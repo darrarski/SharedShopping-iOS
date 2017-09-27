@@ -13,7 +13,6 @@
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
-		31AAAEC31F7C43DB000C29AB /* SharedShoppingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AAAEC21F7C43DB000C29AB /* SharedShoppingAppTests.swift */; };
 		BE7A26929F5ADFD2AD068633 /* Pods_SharedShoppingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		319486301F7C389C00DB435B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		31AAAEC21F7C43DB000C29AB /* SharedShoppingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedShoppingAppTests.swift; sourceTree = "<group>"; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4177C5561BED78236EB9CE18 /* Pods-SharedShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				31A6F86E1F7C4D4F00D40F15 /* Application */,
-				31AAAEC21F7C43DB000C29AB /* SharedShoppingAppTests.swift */,
 				31AAAECA1F7C442B000C29AB /* Supporting Files */,
 			);
 			path = SharedShoppingAppTests;
@@ -430,7 +427,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31AAAEC31F7C43DB000C29AB /* SharedShoppingAppTests.swift in Sources */,
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
