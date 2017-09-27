@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042F49DE31344DD119989289 /* Pods_SharedShoppingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */; };
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
 		319486271F7C389C00DB435B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486261F7C389C00DB435B /* ViewController.swift */; };
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
@@ -20,6 +21,9 @@
 		3194862B1F7C389C00DB435B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3194862E1F7C389C00DB435B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		319486301F7C389C00DB435B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4177C5561BED78236EB9CE18 /* Pods-SharedShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		76CDE8C7A8C2C00A0E3C880C /* Pods-SharedShoppingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.release.xcconfig"; sourceTree = "<group>"; };
+		FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042F49DE31344DD119989289 /* Pods_SharedShoppingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FABA155950D8D51133875C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4177C5561BED78236EB9CE18 /* Pods-SharedShoppingApp.debug.xcconfig */,
+				76CDE8C7A8C2C00A0E3C880C /* Pods-SharedShoppingApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		25209D7451839EBBD253DAF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		319486181F7C389C00DB435B = {
 			isa = PBXGroup;
 			children = (
 				319486221F7C389C00DB435B /* Products */,
 				319486231F7C389C00DB435B /* SharedShoppingApp */,
+				1FABA155950D8D51133875C6 /* Pods */,
+				25209D7451839EBBD253DAF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 319486331F7C389C00DB435B /* Build configuration list for PBXNativeTarget "SharedShoppingApp" */;
 			buildPhases = (
+				D8D8774B49D36F13DCCA5E67 /* [CP] Check Pods Manifest.lock */,
 				3194861D1F7C389C00DB435B /* Sources */,
 				3194861E1F7C389C00DB435B /* Frameworks */,
 				3194861F1F7C389C00DB435B /* Resources */,
+				AF7FFFBC407120512F5E1DC8 /* [CP] Embed Pods Frameworks */,
+				D312E6F2432E53D9B0F4F5BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +185,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AF7FFFBC407120512F5E1DC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp-frameworks.sh",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-11/iOS/RevealServer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D312E6F2432E53D9B0F4F5BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8D8774B49D36F13DCCA5E67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SharedShoppingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3194861D1F7C389C00DB435B /* Sources */ = {
@@ -292,6 +373,7 @@
 		};
 		319486341F7C389C00DB435B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4177C5561BED78236EB9CE18 /* Pods-SharedShoppingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -308,6 +390,7 @@
 		};
 		319486351F7C389C00DB435B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76CDE8C7A8C2C00A0E3C880C /* Pods-SharedShoppingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
