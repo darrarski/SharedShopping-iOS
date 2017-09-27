@@ -2,6 +2,26 @@
 
 ![Swift v4.0](https://img.shields.io/badge/swift-v4.0-orange.svg)
 
+## Setup
+
+Requirements: 
+
+- Ruby with [Bundler](http://bundler.io)
+- Xcode 9
+
+Run:
+
+```sh
+bundle install
+bundle exec pod install
+```
+
+## Building
+
+Open `SharedShopping.xcworkspace` in Xcode. 
+
+Use `SharedShopingApp` build scheme for building and runing the app.
+
 ## License
 
 Copyright © 2017 Dariusz Rybicki Darrarski
