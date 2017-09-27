@@ -125,6 +125,7 @@
 			buildConfigurationList = 319486331F7C389C00DB435B /* Build configuration list for PBXNativeTarget "SharedShoppingApp" */;
 			buildPhases = (
 				D8D8774B49D36F13DCCA5E67 /* [CP] Check Pods Manifest.lock */,
+				315865A51F7C3EF100C33EA5 /* Run SwiftLint */,
 				3194861D1F7C389C00DB435B /* Sources */,
 				3194861E1F7C389C00DB435B /* Frameworks */,
 				3194861F1F7C389C00DB435B /* Resources */,
@@ -187,6 +188,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		315865A51F7C3EF100C33EA5 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$CI\" = \"true\" ]; then\n  echo \"Skipping SwiftLint on CI\"\n  exit 0\nfi\necho \"Running SwiftLint on app target\"\ncd SharedShoppingApp; ${PODS_ROOT}/SwiftLint/swiftlint";
+		};
 		AF7FFFBC407120512F5E1DC8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

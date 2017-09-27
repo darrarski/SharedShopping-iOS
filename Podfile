@@ -5,4 +5,5 @@ inhibit_all_warnings!
 
 target 'SharedShoppingApp' do
 	pod 'Reveal-SDK', :configurations => ['Debug']
+	pod 'SwiftLint', '~> 0.22'
 end
