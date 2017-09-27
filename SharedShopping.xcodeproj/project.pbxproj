@@ -13,6 +13,7 @@
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
 		31AAAEC31F7C43DB000C29AB /* SharedShoppingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AAAEC21F7C43DB000C29AB /* SharedShoppingAppTests.swift */; };
+		BE7A26929F5ADFD2AD068633 /* Pods_SharedShoppingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +36,11 @@
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC21F7C43DB000C29AB /* SharedShoppingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedShoppingAppTests.swift; sourceTree = "<group>"; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4177C5561BED78236EB9CE18 /* Pods-SharedShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4F2C53193E751D3D2C19E495 /* Pods-SharedShoppingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingAppTests/Pods-SharedShoppingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		76CDE8C7A8C2C00A0E3C880C /* Pods-SharedShoppingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.release.xcconfig"; sourceTree = "<group>"; };
+		9A7ABAC7A318911EFE92EF12 /* Pods-SharedShoppingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingAppTests/Pods-SharedShoppingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7A26929F5ADFD2AD068633 /* Pods_SharedShoppingAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 			children = (
 				4177C5561BED78236EB9CE18 /* Pods-SharedShoppingApp.debug.xcconfig */,
 				76CDE8C7A8C2C00A0E3C880C /* Pods-SharedShoppingApp.release.xcconfig */,
+				9A7ABAC7A318911EFE92EF12 /* Pods-SharedShoppingAppTests.debug.xcconfig */,
+				4F2C53193E751D3D2C19E495 /* Pods-SharedShoppingAppTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -72,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */,
+				3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,9 +193,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31AAAEC91F7C43DB000C29AB /* Build configuration list for PBXNativeTarget "SharedShoppingAppTests" */;
 			buildPhases = (
+				1C80E8660BE07F75FA5EF464 /* [CP] Check Pods Manifest.lock */,
+				31AAAECB1F7C44AE000C29AB /* Run SwiftLint */,
 				31AAAEBC1F7C43DB000C29AB /* Sources */,
 				31AAAEBD1F7C43DB000C29AB /* Frameworks */,
 				31AAAEBE1F7C43DB000C29AB /* Resources */,
+				3BB1EAE75E34E6DAEDA2B1C8 /* [CP] Embed Pods Frameworks */,
+				3ABCB7946FDE9BF5AA88E191 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +271,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C80E8660BE07F75FA5EF464 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SharedShoppingAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		315865A51F7C3EF100C33EA5 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +302,50 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ \"$CI\" = \"true\" ]; then\n  echo \"Skipping SwiftLint on CI\"\n  exit 0\nfi\necho \"Running SwiftLint on app target\"\ncd SharedShoppingApp; ${PODS_ROOT}/SwiftLint/swiftlint";
+		};
+		31AAAECB1F7C44AE000C29AB /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$CI\" = \"true\" ]; then\n  echo \"Skipping SwiftLint on CI\"\n  exit 0\nfi\necho \"Running SwiftLint on unit tests target\"\ncd SharedShoppingAppTests; ${PODS_ROOT}/SwiftLint/swiftlint";
+		};
+		3ABCB7946FDE9BF5AA88E191 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedShoppingAppTests/Pods-SharedShoppingAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BB1EAE75E34E6DAEDA2B1C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedShoppingAppTests/Pods-SharedShoppingAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		AF7FFFBC407120512F5E1DC8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -509,6 +583,7 @@
 		};
 		31AAAEC71F7C43DB000C29AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A7ABAC7A318911EFE92EF12 /* Pods-SharedShoppingAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
@@ -526,6 +601,7 @@
 		};
 		31AAAEC81F7C43DB000C29AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F2C53193E751D3D2C19E495 /* Pods-SharedShoppingAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
