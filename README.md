@@ -22,6 +22,10 @@ Open `SharedShopping.xcworkspace` in Xcode.
 
 Use `SharedShopingApp` build scheme for building and runing the app.
 
+## Testing
+
+Use `SharedShopingAppTests` build scheme for running tests.
+
 ## License
 
 Copyright © 2017 Dariusz Rybicki Darrarski
