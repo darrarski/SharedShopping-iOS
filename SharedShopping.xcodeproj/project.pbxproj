@@ -12,7 +12,18 @@
 		319486271F7C389C00DB435B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486261F7C389C00DB435B /* ViewController.swift */; };
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
+		31AAAEC31F7C43DB000C29AB /* SharedShoppingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AAAEC21F7C43DB000C29AB /* SharedShoppingAppTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		31AAAEC51F7C43DB000C29AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 319486191F7C389C00DB435B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 319486201F7C389C00DB435B;
+			remoteInfo = SharedShoppingApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		319486211F7C389C00DB435B /* SharedShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,6 +32,9 @@
 		3194862B1F7C389C00DB435B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3194862E1F7C389C00DB435B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		319486301F7C389C00DB435B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31AAAEC21F7C43DB000C29AB /* SharedShoppingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedShoppingAppTests.swift; sourceTree = "<group>"; };
+		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4177C5561BED78236EB9CE18 /* Pods-SharedShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		76CDE8C7A8C2C00A0E3C880C /* Pods-SharedShoppingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.release.xcconfig"; sourceTree = "<group>"; };
 		FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +46,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				042F49DE31344DD119989289 /* Pods_SharedShoppingApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31AAAEBD1F7C43DB000C29AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,10 +79,11 @@
 		319486181F7C389C00DB435B = {
 			isa = PBXGroup;
 			children = (
+				25209D7451839EBBD253DAF0 /* Frameworks */,
+				1FABA155950D8D51133875C6 /* Pods */,
 				319486221F7C389C00DB435B /* Products */,
 				319486231F7C389C00DB435B /* SharedShoppingApp */,
-				1FABA155950D8D51133875C6 /* Pods */,
-				25209D7451839EBBD253DAF0 /* Frameworks */,
+				31AAAEC11F7C43DB000C29AB /* SharedShoppingAppTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				319486211F7C389C00DB435B /* SharedShoppingApp.app */,
+				31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +140,23 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		31AAAEC11F7C43DB000C29AB /* SharedShoppingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				31AAAEC21F7C43DB000C29AB /* SharedShoppingAppTests.swift */,
+				31AAAECA1F7C442B000C29AB /* Supporting Files */,
+			);
+			path = SharedShoppingAppTests;
+			sourceTree = "<group>";
+		};
+		31AAAECA1F7C442B000C29AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31AAAEC41F7C43DB000C29AB /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +181,24 @@
 			productReference = 319486211F7C389C00DB435B /* SharedShoppingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		31AAAEBF1F7C43DB000C29AB /* SharedShoppingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31AAAEC91F7C43DB000C29AB /* Build configuration list for PBXNativeTarget "SharedShoppingAppTests" */;
+			buildPhases = (
+				31AAAEBC1F7C43DB000C29AB /* Sources */,
+				31AAAEBD1F7C43DB000C29AB /* Frameworks */,
+				31AAAEBE1F7C43DB000C29AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31AAAEC61F7C43DB000C29AB /* PBXTargetDependency */,
+			);
+			name = SharedShoppingAppTests;
+			productName = SharedShoppingAppTests;
+			productReference = 31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -154,6 +212,11 @@
 					319486201F7C389C00DB435B = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Manual;
+					};
+					31AAAEBF1F7C43DB000C29AB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Manual;
+						TestTargetID = 319486201F7C389C00DB435B;
 					};
 				};
 			};
@@ -171,6 +234,7 @@
 			projectRoot = "";
 			targets = (
 				319486201F7C389C00DB435B /* SharedShoppingApp */,
+				31AAAEBF1F7C43DB000C29AB /* SharedShoppingAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +246,13 @@
 			files = (
 				3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */,
 				3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31AAAEBE1F7C43DB000C29AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +336,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		31AAAEBC1F7C43DB000C29AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31AAAEC31F7C43DB000C29AB /* SharedShoppingAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31AAAEC61F7C43DB000C29AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 319486201F7C389C00DB435B /* SharedShoppingApp */;
+			targetProxy = 31AAAEC51F7C43DB000C29AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */ = {
@@ -420,6 +507,40 @@
 			};
 			name = Release;
 		};
+		31AAAEC71F7C43DB000C29AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "SharedShoppingAppTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.SharedShoppingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SharedShoppingApp.app/SharedShoppingApp";
+			};
+			name = Debug;
+		};
+		31AAAEC81F7C43DB000C29AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "SharedShoppingAppTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.SharedShoppingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SharedShoppingApp.app/SharedShoppingApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -437,6 +558,15 @@
 			buildConfigurations = (
 				319486341F7C389C00DB435B /* Debug */,
 				319486351F7C389C00DB435B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31AAAEC91F7C43DB000C29AB /* Build configuration list for PBXNativeTarget "SharedShoppingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31AAAEC71F7C43DB000C29AB /* Debug */,
+				31AAAEC81F7C43DB000C29AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
