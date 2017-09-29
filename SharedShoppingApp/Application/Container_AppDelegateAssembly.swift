@@ -7,14 +7,18 @@ extension Container {
             let stubInstance = stubClass.init() as? AppDelegateAssembly {
             return stubInstance
         }
-        return Assembly()
+        return Assembly(container: self)
     }
 
     private struct Assembly: AppDelegateAssembly {
 
+        let container: Container
+
+        // MAKR: AppDelegateAssembly
+
         var window: UIWindow {
             let window = UIWindow(frame: UIScreen.main.bounds)
-            window.rootViewController = ViewController()
+            window.rootViewController = container.shoppingsViewController
             return window
         }
 
