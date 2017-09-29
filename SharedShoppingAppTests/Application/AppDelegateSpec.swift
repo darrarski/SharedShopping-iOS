@@ -8,10 +8,10 @@ class AppDelegateSpec: QuickSpec {
     override func spec() {
         describe("AppDelegate") {
             var sut: AppDelegate!
-            var assembly: AppDelegateAssemblyStub!
+            var assembly: Assembly!
 
             beforeEach {
-                assembly = AppDelegateAssemblyStub()
+                assembly = Assembly()
                 sut = AppDelegate()
                 sut.assembly = assembly
             }
@@ -40,6 +40,28 @@ class AppDelegateSpec: QuickSpec {
                 }
             }
         }
+    }
+
+    private class Assembly: AppDelegateAssembly {
+
+        let windowSpy = WindowSpy()
+
+        // MARK: AppDelegateAssembly
+
+        var window: UIWindow {
+            return windowSpy
+        }
+
+    }
+
+    private class WindowSpy: UIWindow {
+
+        var makeKeyAndVisibleCalled = false
+
+        override func makeKeyAndVisible() {
+            makeKeyAndVisibleCalled = true
+        }
+
     }
 
 }
