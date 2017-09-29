@@ -15,6 +15,8 @@
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FC1F7EF51000EA7660 /* Container.swift */; };
 		31FAE9FF1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift */; };
+		31FAEA0A1F7EFBAF00EA7660 /* AppDelegateAssemblyStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA091F7EFBAF00EA7660 /* AppDelegateAssemblyStub.swift */; };
+		31FAEA0C1F7EFF5100EA7660 /* WindowSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA0B1F7EFF5100EA7660 /* WindowSpy.swift */; };
 		BE7A26929F5ADFD2AD068633 /* Pods_SharedShoppingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31FAE9FC1F7EF51000EA7660 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		31FAE9FE1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_AppDelegateAssembly.swift; sourceTree = "<group>"; };
+		31FAEA091F7EFBAF00EA7660 /* AppDelegateAssemblyStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateAssemblyStub.swift; sourceTree = "<group>"; };
+		31FAEA0B1F7EFF5100EA7660 /* WindowSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSpy.swift; sourceTree = "<group>"; };
 		3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4177C5561BED78236EB9CE18 /* Pods-SharedShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4F2C53193E751D3D2C19E495 /* Pods-SharedShoppingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingAppTests/Pods-SharedShoppingAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */,
+				31FAEA091F7EFBAF00EA7660 /* AppDelegateAssemblyStub.swift */,
+				31FAEA0B1F7EFF5100EA7660 /* WindowSpy.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -436,6 +442,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
+				31FAEA0A1F7EFBAF00EA7660 /* AppDelegateAssemblyStub.swift in Sources */,
+				31FAEA0C1F7EFF5100EA7660 /* WindowSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
