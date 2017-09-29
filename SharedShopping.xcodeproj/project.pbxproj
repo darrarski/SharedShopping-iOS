@@ -15,6 +15,9 @@
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FC1F7EF51000EA7660 /* Container.swift */; };
 		31FAE9FF1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift */; };
+		31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */; };
+		31FAEA041F7EF93100EA7660 /* Container_ShoppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA031F7EF93100EA7660 /* Container_ShoppingsViewController.swift */; };
+		31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */; };
 		31FAEA0A1F7EFBAF00EA7660 /* AppDelegateAssemblyStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA091F7EFBAF00EA7660 /* AppDelegateAssemblyStub.swift */; };
 		31FAEA0C1F7EFF5100EA7660 /* WindowSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA0B1F7EFF5100EA7660 /* WindowSpy.swift */; };
 		BE7A26929F5ADFD2AD068633 /* Pods_SharedShoppingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */; };
@@ -42,6 +45,9 @@
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31FAE9FC1F7EF51000EA7660 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		31FAE9FE1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_AppDelegateAssembly.swift; sourceTree = "<group>"; };
+		31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewController.swift; sourceTree = "<group>"; };
+		31FAEA031F7EF93100EA7660 /* Container_ShoppingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_ShoppingsViewController.swift; sourceTree = "<group>"; };
+		31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewControllerSpec.swift; sourceTree = "<group>"; };
 		31FAEA091F7EFBAF00EA7660 /* AppDelegateAssemblyStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateAssemblyStub.swift; sourceTree = "<group>"; };
 		31FAEA0B1F7EFF5100EA7660 /* WindowSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSpy.swift; sourceTree = "<group>"; };
 		3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,8 +150,9 @@
 		319486381F7C391B00DB435B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				319486261F7C389C00DB435B /* ViewController.swift */,
 				3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */,
+				31FAEA001F7EF8FD00EA7660 /* Shoppings */,
+				319486261F7C389C00DB435B /* ViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 			children = (
 				31A6F86E1F7C4D4F00D40F15 /* Application */,
 				31AAAECA1F7C442B000C29AB /* Supporting Files */,
+				31FAEA051F7EFA0800EA7660 /* UI */,
 			);
 			path = SharedShoppingAppTests;
 			sourceTree = "<group>";
@@ -183,6 +191,31 @@
 				31AAAEC41F7C43DB000C29AB /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31FAEA001F7EF8FD00EA7660 /* Shoppings */ = {
+			isa = PBXGroup;
+			children = (
+				31FAEA031F7EF93100EA7660 /* Container_ShoppingsViewController.swift */,
+				31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */,
+			);
+			path = Shoppings;
+			sourceTree = "<group>";
+		};
+		31FAEA051F7EFA0800EA7660 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				31FAEA061F7EFA1600EA7660 /* Shoppings */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		31FAEA061F7EFA1600EA7660 /* Shoppings */ = {
+			isa = PBXGroup;
+			children = (
+				31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */,
+			);
+			path = Shoppings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift in Sources */,
+				31FAEA041F7EF93100EA7660 /* Container_ShoppingsViewController.swift in Sources */,
 				319486271F7C389C00DB435B /* ViewController.swift in Sources */,
 				31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */,
 				319486251F7C389C00DB435B /* AppDelegate.swift in Sources */,
@@ -444,6 +479,7 @@
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
 				31FAEA0A1F7EFBAF00EA7660 /* AppDelegateAssemblyStub.swift in Sources */,
 				31FAEA0C1F7EFF5100EA7660 /* WindowSpy.swift in Sources */,
+				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
