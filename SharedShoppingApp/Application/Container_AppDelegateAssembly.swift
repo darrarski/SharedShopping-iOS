@@ -3,10 +3,6 @@ import UIKit
 extension Container {
 
     var appDelegateAssembly: AppDelegateAssembly {
-        if let stubClass = NSClassFromString("SharedShoppingAppTests.AppDelegateAssemblyStub") as? NSObject.Type,
-            let stubInstance = stubClass.init() as? AppDelegateAssembly {
-            return stubInstance
-        }
         return Assembly(container: self)
     }
 
@@ -18,10 +14,19 @@ extension Container {
 
         var window: UIWindow {
             let window = UIWindow(frame: UIScreen.main.bounds)
-            window.rootViewController = container.shoppingsViewController
+            if isRunningTests {
+                window.rootViewController = UIViewController(nibName: nil, bundle: nil)
+            } else {
+                window.rootViewController = container.shoppingsViewController
+            }
             return window
         }
 
+        // MARK: Private
+
+        private var isRunningTests: Bool {
+            return NSClassFromString("XCTest") != nil
+        }
     }
 
 }
