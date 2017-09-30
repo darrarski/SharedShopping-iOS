@@ -1,4 +1,5 @@
 import UIKit
+import SnapKit
 
 class ShoppingsTableViewCell: UITableViewCell {
 
@@ -33,11 +34,12 @@ class ShoppingsTableViewCell: UITableViewCell {
     // MARK: Layout
 
     private func setupLayout() {
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
-        nameLabel.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -16).isActive = true
-        nameLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -16).isActive = true
+        nameLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(16)
+            $0.leading.equalToSuperview().offset(16)
+            $0.trailing.lessThanOrEqualToSuperview().offset(-16)
+            $0.bottom.lessThanOrEqualToSuperview().offset(-16)
+        }
     }
 
     // MARK: Private
