@@ -8,6 +8,7 @@ target 'SharedShoppingApp' do
   pod 'SwiftLint', '~> 0.22'
   pod 'RxSwift', '~> 3.6'
   pod 'RxCocoa', '~> 3.6'
+  pod 'SnapKit', '~> 4.0'
   target 'SharedShoppingAppTests' do
     inherit! :search_paths
     pod 'Quick', '~> 1.1'
