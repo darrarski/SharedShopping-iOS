@@ -10,6 +10,8 @@
 		042F49DE31344DD119989289 /* Pods_SharedShoppingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */; };
 		313AD6951F82EC730055D7CF /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313AD6941F82EC730055D7CF /* List.swift */; };
 		313AD6981F82EC950055D7CF /* ListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313AD6971F82EC950055D7CF /* ListSpec.swift */; };
+		313AD69A1F83042F0055D7CF /* MutableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313AD6991F83042F0055D7CF /* MutableList.swift */; };
+		313E8DFE1F845E7C00EE575E /* MutableListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E8DFD1F845E7C00EE575E /* MutableListSpec.swift */; };
 		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		313AD6941F82EC730055D7CF /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		313AD6971F82EC950055D7CF /* ListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSpec.swift; sourceTree = "<group>"; };
+		313AD6991F83042F0055D7CF /* MutableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableList.swift; sourceTree = "<group>"; };
+		313E8DFD1F845E7C00EE575E /* MutableListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableListSpec.swift; sourceTree = "<group>"; };
 		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
 		319486211F7C389C00DB435B /* SharedShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		319486241F7C389C00DB435B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				313AD6941F82EC730055D7CF /* List.swift */,
+				313AD6991F83042F0055D7CF /* MutableList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				313AD6971F82EC950055D7CF /* ListSpec.swift */,
+				313E8DFD1F845E7C00EE575E /* MutableListSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -493,6 +499,7 @@
 			files = (
 				31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift in Sources */,
+				313AD69A1F83042F0055D7CF /* MutableList.swift in Sources */,
 				313AD6951F82EC730055D7CF /* List.swift in Sources */,
 				31FAEA041F7EF93100EA7660 /* Container_ShoppingsViewController.swift in Sources */,
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
@@ -506,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				313AD6981F82EC950055D7CF /* ListSpec.swift in Sources */,
+				313E8DFE1F845E7C00EE575E /* MutableListSpec.swift in Sources */,
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
 			);
