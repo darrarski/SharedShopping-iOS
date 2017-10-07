@@ -19,6 +19,8 @@
 		3179207D1F884BE800D7359F /* ShoppingsTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207C1F884BE800D7359F /* ShoppingsTableRow.swift */; };
 		317920801F884CFA00D7359F /* TableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */; };
 		317920821F88597000D7359F /* TableRowStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920811F88597000D7359F /* TableRowStub.swift */; };
+		317920841F8859E600D7359F /* Container_ShoppingsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */; };
+		317920861F885A0100D7359F /* ShoppingsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */; };
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
@@ -53,6 +55,8 @@
 		3179207C1F884BE800D7359F /* ShoppingsTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRow.swift; sourceTree = "<group>"; };
 		3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerSpec.swift; sourceTree = "<group>"; };
 		317920811F88597000D7359F /* TableRowStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowStub.swift; sourceTree = "<group>"; };
+		317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_ShoppingsTableViewModel.swift; sourceTree = "<group>"; };
+		317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModel.swift; sourceTree = "<group>"; };
 		319486211F7C389C00DB435B /* SharedShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		319486241F7C389C00DB435B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3194862B1F7C389C00DB435B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 				31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */,
 				316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */,
 				3179207C1F884BE800D7359F /* ShoppingsTableRow.swift */,
+				317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */,
+				317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */,
 			);
 			path = Shoppings;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 				31FAE9FF1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift in Sources */,
 				313AD69A1F83042F0055D7CF /* MutableList.swift in Sources */,
 				317920791F884B9A00D7359F /* TableViewController.swift in Sources */,
+				317920861F885A0100D7359F /* ShoppingsTableViewModel.swift in Sources */,
 				3179207D1F884BE800D7359F /* ShoppingsTableRow.swift in Sources */,
 				313AD6951F82EC730055D7CF /* List.swift in Sources */,
 				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
@@ -543,6 +550,7 @@
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
 				31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */,
 				319486251F7C389C00DB435B /* AppDelegate.swift in Sources */,
+				317920841F8859E600D7359F /* Container_ShoppingsTableViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
