@@ -14,7 +14,10 @@
 		313E8DFE1F845E7C00EE575E /* MutableListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E8DFD1F845E7C00EE575E /* MutableListSpec.swift */; };
 		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
 		317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920751F884B6F00D7359F /* UIViewController_Embedding.swift */; };
+		317920791F884B9A00D7359F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920781F884B9A00D7359F /* TableViewController.swift */; };
 		3179207B1F884BBB00D7359F /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207A1F884BBB00D7359F /* TableRow.swift */; };
+		317920801F884CFA00D7359F /* TableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */; };
+		317920821F88597000D7359F /* TableRowStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920811F88597000D7359F /* TableRowStub.swift */; };
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
@@ -44,7 +47,10 @@
 		313E8DFD1F845E7C00EE575E /* MutableListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableListSpec.swift; sourceTree = "<group>"; };
 		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
 		317920751F884B6F00D7359F /* UIViewController_Embedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Embedding.swift; sourceTree = "<group>"; };
+		317920781F884B9A00D7359F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3179207A1F884BBB00D7359F /* TableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
+		3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerSpec.swift; sourceTree = "<group>"; };
+		317920811F88597000D7359F /* TableRowStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowStub.swift; sourceTree = "<group>"; };
 		319486211F7C389C00DB435B /* SharedShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		319486241F7C389C00DB435B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3194862B1F7C389C00DB435B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,7 +133,17 @@
 		317920771F884B8E00D7359F /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				317920781F884B9A00D7359F /* TableViewController.swift */,
 				3179207A1F884BBB00D7359F /* TableRow.swift */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		3179207E1F884CED00D7359F /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */,
+				317920811F88597000D7359F /* TableRowStub.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -241,6 +257,7 @@
 		31FAEA051F7EFA0800EA7660 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3179207E1F884CED00D7359F /* Table */,
 				31FAEA061F7EFA1600EA7660 /* Shoppings */,
 			);
 			path = UI;
@@ -515,6 +532,7 @@
 				3179207B1F884BBB00D7359F /* TableRow.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift in Sources */,
 				313AD69A1F83042F0055D7CF /* MutableList.swift in Sources */,
+				317920791F884B9A00D7359F /* TableViewController.swift in Sources */,
 				313AD6951F82EC730055D7CF /* List.swift in Sources */,
 				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
 				31FAEA041F7EF93100EA7660 /* Container_ShoppingsViewController.swift in Sources */,
@@ -528,8 +546,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317920821F88597000D7359F /* TableRowStub.swift in Sources */,
 				313AD6981F82EC950055D7CF /* ListSpec.swift in Sources */,
 				313E8DFE1F845E7C00EE575E /* MutableListSpec.swift in Sources */,
+				317920801F884CFA00D7359F /* TableViewControllerSpec.swift in Sources */,
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
 			);
