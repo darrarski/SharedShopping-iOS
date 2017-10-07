@@ -13,6 +13,7 @@
 		313AD69A1F83042F0055D7CF /* MutableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313AD6991F83042F0055D7CF /* MutableList.swift */; };
 		313E8DFE1F845E7C00EE575E /* MutableListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E8DFD1F845E7C00EE575E /* MutableListSpec.swift */; };
 		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
+		317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920751F884B6F00D7359F /* UIViewController_Embedding.swift */; };
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
@@ -41,6 +42,7 @@
 		313AD6991F83042F0055D7CF /* MutableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableList.swift; sourceTree = "<group>"; };
 		313E8DFD1F845E7C00EE575E /* MutableListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableListSpec.swift; sourceTree = "<group>"; };
 		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
+		317920751F884B6F00D7359F /* UIViewController_Embedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Embedding.swift; sourceTree = "<group>"; };
 		319486211F7C389C00DB435B /* SharedShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		319486241F7C389C00DB435B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3194862B1F7C389C00DB435B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */,
 				31FAEA001F7EF8FD00EA7660 /* Shoppings */,
+				317920751F884B6F00D7359F /* UIViewController_Embedding.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				31FAE9FF1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift in Sources */,
 				313AD69A1F83042F0055D7CF /* MutableList.swift in Sources */,
 				313AD6951F82EC730055D7CF /* List.swift in Sources */,
+				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
 				31FAEA041F7EF93100EA7660 /* Container_ShoppingsViewController.swift in Sources */,
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
 				31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */,
