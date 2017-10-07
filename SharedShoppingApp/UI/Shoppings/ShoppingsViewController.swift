@@ -1,8 +1,13 @@
 import UIKit
 
+protocol ShoppingsViewControllerAssembly {
+    var tableViewController: UIViewController { get }
+}
+
 class ShoppingsViewController: UIViewController {
 
-    init() {
+    init(assembly: ShoppingsViewControllerAssembly) {
+        tableViewController = assembly.tableViewController
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -18,7 +23,11 @@ class ShoppingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        embed(tableViewController, in: view)
     }
+
+    // MARK: Private
+
+    private let tableViewController: UIViewController
 
 }

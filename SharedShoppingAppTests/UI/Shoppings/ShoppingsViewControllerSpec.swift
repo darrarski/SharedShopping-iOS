@@ -14,15 +14,29 @@ class ShoppingsViewControllerSpec: QuickSpec {
 
         describe("ShoppingsViewController") {
             var sut: ShoppingsViewController!
+            var assembly: Assembly!
 
             beforeEach {
-                sut = ShoppingsViewController()
+                assembly = Assembly()
+                sut = ShoppingsViewController(assembly: assembly)
             }
 
-            it("should not be nil") { // TODO: remove
-                expect(sut).notTo(beNil())
+            context("load view") {
+                beforeEach {
+                    _ = sut.view
+                }
+
+                it("should embed tableViewController") {
+                    expect(sut.childViewControllers).to(contain(assembly.tableViewController))
+                }
             }
         }
+    }
+
+    private class Assembly: ShoppingsViewControllerAssembly {
+
+        let tableViewController = UIViewController(nibName: nil, bundle: nil)
+
     }
 
 }
