@@ -1,6 +1,14 @@
 import UIKit
 
+protocol ShoppingsTableRowInputs {
+
+}
+
 class ShoppingsTableRow: TableRow {
+
+    init(inputs: ShoppingsTableRowInputs) {
+        self.inputs = inputs
+    }
 
     // MARK: TableRow
 
@@ -22,5 +30,9 @@ class ShoppingsTableRow: TableRow {
         cell.nameLabel.text = "Shopping #\(indexPath.row + 1)"
         return cell
     }
+
+    // MARK: Private
+
+    private let inputs: ShoppingsTableRowInputs
 
 }

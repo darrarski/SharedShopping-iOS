@@ -25,6 +25,7 @@
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
+		31E5F59E1F8AD4BC008A74F7 /* ShoppingsTableRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5F59D1F8AD4BC008A74F7 /* ShoppingsTableRowViewModel.swift */; };
 		31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FC1F7EF51000EA7660 /* Container.swift */; };
 		31FAE9FF1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift */; };
 		31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */; };
@@ -65,6 +66,7 @@
 		31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31E5F59D1F8AD4BC008A74F7 /* ShoppingsTableRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRowViewModel.swift; sourceTree = "<group>"; };
 		31FAE9FC1F7EF51000EA7660 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		31FAE9FE1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_AppDelegateAssembly.swift; sourceTree = "<group>"; };
 		31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewController.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */,
 				317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */,
 				31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */,
+				31E5F59D1F8AD4BC008A74F7 /* ShoppingsTableRowViewModel.swift */,
 			);
 			path = Shoppings;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */,
 				319486251F7C389C00DB435B /* AppDelegate.swift in Sources */,
 				317920841F8859E600D7359F /* Container_ShoppingsTableViewModel.swift in Sources */,
+				31E5F59E1F8AD4BC008A74F7 /* ShoppingsTableRowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
