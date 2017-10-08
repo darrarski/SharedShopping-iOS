@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import RxSwift
 
 class ShoppingsTableViewCell: UITableViewCell {
 
@@ -16,8 +17,11 @@ class ShoppingsTableViewCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        disposeBag = DisposeBag()
         cleanUp()
     }
+
+    private(set) var disposeBag = DisposeBag()
 
     // MARK: Subviews
 
