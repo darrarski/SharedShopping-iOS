@@ -2,6 +2,10 @@ import UIKit
 
 class ShoppingsTableRowViewModel: TableRowViewModel {
 
+    init(shopping: Shopping) {
+        self.shopping = shopping
+    }
+
     // MARK: TableRowViewModel
 
     func register(in tableView: UITableView) {
@@ -19,8 +23,12 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "shopping",
                                                        for: indexPath) as? ShoppingsTableViewCell else { fatalError() }
-        cell.nameLabel.text = "Shopping #\(indexPath.row + 1)"
+        cell.nameLabel.text = "Shopping \(shopping.name)"
         return cell
     }
+
+    // MARK: Private
+
+    private let shopping: Shopping
 
 }
