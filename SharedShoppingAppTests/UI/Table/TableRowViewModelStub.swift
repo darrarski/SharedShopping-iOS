@@ -1,15 +1,15 @@
 import UIKit
 @testable import SharedShoppingApp
 
-class TableRowStub: TableRow {
+class TableRowViewModelStub: TableRowViewModel {
 
     var estimatedHeightStub = CGFloat(66)
     var heightStub = CGFloat(55)
     var cellStub = UITableViewCell(style: .default, reuseIdentifier: "")
 
     var registerInTableViewCalled: (UITableView)?
-    var estimatedHeightAtIndexPathCalled: (IndexPath)?
-    var heightAtIndexPathCalled: (IndexPath)?
+    var estimatedHeightCalled = false
+    var heightCalled = false
     var cellAtIndexPathInTableViewCalled: (IndexPath, UITableView)?
 
     // MARK: TableRowViewModel
@@ -18,13 +18,13 @@ class TableRowStub: TableRow {
         registerInTableViewCalled = (tableView)
     }
 
-    func estimatedHeight(at indexPath: IndexPath) -> CGFloat {
-        estimatedHeightAtIndexPathCalled = (indexPath)
+    var estimatedHeight: CGFloat {
+        estimatedHeightCalled = true
         return estimatedHeightStub
     }
 
-    func height(at indexPath: IndexPath) -> CGFloat {
-        heightAtIndexPathCalled = (indexPath)
+    var height: CGFloat {
+        heightCalled = true
         return heightStub
     }
 

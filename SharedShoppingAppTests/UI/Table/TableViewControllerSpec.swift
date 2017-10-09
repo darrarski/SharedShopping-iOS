@@ -27,7 +27,7 @@ class TableViewControllerSpec: QuickSpec {
             }
 
             describe("row 7 in section 11") {
-                var row: TableRowStub!
+                var row: TableRowViewModelStub!
                 var indexPath: IndexPath!
 
                 beforeEach {
@@ -37,19 +37,20 @@ class TableViewControllerSpec: QuickSpec {
 
                 it("should have correct estimated height") {
                     expect(sut.tableView(sut.tableView, estimatedHeightForRowAt: indexPath)).to(equal(row.estimatedHeightStub))
-                    expect(row.estimatedHeightAtIndexPathCalled).to(equal(indexPath))
+                    expect(row.estimatedHeightCalled).to(beTrue())
                 }
 
                 it("should have correct height") {
                     expect(sut.tableView(sut.tableView, heightForRowAt: indexPath)).to(equal(row.heightStub))
-                    expect(row.heightAtIndexPathCalled).to(equal(indexPath))
+                    expect(row.heightCalled).to(beTrue())
                 }
 
                 it("should have correct cell") {
                     expect(sut.tableView(sut.tableView, cellForRowAt: indexPath)).to(be(row.cellStub))
+                    expect(inputs.rowViewModelAtIndexPathCalled).to(equal(indexPath))
+                    expect(row.registerInTableViewCalled).to(be(sut.tableView))
                     expect(row.cellAtIndexPathInTableViewCalled?.0).to(equal(indexPath))
                     expect(row.cellAtIndexPathInTableViewCalled?.1).to(be(sut.tableView))
-                    expect(row.registerInTableViewCalled).to(be(sut.tableView))
                 }
             }
         }
@@ -58,10 +59,10 @@ class TableViewControllerSpec: QuickSpec {
     private class Inputs: TableViewControllerInputs {
 
         var numberOfRowsStub: Int = 15
-        var rowStub = TableRowStub()
+        var rowStub = TableRowViewModelStub()
 
         var numberOfRowsInSectionCalled: Int?
-        var rowAtIndexPathCalled: IndexPath?
+        var rowViewModelAtIndexPathCalled: IndexPath?
 
         // MARK: TableViewControllerInputs
 
@@ -70,8 +71,8 @@ class TableViewControllerSpec: QuickSpec {
             return numberOfRowsStub
         }
 
-        func row(at indexPath: IndexPath) -> TableRow {
-            rowAtIndexPathCalled = indexPath
+        func rowViewModel(at indexPath: IndexPath) -> TableRowViewModel {
+            rowViewModelAtIndexPathCalled = indexPath
             return rowStub
         }
 

@@ -18,7 +18,7 @@
 		3179207B1F884BBB00D7359F /* TableRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207A1F884BBB00D7359F /* TableRowViewModel.swift */; };
 		3179207D1F884BE800D7359F /* ShoppingsTableRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207C1F884BE800D7359F /* ShoppingsTableRowViewModel.swift */; };
 		317920801F884CFA00D7359F /* TableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */; };
-		317920821F88597000D7359F /* TableRowStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920811F88597000D7359F /* TableRowStub.swift */; };
+		317920821F88597000D7359F /* TableRowViewModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920811F88597000D7359F /* TableRowViewModelStub.swift */; };
 		317920841F8859E600D7359F /* Container_ShoppingsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */; };
 		317920861F885A0100D7359F /* ShoppingsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */; };
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
@@ -55,7 +55,7 @@
 		3179207A1F884BBB00D7359F /* TableRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowViewModel.swift; sourceTree = "<group>"; };
 		3179207C1F884BE800D7359F /* ShoppingsTableRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRowViewModel.swift; sourceTree = "<group>"; };
 		3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerSpec.swift; sourceTree = "<group>"; };
-		317920811F88597000D7359F /* TableRowStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowStub.swift; sourceTree = "<group>"; };
+		317920811F88597000D7359F /* TableRowViewModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowViewModelStub.swift; sourceTree = "<group>"; };
 		317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_ShoppingsTableViewModel.swift; sourceTree = "<group>"; };
 		317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModel.swift; sourceTree = "<group>"; };
 		319486211F7C389C00DB435B /* SharedShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,7 +202,7 @@
 		3179207E1F884CED00D7359F /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				317920811F88597000D7359F /* TableRowStub.swift */,
+				317920811F88597000D7359F /* TableRowViewModelStub.swift */,
 				3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */,
 			);
 			path = Table;
@@ -610,7 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				317920821F88597000D7359F /* TableRowStub.swift in Sources */,
+				317920821F88597000D7359F /* TableRowViewModelStub.swift in Sources */,
 				313AD6981F82EC950055D7CF /* ListSpec.swift in Sources */,
 				313E8DFE1F845E7C00EE575E /* MutableListSpec.swift in Sources */,
 				317920801F884CFA00D7359F /* TableViewControllerSpec.swift in Sources */,
