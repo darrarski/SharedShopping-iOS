@@ -6,4 +6,8 @@ class ShoppingsViewModel: ShoppingsViewControllerInputs, ShoppingsViewController
 
     // MARK: ShoppingsViewControllerOutputs
 
+    func addShopping() {
+        // TODO:
+    }
+
 }

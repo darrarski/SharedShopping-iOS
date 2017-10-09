@@ -9,7 +9,7 @@ protocol ShoppingsViewControllerInputs {
 }
 
 protocol ShoppingsViewControllerOutputs {
-
+    func addShopping()
 }
 
 class ShoppingsViewController: UIViewController {
@@ -43,7 +43,7 @@ class ShoppingsViewController: UIViewController {
     }
 
     @objc func rightBarButtonItemAction() {
-        // TODO:
+        outputs.addShopping()
     }
 
     // MARK: Private

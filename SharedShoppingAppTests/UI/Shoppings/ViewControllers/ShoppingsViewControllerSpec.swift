@@ -38,8 +38,26 @@ class ShoppingsViewControllerSpec: QuickSpec {
                     expect(sut.title).to(equal(inputs.title))
                 }
 
-                it("should have right bar button item in navigation item") {
-                    expect(sut.navigationItem.rightBarButtonItem).notTo(beNil())
+                describe("right bar button item in navigation item") {
+                    var button: UIBarButtonItem?
+
+                    beforeEach {
+                        button = sut.navigationItem.rightBarButtonItem
+                    }
+
+                    it("should not be nil") {
+                        expect(button).notTo(beNil())
+                    }
+
+                    context("tap") {
+                        beforeEach {
+                            _ = button?.target?.perform(button?.action)
+                        }
+
+                        it("should call addShopping") {
+                            expect(outputs.addShoppingCalled).to(beTrue())
+                        }
+                    }
                 }
             }
         }
@@ -58,6 +76,14 @@ class ShoppingsViewControllerSpec: QuickSpec {
     }
 
     private class Outputs: ShoppingsViewControllerOutputs {
+
+        var addShoppingCalled = false
+
+        // MARK: ShoppingsViewControllerOutputs
+
+        func addShopping() {
+            addShoppingCalled = true
+        }
 
     }
 
