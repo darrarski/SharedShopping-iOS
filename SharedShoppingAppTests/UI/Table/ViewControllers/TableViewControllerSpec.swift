@@ -32,6 +32,9 @@ class TableViewControllerSpec: QuickSpec {
 
                 beforeEach {
                     row = inputs.rowStub
+                    inputs.rowStub.actionsStub = [
+                        UITableViewRowAction(style: .default, title: "Test Action", handler: { _, _ in })
+                    ]
                     indexPath = IndexPath(row: 7, section: 11)
                 }
 
@@ -51,6 +54,11 @@ class TableViewControllerSpec: QuickSpec {
                     expect(row.registerInTableViewCalled).to(be(sut.tableView))
                     expect(row.cellAtIndexPathInTableViewCalled?.0).to(equal(indexPath))
                     expect(row.cellAtIndexPathInTableViewCalled?.1).to(be(sut.tableView))
+                }
+
+                it("should have correct actions") {
+                    expect(sut.tableView(sut.tableView, editActionsForRowAt: indexPath)).to(equal(inputs.rowStub.actionsStub))
+                    expect(inputs.rowStub.actionsCalled).to(beTrue())
                 }
             }
         }

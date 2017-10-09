@@ -26,6 +26,11 @@ class TableViewController: UITableViewController {
         return inputs.rowViewModel(at: indexPath).estimatedHeight
     }
 
+    override func tableView(_ tableView: UITableView,
+                            editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        return inputs.rowViewModel(at: indexPath).actions
+    }
+
     // MARK: UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
