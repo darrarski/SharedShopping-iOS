@@ -136,7 +136,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
         func action(style: UITableViewRowActionStyle,
                     title: String?,
                     handler: @escaping (UITableViewRowAction, IndexPath) -> Void) -> UITableViewRowAction {
-            let action = UITableViewRowActionSpy(style: style, title: title, handler: handler)
+            let action = UITableViewRowActionSpy.create(style: style, title: title, handler: handler)
             createdActions.append(action)
             return action
         }
