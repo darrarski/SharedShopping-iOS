@@ -2,7 +2,7 @@ import Foundation
 
 extension Container {
 
-    func shoppingsTableViewModel(shopping: Shopping) -> ShoppingsTableRowViewModel {
+    func shoppingsTableRowViewModel(shopping: Shopping) -> ShoppingsTableRowViewModel {
         return ShoppingsTableRowViewModel(shopping: shopping, assembly: Assembly())
     }
 
