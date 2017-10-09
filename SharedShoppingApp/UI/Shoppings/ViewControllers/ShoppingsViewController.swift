@@ -4,9 +4,13 @@ protocol ShoppingsViewControllerAssembly {
     var tableViewController: UIViewController { get }
 }
 
+protocol ShoppingsViewControllerInputs {
+
+}
+
 class ShoppingsViewController: UIViewController {
 
-    init(assembly: ShoppingsViewControllerAssembly) {
+    init(assembly: ShoppingsViewControllerAssembly, inputs: ShoppingsViewControllerInputs) {
         tableViewController = assembly.tableViewController
         super.init(nibName: nil, bundle: nil)
     }

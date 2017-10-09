@@ -11,6 +11,8 @@
 		313B26A31F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26A21F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift */; };
 		313B26A61F8BFF8900E55447 /* UITableViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26A51F8BFF8900E55447 /* UITableViewSpy.swift */; };
 		313B26AA1F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26A91F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift */; };
+		313B26AF1F8C21A200E55447 /* ShoppingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26AE1F8C21A200E55447 /* ShoppingsViewModel.swift */; };
+		313B26B11F8C21DE00E55447 /* Container_ShoppingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B01F8C21DE00E55447 /* Container_ShoppingsViewModel.swift */; };
 		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
 		317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920751F884B6F00D7359F /* UIViewController_Embedding.swift */; };
 		317920791F884B9A00D7359F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920781F884B9A00D7359F /* TableViewController.swift */; };
@@ -47,6 +49,8 @@
 		313B26A21F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRowViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26A51F8BFF8900E55447 /* UITableViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewSpy.swift; sourceTree = "<group>"; };
 		313B26A91F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_ShoppingsTableRowViewModel.swift; sourceTree = "<group>"; };
+		313B26AE1F8C21A200E55447 /* ShoppingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewModel.swift; sourceTree = "<group>"; };
+		313B26B01F8C21DE00E55447 /* Container_ShoppingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_ShoppingsViewModel.swift; sourceTree = "<group>"; };
 		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
 		317920751F884B6F00D7359F /* UIViewController_Embedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Embedding.swift; sourceTree = "<group>"; };
 		317920781F884B9A00D7359F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -156,8 +160,10 @@
 			children = (
 				313B26A91F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift */,
 				317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */,
+				313B26B01F8C21DE00E55447 /* Container_ShoppingsViewModel.swift */,
 				3179207C1F884BE800D7359F /* ShoppingsTableRowViewModel.swift */,
 				317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */,
+				313B26AE1F8C21A200E55447 /* ShoppingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -627,7 +633,9 @@
 				3179207D1F884BE800D7359F /* ShoppingsTableRowViewModel.swift in Sources */,
 				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
 				31FAEA041F7EF93100EA7660 /* Container_ShoppingsViewController.swift in Sources */,
+				313B26AF1F8C21A200E55447 /* ShoppingsViewModel.swift in Sources */,
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
+				313B26B11F8C21DE00E55447 /* Container_ShoppingsViewModel.swift in Sources */,
 				31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */,
 				319486251F7C389C00DB435B /* AppDelegate.swift in Sources */,
 				317920841F8859E600D7359F /* Container_ShoppingsTableViewModel.swift in Sources */,

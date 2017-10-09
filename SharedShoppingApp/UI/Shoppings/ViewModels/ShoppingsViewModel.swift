@@ -1,0 +1,3 @@
+class ShoppingsViewModel: ShoppingsViewControllerInputs {
+
+}

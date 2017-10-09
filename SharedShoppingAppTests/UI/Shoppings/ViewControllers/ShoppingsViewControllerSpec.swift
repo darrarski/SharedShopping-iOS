@@ -15,10 +15,12 @@ class ShoppingsViewControllerSpec: QuickSpec {
         describe("ShoppingsViewController") {
             var sut: ShoppingsViewController!
             var assembly: Assembly!
+            var inputs: Inputs!
 
             beforeEach {
                 assembly = Assembly()
-                sut = ShoppingsViewController(assembly: assembly)
+                inputs = Inputs()
+                sut = ShoppingsViewController(assembly: assembly, inputs: inputs)
             }
 
             context("load view") {
@@ -36,6 +38,10 @@ class ShoppingsViewControllerSpec: QuickSpec {
     private class Assembly: ShoppingsViewControllerAssembly {
 
         let tableViewController = UIViewController(nibName: nil, bundle: nil)
+
+    }
+
+    private class Inputs: ShoppingsViewControllerInputs {
 
     }
 

@@ -3,7 +3,8 @@ import UIKit
 extension Container {
 
     var shoppingsViewController: ShoppingsViewController {
-        return ShoppingsViewController(assembly: Assembly(container: self))
+        let viewModel = shoppingsViewModel
+        return ShoppingsViewController(assembly: Assembly(container: self), inputs: viewModel)
     }
 
     private struct Assembly: ShoppingsViewControllerAssembly {
