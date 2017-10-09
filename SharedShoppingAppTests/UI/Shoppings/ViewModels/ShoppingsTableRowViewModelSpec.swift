@@ -16,10 +16,10 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
             }
 
             context("register in table view") {
-                var tableView: TableViewSpy!
+                var tableView: UITableViewSpy!
 
                 beforeEach {
-                    tableView = TableViewSpy()
+                    tableView = UITableViewSpy()
                     sut.register(in: tableView)
                 }
 
@@ -42,13 +42,13 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
 
             describe("cell at index path in table view") {
                 var indexPath: IndexPath!
-                var tableView: TableViewSpy!
+                var tableView: UITableViewSpy!
                 var cellStub: ShoppingsTableViewCell!
                 var cell: UITableViewCell?
 
                 beforeEach {
                     indexPath = IndexPath(row: 12, section: 17)
-                    tableView = TableViewSpy()
+                    tableView = UITableViewSpy()
                     tableView.cellStub = { identifier in
                         cellStub = ShoppingsTableViewCell(style: .default, reuseIdentifier: identifier)
                         return cellStub
@@ -78,7 +78,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                     }
 
                     it("should throw assertion") {
-                        expect { _ = sut.cell(at: IndexPath(row: 0, section: 0), in: TableViewSpy()) }
+                        expect { _ = sut.cell(at: IndexPath(row: 0, section: 0), in: tableView) }
                             .to(throwAssertion())
                     }
                 }

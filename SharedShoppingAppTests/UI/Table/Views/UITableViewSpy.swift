@@ -1,6 +1,6 @@
 import UIKit
 
-class TableViewSpy: UITableView {
+class UITableViewSpy: UITableView {
 
     init() {
         super.init(frame: .zero, style: .plain)
