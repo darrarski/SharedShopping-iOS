@@ -190,6 +190,30 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		313B269E1F8BF06C00E55447 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		313B269F1F8BF08000E55447 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		313B26A01F8BF0B400E55447 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				317920811F88597000D7359F /* TableRowViewModelStub.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		317920771F884B8E00D7359F /* Table */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,8 +226,8 @@
 		3179207E1F884CED00D7359F /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				317920811F88597000D7359F /* TableRowViewModelStub.swift */,
-				3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */,
+				313B269F1F8BF08000E55447 /* ViewControllers */,
+				313B26A01F8BF0B400E55447 /* ViewModels */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -326,7 +350,7 @@
 		31FAEA061F7EFA1600EA7660 /* Shoppings */ = {
 			isa = PBXGroup;
 			children = (
-				31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */,
+				313B269E1F8BF06C00E55447 /* ViewControllers */,
 			);
 			path = Shoppings;
 			sourceTree = "<group>";
