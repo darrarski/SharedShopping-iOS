@@ -16,6 +16,13 @@ class TableViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: View
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.tableFooterView = UIView(frame: .zero)
+    }
+
     // MARK: UITableViewDelegate
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

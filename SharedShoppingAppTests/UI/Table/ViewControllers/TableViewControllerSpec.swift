@@ -59,6 +59,16 @@ class TableViewControllerSpec: QuickSpec {
                     expect(inputs.rowStub.actionsCalled).to(beTrue())
                 }
             }
+
+            context("load view") {
+                beforeEach {
+                    _ = sut.view
+                }
+
+                it("should have footer view") {
+                    expect(sut.tableView.tableFooterView).notTo(beNil())
+                }
+            }
         }
     }
 
