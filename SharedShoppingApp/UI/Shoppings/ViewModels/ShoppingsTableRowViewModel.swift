@@ -39,7 +39,7 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
 
     var actions: [UITableViewRowAction]? {
         let delete = assembly.action(style: .destructive, title: "Delete") { (_, _) in
-            // TODO:
+            // TODO: implement "delete" action
         }
         return [delete]
     }

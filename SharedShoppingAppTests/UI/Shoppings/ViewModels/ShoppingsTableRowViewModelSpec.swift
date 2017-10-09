@@ -115,6 +115,15 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                     it("should have correct title") {
                         expect(action?.title).to(equal("Delete"))
                     }
+
+                    context("perform") {
+                        beforeEach {
+                            guard let action = action else { return }
+                            action.handler(action, IndexPath(row: 12, section: 17))
+                        }
+
+                        // TODO: test "delete" action
+                    }
                 }
             }
         }

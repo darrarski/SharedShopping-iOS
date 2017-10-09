@@ -16,6 +16,14 @@ class ShoppingsViewModelSpec: QuickSpec {
             it("should have correct title") {
                 expect(sut.title).to(equal("Shared Shopping"))
             }
+
+            context("add shopping") {
+                beforeEach {
+                    sut.addShopping()
+                }
+
+                // TODO: test "add shopping" action
+            }
         }
     }
 

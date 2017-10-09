@@ -7,7 +7,7 @@ class ShoppingsViewModel: ShoppingsViewControllerInputs, ShoppingsViewController
     // MARK: ShoppingsViewControllerOutputs
 
     func addShopping() {
-        // TODO:
+        // TODO: implement "add shopping" action
     }
 
 }
