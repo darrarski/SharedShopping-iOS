@@ -90,40 +90,32 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 }
             }
 
-            describe("actions") {
-                var actions: [UITableViewRowAction]?
+            it("should have one action") {
+                expect(sut.actions).to(haveCount(1))
+            }
+
+            describe("first action") {
+                var action: UITableViewRowActionSpy?
 
                 beforeEach {
-                    actions = sut.actions
+                    action = sut.actions?.first as? UITableViewRowActionSpy
                 }
 
-                it("should be correct") {
-                    expect(actions).to(equal(assembly.createdActions))
+                it("should have correct style") {
+                    expect(action?.style).to(equal(UITableViewRowActionStyle.destructive))
                 }
 
-                describe("first") {
-                    var action: UITableViewRowActionSpy?
+                it("should have correct title") {
+                    expect(action?.title).to(equal("Delete"))
+                }
 
+                context("perform") {
                     beforeEach {
-                        action = actions?.first as? UITableViewRowActionSpy
+                        guard let action = action else { return }
+                        action.handler(action, IndexPath(row: 12, section: 17))
                     }
 
-                    it("should have correct style") {
-                        expect(action?.style).to(equal(UITableViewRowActionStyle.destructive))
-                    }
-
-                    it("should have correct title") {
-                        expect(action?.title).to(equal("Delete"))
-                    }
-
-                    context("perform") {
-                        beforeEach {
-                            guard let action = action else { return }
-                            action.handler(action, IndexPath(row: 12, section: 17))
-                        }
-
-                        // TODO: test "delete" action
-                    }
+                    // TODO: test "delete" action
                 }
             }
         }
