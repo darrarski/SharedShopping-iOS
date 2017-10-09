@@ -17,7 +17,9 @@ extension Container {
             if isRunningTests {
                 window.rootViewController = UIViewController(nibName: nil, bundle: nil)
             } else {
-                window.rootViewController = container.shoppingsViewController
+                let shoppingsViewController = container.shoppingsViewController
+                let navigationController = UINavigationController(rootViewController: shoppingsViewController)
+                window.rootViewController = navigationController
             }
             return window
         }
