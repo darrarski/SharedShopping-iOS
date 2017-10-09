@@ -10,7 +10,7 @@ class ShoppingsTableViewModel: TableViewControllerInputs {
     }
 
     func rowViewModel(at indexPath: IndexPath) -> TableRowViewModel {
-        return ShoppingsTableRow(inputs: ShoppingsTableRowViewModel())
+        return ShoppingsTableRow()
     }
 
     // MARK: Private

@@ -1,14 +1,6 @@
 import UIKit
 
-protocol ShoppingsTableRowInputs {
-
-}
-
 class ShoppingsTableRow: TableRowViewModel {
-
-    init(inputs: ShoppingsTableRowInputs) {
-        self.inputs = inputs
-    }
 
     // MARK: TableRowViewModel
 
@@ -30,9 +22,5 @@ class ShoppingsTableRow: TableRowViewModel {
         cell.nameLabel.text = "Shopping #\(indexPath.row + 1)"
         return cell
     }
-
-    // MARK: Private
-
-    private let inputs: ShoppingsTableRowInputs
 
 }

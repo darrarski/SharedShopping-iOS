@@ -1,5 +1,3 @@
-class ShoppingsTableRowViewModel: ShoppingsTableRowInputs {
-
-    // MARK: ShoppingsTableRowInputs
+class ShoppingsTableRowViewModel {
 
 }
