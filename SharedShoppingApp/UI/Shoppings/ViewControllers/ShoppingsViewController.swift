@@ -8,9 +8,15 @@ protocol ShoppingsViewControllerInputs {
     var title: String { get }
 }
 
+protocol ShoppingsViewControllerOutputs {
+
+}
+
 class ShoppingsViewController: UIViewController {
 
-    init(assembly: ShoppingsViewControllerAssembly, inputs: ShoppingsViewControllerInputs) {
+    init(assembly: ShoppingsViewControllerAssembly,
+         inputs: ShoppingsViewControllerInputs,
+         outputs: ShoppingsViewControllerOutputs) {
         tableViewController = assembly.tableViewController
         super.init(nibName: nil, bundle: nil)
         title = inputs.title

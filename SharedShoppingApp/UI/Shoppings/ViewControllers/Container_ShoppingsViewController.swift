@@ -4,7 +4,7 @@ extension Container {
 
     var shoppingsViewController: ShoppingsViewController {
         let viewModel = shoppingsViewModel
-        return ShoppingsViewController(assembly: Assembly(container: self), inputs: viewModel)
+        return ShoppingsViewController(assembly: Assembly(container: self), inputs: viewModel, outputs: viewModel)
     }
 
     private struct Assembly: ShoppingsViewControllerAssembly {

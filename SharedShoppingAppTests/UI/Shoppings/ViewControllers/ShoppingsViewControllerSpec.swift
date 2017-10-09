@@ -16,11 +16,13 @@ class ShoppingsViewControllerSpec: QuickSpec {
             var sut: ShoppingsViewController!
             var assembly: Assembly!
             var inputs: Inputs!
+            var outputs: Outputs!
 
             beforeEach {
                 assembly = Assembly()
                 inputs = Inputs()
-                sut = ShoppingsViewController(assembly: assembly, inputs: inputs)
+                outputs = Outputs()
+                sut = ShoppingsViewController(assembly: assembly, inputs: inputs, outputs: outputs)
             }
 
             it("should have correct title") {
@@ -52,6 +54,10 @@ class ShoppingsViewControllerSpec: QuickSpec {
     private class Inputs: ShoppingsViewControllerInputs {
 
         let title = "Test Title"
+
+    }
+
+    private class Outputs: ShoppingsViewControllerOutputs {
 
     }
 
