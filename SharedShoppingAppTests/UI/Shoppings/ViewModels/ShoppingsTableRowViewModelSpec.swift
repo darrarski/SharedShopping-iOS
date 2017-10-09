@@ -71,7 +71,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 }
 
                 it("should have correct title") {
-                    expect(cellStub.titleLabel.text).to(equal("Shopping \(shopping.name)"))
+                    expect(cellStub.titleLabel.text).to(equal(shopping.name))
                 }
 
                 it("should have correct date") {
