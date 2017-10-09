@@ -8,6 +8,7 @@ class ShoppingsTableViewModel: TableViewControllerInputs {
 
     init(assembly: ShoppingsTableViewModelAssembly) {
         rowViewModels = ["A", "B", "C", "D"]
+            .map { "Shopping \($0)" }
             .map { Shopping(name: $0, date: Date()) }
             .map { assembly.shoppingsTableRowViewModel(shopping: $0) }
     }
