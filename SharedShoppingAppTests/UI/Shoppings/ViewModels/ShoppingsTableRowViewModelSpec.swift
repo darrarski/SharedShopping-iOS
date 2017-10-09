@@ -95,10 +95,10 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
             }
 
             describe("first action") {
-                var action: UITableViewRowActionSpy?
+                var action: UITableViewRowAction?
 
                 beforeEach {
-                    action = sut.actions?.first as? UITableViewRowActionSpy
+                    action = sut.actions?.first
                 }
 
                 it("should have correct style") {
@@ -111,7 +111,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
 
                 context("perform") {
                     beforeEach {
-                        guard let action = action else { return }
+                        guard let action = action as? UITableViewRowActionSpy else { return }
                         action.handler(action, IndexPath(row: 12, section: 17))
                     }
 
