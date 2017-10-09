@@ -10,7 +10,7 @@ extension Container {
 
         // MARK: ShoppingsTableViewModelAssembly
 
-        func shoppingsTableRowViewModel(shopping: Shopping) -> ShoppingsTableRowViewModel {
+        func tableRowViewModel(shopping: Shopping) -> TableRowViewModel {
             return container.shoppingsTableRowViewModel(shopping: shopping)
         }
 
