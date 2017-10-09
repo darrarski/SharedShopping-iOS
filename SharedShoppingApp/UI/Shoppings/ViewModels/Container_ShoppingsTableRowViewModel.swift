@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 extension Container {
 
@@ -15,6 +15,12 @@ extension Container {
             formatter.dateStyle = .medium
             formatter.timeStyle = .short
             return formatter
+        }
+
+        func action(style: UITableViewRowActionStyle,
+                    title: String?,
+                    handler: @escaping (UITableViewRowAction, IndexPath) -> Void) -> UITableViewRowAction {
+            return UITableViewRowAction(style: style, title: title, handler: handler)
         }
 
     }

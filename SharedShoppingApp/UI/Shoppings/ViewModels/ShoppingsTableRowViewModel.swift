@@ -2,12 +2,16 @@ import UIKit
 
 protocol ShoppingsTableRowViewModelAssembly {
     var dateFormatter: DateFormatter { get }
+    func action(style: UITableViewRowActionStyle,
+                title: String?,
+                handler: @escaping (UITableViewRowAction, IndexPath) -> Void) -> UITableViewRowAction
 }
 
 class ShoppingsTableRowViewModel: TableRowViewModel {
 
     init(shopping: Shopping, assembly: ShoppingsTableRowViewModelAssembly) {
         self.shopping = shopping
+        self.assembly = assembly
         self.dateFormatter = assembly.dateFormatter
     }
 
@@ -34,7 +38,7 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     }
 
     var actions: [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { _, _ in
+        let delete = assembly.action(style: .destructive, title: "Delete") { (_, _) in
             // TODO:
         }
         return [delete]
@@ -42,6 +46,7 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
 
     // MARK: Private
 
+    private let assembly: ShoppingsTableRowViewModelAssembly
     private let shopping: Shopping
     private let dateFormatter: DateFormatter
 

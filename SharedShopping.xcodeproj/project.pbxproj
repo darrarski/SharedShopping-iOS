@@ -227,8 +227,8 @@
 		313B26A41F8BFF7B00E55447 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				313B26A51F8BFF8900E55447 /* UITableViewSpy.swift */,
 				313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */,
+				313B26A51F8BFF8900E55447 /* UITableViewSpy.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

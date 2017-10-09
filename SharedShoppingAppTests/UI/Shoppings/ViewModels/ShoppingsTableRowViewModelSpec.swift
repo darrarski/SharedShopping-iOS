@@ -90,10 +90,39 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 }
             }
 
+            describe("actions") {
+                var actions: [UITableViewRowAction]?
+
+                beforeEach {
+                    actions = sut.actions
+                }
+
+                it("should be correct") {
+                    expect(actions).to(equal(assembly.createdActions))
+                }
+
+                describe("first") {
+                    var action: UITableViewRowActionSpy?
+
+                    beforeEach {
+                        action = actions?.first as? UITableViewRowActionSpy
+                    }
+
+                    it("should have correct style") {
+                        expect(action?.style).to(equal(UITableViewRowActionStyle.destructive))
+                    }
+
+                    it("should have correct title") {
+                        expect(action?.title).to(equal("Delete"))
+                    }
+                }
+            }
         }
     }
 
     private class Assembly: ShoppingsTableRowViewModelAssembly {
+
+        var createdActions: [UITableViewRowActionSpy] = []
 
         // MARK: ShoppingsTableRowViewModelAssembly
 
@@ -103,6 +132,14 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
             formatter.timeStyle = .long
             return formatter
         }()
+
+        func action(style: UITableViewRowActionStyle,
+                    title: String?,
+                    handler: @escaping (UITableViewRowAction, IndexPath) -> Void) -> UITableViewRowAction {
+            let action = UITableViewRowActionSpy(style: style, title: title, handler: handler)
+            createdActions.append(action)
+            return action
+        }
 
     }
 
