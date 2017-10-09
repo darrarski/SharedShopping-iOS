@@ -17,9 +17,10 @@ class ShoppingsViewController: UIViewController {
     init(assembly: ShoppingsViewControllerAssembly,
          inputs: ShoppingsViewControllerInputs,
          outputs: ShoppingsViewControllerOutputs) {
-        tableViewController = assembly.tableViewController
+        self.assembly = assembly
+        self.inputs = inputs
+        self.outputs = outputs
         super.init(nibName: nil, bundle: nil)
-        title = inputs.title
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -30,14 +31,15 @@ class ShoppingsViewController: UIViewController {
 
     override func loadView() {
         view = UIView(frame: .zero)
+        embed(assembly.tableViewController, in: view)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = inputs.title
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(rightBarButtonItemAction))
-        embed(tableViewController, in: view)
     }
 
     @objc func rightBarButtonItemAction() {
@@ -46,6 +48,8 @@ class ShoppingsViewController: UIViewController {
 
     // MARK: Private
 
-    private let tableViewController: UIViewController
+    private let assembly: ShoppingsViewControllerAssembly
+    private let inputs: ShoppingsViewControllerInputs
+    private let outputs: ShoppingsViewControllerOutputs
 
 }

@@ -25,21 +25,21 @@ class ShoppingsViewControllerSpec: QuickSpec {
                 sut = ShoppingsViewController(assembly: assembly, inputs: inputs, outputs: outputs)
             }
 
-            it("should have correct title") {
-                expect(sut.title).to(equal(inputs.title))
-            }
-
             context("load view") {
                 beforeEach {
                     _ = sut.view
                 }
 
-                it("should have right bar button item in navigation item") {
-                    expect(sut.navigationItem.rightBarButtonItem).notTo(beNil())
-                }
-
                 it("should embed tableViewController") {
                     expect(sut.childViewControllers).to(contain(assembly.tableViewController))
+                }
+
+                it("should have correct title") {
+                    expect(sut.title).to(equal(inputs.title))
+                }
+
+                it("should have right bar button item in navigation item") {
+                    expect(sut.navigationItem.rightBarButtonItem).notTo(beNil())
                 }
             }
         }
