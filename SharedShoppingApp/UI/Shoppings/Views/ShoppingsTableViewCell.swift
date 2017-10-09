@@ -31,8 +31,15 @@ class ShoppingsTableViewCell: UITableViewCell {
         return label
     }()
 
+    let dateLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        return label
+    }()
+
     private func loadSubviews() {
         contentView.addSubview(titleLabel)
+        contentView.addSubview(dateLabel)
     }
 
     // MARK: Layout
@@ -40,6 +47,11 @@ class ShoppingsTableViewCell: UITableViewCell {
     private func setupLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(16)
+            $0.leading.equalToSuperview().offset(16)
+            $0.trailing.lessThanOrEqualToSuperview().offset(-16)
+        }
+        dateLabel.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(8)
             $0.leading.equalToSuperview().offset(16)
             $0.trailing.lessThanOrEqualToSuperview().offset(-16)
             $0.bottom.lessThanOrEqualToSuperview().offset(-16)
