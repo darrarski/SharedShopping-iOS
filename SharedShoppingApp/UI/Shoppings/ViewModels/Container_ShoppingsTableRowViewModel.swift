@@ -11,7 +11,10 @@ extension Container {
         // MARK: ShoppingsTableRowViewModelAssembly
 
         var dateFormatter: DateFormatter {
-            return DateFormatter()
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .short
+            return formatter
         }
 
     }
