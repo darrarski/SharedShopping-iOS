@@ -68,8 +68,8 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                     expect(cell).to(be(cellStub))
                 }
 
-                it("should have correct nameLabel text") {
-                    expect(cellStub.nameLabel.text).to(equal("Shopping \(shopping.name)"))
+                it("should have correct title") {
+                    expect(cellStub.titleLabel.text).to(equal("Shopping \(shopping.name)"))
                 }
 
                 describe("when wrong cell is dequeued") {

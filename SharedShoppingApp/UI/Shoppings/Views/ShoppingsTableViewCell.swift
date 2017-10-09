@@ -25,20 +25,20 @@ class ShoppingsTableViewCell: UITableViewCell {
 
     // MARK: Subviews
 
-    let nameLabel: UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
         return label
     }()
 
     private func loadSubviews() {
-        contentView.addSubview(nameLabel)
+        contentView.addSubview(titleLabel)
     }
 
     // MARK: Layout
 
     private func setupLayout() {
-        nameLabel.snp.makeConstraints {
+        titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(16)
             $0.leading.equalToSuperview().offset(16)
             $0.trailing.lessThanOrEqualToSuperview().offset(-16)
@@ -49,7 +49,7 @@ class ShoppingsTableViewCell: UITableViewCell {
     // MARK: Private
 
     private func cleanUp() {
-        nameLabel.text = nil
+        titleLabel.text = nil
     }
 
 }
