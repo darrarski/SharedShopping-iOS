@@ -33,6 +33,13 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
         return cell
     }
 
+    var actions: [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { _, _ in
+            // TODO:
+        }
+        return [delete]
+    }
+
     // MARK: Private
 
     private let shopping: Shopping
