@@ -11,7 +11,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
             var shopping: Shopping!
 
             beforeEach {
-                shopping = Shopping(name: "Test Shopping")
+                shopping = Shopping(name: "Test Shopping", date: Date())
                 sut = ShoppingsTableRowViewModel(shopping: shopping)
             }
 

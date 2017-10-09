@@ -4,7 +4,7 @@ class ShoppingsTableViewModel: TableViewControllerInputs {
 
     init() {
         let names = ["A", "B", "C", "D"]
-        let shoppings = names.map { Shopping(name: $0) }
+        let shoppings = names.map { Shopping(name: $0, date: Date()) }
         shoppingRowViewModels = shoppings.map { ShoppingsTableRowViewModel(shopping: $0) }
     }
 
