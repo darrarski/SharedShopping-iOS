@@ -74,6 +74,10 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                     expect(cellStub.titleLabel.text).to(equal("Shopping \(shopping.name)"))
                 }
 
+                it("should have correct date") {
+                    expect(cellStub.dateLabel.text).to(equal(assembly.dateFormatter.string(from: shopping.date)))
+                }
+
                 describe("when wrong cell is dequeued") {
                     beforeEach {
                         tableView.cellStub = { UITableViewCell(style: .default, reuseIdentifier: $0) }
