@@ -1,15 +1,17 @@
 extension Container {
 
     var shoppingsTableViewModel: ShoppingsTableViewModel {
-        return ShoppingsTableViewModel(assembly: Assembly())
+        return ShoppingsTableViewModel(assembly: Assembly(container: self))
     }
 
     private struct Assembly: ShoppingsTableViewModelAssembly {
 
+        let container: Container
+
         // MARK: ShoppingsTableViewModelAssembly
 
         func shoppingsTableRowViewModel(shopping: Shopping) -> ShoppingsTableRowViewModel {
-            return ShoppingsTableRowViewModel(shopping: shopping)
+            return self.shoppingsTableRowViewModel(shopping: shopping)
         }
 
     }

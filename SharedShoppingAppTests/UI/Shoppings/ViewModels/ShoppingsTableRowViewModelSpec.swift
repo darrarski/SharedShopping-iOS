@@ -9,10 +9,12 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
         describe("ShoppingsTableRowViewModel") {
             var sut: ShoppingsTableRowViewModel!
             var shopping: Shopping!
+            var assembly: Assembly!
 
             beforeEach {
                 shopping = Shopping(name: "Test Shopping", date: Date())
-                sut = ShoppingsTableRowViewModel(shopping: shopping)
+                assembly = Assembly()
+                sut = ShoppingsTableRowViewModel(shopping: shopping, assembly: assembly)
             }
 
             context("register in table view") {
@@ -85,6 +87,14 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
             }
 
         }
+    }
+
+    private class Assembly: ShoppingsTableRowViewModelAssembly {
+
+        // MARK: ShoppingsTableRowViewModelAssembly
+
+        let dateFormatter = DateFormatter()
+
     }
 
 }

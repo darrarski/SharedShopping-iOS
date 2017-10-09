@@ -1,9 +1,14 @@
 import UIKit
 
+protocol ShoppingsTableRowViewModelAssembly {
+    var dateFormatter: DateFormatter { get }
+}
+
 class ShoppingsTableRowViewModel: TableRowViewModel {
 
-    init(shopping: Shopping) {
+    init(shopping: Shopping, assembly: ShoppingsTableRowViewModelAssembly) {
         self.shopping = shopping
+        self.dateFormatter = assembly.dateFormatter
     }
 
     // MARK: TableRowViewModel
@@ -30,5 +35,6 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     // MARK: Private
 
     private let shopping: Shopping
+    private let dateFormatter: DateFormatter
 
 }
