@@ -9,7 +9,7 @@ class ShoppingsTableViewModel: TableViewControllerInputs {
         return items.count
     }
 
-    func row(at indexPath: IndexPath) -> TableRowViewModel {
+    func rowViewModel(at indexPath: IndexPath) -> TableRowViewModel {
         return ShoppingsTableRow(inputs: ShoppingsTableRowViewModel())
     }
 

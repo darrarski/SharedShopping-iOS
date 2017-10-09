@@ -2,7 +2,7 @@ import UIKit
 
 protocol TableRowViewModel {
     func register(in tableView: UITableView)
-    func estimatedHeight(at indexPath: IndexPath) -> CGFloat
-    func height(at indexPath: IndexPath) -> CGFloat
+    var estimatedHeight: CGFloat { get }
+    var height: CGFloat { get }
     func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell
 }

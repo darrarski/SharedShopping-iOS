@@ -2,7 +2,7 @@ import UIKit
 
 protocol TableViewControllerInputs {
     func numberOfRows(in section: Int) -> Int
-    func row(at indexPath: IndexPath) -> TableRowViewModel
+    func rowViewModel(at indexPath: IndexPath) -> TableRowViewModel
 }
 
 class TableViewController: UITableViewController {
@@ -19,11 +19,11 @@ class TableViewController: UITableViewController {
     // MARK: UITableViewDelegate
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return inputs.row(at: indexPath).height(at: indexPath)
+        return inputs.rowViewModel(at: indexPath).height
     }
 
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return inputs.row(at: indexPath).estimatedHeight(at: indexPath)
+        return inputs.rowViewModel(at: indexPath).estimatedHeight
     }
 
     // MARK: UITableViewDataSource
@@ -33,7 +33,7 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = inputs.row(at: indexPath)
+        let row = inputs.rowViewModel(at: indexPath)
         row.register(in: tableView)
         return row.cell(at: indexPath, in: tableView)
     }

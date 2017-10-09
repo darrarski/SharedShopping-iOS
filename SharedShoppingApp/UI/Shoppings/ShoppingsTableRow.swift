@@ -16,11 +16,11 @@ class ShoppingsTableRow: TableRowViewModel {
         tableView.register(ShoppingsTableViewCell.self, forCellReuseIdentifier: "shopping")
     }
 
-    func estimatedHeight(at indexPath: IndexPath) -> CGFloat {
+    var estimatedHeight: CGFloat {
         return 60
     }
 
-    func height(at indexPath: IndexPath) -> CGFloat {
+    var height: CGFloat {
         return UITableViewAutomaticDimension
     }
 
