@@ -11,7 +11,7 @@ extension Container {
         // MARK: ShoppingsTableViewModelAssembly
 
         func shoppingsTableRowViewModel(shopping: Shopping) -> ShoppingsTableRowViewModel {
-            return self.shoppingsTableRowViewModel(shopping: shopping)
+            return container.shoppingsTableRowViewModel(shopping: shopping)
         }
 
     }
