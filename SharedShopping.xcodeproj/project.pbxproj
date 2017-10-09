@@ -139,11 +139,62 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		317920771F884B8E00D7359F /* Table */ = {
+		313B26981F8BEE0400E55447 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				3179207A1F884BBB00D7359F /* TableRowViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		313B26991F8BEE0C00E55447 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				317920781F884B9A00D7359F /* TableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		313B269A1F8BEE2900E55447 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31FAEA031F7EF93100EA7660 /* Container_ShoppingsViewController.swift */,
+				31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		313B269B1F8BEE3600E55447 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */,
+				3179207C1F884BE800D7359F /* ShoppingsTableRowViewModel.swift */,
+				317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		313B269C1F8BEE4A00E55447 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		313B269D1F8BEE7B00E55447 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				317920751F884B6F00D7359F /* UIViewController_Embedding.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		317920771F884B8E00D7359F /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				313B26991F8BEE0C00E55447 /* ViewControllers */,
+				313B26981F8BEE0400E55447 /* ViewModels */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -210,10 +261,10 @@
 		319486381F7C391B00DB435B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				313B269D1F8BEE7B00E55447 /* Helpers */,
 				3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */,
 				31FAEA001F7EF8FD00EA7660 /* Shoppings */,
 				317920771F884B8E00D7359F /* Table */,
-				317920751F884B6F00D7359F /* UIViewController_Embedding.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -256,12 +307,9 @@
 		31FAEA001F7EF8FD00EA7660 /* Shoppings */ = {
 			isa = PBXGroup;
 			children = (
-				317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */,
-				31FAEA031F7EF93100EA7660 /* Container_ShoppingsViewController.swift */,
-				3179207C1F884BE800D7359F /* ShoppingsTableRowViewModel.swift */,
-				316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */,
-				317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */,
-				31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */,
+				313B269A1F8BEE2900E55447 /* ViewControllers */,
+				313B269B1F8BEE3600E55447 /* ViewModels */,
+				313B269C1F8BEE4A00E55447 /* Views */,
 			);
 			path = Shoppings;
 			sourceTree = "<group>";
