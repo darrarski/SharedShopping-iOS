@@ -1,6 +1,6 @@
 import UIKit
 
-class ShoppingsTableRow: TableRowViewModel {
+class ShoppingsTableRowViewModel: TableRowViewModel {
 
     // MARK: TableRowViewModel
 
