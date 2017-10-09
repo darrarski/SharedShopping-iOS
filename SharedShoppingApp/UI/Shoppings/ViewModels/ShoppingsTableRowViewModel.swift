@@ -29,6 +29,7 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "shopping",
                                                        for: indexPath) as? ShoppingsTableViewCell else { fatalError() }
         cell.titleLabel.text = "Shopping \(shopping.name)"
+        cell.dateLabel.text = dateFormatter.string(from: shopping.date)
         return cell
     }
 
