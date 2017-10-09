@@ -32,6 +32,10 @@ class ShoppingsViewControllerSpec: QuickSpec {
                     _ = sut.view
                 }
 
+                it("should have right bar button item in navigation item") {
+                    expect(sut.navigationItem.rightBarButtonItem).notTo(beNil())
+                }
+
                 it("should embed tableViewController") {
                     expect(sut.childViewControllers).to(contain(assembly.tableViewController))
                 }

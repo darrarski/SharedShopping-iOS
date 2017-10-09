@@ -28,7 +28,14 @@ class ShoppingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                            target: self,
+                                                            action: #selector(rightBarButtonItemAction))
         embed(tableViewController, in: view)
+    }
+
+    @objc func rightBarButtonItemAction() {
+        // TODO:
     }
 
     // MARK: Private
