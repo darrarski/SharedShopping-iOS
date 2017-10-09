@@ -5,7 +5,7 @@ protocol ShoppingsViewControllerAssembly {
 }
 
 protocol ShoppingsViewControllerInputs {
-
+    var title: String { get }
 }
 
 class ShoppingsViewController: UIViewController {
@@ -13,6 +13,7 @@ class ShoppingsViewController: UIViewController {
     init(assembly: ShoppingsViewControllerAssembly, inputs: ShoppingsViewControllerInputs) {
         tableViewController = assembly.tableViewController
         super.init(nibName: nil, bundle: nil)
+        title = inputs.title
     }
 
     required init?(coder aDecoder: NSCoder) {

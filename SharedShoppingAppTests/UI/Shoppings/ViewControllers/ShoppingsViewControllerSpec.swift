@@ -23,6 +23,10 @@ class ShoppingsViewControllerSpec: QuickSpec {
                 sut = ShoppingsViewController(assembly: assembly, inputs: inputs)
             }
 
+            it("should have correct title") {
+                expect(sut.title).to(equal(inputs.title))
+            }
+
             context("load view") {
                 beforeEach {
                     _ = sut.view
@@ -42,6 +46,8 @@ class ShoppingsViewControllerSpec: QuickSpec {
     }
 
     private class Inputs: ShoppingsViewControllerInputs {
+
+        let title = "Test Title"
 
     }
 
