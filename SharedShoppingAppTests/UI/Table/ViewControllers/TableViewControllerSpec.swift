@@ -27,11 +27,9 @@ class TableViewControllerSpec: QuickSpec {
             }
 
             describe("row 7 in section 11") {
-                var row: TableRowViewModelStub!
                 var indexPath: IndexPath!
 
                 beforeEach {
-                    row = inputs.rowStub
                     inputs.rowStub.actionsStub = [
                         UITableViewRowAction(style: .default, title: "Test Action", handler: { _, _ in })
                     ]
@@ -39,21 +37,21 @@ class TableViewControllerSpec: QuickSpec {
                 }
 
                 it("should have correct estimated height") {
-                    expect(sut.tableView(sut.tableView, estimatedHeightForRowAt: indexPath)).to(equal(row.estimatedHeightStub))
-                    expect(row.estimatedHeightCalled).to(beTrue())
+                    expect(sut.tableView(sut.tableView, estimatedHeightForRowAt: indexPath)).to(equal(inputs.rowStub.estimatedHeightStub))
+                    expect(inputs.rowStub.estimatedHeightCalled).to(beTrue())
                 }
 
                 it("should have correct height") {
-                    expect(sut.tableView(sut.tableView, heightForRowAt: indexPath)).to(equal(row.heightStub))
-                    expect(row.heightCalled).to(beTrue())
+                    expect(sut.tableView(sut.tableView, heightForRowAt: indexPath)).to(equal(inputs.rowStub.heightStub))
+                    expect(inputs.rowStub.heightCalled).to(beTrue())
                 }
 
                 it("should have correct cell") {
-                    expect(sut.tableView(sut.tableView, cellForRowAt: indexPath)).to(be(row.cellStub))
+                    expect(sut.tableView(sut.tableView, cellForRowAt: indexPath)).to(be(inputs.rowStub.cellStub))
                     expect(inputs.rowViewModelAtIndexPathCalled).to(equal(indexPath))
-                    expect(row.registerInTableViewCalled).to(be(sut.tableView))
-                    expect(row.cellAtIndexPathInTableViewCalled?.0).to(equal(indexPath))
-                    expect(row.cellAtIndexPathInTableViewCalled?.1).to(be(sut.tableView))
+                    expect(inputs.rowStub.registerInTableViewCalled).to(be(sut.tableView))
+                    expect(inputs.rowStub.cellAtIndexPathInTableViewCalled?.0).to(equal(indexPath))
+                    expect(inputs.rowStub.cellAtIndexPathInTableViewCalled?.1).to(be(sut.tableView))
                 }
 
                 it("should have correct actions") {
