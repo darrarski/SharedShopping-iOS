@@ -75,7 +75,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 }
 
                 it("should have correct date") {
-                    expect(cellStub.dateLabel.text).to(equal(assembly.dateFormatter.string(from: shopping.date)))
+                    expect(cellStub.subtitleLabel.text).to(equal(assembly.dateFormatter.string(from: shopping.date)))
                 }
 
                 describe("when wrong cell is dequeued") {
