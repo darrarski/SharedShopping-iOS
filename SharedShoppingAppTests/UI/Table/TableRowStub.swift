@@ -12,7 +12,7 @@ class TableRowStub: TableRow {
     var heightAtIndexPathCalled: (IndexPath)?
     var cellAtIndexPathInTableViewCalled: (IndexPath, UITableView)?
 
-    // MARK: TableRow
+    // MARK: TableRowViewModel
 
     func register(in tableView: UITableView) {
         registerInTableViewCalled = (tableView)

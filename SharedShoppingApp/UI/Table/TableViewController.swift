@@ -2,7 +2,7 @@ import UIKit
 
 protocol TableViewControllerInputs {
     func numberOfRows(in section: Int) -> Int
-    func row(at indexPath: IndexPath) -> TableRow
+    func row(at indexPath: IndexPath) -> TableRowViewModel
 }
 
 class TableViewController: UITableViewController {

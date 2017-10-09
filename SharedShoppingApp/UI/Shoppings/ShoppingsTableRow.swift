@@ -4,13 +4,13 @@ protocol ShoppingsTableRowInputs {
 
 }
 
-class ShoppingsTableRow: TableRow {
+class ShoppingsTableRow: TableRowViewModel {
 
     init(inputs: ShoppingsTableRowInputs) {
         self.inputs = inputs
     }
 
-    // MARK: TableRow
+    // MARK: TableRowViewModel
 
     func register(in tableView: UITableView) {
         tableView.register(ShoppingsTableViewCell.self, forCellReuseIdentifier: "shopping")

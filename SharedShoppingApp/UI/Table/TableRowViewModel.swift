@@ -1,6 +1,6 @@
 import UIKit
 
-protocol TableRow {
+protocol TableRowViewModel {
     func register(in tableView: UITableView)
     func estimatedHeight(at indexPath: IndexPath) -> CGFloat
     func height(at indexPath: IndexPath) -> CGFloat
