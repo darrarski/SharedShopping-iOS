@@ -27,7 +27,7 @@ class ShoppingsTableViewCell: UITableViewCell {
 
     let titleLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
         return label
     }()
 
