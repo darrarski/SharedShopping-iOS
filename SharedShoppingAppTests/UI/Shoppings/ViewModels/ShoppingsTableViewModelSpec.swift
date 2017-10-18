@@ -38,8 +38,13 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                     rowViewModel = sut.rowViewModel(at: IndexPath(row: 0, section: 0))
                 }
 
+                it("should create rowViewModel with correct shopping") {
+                    expect(assembly.tableRowViewModelShoppingCalled)
+                        .to(equal(assembly.shoppingsProviderStub.shoppingsVar.value[0]))
+                }
+
                 it("should be correct") {
-                    expect(rowViewModel).to(be(assembly.tableRowViewModelStub))
+                    expect(rowViewModel).to(be(assembly.createdTableRowViewModel))
                 }
             }
 
@@ -76,7 +81,7 @@ class ShoppingsTableViewModelSpec: QuickSpec {
     private class Assembly: ShoppingsTableViewModelAssembly {
 
         var shoppingsProviderStub = ShoppingsProviderStub()
-        var tableRowViewModelStub = TableRowViewModelStub()
+        var createdTableRowViewModel: TableRowViewModelStub?
 
         var tableRowViewModelShoppingCalled: (Shopping)?
 
@@ -88,7 +93,9 @@ class ShoppingsTableViewModelSpec: QuickSpec {
 
         func tableRowViewModel(shopping: Shopping) -> TableRowViewModel {
             tableRowViewModelShoppingCalled = (shopping)
-            return tableRowViewModelStub
+            let rowViewModel = TableRowViewModelStub(shopping: shopping)
+            createdTableRowViewModel = rowViewModel
+            return rowViewModel
         }
 
     }

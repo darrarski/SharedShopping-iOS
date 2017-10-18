@@ -89,7 +89,7 @@ class TableViewControllerSpec: QuickSpec {
     private class Inputs: TableViewControllerInputs {
 
         var numberOfRowsStub: Int = 15
-        var rowStub = TableRowViewModelStub()
+        var rowStub = TableRowViewModelStub(shopping: Shopping(name: "Tesy", date: Date()))
         let eventSubject = PublishSubject<TableViewController.Event>()
 
         var numberOfRowsInSectionCalled: Int?

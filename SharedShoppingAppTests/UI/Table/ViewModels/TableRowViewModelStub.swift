@@ -3,6 +3,12 @@ import UIKit
 
 class TableRowViewModelStub: TableRowViewModel {
 
+    init(shopping: Shopping) {
+        self.shopping = shopping
+    }
+
+    let shopping: Shopping
+
     var estimatedHeightStub = CGFloat(66)
     var heightStub = CGFloat(55)
     var cellStub = UITableViewCell(style: .default, reuseIdentifier: "")
@@ -41,7 +47,8 @@ class TableRowViewModelStub: TableRowViewModel {
     }
 
     func isEqual(to other: TableRowViewModel) -> Bool {
-        return false // TODO:
+        guard let other = other as? TableRowViewModelStub else { return false }
+        return shopping == other.shopping
     }
 
 }
