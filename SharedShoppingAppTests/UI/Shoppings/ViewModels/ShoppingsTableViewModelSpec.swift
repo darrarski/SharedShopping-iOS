@@ -12,6 +12,12 @@ class ShoppingsTableViewModelSpec: QuickSpec {
 
             beforeEach {
                 assembly = Assembly()
+                assembly.shoppingsProviderStub.stubShoppings = [
+                    Shopping(name: "Shopping 1", date: Date()),
+                    Shopping(name: "Shopping 2", date: Date()),
+                    Shopping(name: "Shopping 3", date: Date()),
+                    Shopping(name: "Shopping 4", date: Date())
+                ]
                 sut = ShoppingsTableViewModel(assembly: assembly)
             }
 
@@ -30,10 +36,6 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                     rowViewModel = sut.rowViewModel(at: IndexPath(row: 0, section: 0))
                 }
 
-                it("should call assembly") {
-                    expect(assembly.tableRowViewModelShoppingCalled).notTo(beNil())
-                }
-
                 it("should be correct") {
                     expect(rowViewModel).to(be(assembly.tableRowViewModelStub))
                 }
@@ -47,11 +49,16 @@ class ShoppingsTableViewModelSpec: QuickSpec {
 
     private class Assembly: ShoppingsTableViewModelAssembly {
 
+        var shoppingsProviderStub = ShoppingsProviderStub()
         var tableRowViewModelStub = TableRowViewModelStub()
 
         var tableRowViewModelShoppingCalled: (Shopping)?
 
         // MARK: ShoppingsTableViewModelAssembly
+
+        var shoppingsProvider: ShoppingsProviding {
+            return shoppingsProviderStub
+        }
 
         func tableRowViewModel(shopping: Shopping) -> TableRowViewModel {
             tableRowViewModelShoppingCalled = (shopping)

@@ -10,6 +10,10 @@ extension Container {
 
         // MARK: ShoppingsTableViewModelAssembly
 
+        var shoppingsProvider: ShoppingsProviding {
+            return container.shoppingService
+        }
+
         func tableRowViewModel(shopping: Shopping) -> TableRowViewModel {
             return container.shoppingsTableRowViewModel(shopping: shopping)
         }

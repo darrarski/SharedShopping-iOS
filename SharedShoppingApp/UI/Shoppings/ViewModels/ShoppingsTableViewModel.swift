@@ -1,16 +1,15 @@
 import UIKit
 
 protocol ShoppingsTableViewModelAssembly {
+    var shoppingsProvider: ShoppingsProviding { get }
     func tableRowViewModel(shopping: Shopping) -> TableRowViewModel
 }
 
 class ShoppingsTableViewModel: TableViewControllerInputs {
 
     init(assembly: ShoppingsTableViewModelAssembly) {
-        rowViewModels = ["A", "B", "C", "D"]
-            .map { "Shopping \($0)" }
-            .map { Shopping(name: $0, date: Date()) }
-            .map { assembly.tableRowViewModel(shopping: $0) }
+        shoppingsProvider = assembly.shoppingsProvider
+        rowViewModels = shoppingsProvider.shoppings().map { assembly.tableRowViewModel(shopping: $0) }
     }
 
     // MARK: TableViewControllerInputs
@@ -31,6 +30,7 @@ class ShoppingsTableViewModel: TableViewControllerInputs {
 
     // MARK: Private
 
+    private let shoppingsProvider: ShoppingsProviding
     private let rowViewModels: [TableRowViewModel]
 
 }
