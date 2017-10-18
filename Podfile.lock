@@ -1,4 +1,5 @@
 PODS:
+  - Differ (1.0.2)
   - Nimble (7.0.2)
   - Quick (1.2.0)
   - Reveal-SDK (11)
@@ -13,6 +14,7 @@ PODS:
   - SwiftLint (0.23.1)
 
 DEPENDENCIES:
+  - Differ (~> 1.0)
   - Nimble (~> 7.0)
   - Quick (~> 1.1)
   - Reveal-SDK
@@ -24,6 +26,7 @@ DEPENDENCIES:
   - SwiftLint (~> 0.22)
 
 SPEC CHECKSUMS:
+  Differ: a571b66c49d0fc83fe5af9a4a41f09bb09e91c85
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Reveal-SDK: 7fa13d04bb55db61ff2342a990cf731d5159361d
@@ -34,6 +37,6 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
 
-PODFILE CHECKSUM: e8c1a16f31c0af4482b593329856c13faf09b0bc
+PODFILE CHECKSUM: 1a3014aa91480ad16fb1a09812abdc093f619c4a
 
 COCOAPODS: 1.3.1
