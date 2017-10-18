@@ -1,5 +1,7 @@
 import Quick
 import Nimble
+import RxSwift
+import RxTest
 
 @testable import SharedShoppingApp
 
@@ -12,7 +14,7 @@ class ShoppingsTableViewModelSpec: QuickSpec {
 
             beforeEach {
                 assembly = Assembly()
-                assembly.shoppingsProviderStub.stubShoppings = [
+                assembly.shoppingsProviderStub.shoppingsVar.value = [
                     Shopping(name: "Shopping 1", date: Date()),
                     Shopping(name: "Shopping 2", date: Date()),
                     Shopping(name: "Shopping 3", date: Date()),
@@ -43,6 +45,30 @@ class ShoppingsTableViewModelSpec: QuickSpec {
 
             it("should throw when asked for row view model at row 0 in section 1") {
                 expect { _ = sut.rowViewModel(at: IndexPath(row: 0, section: 1)) }.to(throwAssertion())
+            }
+
+            context("remove first Shopping") {
+                var scheduler: TestScheduler!
+                var eventObserver: TestableObserver<TableViewController.Event>!
+
+                beforeEach {
+                    scheduler = TestScheduler(initialClock: 0)
+                    eventObserver = scheduler.createObserver(TableViewController.Event.self)
+                    _ = sut.event.subscribe(eventObserver)
+
+                    assembly.shoppingsProviderStub.shoppingsVar.value.removeLast()
+                }
+
+                it("should have three rows in first section") {
+                    expect(sut.numberOfRows(in: 0)).to(equal(3))
+                }
+
+                it("should emit reload event") {
+                    let expectation: [Recorded<Event<TableViewController.Event>>] = [
+                        next(0, .reload)
+                    ]
+                    expect(eventObserver.events.debugDescription).to(equal(expectation.debugDescription))
+                }
             }
         }
     }

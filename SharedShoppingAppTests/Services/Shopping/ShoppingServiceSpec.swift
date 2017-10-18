@@ -1,5 +1,7 @@
 import Quick
 import Nimble
+import RxSwift
+import RxBlocking
 
 @testable import SharedShoppingApp
 
@@ -14,7 +16,7 @@ class ShoppingServiceSpec: QuickSpec {
             }
 
             it("should have no shoppings") {
-                expect(sut.shoppings()).to(beEmpty())
+                expect { try sut.shoppings.toBlocking().first() }.to(beEmpty())
             }
 
             context("create shopping") {
@@ -25,7 +27,7 @@ class ShoppingServiceSpec: QuickSpec {
                 }
 
                 it("should have created shopping") {
-                    expect(sut.shoppings()).to(contain(createdShopping))
+                    expect { try sut.shoppings.toBlocking().first() }.to(contain(createdShopping))
                 }
 
                 context("remove created shopping") {
@@ -34,7 +36,7 @@ class ShoppingServiceSpec: QuickSpec {
                     }
 
                     it("should have no shoppings") {
-                        expect(sut.shoppings()).to(beEmpty())
+                        expect { try sut.shoppings.toBlocking().first() }.to(beEmpty())
                     }
                 }
 
@@ -44,7 +46,7 @@ class ShoppingServiceSpec: QuickSpec {
                     }
 
                     it("should have created shopping") {
-                        expect(sut.shoppings()).to(contain(createdShopping))
+                        expect { try sut.shoppings.toBlocking().first() }.to(contain(createdShopping))
                     }
                 }
             }

@@ -1,13 +1,14 @@
+import RxSwift
 @testable import SharedShoppingApp
 
 class ShoppingsProviderStub: ShoppingsProviding {
 
-    var stubShoppings = [Shopping]()
+    let shoppingsVar = Variable<[Shopping]>([])
 
     // MARK: ShoppingsProviding
 
-    func shoppings() -> [Shopping] {
-        return stubShoppings
+    var shoppings: Observable<[Shopping]> {
+        return shoppingsVar.asObservable()
     }
 
 }

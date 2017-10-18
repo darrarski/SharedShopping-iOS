@@ -1,3 +1,5 @@
+import RxSwift
+
 protocol ShoppingsProviding {
-    func shoppings() -> [Shopping]
+    var shoppings: Observable<[Shopping]> { get }
 }
