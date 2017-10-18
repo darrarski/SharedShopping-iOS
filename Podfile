@@ -31,14 +31,4 @@ post_install do |installer|
     end
   end
 
-  pods = ['Quick', 'Nimble']
-  installer.pods_project.targets.each do |target|
-    if pods.include? target.name
-      print "Setting Swift 3.2 for " + target.name + " pod\n"
-      target.build_configurations.each do |config|
-        config.build_settings['SWIFT_VERSION'] = '3.2'
-      end
-    end
-  end
-
 end
