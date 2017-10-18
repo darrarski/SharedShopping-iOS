@@ -26,6 +26,7 @@
 		317920821F88597000D7359F /* TableRowViewModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920811F88597000D7359F /* TableRowViewModelStub.swift */; };
 		317920841F8859E600D7359F /* Container_ShoppingsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */; };
 		317920861F885A0100D7359F /* ShoppingsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */; };
+		3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3185C96C1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift */; };
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
@@ -77,6 +78,7 @@
 		317920811F88597000D7359F /* TableRowViewModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowViewModelStub.swift; sourceTree = "<group>"; };
 		317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_ShoppingsTableViewModel.swift; sourceTree = "<group>"; };
 		317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModel.swift; sourceTree = "<group>"; };
+		3185C96C1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Differ_TableViewControllerUpdates.swift; sourceTree = "<group>"; };
 		319486211F7C389C00DB435B /* SharedShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		319486241F7C389C00DB435B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3194862B1F7C389C00DB435B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		313B269D1F8BEE7B00E55447 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3185C96C1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift */,
 				317920751F884B6F00D7359F /* UIViewController_Embedding.swift */,
 			);
 			path = Helpers;
@@ -716,6 +719,7 @@
 				3179207B1F884BBB00D7359F /* TableRowViewModel.swift in Sources */,
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
 				313B26AA1F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift in Sources */,
+				3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* Container_AppDelegateAssembly.swift in Sources */,
 				31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */,
 				317920791F884B9A00D7359F /* TableViewController.swift in Sources */,
