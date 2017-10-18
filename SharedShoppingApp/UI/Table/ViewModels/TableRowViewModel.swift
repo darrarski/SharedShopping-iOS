@@ -6,6 +6,7 @@ protocol TableRowViewModel {
     var height: CGFloat { get }
     func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell
     var actions: [UITableViewRowAction]? { get }
+    func isEqual(to other: TableRowViewModel) -> Bool
 }
 
 extension TableRowViewModel {

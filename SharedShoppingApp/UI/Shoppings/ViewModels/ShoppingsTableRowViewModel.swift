@@ -45,6 +45,11 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
         return [delete]
     }
 
+    func isEqual(to other: TableRowViewModel) -> Bool {
+        guard let other = other as? ShoppingsTableRowViewModel else { return false }
+        return shopping == other.shopping
+    }
+
     // MARK: Private
 
     private let assembly: ShoppingsTableRowViewModelAssembly

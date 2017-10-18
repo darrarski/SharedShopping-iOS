@@ -40,4 +40,8 @@ class TableRowViewModelStub: TableRowViewModel {
         return actionsStub
     }
 
+    func isEqual(to other: TableRowViewModel) -> Bool {
+        return false // TODO:
+    }
+
 }
