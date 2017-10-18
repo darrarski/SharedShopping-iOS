@@ -24,12 +24,22 @@ class ShoppingsViewModelSpec: QuickSpec {
                     sut.addShopping()
                 }
 
-                // TODO: test "add shopping" action
+                it("should add shopping") {
+                    expect(assembly.shoppingCreatorSpy.didCreateShopping).notTo(beNil())
+                }
             }
         }
     }
 
     private struct Assembly: ShoppingsViewModelAssembly {
+
+        let shoppingCreatorSpy = ShoppingCreatorSpy()
+
+        // MARK: ShoppingsViewModelAssembly
+
+        var shoppingCreator: ShoppingCreating {
+            return shoppingCreatorSpy
+        }
 
     }
 

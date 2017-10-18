@@ -1,11 +1,11 @@
 protocol ShoppingsViewModelAssembly {
-
+    var shoppingCreator: ShoppingCreating { get }
 }
 
 class ShoppingsViewModel: ShoppingsViewControllerInputs, ShoppingsViewControllerOutputs {
 
     init(assembly: ShoppingsViewModelAssembly) {
-
+        shoppingCreator = assembly.shoppingCreator
     }
 
     // MARK: ShoppingsViewControllerInputs
@@ -15,7 +15,11 @@ class ShoppingsViewModel: ShoppingsViewControllerInputs, ShoppingsViewController
     // MARK: ShoppingsViewControllerOutputs
 
     func addShopping() {
-        // TODO: implement "add shopping" action
+        _ = shoppingCreator.createShopping()
     }
+
+    // MARK: Private
+
+    private let shoppingCreator: ShoppingCreating
 
 }
