@@ -2,13 +2,13 @@ PODS:
   - Nimble (7.0.2)
   - Quick (1.2.0)
   - Reveal-SDK (11)
-  - RxBlocking (3.6.1):
-    - RxSwift (~> 3.6)
-  - RxCocoa (3.6.1):
-    - RxSwift (~> 3.6)
-  - RxSwift (3.6.1)
-  - RxTest (3.6.1):
-    - RxSwift (~> 3.6)
+  - RxBlocking (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - RxTest (4.0.0):
+    - RxSwift (~> 4.0)
   - SnapKit (4.0.0)
   - SwiftLint (0.23.0)
 
@@ -16,10 +16,10 @@ DEPENDENCIES:
   - Nimble (~> 7.0)
   - Quick (~> 1.1)
   - Reveal-SDK
-  - RxBlocking (~> 3.6)
-  - RxCocoa (~> 3.6)
-  - RxSwift (~> 3.6)
-  - RxTest (~> 3.6)
+  - RxBlocking (~> 4.0)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - RxTest (~> 4.0)
   - SnapKit (~> 4.0)
   - SwiftLint (~> 0.22)
 
@@ -27,13 +27,13 @@ SPEC CHECKSUMS:
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Reveal-SDK: 7fa13d04bb55db61ff2342a990cf731d5159361d
-  RxBlocking: 4f4bd5732e8b952e54ae8a57739bcfb645de12bc
-  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
-  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
-  RxTest: 1d00348a7848c91ab5bf5d197d2378aa6b2bb356
+  RxBlocking: 923c2c8106d80d7c2d6b276afd66ce3b10824836
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  RxTest: 0041e792cede35e53e4749f378d21482af0e9d12
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftLint: 6ddf7d305644c2239cb768a11d97cce804816691
 
-PODFILE CHECKSUM: 65f24f32c0ee0ad80a008309ed12d1bb11d5cf41
+PODFILE CHECKSUM: d4d1037a926fe29f5622e17ce264a867ac1cb832
 
 COCOAPODS: 1.3.1

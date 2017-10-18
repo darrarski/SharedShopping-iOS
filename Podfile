@@ -6,15 +6,15 @@ inhibit_all_warnings!
 target 'SharedShoppingApp' do
   pod 'Reveal-SDK', :configurations => ['Debug']
   pod 'SwiftLint', '~> 0.22'
-  pod 'RxSwift', '~> 3.6'
-  pod 'RxCocoa', '~> 3.6'
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
   pod 'SnapKit', '~> 4.0'
   target 'SharedShoppingAppTests' do
     inherit! :search_paths
     pod 'Quick', '~> 1.1'
     pod 'Nimble', '~> 7.0'
-    pod 'RxTest', '~> 3.6'
-    pod 'RxBlocking', '~> 3.6'
+    pod 'RxTest', '~> 4.0'
+    pod 'RxBlocking', '~> 4.0'
   end
 end
 
@@ -31,7 +31,7 @@ post_install do |installer|
     end
   end
 
-  pods = ['RxSwift', 'RxCocoa', 'Quick', 'Nimble', 'RxTest', 'RxBlocking']
+  pods = ['Quick', 'Nimble']
   installer.pods_project.targets.each do |target|
     if pods.include? target.name
       print "Setting Swift 3.2 for " + target.name + " pod\n"
