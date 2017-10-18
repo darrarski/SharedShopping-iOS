@@ -1,1 +1,5 @@
-class Container {}
+class Container {
+
+    let shoppingService = ShoppingService()
+
+}
