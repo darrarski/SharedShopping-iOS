@@ -36,6 +36,7 @@
 		31A361AB1F97E0080061B658 /* ShoppingCreatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361AA1F97E0080061B658 /* ShoppingCreatorSpy.swift */; };
 		31A361AD1F97E3000061B658 /* ShoppingsProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361AC1F97E3000061B658 /* ShoppingsProviderStub.swift */; };
 		31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361AF1F97F6540061B658 /* MethodCallObserver.swift */; };
+		31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361B11F97FE710061B658 /* ShoppingRemoverSpy.swift */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */; };
 		31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FC1F7EF51000EA7660 /* Container.swift */; };
@@ -87,6 +88,7 @@
 		31A361AA1F97E0080061B658 /* ShoppingCreatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCreatorSpy.swift; sourceTree = "<group>"; };
 		31A361AC1F97E3000061B658 /* ShoppingsProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsProviderStub.swift; sourceTree = "<group>"; };
 		31A361AF1F97F6540061B658 /* MethodCallObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodCallObserver.swift; sourceTree = "<group>"; };
+		31A361B11F97FE710061B658 /* ShoppingRemoverSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRemoverSpy.swift; sourceTree = "<group>"; };
 		31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				31A361AA1F97E0080061B658 /* ShoppingCreatorSpy.swift */,
+				31A361B11F97FE710061B658 /* ShoppingRemoverSpy.swift */,
 				31A361A81F97DBDC0061B658 /* ShoppingServiceSpec.swift */,
 				31A361AC1F97E3000061B658 /* ShoppingsProviderStub.swift */,
 			);
@@ -732,6 +735,7 @@
 				31A361AB1F97E0080061B658 /* ShoppingCreatorSpy.swift in Sources */,
 				31A361A91F97DBDC0061B658 /* ShoppingServiceSpec.swift in Sources */,
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
+				31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */,
 				31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */,
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
 				31A361AD1F97E3000061B658 /* ShoppingsProviderStub.swift in Sources */,
