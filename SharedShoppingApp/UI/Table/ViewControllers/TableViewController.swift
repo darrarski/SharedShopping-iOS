@@ -11,6 +11,12 @@ class TableViewController: UITableViewController {
 
     enum Event {
         case reload
+        case update([Update])
+    }
+
+    enum Update {
+        case insert(row: Int, inSection: Int)
+        case delete(row: Int, inSection: Int)
     }
 
     init(style: UITableViewStyle, inputs: TableViewControllerInputs) {
@@ -72,6 +78,8 @@ class TableViewController: UITableViewController {
         switch event {
         case .reload:
             tableView.reloadData()
+        case .update(let updates):
+            break // TODO:
         }
     }
 
