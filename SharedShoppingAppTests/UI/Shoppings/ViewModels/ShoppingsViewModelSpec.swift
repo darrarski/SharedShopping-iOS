@@ -8,9 +8,11 @@ class ShoppingsViewModelSpec: QuickSpec {
     override func spec() {
         describe("ShoppingsViewModel") {
             var sut: ShoppingsViewModel!
+            var assembly: Assembly!
 
             beforeEach {
-                sut = ShoppingsViewModel()
+                assembly = Assembly()
+                sut = ShoppingsViewModel(assembly: assembly)
             }
 
             it("should have correct title") {
@@ -25,6 +27,10 @@ class ShoppingsViewModelSpec: QuickSpec {
                 // TODO: test "add shopping" action
             }
         }
+    }
+
+    private struct Assembly: ShoppingsViewModelAssembly {
+
     }
 
 }

@@ -1,4 +1,12 @@
+protocol ShoppingsViewModelAssembly {
+
+}
+
 class ShoppingsViewModel: ShoppingsViewControllerInputs, ShoppingsViewControllerOutputs {
+
+    init(assembly: ShoppingsViewModelAssembly) {
+
+    }
 
     // MARK: ShoppingsViewControllerInputs
 
