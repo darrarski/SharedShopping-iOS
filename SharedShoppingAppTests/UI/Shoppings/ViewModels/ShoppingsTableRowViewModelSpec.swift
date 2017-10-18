@@ -115,7 +115,9 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                         action.handler(action, IndexPath(row: 12, section: 17))
                     }
 
-                    // TODO: test "delete" action
+                    it("should delete shopping") {
+                        expect(assembly.shoppingRemoverSpy.didRemoveShopping).to(equal(shopping))
+                    }
                 }
             }
         }

@@ -39,8 +39,8 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     }
 
     var actions: [UITableViewRowAction]? {
-        let delete = assembly.action(style: .destructive, title: "Delete") { (_, _) in
-            // TODO: implement "delete" action
+        let delete = assembly.action(style: .destructive, title: "Delete") { [weak self] (_, _) in
+            self?.handleDeleteAction()
         }
         return [delete]
     }
@@ -50,5 +50,9 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     private let assembly: ShoppingsTableRowViewModelAssembly
     private let shopping: Shopping
     private let dateFormatter: DateFormatter
+
+    private func handleDeleteAction() {
+        assembly.shoppingRemover.removeShopping(shopping)
+    }
 
 }
