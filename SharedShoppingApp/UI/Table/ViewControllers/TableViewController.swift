@@ -7,6 +7,10 @@ protocol TableViewControllerInputs {
 
 class TableViewController: UITableViewController {
 
+    enum Event {
+        case reload
+    }
+
     init(style: UITableViewStyle, inputs: TableViewControllerInputs) {
         self.inputs = inputs
         super.init(style: style)
@@ -53,5 +57,12 @@ class TableViewController: UITableViewController {
     // MARK: Private
 
     private let inputs: TableViewControllerInputs
+
+    private func handleEvent(_ event: Event) {
+        switch event {
+        case .reload:
+            tableView.reloadData()
+        }
+    }
 
 }
