@@ -1,4 +1,5 @@
 import UIKit
+import RxSwift
 
 protocol ShoppingsTableViewModelAssembly {
     var shoppingsProvider: ShoppingsProviding { get }
@@ -26,6 +27,10 @@ class ShoppingsTableViewModel: TableViewControllerInputs {
         case 0: return rowViewModels[indexPath.row]
         default: fatalError()
         }
+    }
+
+    var event: Observable<TableViewController.Event> {
+        return Observable.never() // TODO:
     }
 
     // MARK: Private

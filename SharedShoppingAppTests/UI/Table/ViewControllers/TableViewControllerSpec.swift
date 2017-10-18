@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import RxSwift
 
 @testable import SharedShoppingApp
 
@@ -68,6 +69,19 @@ class TableViewControllerSpec: QuickSpec {
                 it("should have footer view") {
                     expect(sut.tableView.tableFooterView).notTo(beNil())
                 }
+
+                context("on reload event") {
+                    var reloadDataCallObserver: MethodCallObserver<UITableView>!
+
+                    beforeEach {
+                        reloadDataCallObserver = sut.tableView.rx.observeMethodCall(#selector(sut.tableView.reloadData))
+                        inputs.eventSubject.onNext(.reload)
+                    }
+
+                    it("should call reloadData on table view") {
+                        expect(reloadDataCallObserver.observedCalls).to(haveCount(1))
+                    }
+                }
             }
         }
     }
@@ -76,6 +90,7 @@ class TableViewControllerSpec: QuickSpec {
 
         var numberOfRowsStub: Int = 15
         var rowStub = TableRowViewModelStub()
+        let eventSubject = PublishSubject<TableViewController.Event>()
 
         var numberOfRowsInSectionCalled: Int?
         var rowViewModelAtIndexPathCalled: IndexPath?
@@ -90,6 +105,10 @@ class TableViewControllerSpec: QuickSpec {
         func rowViewModel(at indexPath: IndexPath) -> TableRowViewModel {
             rowViewModelAtIndexPathCalled = indexPath
             return rowStub
+        }
+
+        var event: Observable<TableViewController.Event> {
+            return eventSubject.asObservable()
         }
 
     }

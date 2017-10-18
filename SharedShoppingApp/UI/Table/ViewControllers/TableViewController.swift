@@ -1,8 +1,10 @@
 import UIKit
+import RxSwift
 
 protocol TableViewControllerInputs {
     func numberOfRows(in section: Int) -> Int
     func rowViewModel(at indexPath: IndexPath) -> TableRowViewModel
+    var event: Observable<TableViewController.Event> { get }
 }
 
 class TableViewController: UITableViewController {
@@ -25,6 +27,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: .zero)
+        setupBindings()
     }
 
     // MARK: UITableViewDelegate
@@ -57,6 +60,13 @@ class TableViewController: UITableViewController {
     // MARK: Private
 
     private let inputs: TableViewControllerInputs
+    private let disposeBag = DisposeBag()
+
+    private func setupBindings() {
+        inputs.event
+            .subscribe(onNext: { [weak self] in self?.handleEvent($0) })
+            .disposed(by: disposeBag)
+    }
 
     private func handleEvent(_ event: Event) {
         switch event {
