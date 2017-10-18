@@ -123,6 +123,8 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
 
     private class Assembly: ShoppingsTableRowViewModelAssembly {
 
+        let shoppingRemoverSpy = ShoppingRemoverSpy()
+
         var createdActions: [UITableViewRowActionSpy] = []
 
         // MARK: ShoppingsTableRowViewModelAssembly
@@ -140,6 +142,10 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
             let action = UITableViewRowActionSpy.create(style: style, title: title, handler: handler)
             createdActions.append(action)
             return action
+        }
+
+        var shoppingRemover: ShoppingRemoving {
+            return shoppingRemoverSpy
         }
 
     }

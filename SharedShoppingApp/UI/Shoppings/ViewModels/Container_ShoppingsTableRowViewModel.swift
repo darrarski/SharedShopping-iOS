@@ -3,10 +3,12 @@ import UIKit
 extension Container {
 
     func shoppingsTableRowViewModel(shopping: Shopping) -> ShoppingsTableRowViewModel {
-        return ShoppingsTableRowViewModel(shopping: shopping, assembly: Assembly())
+        return ShoppingsTableRowViewModel(shopping: shopping, assembly: Assembly(container: self))
     }
 
     private struct Assembly: ShoppingsTableRowViewModelAssembly {
+
+        let container: Container
 
         // MARK: ShoppingsTableRowViewModelAssembly
 
@@ -21,6 +23,10 @@ extension Container {
                     title: String?,
                     handler: @escaping (UITableViewRowAction, IndexPath) -> Void) -> UITableViewRowAction {
             return UITableViewRowAction(style: style, title: title, handler: handler)
+        }
+
+        var shoppingRemover: ShoppingRemoving {
+            return container.shoppingService
         }
 
     }

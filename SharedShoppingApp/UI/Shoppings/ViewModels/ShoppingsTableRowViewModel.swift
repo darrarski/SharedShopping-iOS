@@ -5,6 +5,7 @@ protocol ShoppingsTableRowViewModelAssembly {
     func action(style: UITableViewRowActionStyle,
                 title: String?,
                 handler: @escaping (UITableViewRowAction, IndexPath) -> Void) -> UITableViewRowAction
+    var shoppingRemover: ShoppingRemoving { get }
 }
 
 class ShoppingsTableRowViewModel: TableRowViewModel {
