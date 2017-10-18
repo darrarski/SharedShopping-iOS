@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Differ
 
 protocol ShoppingsTableViewModelAssembly {
     var shoppingsProvider: ShoppingsProviding { get }
@@ -44,7 +45,11 @@ class ShoppingsTableViewModel: TableViewControllerInputs {
 
     private var rowViewModels = [TableRowViewModel]() {
         didSet {
-            eventSubject.onNext(.reload)
+            let diff = oldValue.diff(rowViewModels) { $0.isEqual(to: $1) }
+            let updates = diff.elements.tableViewControllerUpdates(section: 0)
+            if !updates.isEmpty {
+                eventSubject.onNext(.update(updates))
+            }
         }
     }
 

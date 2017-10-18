@@ -38,13 +38,13 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                     rowViewModel = sut.rowViewModel(at: IndexPath(row: 0, section: 0))
                 }
 
-                it("should create rowViewModel with correct shopping") {
-                    expect(assembly.tableRowViewModelShoppingCalled)
-                        .to(equal(assembly.shoppingsProviderStub.shoppingsVar.value[0]))
+                it("should be a stub") {
+                    expect(rowViewModel).to(beAKindOf(TableRowViewModelStub.self))
                 }
 
-                it("should be correct") {
-                    expect(rowViewModel).to(be(assembly.createdTableRowViewModel))
+                it("should have correct shopping") {
+                    expect((rowViewModel as? TableRowViewModelStub)?.shopping)
+                        .to(equal(assembly.shoppingsProviderStub.shoppingsVar.value.first))
                 }
             }
 
@@ -52,7 +52,7 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                 expect { _ = sut.rowViewModel(at: IndexPath(row: 0, section: 1)) }.to(throwAssertion())
             }
 
-            context("remove first Shopping") {
+            context("remove last Shopping") {
                 var scheduler: TestScheduler!
                 var eventObserver: TestableObserver<TableViewController.Event>!
 
@@ -68,11 +68,26 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                     expect(sut.numberOfRows(in: 0)).to(equal(3))
                 }
 
-                it("should emit reload event") {
+                it("should emit correct event") {
                     let expectation: [Recorded<Event<TableViewController.Event>>] = [
-                        next(0, .reload)
+                        next(0, .update([.delete(row: 3, inSection: 0)]))
                     ]
                     expect(eventObserver.events.debugDescription).to(equal(expectation.debugDescription))
+                }
+
+                context("insert shopping at index 0") {
+                    beforeEach {
+                        let shopping = Shopping(name: "Inserted Shopping", date: Date())
+                        assembly.shoppingsProviderStub.shoppingsVar.value.insert(shopping, at: 0)
+                    }
+
+                    it("should emit correct event") {
+                        let expectation: [Recorded<Event<TableViewController.Event>>] = [
+                            next(0, .update([.delete(row: 3, inSection: 0)])),
+                            next(0, .update([.insert(row: 0, inSection: 0)]))
+                        ]
+                        expect(eventObserver.events.debugDescription).to(equal(expectation.debugDescription))
+                    }
                 }
             }
         }
@@ -81,9 +96,6 @@ class ShoppingsTableViewModelSpec: QuickSpec {
     private class Assembly: ShoppingsTableViewModelAssembly {
 
         var shoppingsProviderStub = ShoppingsProviderStub()
-        var createdTableRowViewModel: TableRowViewModelStub?
-
-        var tableRowViewModelShoppingCalled: (Shopping)?
 
         // MARK: ShoppingsTableViewModelAssembly
 
@@ -92,10 +104,7 @@ class ShoppingsTableViewModelSpec: QuickSpec {
         }
 
         func tableRowViewModel(shopping: Shopping) -> TableRowViewModel {
-            tableRowViewModelShoppingCalled = (shopping)
-            let rowViewModel = TableRowViewModelStub(shopping: shopping)
-            createdTableRowViewModel = rowViewModel
-            return rowViewModel
+            return TableRowViewModelStub(shopping: shopping)
         }
 
     }
