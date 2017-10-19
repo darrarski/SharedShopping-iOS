@@ -71,10 +71,12 @@ class TableViewControllerSpec: QuickSpec {
                 }
 
                 context("on reload event") {
-                    var reloadDataCallObserver: MethodCallObserver<UITableView>!
+                    var reloadDataCallObserver: MethodCallObserver!
 
                     beforeEach {
-                        reloadDataCallObserver = sut.tableView.rx.observeMethodCall(#selector(sut.tableView.reloadData))
+                        reloadDataCallObserver = MethodCallObserver()
+                        reloadDataCallObserver.observe(sut.tableView, #selector(sut.tableView.reloadData))
+
                         inputs.eventSubject.onNext(.reload)
                     }
 
