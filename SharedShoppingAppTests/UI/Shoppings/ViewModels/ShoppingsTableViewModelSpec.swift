@@ -28,7 +28,9 @@ class ShoppingsTableViewModelSpec: QuickSpec {
             }
 
             it("should throw when asked for number of rows in second section") {
-                expect { _ = sut.numberOfRows(in: 1) }.to(throwAssertion())
+                onSimulator {
+                    expect { _ = sut.numberOfRows(in: 1) }.to(throwAssertion())
+                }
             }
 
             describe("row view model at row 0 in section 0") {
@@ -49,7 +51,9 @@ class ShoppingsTableViewModelSpec: QuickSpec {
             }
 
             it("should throw when asked for row view model at row 0 in section 1") {
-                expect { _ = sut.rowViewModel(at: IndexPath(row: 0, section: 1)) }.to(throwAssertion())
+                onSimulator {
+                    expect { _ = sut.rowViewModel(at: IndexPath(row: 0, section: 1)) }.to(throwAssertion())
+                }
             }
 
             context("remove last Shopping") {

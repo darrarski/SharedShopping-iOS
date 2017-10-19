@@ -9,7 +9,9 @@ class TableViewControllerSpec: QuickSpec {
     override func spec() {
         describe("TableViewController init with coder") {
             it("should throw fatal error") {
-                expect { _ = TableViewController(coder: NSCoder()) }.to(throwAssertion())
+                onSimulator {
+                    expect { _ = TableViewController(coder: NSCoder()) }.to(throwAssertion())
+                }
             }
         }
 

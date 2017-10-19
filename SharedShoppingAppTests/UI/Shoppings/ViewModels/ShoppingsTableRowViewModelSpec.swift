@@ -84,8 +84,10 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                     }
 
                     it("should throw assertion") {
-                        expect { _ = sut.cell(at: IndexPath(row: 0, section: 0), in: tableView) }
-                            .to(throwAssertion())
+                        onSimulator {
+                            expect { _ = sut.cell(at: IndexPath(row: 0, section: 0), in: tableView) }
+                                .to(throwAssertion())
+                        }
                     }
                 }
             }

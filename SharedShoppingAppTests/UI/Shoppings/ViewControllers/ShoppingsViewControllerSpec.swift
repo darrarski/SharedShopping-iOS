@@ -8,7 +8,9 @@ class ShoppingsViewControllerSpec: QuickSpec {
     override func spec() {
         describe("ShoppingsViewController init with coder") {
             it("should throw fatal error") {
-                expect { _ = ShoppingsViewController(coder: NSCoder()) }.to(throwAssertion())
+                onSimulator {
+                    expect { _ = ShoppingsViewController(coder: NSCoder()) }.to(throwAssertion())
+                }
             }
         }
 
