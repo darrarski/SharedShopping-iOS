@@ -1,6 +1,5 @@
 import UIKit
 import SnapKit
-import RxSwift
 
 class ShoppingsTableViewCell: UITableViewCell {
 
@@ -8,20 +7,11 @@ class ShoppingsTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         loadSubviews()
         setupLayout()
-        cleanUp()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        disposeBag = DisposeBag()
-        cleanUp()
-    }
-
-    private(set) var disposeBag = DisposeBag()
 
     // MARK: Subviews
 
@@ -56,12 +46,6 @@ class ShoppingsTableViewCell: UITableViewCell {
             $0.trailing.lessThanOrEqualToSuperview().offset(-16)
             $0.bottom.lessThanOrEqualToSuperview().offset(-16)
         }
-    }
-
-    // MARK: Private
-
-    private func cleanUp() {
-        titleLabel.text = nil
     }
 
 }
