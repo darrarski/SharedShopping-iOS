@@ -1,0 +1,89 @@
+fastlane_version '2.62.0'
+default_platform :ios
+
+MATCH_GIT_URL = 'git@bitbucket.org:darrarski/darrarski-match.git'
+APP_IDENTIFIER = 'pl.darrarski.SharedShopping'
+DEV_TEAM_ID = 'P38XW29864'
+ITC_TEAM_ID = '551454'
+APP_SCHEME = 'SharedShoppingApp'
+UNIT_TEST_SCHEME = 'SharedShoppingAppTests'
+XC_WORKSPACE = 'SharedShopping.xcworkspace'
+
+platform :ios do
+
+  desc 'Bootstrap project'
+  lane :setup do
+    ['development', 'appstore'].each do |type|
+      puts "Sync codesigning for #{type}"
+      match(
+        type: type,
+        git_url: MATCH_GIT_URL,
+        app_identifier: APP_IDENTIFIER,
+        team_id: DEV_TEAM_ID,
+        readonly: false
+      )
+    end
+    system 'diff ../Podfile.lock ../Pods/Manifest.lock > /dev/null'
+    if $?.exitstatus != 0 then
+      puts 'The sandbox is not in sync with the Podfile.lock, installing pods'
+      sh [
+        'cd .. &&',
+        'bundle exec',
+        'pod install',
+        '--repo-update'
+      ].join(' ')
+    else
+      puts 'Skipping pod install, the sandbox is in sync with the Podfile.lock'
+    end
+  end
+
+  desc 'Run unit tests'
+  lane :test do
+    sh [
+      'cd .. &&',
+      'set -o pipefail &&',
+      'xcodebuild test',
+      "-workspace #{XC_WORKSPACE}",
+      "-scheme #{UNIT_TEST_SCHEME}",
+      '-sdk iphonesimulator',
+      '-destination \'platform=iOS Simulator,name=iPhone 7,OS=latest\'',
+      'ONLY_ACTIVE_ARCH=YES',
+      '| xcpretty -f `xcpretty-travis-formatter`'
+    ].join(' ')
+  end
+
+  desc 'Generate code coverage report'
+  lane :codecov do
+    xcov(
+      workspace: XC_WORKSPACE,
+      scheme: UNIT_TEST_SCHEME,
+      output_directory: 'xcov_output',
+      only_project_targets: true,
+      ignore_file_path: File.join(File.expand_path('..', Dir.pwd), '.xcovignore')
+    )
+  end
+  
+  desc 'Bump build number and commit with tag'
+  lane :bump do
+    ensure_git_status_clean
+    increment_build_number
+    build_number = get_build_number
+    version_number = get_version_number
+    commit_version_bump(message: 'Build number bumped - v' + version_number + ' (' + build_number + ')')
+    add_git_tag(tag: 'v' + version_number + '_' + build_number)
+  end
+
+  desc 'Deploy to iTunesConnect'
+  lane :deploy do
+    ensure_git_status_clean
+    gym(scheme: APP_SCHEME, clean: true)
+    pilot(
+      app_identifier: APP_IDENTIFIER,
+      dev_portal_team_id: DEV_TEAM_ID,
+      team_id: ITC_TEAM_ID,
+      skip_waiting_for_build_processing: true,
+      skip_submission: true
+    )
+  end
+
+end
