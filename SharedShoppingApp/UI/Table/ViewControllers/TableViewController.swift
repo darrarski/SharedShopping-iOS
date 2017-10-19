@@ -79,8 +79,21 @@ class TableViewController: UITableViewController {
         case .reload:
             tableView.reloadData()
         case .update(let updates):
-            break // TODO:
+            handleUpdates(updates)
         }
+    }
+
+    private func handleUpdates(_ updates: [Update]) {
+        tableView.beginUpdates()
+        updates.forEach { update in
+            switch update {
+            case let .insert(row, section):
+                tableView.insertRows(at: [IndexPath(row: row, section: section)], with: .automatic)
+            case let .delete(row, section):
+                tableView.deleteRows(at: [IndexPath(row: row, section: section)], with: .automatic)
+            }
+        }
+        tableView.endUpdates()
     }
 
 }

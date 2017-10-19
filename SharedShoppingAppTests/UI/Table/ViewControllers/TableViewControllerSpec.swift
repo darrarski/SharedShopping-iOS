@@ -84,6 +84,44 @@ class TableViewControllerSpec: QuickSpec {
                         expect(reloadDataCallObserver.observedCalls).to(haveCount(1))
                     }
                 }
+
+                context("on update event") {
+                    var methodCallObserver: MethodCallObserver!
+
+                    beforeEach {
+                        methodCallObserver = MethodCallObserver()
+                        methodCallObserver.observe(sut.tableView, #selector(sut.tableView.beginUpdates))
+                        methodCallObserver.observe(sut.tableView, #selector(sut.tableView.endUpdates))
+                        methodCallObserver.observe(sut.tableView, #selector(sut.tableView.insertRows(at:with:)))
+                        methodCallObserver.observe(sut.tableView, #selector(sut.tableView.deleteRows(at:with:)))
+
+                        inputs.eventSubject.onNext(.update([
+                            .delete(row: 10, inSection: 0),
+                            .insert(row: 7, inSection: 0)
+                        ]))
+                    }
+
+                    it("should call table view methods in correct order") {
+                        expect(methodCallObserver.observedCalls.map { $0.0.description }).to(equal([
+                            #selector(sut.tableView.beginUpdates),
+                            #selector(sut.tableView.deleteRows(at:with:)),
+                            #selector(sut.tableView.insertRows(at:with:)),
+                            #selector(sut.tableView.endUpdates)
+                        ].map { $0.description }))
+                    }
+
+                    it("should pass correct params to delete rows method") {
+                        let params = methodCallObserver.observedCalls[1].1
+                        expect(params[0] as? [IndexPath]).to(equal([IndexPath(row: 10, section: 0)]))
+                        expect(params[1] as? Int).to(equal(UITableViewRowAnimation.automatic.rawValue))
+                    }
+
+                    it("should pass correct params to insert rows method") {
+                        let params = methodCallObserver.observedCalls[2].1
+                        expect(params[0] as? [IndexPath]).to(equal([IndexPath(row: 7, section: 0)]))
+                        expect(params[1] as? Int).to(equal(UITableViewRowAnimation.automatic.rawValue))
+                    }
+                }
             }
         }
     }
