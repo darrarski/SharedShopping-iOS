@@ -9,22 +9,55 @@ Requirements:
 - Ruby with [Bundler](http://bundler.io)
 - Xcode 9
 
-Run:
+To bootstrap the project run:
 
 ```sh
 bundle install
-bundle exec pod install
+bundle exec fastlane setup
 ```
 
-## Building
+## Develop
 
-Open `SharedShopping.xcworkspace` in Xcode. 
+Open `SharedShopping.xcworkspace` in Xcode.
 
 Use `SharedShopingApp` build scheme for building and runing the app.
 
-## Testing
+## Test
 
-Use `SharedShopingAppTests` build scheme for running tests.
+Use `SharedShopingAppTests` build scheme for runing tests.
+
+To run tests from command line execute:
+
+```sh
+bundle exec fastlane test
+```
+
+To generate and open code coverage report run:
+
+```sh
+bundle exec fastlane codecov
+open xcov_output/index.html
+```
+
+## Deploy
+
+To bump build version execute:
+
+```sh
+bundle exec fastlane bump
+```
+
+To setup code signing (certificates and provisioning profiles) run:
+
+```sh
+bundle exec fastlane codesigning
+```
+
+To build and deploy app to iTunes Connect run:
+
+```sh
+bundle exec fastlane deploy
+```
 
 ## License
 
