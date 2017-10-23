@@ -63,6 +63,20 @@ platform :ios do
     add_git_tag(tag: 'v' + version_number + '_' + build_number)
   end
 
+  desc 'Setup code signing'
+  lane :codesigning do
+    ['development', 'appstore'].each do |type|
+      puts "Sync codesigning for #{type}"
+      match(
+        type: type,
+        git_url: MATCH_GIT_URL,
+        app_identifier: APP_IDENTIFIER,
+        team_id: DEV_TEAM_ID,
+        readonly: false
+      )
+    end
+  end
+
   desc 'Deploy to iTunesConnect'
   lane :deploy do
     ensure_git_status_clean
