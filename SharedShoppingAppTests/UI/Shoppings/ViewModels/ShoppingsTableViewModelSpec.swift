@@ -2,6 +2,7 @@ import Quick
 import Nimble
 import RxSwift
 import RxTest
+import RxBlocking
 
 @testable import SharedShoppingApp
 
@@ -26,21 +27,15 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                 )
             }
 
-            it("should have four rows in first section") {
-                expect(sut.numberOfRows(in: 0)).to(equal(4))
+            it("should have four row view models") {
+                expect(try! sut.rowViewModels.toBlocking().first()).to(haveCount(4))
             }
 
-            it("should throw when asked for number of rows in second section") {
-                onSimulator {
-                    expect { _ = sut.numberOfRows(in: 1) }.to(throwAssertion())
-                }
-            }
-
-            describe("row view model at row 0 in section 0") {
+            describe("first row view model") {
                 var rowViewModel: TableRowViewModel!
 
                 beforeEach {
-                    rowViewModel = sut.rowViewModel(at: IndexPath(row: 0, section: 0))
+                    rowViewModel = try! sut.rowViewModels.toBlocking().first()?.first
                 }
 
                 it("should be a stub") {
@@ -53,33 +48,13 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                 }
             }
 
-            it("should throw when asked for row view model at row 0 in section 1") {
-                onSimulator {
-                    expect { _ = sut.rowViewModel(at: IndexPath(row: 0, section: 1)) }.to(throwAssertion())
-                }
-            }
-
             context("remove last Shopping") {
-                var scheduler: TestScheduler!
-                var eventObserver: TestableObserver<TableViewController.Event>!
-
                 beforeEach {
-                    scheduler = TestScheduler(initialClock: 0)
-                    eventObserver = scheduler.createObserver(TableViewController.Event.self)
-                    _ = sut.event.subscribe(eventObserver)
-
                     shoppingsProviderStub.shoppingsVar.value.removeLast()
                 }
 
-                it("should have three rows in first section") {
-                    expect(sut.numberOfRows(in: 0)).to(equal(3))
-                }
-
-                it("should emit correct event") {
-                    let expectation: [Recorded<Event<TableViewController.Event>>] = [
-                        next(0, .update([.delete(row: 3, inSection: 0)]))
-                    ]
-                    expect(eventObserver.events.debugDescription).to(equal(expectation.debugDescription))
+                it("should have three row view models") {
+                    expect(try! sut.rowViewModels.toBlocking().first()).to(haveCount(3))
                 }
 
                 context("insert shopping at index 0") {
@@ -88,12 +63,8 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                         shoppingsProviderStub.shoppingsVar.value.insert(shopping, at: 0)
                     }
 
-                    it("should emit correct event") {
-                        let expectation: [Recorded<Event<TableViewController.Event>>] = [
-                            next(0, .update([.delete(row: 3, inSection: 0)])),
-                            next(0, .update([.insert(row: 0, inSection: 0)]))
-                        ]
-                        expect(eventObserver.events.debugDescription).to(equal(expectation.debugDescription))
+                    it("should have four row view models") {
+                        expect(try! sut.rowViewModels.toBlocking().first()).to(haveCount(4))
                     }
                 }
             }

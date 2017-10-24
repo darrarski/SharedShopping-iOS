@@ -2,17 +2,10 @@ import UIKit
 import RxSwift
 
 protocol TableViewControllerInputs {
-    func numberOfRows(in section: Int) -> Int
-    func rowViewModel(at indexPath: IndexPath) -> TableRowViewModel
-    var event: Observable<TableViewController.Event> { get }
+    var rowViewModels: Observable<[TableRowViewModel]> { get }
 }
 
 class TableViewController: UITableViewController {
-
-    enum Event {
-        case reload
-        case update([Update])
-    }
 
     enum Update {
         case insert(row: Int, inSection: Int)
@@ -39,26 +32,29 @@ class TableViewController: UITableViewController {
     // MARK: UITableViewDelegate
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return inputs.rowViewModel(at: indexPath).height
+        return rowViewModels[indexPath.row].height
     }
 
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return inputs.rowViewModel(at: indexPath).estimatedHeight
+        return rowViewModels[indexPath.row].estimatedHeight
     }
 
     override func tableView(_ tableView: UITableView,
                             editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        return inputs.rowViewModel(at: indexPath).actions
+        return rowViewModels[indexPath.row].actions
     }
 
     // MARK: UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return inputs.numberOfRows(in: section)
+        switch section {
+        case 0: return rowViewModels.count
+        default: return 0
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = inputs.rowViewModel(at: indexPath)
+        let row = rowViewModels[indexPath.row]
         row.register(in: tableView)
         return row.cell(at: indexPath, in: tableView)
     }
@@ -68,19 +64,18 @@ class TableViewController: UITableViewController {
     private let inputs: TableViewControllerInputs
     private let disposeBag = DisposeBag()
 
-    private func setupBindings() {
-        inputs.event
-            .subscribe(onNext: { [weak self] in self?.handleEvent($0) })
-            .disposed(by: disposeBag)
+    private var rowViewModels = [TableRowViewModel]() {
+        didSet {
+            let diff = oldValue.diff(rowViewModels) { $0.isEqual(to: $1) }
+            let updates = diff.elements.tableViewControllerUpdates(section: 0)
+            if !updates.isEmpty { handleUpdates(updates) }
+        }
     }
 
-    private func handleEvent(_ event: Event) {
-        switch event {
-        case .reload:
-            tableView.reloadData()
-        case .update(let updates):
-            handleUpdates(updates)
-        }
+    private func setupBindings() {
+        inputs.rowViewModels
+            .subscribe(onNext: { [weak self] in self?.rowViewModels = $0 })
+            .disposed(by: disposeBag)
     }
 
     private func handleUpdates(_ updates: [Update]) {
