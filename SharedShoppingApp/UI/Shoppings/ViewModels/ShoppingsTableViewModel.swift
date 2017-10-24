@@ -3,16 +3,14 @@ import RxSwift
 import RxCocoa
 import Differ
 
-protocol ShoppingsTableViewModelAssembly {
-    var shoppingsProvider: ShoppingsProviding { get }
-    func tableRowViewModel(shopping: Shopping) -> TableRowViewModel
-}
-
 class ShoppingsTableViewModel: TableViewControllerInputs {
 
-    init(assembly: ShoppingsTableViewModelAssembly) {
-        self.assembly = assembly
-        shoppingsProvider = assembly.shoppingsProvider
+    typealias TableRowViewModelFactory = (Shopping) -> TableRowViewModel
+
+    init(shoppingsProvider: ShoppingsProviding,
+         rowViewModelFactory: @escaping TableRowViewModelFactory) {
+        self.shoppingsProvider = shoppingsProvider
+        self.rowViewModelFactory = rowViewModelFactory
         setupBindings()
     }
 
@@ -38,8 +36,8 @@ class ShoppingsTableViewModel: TableViewControllerInputs {
 
     // MARK: Private
 
-    private let assembly: ShoppingsTableViewModelAssembly
     private let shoppingsProvider: ShoppingsProviding
+    private let rowViewModelFactory: TableRowViewModelFactory
     private let eventSubject = PublishSubject<TableViewController.Event>()
     private let disposeBag = DisposeBag()
 
@@ -55,7 +53,7 @@ class ShoppingsTableViewModel: TableViewControllerInputs {
 
     private func setupBindings() {
         shoppingsProvider.shoppings
-            .map { [weak self] in $0.flatMap { self?.assembly.tableRowViewModel(shopping: $0) } }
+            .map { [weak self] in $0.flatMap { self?.rowViewModelFactory($0) } }
             .subscribe(onNext: { [weak self] in self?.rowViewModels = $0 })
             .disposed(by: disposeBag)
     }

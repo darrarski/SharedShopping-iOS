@@ -16,15 +16,19 @@ class ShoppingsViewControllerSpec: QuickSpec {
 
         describe("ShoppingsViewController") {
             var sut: ShoppingsViewController!
-            var assembly: Assembly!
+            var tableViewController: UIViewController!
             var inputs: Inputs!
             var outputs: Outputs!
 
             beforeEach {
-                assembly = Assembly()
+                tableViewController = UIViewController(nibName: nil, bundle: nil)
                 inputs = Inputs()
                 outputs = Outputs()
-                sut = ShoppingsViewController(assembly: assembly, inputs: inputs, outputs: outputs)
+                sut = ShoppingsViewController(
+                    tableViewControllerFactory: { tableViewController },
+                    inputs: inputs,
+                    outputs: outputs
+                )
             }
 
             context("load view") {
@@ -33,7 +37,7 @@ class ShoppingsViewControllerSpec: QuickSpec {
                 }
 
                 it("should embed tableViewController") {
-                    expect(sut.childViewControllers).to(contain(assembly.tableViewController))
+                    expect(sut.childViewControllers).to(contain(tableViewController))
                 }
 
                 it("should have correct title") {
@@ -63,12 +67,6 @@ class ShoppingsViewControllerSpec: QuickSpec {
                 }
             }
         }
-    }
-
-    private class Assembly: ShoppingsViewControllerAssembly {
-
-        let tableViewController = UIViewController(nibName: nil, bundle: nil)
-
     }
 
     private class Inputs: ShoppingsViewControllerInputs {

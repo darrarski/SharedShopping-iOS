@@ -8,11 +8,11 @@ class ShoppingsViewModelSpec: QuickSpec {
     override func spec() {
         describe("ShoppingsViewModel") {
             var sut: ShoppingsViewModel!
-            var assembly: Assembly!
+            var shoppingCreatorSpy: ShoppingCreatorSpy!
 
             beforeEach {
-                assembly = Assembly()
-                sut = ShoppingsViewModel(assembly: assembly)
+                shoppingCreatorSpy = ShoppingCreatorSpy()
+                sut = ShoppingsViewModel(shoppingCreator: shoppingCreatorSpy)
             }
 
             it("should have correct title") {
@@ -25,22 +25,10 @@ class ShoppingsViewModelSpec: QuickSpec {
                 }
 
                 it("should add shopping") {
-                    expect(assembly.shoppingCreatorSpy.didCreateShopping).notTo(beNil())
+                    expect(shoppingCreatorSpy.didCreateShopping).notTo(beNil())
                 }
             }
         }
-    }
-
-    private struct Assembly: ShoppingsViewModelAssembly {
-
-        let shoppingCreatorSpy = ShoppingCreatorSpy()
-
-        // MARK: ShoppingsViewModelAssembly
-
-        var shoppingCreator: ShoppingCreating {
-            return shoppingCreatorSpy
-        }
-
     }
 
 }

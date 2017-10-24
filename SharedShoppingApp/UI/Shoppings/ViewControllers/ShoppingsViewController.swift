@@ -1,9 +1,5 @@
 import UIKit
 
-protocol ShoppingsViewControllerAssembly {
-    var tableViewController: UIViewController { get }
-}
-
 protocol ShoppingsViewControllerInputs {
     var title: String { get }
 }
@@ -14,10 +10,10 @@ protocol ShoppingsViewControllerOutputs {
 
 class ShoppingsViewController: UIViewController {
 
-    init(assembly: ShoppingsViewControllerAssembly,
+    init(tableViewControllerFactory: @escaping () -> UIViewController,
          inputs: ShoppingsViewControllerInputs,
          outputs: ShoppingsViewControllerOutputs) {
-        self.assembly = assembly
+        self.tableViewControllerFactory = tableViewControllerFactory
         self.inputs = inputs
         self.outputs = outputs
         super.init(nibName: nil, bundle: nil)
@@ -31,7 +27,7 @@ class ShoppingsViewController: UIViewController {
 
     override func loadView() {
         view = UIView(frame: .zero)
-        embed(assembly.tableViewController, in: view)
+        embed(tableViewControllerFactory(), in: view)
     }
 
     override func viewDidLoad() {
@@ -48,7 +44,7 @@ class ShoppingsViewController: UIViewController {
 
     // MARK: Private
 
-    private let assembly: ShoppingsViewControllerAssembly
+    private let tableViewControllerFactory: () -> UIViewController
     private let inputs: ShoppingsViewControllerInputs
     private let outputs: ShoppingsViewControllerOutputs
 

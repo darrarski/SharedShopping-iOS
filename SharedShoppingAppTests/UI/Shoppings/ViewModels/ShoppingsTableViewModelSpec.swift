@@ -10,17 +10,20 @@ class ShoppingsTableViewModelSpec: QuickSpec {
     override func spec() {
         describe("ShoppingsTableViewModel") {
             var sut: ShoppingsTableViewModel!
-            var assembly: Assembly!
+            var shoppingsProviderStub: ShoppingsProviderStub!
 
             beforeEach {
-                assembly = Assembly()
-                assembly.shoppingsProviderStub.shoppingsVar.value = [
+                shoppingsProviderStub = ShoppingsProviderStub()
+                shoppingsProviderStub.shoppingsVar.value = [
                     Shopping(name: "Shopping 1", date: Date()),
                     Shopping(name: "Shopping 2", date: Date()),
                     Shopping(name: "Shopping 3", date: Date()),
                     Shopping(name: "Shopping 4", date: Date())
                 ]
-                sut = ShoppingsTableViewModel(assembly: assembly)
+                sut = ShoppingsTableViewModel(
+                    shoppingsProvider: shoppingsProviderStub,
+                    rowViewModelFactory: { TableRowViewModelStub(shopping: $0) }
+                )
             }
 
             it("should have four rows in first section") {
@@ -46,7 +49,7 @@ class ShoppingsTableViewModelSpec: QuickSpec {
 
                 it("should have correct shopping") {
                     expect((rowViewModel as? TableRowViewModelStub)?.shopping)
-                        .to(equal(assembly.shoppingsProviderStub.shoppingsVar.value.first))
+                        .to(equal(shoppingsProviderStub.shoppingsVar.value.first))
                 }
             }
 
@@ -65,7 +68,7 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                     eventObserver = scheduler.createObserver(TableViewController.Event.self)
                     _ = sut.event.subscribe(eventObserver)
 
-                    assembly.shoppingsProviderStub.shoppingsVar.value.removeLast()
+                    shoppingsProviderStub.shoppingsVar.value.removeLast()
                 }
 
                 it("should have three rows in first section") {
@@ -82,7 +85,7 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                 context("insert shopping at index 0") {
                     beforeEach {
                         let shopping = Shopping(name: "Inserted Shopping", date: Date())
-                        assembly.shoppingsProviderStub.shoppingsVar.value.insert(shopping, at: 0)
+                        shoppingsProviderStub.shoppingsVar.value.insert(shopping, at: 0)
                     }
 
                     it("should emit correct event") {
@@ -95,22 +98,6 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                 }
             }
         }
-    }
-
-    private class Assembly: ShoppingsTableViewModelAssembly {
-
-        var shoppingsProviderStub = ShoppingsProviderStub()
-
-        // MARK: ShoppingsTableViewModelAssembly
-
-        var shoppingsProvider: ShoppingsProviding {
-            return shoppingsProviderStub
-        }
-
-        func tableRowViewModel(shopping: Shopping) -> TableRowViewModel {
-            return TableRowViewModelStub(shopping: shopping)
-        }
-
     }
 
 }
