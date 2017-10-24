@@ -1,13 +1,9 @@
 import UIKit
 
-protocol AppDelegateAssembly {
-    var window: UIWindow { get }
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var assembly: AppDelegateAssembly = Container().appDelegateAssembly
+    var windowFactory: () -> UIWindow = Container().appWindowFactory
 
     // MARK: UIApplicationDelegate
 
@@ -15,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = assembly.window
+        window = windowFactory()
         window?.makeKeyAndVisible()
         return true
     }
