@@ -4,18 +4,15 @@ extension Container {
 
     var shoppingsViewController: ShoppingsViewController {
         let viewModel = shoppingsViewModel
-        return ShoppingsViewController(assembly: Assembly(container: self), inputs: viewModel, outputs: viewModel)
+        return ShoppingsViewController(
+            tableViewControllerFactory: { self.shoppingsTableViewController },
+            inputs: viewModel,
+            outputs: viewModel
+        )
     }
 
-    private struct Assembly: ShoppingsViewControllerAssembly {
-
-        let container: Container
-
-        var tableViewController: UIViewController {
-            let viewModel = container.shoppingsTableViewModel
-            return TableViewController(style: .plain, inputs: viewModel)
-        }
-
+    private var shoppingsTableViewController: UIViewController {
+        return TableViewController(style: .plain, inputs: shoppingsTableViewModel)
     }
 
 }
