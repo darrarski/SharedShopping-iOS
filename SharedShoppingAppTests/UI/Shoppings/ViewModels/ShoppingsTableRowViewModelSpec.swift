@@ -8,13 +8,28 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
     override func spec() {
         describe("ShoppingsTableRowViewModel") {
             var sut: ShoppingsTableRowViewModel!
+            var dateFormatter: DateFormatter!
+            var shoppingRemoverSpy: ShoppingRemoverSpy!
             var shopping: Shopping!
-            var assembly: Assembly!
 
             beforeEach {
+                dateFormatter = {
+                    let formatter = DateFormatter()
+                    formatter.dateStyle = .long
+                    formatter.timeStyle = .long
+                    return formatter
+                }()
+                shoppingRemoverSpy = ShoppingRemoverSpy()
                 shopping = Shopping(name: "Test Shopping", date: Date())
-                assembly = Assembly()
-                sut = ShoppingsTableRowViewModel(shopping: shopping, assembly: assembly)
+
+                sut = ShoppingsTableRowViewModel(
+                    dateFormatter: dateFormatter,
+                    rowActionFactory: { style, title, handler in
+                        UITableViewRowActionSpy.create(style: style, title: title, handler: handler)
+                    },
+                    shoppingRemover: shoppingRemoverSpy,
+                    shopping: shopping
+                )
             }
 
             context("register in table view") {
@@ -75,7 +90,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 }
 
                 it("should have correct date") {
-                    expect(cellStub.subtitleLabel.text).to(equal(assembly.dateFormatter.string(from: shopping.date)))
+                    expect(cellStub.subtitleLabel.text).to(equal(dateFormatter.string(from: shopping.date)))
                 }
 
                 describe("when wrong cell is dequeued") {
@@ -118,40 +133,11 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                     }
 
                     it("should delete shopping") {
-                        expect(assembly.shoppingRemoverSpy.didRemoveShopping).to(equal(shopping))
+                        expect(shoppingRemoverSpy.didRemoveShopping).to(equal(shopping))
                     }
                 }
             }
         }
-    }
-
-    private class Assembly: ShoppingsTableRowViewModelAssembly {
-
-        let shoppingRemoverSpy = ShoppingRemoverSpy()
-
-        var createdActions: [UITableViewRowActionSpy] = []
-
-        // MARK: ShoppingsTableRowViewModelAssembly
-
-        let dateFormatter: DateFormatter = {
-            let formatter = DateFormatter()
-            formatter.dateStyle = .long
-            formatter.timeStyle = .long
-            return formatter
-        }()
-
-        func action(style: UITableViewRowActionStyle,
-                    title: String?,
-                    handler: @escaping (UITableViewRowAction, IndexPath) -> Void) -> UITableViewRowAction {
-            let action = UITableViewRowActionSpy.create(style: style, title: title, handler: handler)
-            createdActions.append(action)
-            return action
-        }
-
-        var shoppingRemover: ShoppingRemoving {
-            return shoppingRemoverSpy
-        }
-
     }
 
 }
