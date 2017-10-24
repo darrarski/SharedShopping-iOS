@@ -1,11 +1,7 @@
-protocol ShoppingsViewModelAssembly {
-    var shoppingCreator: ShoppingCreating { get }
-}
-
 class ShoppingsViewModel: ShoppingsViewControllerInputs, ShoppingsViewControllerOutputs {
 
-    init(assembly: ShoppingsViewModelAssembly) {
-        shoppingCreator = assembly.shoppingCreator
+    init(shoppingCreator: ShoppingCreating) {
+        self.shoppingCreator = shoppingCreator
     }
 
     // MARK: ShoppingsViewControllerInputs
