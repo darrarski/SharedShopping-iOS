@@ -43,6 +43,8 @@
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828611FA26708009CD4E5 /* AppWindowFactory.swift */; };
 		31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */; };
+		31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */; };
+		31D8286C1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8286B1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift */; };
 		31D828701FA26ED8009CD4E5 /* UIWindowSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */; };
 		31D828721FA27057009CD4E5 /* AppWindowConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828711FA27057009CD4E5 /* AppWindowConfiguring.swift */; };
 		31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */; };
@@ -104,6 +106,8 @@
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31D828611FA26708009CD4E5 /* AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactory.swift; sourceTree = "<group>"; };
 		31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactorySpec.swift; sourceTree = "<group>"; };
+		31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfigurator.swift; sourceTree = "<group>"; };
+		31D8286B1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfiguratorSpec.swift; sourceTree = "<group>"; };
 		31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowSpy.swift; sourceTree = "<group>"; };
 		31D828711FA27057009CD4E5 /* AppWindowConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfiguring.swift; sourceTree = "<group>"; };
 		31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
@@ -331,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				319486241F7C389C00DB435B /* AppDelegate.swift */,
+				31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */,
 				31D828711FA27057009CD4E5 /* AppWindowConfiguring.swift */,
 				31D828611FA26708009CD4E5 /* AppWindowFactory.swift */,
 				31FAE9FE1F7EF61D00EA7660 /* Container_AppWindowFactory.swift */,
@@ -417,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */,
+				31D8286B1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift */,
 				31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */,
 				31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */,
 			);
@@ -747,6 +753,7 @@
 				313B26AF1F8C21A200E55447 /* ShoppingsViewModel.swift in Sources */,
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
 				313B26B11F8C21DE00E55447 /* Container_ShoppingsViewModel.swift in Sources */,
+				31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */,
 				31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */,
 				31D828721FA27057009CD4E5 /* AppWindowConfiguring.swift in Sources */,
 				319486251F7C389C00DB435B /* AppDelegate.swift in Sources */,
@@ -775,6 +782,7 @@
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
 				31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */,
 				31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */,
+				31D8286C1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift in Sources */,
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
 				31A361AD1F97E3000061B658 /* ShoppingsProviderStub.swift in Sources */,
 				313B26B31F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift in Sources */,
