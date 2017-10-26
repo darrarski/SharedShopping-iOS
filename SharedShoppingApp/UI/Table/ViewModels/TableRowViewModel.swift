@@ -8,9 +8,3 @@ protocol TableRowViewModel {
     var actions: [UITableViewRowAction]? { get }
     func isEqual(to other: TableRowViewModel) -> Bool
 }
-
-extension TableRowViewModel {
-
-    var actions: [UITableViewRowAction]? { return nil }
-
-}
