@@ -12,7 +12,7 @@ class ShoppingService: ShoppingsProviding, ShoppingCreating, ShoppingRemoving {
     // MARK: ShoppingCreating
 
     func createShopping() -> Shopping {
-        let shopping = Shopping(name: "New Shopping", date: Date())
+        let shopping = ShoppingStruct(name: "New Shopping", date: Date())
         shoppingsVar.value.append(shopping)
         return shopping
     }
@@ -20,7 +20,7 @@ class ShoppingService: ShoppingsProviding, ShoppingCreating, ShoppingRemoving {
     // MARK: ShoppingRemoving
 
     func removeShopping(_ shopping: Shopping) {
-        guard let index = shoppingsVar.value.index(of: shopping) else { return }
+        guard let index = shoppingsVar.value.index(where: { $0.isEqual(to: shopping) }) else { return }
         shoppingsVar.value.remove(at: index)
     }
 

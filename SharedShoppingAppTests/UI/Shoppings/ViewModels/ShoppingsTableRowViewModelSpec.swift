@@ -20,7 +20,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                     return formatter
                 }()
                 shoppingRemoverSpy = ShoppingRemoverSpy()
-                shopping = Shopping(name: "Test Shopping", date: Date())
+                shopping = ShoppingFake(name: "Test Shopping", date: Date())
 
                 sut = ShoppingsTableRowViewModel(
                     dateFormatter: dateFormatter,

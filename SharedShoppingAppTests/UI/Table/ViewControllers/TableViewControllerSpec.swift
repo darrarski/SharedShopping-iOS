@@ -82,7 +82,7 @@ class TableViewControllerSpec: QuickSpec {
                     var methodCallObserver: MethodCallObserver!
 
                     beforeEach {
-                        rowViewModelStub = TableRowViewModelStub(shopping: Shopping(name: "Inserted", date: Date()))
+                        rowViewModelStub = TableRowViewModelStub(shopping: ShoppingFake(name: "Inserted", date: Date()))
 
                         methodCallObserver = MethodCallObserver()
                         methodCallObserver.observe(sut.tableView, #selector(sut.tableView.beginUpdates))
@@ -124,7 +124,7 @@ class TableViewControllerSpec: QuickSpec {
     private class Inputs: TableViewControllerInputs {
 
         let rowViewModelsStub = Variable<[TableRowViewModelStub]>((1...15).map { index in
-            TableRowViewModelStub(shopping: Shopping(name: "Test Shopping \(index)", date: Date()))
+            TableRowViewModelStub(shopping: ShoppingFake(name: "Test Shopping \(index)", date: Date()))
         })
 
         // MARK: TableViewControllerInputs

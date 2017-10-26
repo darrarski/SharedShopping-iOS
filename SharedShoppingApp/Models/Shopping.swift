@@ -1,15 +1,7 @@
 import Foundation
 
-struct Shopping {
-    let name: String
-    let date: Date
-}
-
-extension Shopping: Equatable {
-
-    public static func == (lhs: Shopping, rhs: Shopping) -> Bool {
-        return lhs.name == rhs.name &&
-               lhs.date == rhs.date
-    }
-
+protocol Shopping {
+    var name: String { get }
+    var date: Date { get }
+    func isEqual(to other: Shopping) -> Bool
 }

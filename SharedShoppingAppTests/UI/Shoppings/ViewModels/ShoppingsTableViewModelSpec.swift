@@ -16,10 +16,10 @@ class ShoppingsTableViewModelSpec: QuickSpec {
             beforeEach {
                 shoppingsProviderStub = ShoppingsProviderStub()
                 shoppingsProviderStub.shoppingsVar.value = [
-                    Shopping(name: "Shopping 1", date: Date()),
-                    Shopping(name: "Shopping 2", date: Date()),
-                    Shopping(name: "Shopping 3", date: Date()),
-                    Shopping(name: "Shopping 4", date: Date())
+                    ShoppingFake(name: "Shopping 1", date: Date()),
+                    ShoppingFake(name: "Shopping 2", date: Date()),
+                    ShoppingFake(name: "Shopping 3", date: Date()),
+                    ShoppingFake(name: "Shopping 4", date: Date())
                 ]
                 sut = ShoppingsTableViewModel(
                     shoppingsProvider: shoppingsProviderStub,
@@ -59,7 +59,7 @@ class ShoppingsTableViewModelSpec: QuickSpec {
 
                 context("insert shopping at index 0") {
                     beforeEach {
-                        let shopping = Shopping(name: "Inserted Shopping", date: Date())
+                        let shopping = ShoppingFake(name: "Inserted Shopping", date: Date())
                         shoppingsProviderStub.shoppingsVar.value.insert(shopping, at: 0)
                     }
 

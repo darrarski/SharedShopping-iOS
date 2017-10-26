@@ -42,7 +42,7 @@ class ShoppingServiceSpec: QuickSpec {
 
                 context("remove other shopping") {
                     beforeEach {
-                        sut.removeShopping(Shopping(name: "Other Shopping", date: Date()))
+                        sut.removeShopping(ShoppingFake(name: "Other Shopping", date: Date()))
                     }
 
                     it("should have created shopping") {
