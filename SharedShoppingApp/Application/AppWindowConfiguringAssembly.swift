@@ -1,14 +1,9 @@
-import UIKit
 import Swinject
 import SwinjectAutoregistration
 
-class AppAssembly: Assembly {
+class AppWindowConfiguringAssembly: Assembly {
 
-    func assemble(container: Swinject.Container) {
-        container.register(AppWindowCreating.self) { _ in
-            AppWindowFactory(size: UIScreen.main.bounds.size)
-        }
-
+    func assemble(container: Container) {
         if isRunningTests {
             container.register(AppWindowConfiguring.self) { _ in
                 TestAppWindowConfigurator()
@@ -18,10 +13,6 @@ class AppAssembly: Assembly {
                 AppWindowConfigurator(rootViewController: { resolver ~> ShoppingsViewController.self })
             }
         }
-
-        container.register(ShoppingService.self) { _ in
-            ShoppingService()
-        }.inObjectScope(.container)
     }
 
     private var isRunningTests: Bool {

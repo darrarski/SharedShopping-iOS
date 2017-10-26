@@ -4,7 +4,9 @@ extension Assembler {
 
     static var `default`: Assembler {
         return Assembler([
-            AppAssembly(),
+            AppWindowCreatingAssembly(),
+            AppWindowConfiguringAssembly(),
+            ShoppingServiceAssembly(),
             ShoppingsAssembly()
         ])
     }

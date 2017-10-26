@@ -54,8 +54,10 @@
 		31D828801FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8287F1FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift */; };
 		31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828811FA28B0B009CD4E5 /* Assembler.swift */; };
 		31D828841FA28F0D009CD4E5 /* ShoppingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828831FA28F0D009CD4E5 /* ShoppingsAssembly.swift */; };
+		31D828861FA2948E009CD4E5 /* ShoppingServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828851FA2948E009CD4E5 /* ShoppingServiceAssembly.swift */; };
+		31D828881FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828871FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift */; };
 		31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */; };
-		31FAE9FF1F7EF61D00EA7660 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* AppAssembly.swift */; };
+		31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */; };
 		31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */; };
 		31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */; };
 		BE7A26929F5ADFD2AD068633 /* Pods_SharedShoppingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */; };
@@ -122,8 +124,10 @@
 		31D8287F1FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_EmbeddingSpec.swift; sourceTree = "<group>"; };
 		31D828811FA28B0B009CD4E5 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		31D828831FA28F0D009CD4E5 /* ShoppingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsAssembly.swift; sourceTree = "<group>"; };
+		31D828851FA2948E009CD4E5 /* ShoppingServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceAssembly.swift; sourceTree = "<group>"; };
+		31D828871FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfiguringAssembly.swift; sourceTree = "<group>"; };
 		31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
-		31FAE9FE1F7EF61D00EA7660 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowCreatingAssembly.swift; sourceTree = "<group>"; };
 		31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewController.swift; sourceTree = "<group>"; };
 		31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewControllerSpec.swift; sourceTree = "<group>"; };
 		3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -341,10 +345,11 @@
 		319486361F7C38F800DB435B /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				31FAE9FE1F7EF61D00EA7660 /* AppAssembly.swift */,
 				319486241F7C389C00DB435B /* AppDelegate.swift */,
 				31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */,
 				31D828711FA27057009CD4E5 /* AppWindowConfiguring.swift */,
+				31D828871FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift */,
+				31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */,
 				31D828611FA26708009CD4E5 /* AppWindowFactory.swift */,
 				31D828811FA28B0B009CD4E5 /* Assembler.swift */,
 				31D828691FA26D41009CD4E5 /* TestAppWindowConfigurator.swift */,
@@ -385,6 +390,7 @@
 				31A361A21F97DADE0061B658 /* ShoppingCreating.swift */,
 				31A361A41F97DAF00061B658 /* ShoppingRemoving.swift */,
 				313B26AC1F8C1E9F00E55447 /* ShoppingService.swift */,
+				31D828851FA2948E009CD4E5 /* ShoppingServiceAssembly.swift */,
 				31A361A01F97DAD40061B658 /* ShoppingsProviding.swift */,
 			);
 			path = Shopping;
@@ -776,7 +782,7 @@
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
 				31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */,
 				3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */,
-				31FAE9FF1F7EF61D00EA7660 /* AppAssembly.swift in Sources */,
+				31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */,
 				31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */,
 				317920791F884B9A00D7359F /* TableViewController.swift in Sources */,
 				317920861F885A0100D7359F /* ShoppingsTableViewModel.swift in Sources */,
@@ -785,6 +791,8 @@
 				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
 				313B26AF1F8C21A200E55447 /* ShoppingsViewModel.swift in Sources */,
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
+				31D828861FA2948E009CD4E5 /* ShoppingServiceAssembly.swift in Sources */,
+				31D828881FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift in Sources */,
 				31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */,
 				31D828721FA27057009CD4E5 /* AppWindowConfiguring.swift in Sources */,
 				319486251F7C389C00DB435B /* AppDelegate.swift in Sources */,
