@@ -3,7 +3,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var windowFactory: () -> UIWindow = Container().appWindowFactory
+    override init() {
+        let container = Container()
+        appWindowFactory = container.appWindowFactory
+        appWindowConfigurator = container.appWindowConfiguring
+        super.init()
+    }
+
+    var appWindowFactory: AppWindowCreating
+    var appWindowConfigurator: AppWindowConfiguring
 
     // MARK: UIApplicationDelegate
 
@@ -11,8 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = windowFactory()
-        window?.makeKeyAndVisible()
+        let window = appWindowFactory.createAppWindow()
+        appWindowConfigurator.configureWindow(window)
+        self.window = window
         return true
     }
 

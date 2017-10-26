@@ -8,12 +8,15 @@ class AppDelegateSpec: QuickSpec {
     override func spec() {
         describe("AppDelegate") {
             var sut: AppDelegate!
-            var windowSpy: UIWindowSpy!
+            var appWindowFactoryStub: AppWindowFactoryStub!
+            var appWindowConfiguratorSpy: AppWindowConfiguratorSpy!
 
             beforeEach {
-                windowSpy = UIWindowSpy()
+                appWindowFactoryStub = AppWindowFactoryStub()
+                appWindowConfiguratorSpy = AppWindowConfiguratorSpy()
                 sut = AppDelegate()
-                sut.windowFactory = { windowSpy }
+                sut.appWindowFactory = appWindowFactoryStub
+                sut.appWindowConfigurator = appWindowConfiguratorSpy
             }
 
             context("application did finish launching") {
@@ -27,12 +30,12 @@ class AppDelegateSpec: QuickSpec {
                     expect(sut.window).notTo(beNil())
                 }
 
-                it("should use window from assembly") {
-                    expect(sut.window).to(be(windowSpy))
+                it("should have correct window") {
+                    expect(sut.window).to(be(appWindowFactoryStub.windowSpy))
                 }
 
-                it("should make window key and visible") {
-                    expect(windowSpy.makeKeyAndVisibleCalled).to(beTrue())
+                it("should configure window") {
+                    expect(appWindowConfiguratorSpy.didConfigureWindow).to(be(sut.window))
                 }
 
                 it("should return true") {
