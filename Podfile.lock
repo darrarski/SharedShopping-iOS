@@ -12,6 +12,9 @@ PODS:
     - RxSwift (~> 4.0)
   - SnapKit (4.0.0)
   - SwiftLint (0.23.1)
+  - Swinject (2.1.1)
+  - SwinjectAutoregistration (2.1.1):
+    - Swinject (~> 2.1)
 
 DEPENDENCIES:
   - Differ (~> 1.0)
@@ -24,6 +27,8 @@ DEPENDENCIES:
   - RxTest (~> 4.0)
   - SnapKit (~> 4.0)
   - SwiftLint (~> 0.22)
+  - Swinject (~> 2.1)
+  - SwinjectAutoregistration (~> 2.1)
 
 SPEC CHECKSUMS:
   Differ: a571b66c49d0fc83fe5af9a4a41f09bb09e91c85
@@ -36,7 +41,9 @@ SPEC CHECKSUMS:
   RxTest: 0041e792cede35e53e4749f378d21482af0e9d12
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
+  Swinject: afea49fd95f392b41171669f165842879c48fad6
+  SwinjectAutoregistration: d06b56bd8f912b9fb9c59c15181342558a734b1b
 
-PODFILE CHECKSUM: 1a3014aa91480ad16fb1a09812abdc093f619c4a
+PODFILE CHECKSUM: a3adee9dabf2804852bed591a94008019d4934e5
 
 COCOAPODS: 1.3.1
