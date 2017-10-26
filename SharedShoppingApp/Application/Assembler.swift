@@ -7,7 +7,10 @@ extension Assembler {
             AppWindowCreatingAssembly(),
             AppWindowConfiguringAssembly(),
             ShoppingServiceAssembly(),
-            ShoppingsAssembly()
+            ShoppingsViewControllerAssembly(),
+            ShoppingsViewModelAssembly(),
+            ShoppingsTableViewModelAssembly(),
+            ShoppingsTableRowViewModelAssembly()
         ])
     }
 
