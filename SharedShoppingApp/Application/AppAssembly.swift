@@ -18,6 +18,10 @@ class AppAssembly: Assembly {
                 AppWindowConfigurator(rootViewController: { resolver ~> ShoppingsViewController.self })
             }
         }
+
+        container.register(ShoppingService.self) { _ in
+            ShoppingService()
+        }.inObjectScope(.container)
     }
 
     private var isRunningTests: Bool {
