@@ -44,7 +44,9 @@
 		31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828611FA26708009CD4E5 /* AppWindowFactory.swift */; };
 		31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */; };
 		31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */; };
+		31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828691FA26D41009CD4E5 /* TestAppWindowConfigurator.swift */; };
 		31D8286C1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8286B1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift */; };
+		31D8286E1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8286D1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift */; };
 		31D828701FA26ED8009CD4E5 /* UIWindowSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */; };
 		31D828721FA27057009CD4E5 /* AppWindowConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828711FA27057009CD4E5 /* AppWindowConfiguring.swift */; };
 		31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */; };
@@ -107,7 +109,9 @@
 		31D828611FA26708009CD4E5 /* AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactory.swift; sourceTree = "<group>"; };
 		31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactorySpec.swift; sourceTree = "<group>"; };
 		31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfigurator.swift; sourceTree = "<group>"; };
+		31D828691FA26D41009CD4E5 /* TestAppWindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppWindowConfigurator.swift; sourceTree = "<group>"; };
 		31D8286B1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfiguratorSpec.swift; sourceTree = "<group>"; };
+		31D8286D1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppWindowConfiguratorSpec.swift; sourceTree = "<group>"; };
 		31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowSpy.swift; sourceTree = "<group>"; };
 		31D828711FA27057009CD4E5 /* AppWindowConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfiguring.swift; sourceTree = "<group>"; };
 		31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 				31D828611FA26708009CD4E5 /* AppWindowFactory.swift */,
 				31FAE9FE1F7EF61D00EA7660 /* Container_AppWindowFactory.swift */,
 				31FAE9FC1F7EF51000EA7660 /* Container.swift */,
+				31D828691FA26D41009CD4E5 /* TestAppWindowConfigurator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 				31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */,
 				31D8286B1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift */,
 				31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */,
+				31D8286D1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift */,
 				31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */,
 			);
 			path = Application;
@@ -758,6 +764,7 @@
 				31D828721FA27057009CD4E5 /* AppWindowConfiguring.swift in Sources */,
 				319486251F7C389C00DB435B /* AppDelegate.swift in Sources */,
 				317920841F8859E600D7359F /* Container_ShoppingsTableViewModel.swift in Sources */,
+				31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */,
 				31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */,
 				31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */,
 				313B26AD1F8C1E9F00E55447 /* ShoppingService.swift in Sources */,
@@ -781,6 +788,7 @@
 				31D828701FA26ED8009CD4E5 /* UIWindowSpy.swift in Sources */,
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
 				31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */,
+				31D8286E1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift in Sources */,
 				31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */,
 				31D8286C1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift in Sources */,
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
