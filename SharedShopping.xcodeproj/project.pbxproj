@@ -41,6 +41,8 @@
 		31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361B11F97FE710061B658 /* ShoppingRemoverSpy.swift */; };
 		31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361B41F9803240061B658 /* Variable_AsWeakObserver.swift */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
+		31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828611FA26708009CD4E5 /* AppWindowFactory.swift */; };
+		31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */; };
 		31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */; };
 		31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FC1F7EF51000EA7660 /* Container.swift */; };
 		31FAE9FF1F7EF61D00EA7660 /* Container_AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* Container_AppWindowFactory.swift */; };
@@ -98,6 +100,8 @@
 		31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31D828611FA26708009CD4E5 /* AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactory.swift; sourceTree = "<group>"; };
+		31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactorySpec.swift; sourceTree = "<group>"; };
 		31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
 		31FAE9FC1F7EF51000EA7660 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		31FAE9FE1F7EF61D00EA7660 /* Container_AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_AppWindowFactory.swift; sourceTree = "<group>"; };
@@ -323,8 +327,9 @@
 			isa = PBXGroup;
 			children = (
 				319486241F7C389C00DB435B /* AppDelegate.swift */,
-				31FAE9FC1F7EF51000EA7660 /* Container.swift */,
+				31D828611FA26708009CD4E5 /* AppWindowFactory.swift */,
 				31FAE9FE1F7EF61D00EA7660 /* Container_AppWindowFactory.swift */,
+				31FAE9FC1F7EF51000EA7660 /* Container.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */,
+				31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -722,6 +728,7 @@
 				3179207B1F884BBB00D7359F /* TableRowViewModel.swift in Sources */,
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
 				313B26AA1F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift in Sources */,
+				31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */,
 				3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* Container_AppWindowFactory.swift in Sources */,
 				31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */,
@@ -748,6 +755,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				317920821F88597000D7359F /* TableRowViewModelStub.swift in Sources */,
+				31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */,
 				313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */,
 				317920801F884CFA00D7359F /* TableViewControllerSpec.swift in Sources */,
 				313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */,
