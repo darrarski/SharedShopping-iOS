@@ -43,6 +43,7 @@
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828611FA26708009CD4E5 /* AppWindowFactory.swift */; };
 		31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */; };
+		31D828701FA26ED8009CD4E5 /* UIWindowSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */; };
 		31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */; };
 		31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FC1F7EF51000EA7660 /* Container.swift */; };
 		31FAE9FF1F7EF61D00EA7660 /* Container_AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* Container_AppWindowFactory.swift */; };
@@ -102,6 +103,7 @@
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31D828611FA26708009CD4E5 /* AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactory.swift; sourceTree = "<group>"; };
 		31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactorySpec.swift; sourceTree = "<group>"; };
+		31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowSpy.swift; sourceTree = "<group>"; };
 		31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
 		31FAE9FC1F7EF51000EA7660 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		31FAE9FE1F7EF61D00EA7660 /* Container_AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_AppWindowFactory.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 			children = (
 				31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */,
 				31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */,
+				31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -764,6 +767,7 @@
 				313B26A31F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift in Sources */,
 				31A361AB1F97E0080061B658 /* ShoppingCreatorSpy.swift in Sources */,
 				31A361A91F97DBDC0061B658 /* ShoppingServiceSpec.swift in Sources */,
+				31D828701FA26ED8009CD4E5 /* UIWindowSpy.swift in Sources */,
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
 				31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */,
 				31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */,

@@ -8,10 +8,10 @@ class AppDelegateSpec: QuickSpec {
     override func spec() {
         describe("AppDelegate") {
             var sut: AppDelegate!
-            var windowSpy: WindowSpy!
+            var windowSpy: UIWindowSpy!
 
             beforeEach {
-                windowSpy = WindowSpy()
+                windowSpy = UIWindowSpy()
                 sut = AppDelegate()
                 sut.windowFactory = { windowSpy }
             }
@@ -40,16 +40,6 @@ class AppDelegateSpec: QuickSpec {
                 }
             }
         }
-    }
-
-    private class WindowSpy: UIWindow {
-
-        var makeKeyAndVisibleCalled = false
-
-        override func makeKeyAndVisible() {
-            makeKeyAndVisibleCalled = true
-        }
-
     }
 
 }
