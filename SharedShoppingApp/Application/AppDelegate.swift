@@ -7,9 +7,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     override init() {
         assembler = Assembler.default
-        let container = Container()
-        appWindowFactory = container.appWindowFactory
-        appWindowConfigurator = container.appWindowConfiguring
+        appWindowFactory = assembler.resolver ~> AppWindowCreating.self
+        appWindowConfigurator = assembler.resolver ~> AppWindowConfiguring.self
         super.init()
     }
 
