@@ -5,6 +5,10 @@ import RxRealm
 
 class ShoppingServiceRealm: ShoppingsProviding, ShoppingCreating, ShoppingRemoving {
 
+    init(realm: Realm) {
+        self.realm = realm
+    }
+
     // MARK: ShoppingsProviding
 
     var shoppings: Observable<[Shopping]> {
@@ -35,6 +39,6 @@ class ShoppingServiceRealm: ShoppingsProviding, ShoppingCreating, ShoppingRemovi
 
     // MARK: Private
 
-    private let realm = try! Realm() // swiftlint:disable:this force_try
+    private let realm: Realm
 
 }
