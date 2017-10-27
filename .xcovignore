@@ -1,3 +1,3 @@
-# Production Container
-- Container.swift
-- Container_.*.swift
+# Swinject
+- Assembler.swift
+- .*Assembly.swift

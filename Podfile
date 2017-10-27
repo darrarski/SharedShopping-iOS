@@ -6,6 +6,8 @@ inhibit_all_warnings!
 target 'SharedShoppingApp' do
   pod 'Reveal-SDK', :configurations => ['Debug']
   pod 'SwiftLint', '~> 0.22'
+  pod 'Swinject', '~> 2.1'
+  pod 'SwinjectAutoregistration', '~> 2.1'
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
   pod 'RealmSwift', '~> 3.0'

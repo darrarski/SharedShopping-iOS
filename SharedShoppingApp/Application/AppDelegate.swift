@@ -1,15 +1,18 @@
 import UIKit
+import Swinject
+import SwinjectAutoregistration
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     override init() {
-        let container = Container()
-        appWindowFactory = container.appWindowFactory
-        appWindowConfigurator = container.appWindowConfiguring
+        assembler = Assembler.default
+        appWindowFactory = assembler.resolver ~> AppWindowCreating.self
+        appWindowConfigurator = assembler.resolver ~> AppWindowConfiguring.self
         super.init()
     }
 
+    let assembler: Assembler
     var appWindowFactory: AppWindowCreating
     var appWindowConfigurator: AppWindowConfiguring
 
