@@ -31,6 +31,7 @@
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
+		3197416D1FA3659E00C4A3C3 /* ShoppingRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3197416C1FA3659E00C4A3C3 /* ShoppingRealm.swift */; };
 		31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361A01F97DAD40061B658 /* ShoppingsProviding.swift */; };
 		31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361A21F97DADE0061B658 /* ShoppingCreating.swift */; };
 		31A361A51F97DAF00061B658 /* ShoppingRemoving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361A41F97DAF00061B658 /* ShoppingRemoving.swift */; };
@@ -101,6 +102,7 @@
 		3194862B1F7C389C00DB435B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3194862E1F7C389C00DB435B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		319486301F7C389C00DB435B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3197416C1FA3659E00C4A3C3 /* ShoppingRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRealm.swift; sourceTree = "<group>"; };
 		31A361A01F97DAD40061B658 /* ShoppingsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsProviding.swift; sourceTree = "<group>"; };
 		31A361A21F97DADE0061B658 /* ShoppingCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCreating.swift; sourceTree = "<group>"; };
 		31A361A41F97DAF00061B658 /* ShoppingRemoving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRemoving.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */,
+				3197416C1FA3659E00C4A3C3 /* ShoppingRealm.swift */,
 				31D8287C1FA282CF009CD4E5 /* ShoppingStruct.swift */,
 			);
 			path = Models;
@@ -791,6 +794,7 @@
 				313B26AA1F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift in Sources */,
 				31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */,
 				3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */,
+				3197416D1FA3659E00C4A3C3 /* ShoppingRealm.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* Container_AppWindowFactory.swift in Sources */,
 				31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */,
 				317920791F884B9A00D7359F /* TableViewController.swift in Sources */,
