@@ -6,6 +6,7 @@ extension Assembler {
         return Assembler([
             AppWindowCreatingAssembly(),
             AppWindowConfiguringAssembly(),
+            RealmAssembly(),
             ShoppingServiceAssembly(),
             ShoppingsViewControllerAssembly(),
             ShoppingsViewModelAssembly(),
