@@ -11,10 +11,8 @@
 		310BB4721F99637700031540 /* OnSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BB4711F99637700031540 /* OnSimulator.swift */; };
 		313B26A31F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26A21F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift */; };
 		313B26A61F8BFF8900E55447 /* UITableViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26A51F8BFF8900E55447 /* UITableViewSpy.swift */; };
-		313B26AA1F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26A91F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift */; };
 		313B26AD1F8C1E9F00E55447 /* ShoppingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26AC1F8C1E9F00E55447 /* ShoppingService.swift */; };
 		313B26AF1F8C21A200E55447 /* ShoppingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26AE1F8C21A200E55447 /* ShoppingsViewModel.swift */; };
-		313B26B11F8C21DE00E55447 /* Container_ShoppingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B01F8C21DE00E55447 /* Container_ShoppingsViewModel.swift */; };
 		313B26B31F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B21F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift */; };
 		313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */; };
 		313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */; };
@@ -25,7 +23,6 @@
 		3179207D1F884BE800D7359F /* ShoppingsTableRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207C1F884BE800D7359F /* ShoppingsTableRowViewModel.swift */; };
 		317920801F884CFA00D7359F /* TableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */; };
 		317920821F88597000D7359F /* TableRowViewModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920811F88597000D7359F /* TableRowViewModelStub.swift */; };
-		317920841F8859E600D7359F /* Container_ShoppingsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */; };
 		317920861F885A0100D7359F /* ShoppingsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */; };
 		3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3185C96C1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift */; };
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
@@ -44,7 +41,6 @@
 		31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828611FA26708009CD4E5 /* AppWindowFactory.swift */; };
 		31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */; };
 		31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */; };
-		31D828681FA26A35009CD4E5 /* Container_AppWindowConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828671FA26A35009CD4E5 /* Container_AppWindowConfiguring.swift */; };
 		31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828691FA26D41009CD4E5 /* TestAppWindowConfigurator.swift */; };
 		31D8286C1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8286B1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift */; };
 		31D8286E1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8286D1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift */; };
@@ -56,11 +52,16 @@
 		31D8287B1FA27F05009CD4E5 /* Shopping_Nimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8287A1FA27F05009CD4E5 /* Shopping_Nimble.swift */; };
 		31D8287D1FA282CF009CD4E5 /* ShoppingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8287C1FA282CF009CD4E5 /* ShoppingStruct.swift */; };
 		31D828801FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8287F1FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift */; };
+		31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828811FA28B0B009CD4E5 /* Assembler.swift */; };
+		31D828841FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828831FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift */; };
+		31D828861FA2948E009CD4E5 /* ShoppingServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828851FA2948E009CD4E5 /* ShoppingServiceAssembly.swift */; };
+		31D828881FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828871FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift */; };
+		31D8288A1FA29648009CD4E5 /* ShoppingsViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828891FA29648009CD4E5 /* ShoppingsViewControllerAssembly.swift */; };
+		31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8288B1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift */; };
+		31D8288E1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8288D1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift */; };
 		31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */; };
-		31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FC1F7EF51000EA7660 /* Container.swift */; };
-		31FAE9FF1F7EF61D00EA7660 /* Container_AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* Container_AppWindowFactory.swift */; };
+		31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */; };
 		31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */; };
-		31FAEA041F7EF93100EA7660 /* Container_ShoppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA031F7EF93100EA7660 /* Container_ShoppingsViewController.swift */; };
 		31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */; };
 		BE7A26929F5ADFD2AD068633 /* Pods_SharedShoppingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,10 +80,8 @@
 		310BB4711F99637700031540 /* OnSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSimulator.swift; sourceTree = "<group>"; };
 		313B26A21F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRowViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26A51F8BFF8900E55447 /* UITableViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewSpy.swift; sourceTree = "<group>"; };
-		313B26A91F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_ShoppingsTableRowViewModel.swift; sourceTree = "<group>"; };
 		313B26AC1F8C1E9F00E55447 /* ShoppingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingService.swift; sourceTree = "<group>"; };
 		313B26AE1F8C21A200E55447 /* ShoppingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewModel.swift; sourceTree = "<group>"; };
-		313B26B01F8C21DE00E55447 /* Container_ShoppingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_ShoppingsViewModel.swift; sourceTree = "<group>"; };
 		313B26B21F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRowActionSpy.swift; sourceTree = "<group>"; };
@@ -93,7 +92,6 @@
 		3179207C1F884BE800D7359F /* ShoppingsTableRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRowViewModel.swift; sourceTree = "<group>"; };
 		3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerSpec.swift; sourceTree = "<group>"; };
 		317920811F88597000D7359F /* TableRowViewModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowViewModelStub.swift; sourceTree = "<group>"; };
-		317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_ShoppingsTableViewModel.swift; sourceTree = "<group>"; };
 		317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModel.swift; sourceTree = "<group>"; };
 		3185C96C1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Differ_TableViewControllerUpdates.swift; sourceTree = "<group>"; };
 		319486211F7C389C00DB435B /* SharedShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +114,6 @@
 		31D828611FA26708009CD4E5 /* AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactory.swift; sourceTree = "<group>"; };
 		31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactorySpec.swift; sourceTree = "<group>"; };
 		31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfigurator.swift; sourceTree = "<group>"; };
-		31D828671FA26A35009CD4E5 /* Container_AppWindowConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_AppWindowConfiguring.swift; sourceTree = "<group>"; };
 		31D828691FA26D41009CD4E5 /* TestAppWindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppWindowConfigurator.swift; sourceTree = "<group>"; };
 		31D8286B1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfiguratorSpec.swift; sourceTree = "<group>"; };
 		31D8286D1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppWindowConfiguratorSpec.swift; sourceTree = "<group>"; };
@@ -128,11 +125,16 @@
 		31D8287A1FA27F05009CD4E5 /* Shopping_Nimble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_Nimble.swift; sourceTree = "<group>"; };
 		31D8287C1FA282CF009CD4E5 /* ShoppingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingStruct.swift; sourceTree = "<group>"; };
 		31D8287F1FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_EmbeddingSpec.swift; sourceTree = "<group>"; };
+		31D828811FA28B0B009CD4E5 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		31D828831FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRowViewModelAssembly.swift; sourceTree = "<group>"; };
+		31D828851FA2948E009CD4E5 /* ShoppingServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceAssembly.swift; sourceTree = "<group>"; };
+		31D828871FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfiguringAssembly.swift; sourceTree = "<group>"; };
+		31D828891FA29648009CD4E5 /* ShoppingsViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewControllerAssembly.swift; sourceTree = "<group>"; };
+		31D8288B1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewModelAssembly.swift; sourceTree = "<group>"; };
+		31D8288D1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModelAssembly.swift; sourceTree = "<group>"; };
 		31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
-		31FAE9FC1F7EF51000EA7660 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
-		31FAE9FE1F7EF61D00EA7660 /* Container_AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_AppWindowFactory.swift; sourceTree = "<group>"; };
+		31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowCreatingAssembly.swift; sourceTree = "<group>"; };
 		31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewController.swift; sourceTree = "<group>"; };
-		31FAEA031F7EF93100EA7660 /* Container_ShoppingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_ShoppingsViewController.swift; sourceTree = "<group>"; };
 		31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewControllerSpec.swift; sourceTree = "<group>"; };
 		3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4177C5561BED78236EB9CE18 /* Pods-SharedShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -210,8 +212,8 @@
 		313B269A1F8BEE2900E55447 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				31FAEA031F7EF93100EA7660 /* Container_ShoppingsViewController.swift */,
 				31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */,
+				31D828891FA29648009CD4E5 /* ShoppingsViewControllerAssembly.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -219,12 +221,12 @@
 		313B269B1F8BEE3600E55447 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				313B26A91F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift */,
-				317920831F8859E600D7359F /* Container_ShoppingsTableViewModel.swift */,
-				313B26B01F8C21DE00E55447 /* Container_ShoppingsViewModel.swift */,
 				3179207C1F884BE800D7359F /* ShoppingsTableRowViewModel.swift */,
+				31D828831FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift */,
 				317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */,
+				31D8288D1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift */,
 				313B26AE1F8C21A200E55447 /* ShoppingsViewModel.swift */,
+				31D8288B1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -356,10 +358,10 @@
 				319486241F7C389C00DB435B /* AppDelegate.swift */,
 				31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */,
 				31D828711FA27057009CD4E5 /* AppWindowConfiguring.swift */,
+				31D828871FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift */,
+				31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */,
 				31D828611FA26708009CD4E5 /* AppWindowFactory.swift */,
-				31D828671FA26A35009CD4E5 /* Container_AppWindowConfiguring.swift */,
-				31FAE9FE1F7EF61D00EA7660 /* Container_AppWindowFactory.swift */,
-				31FAE9FC1F7EF51000EA7660 /* Container.swift */,
+				31D828811FA28B0B009CD4E5 /* Assembler.swift */,
 				31D828691FA26D41009CD4E5 /* TestAppWindowConfigurator.swift */,
 			);
 			path = Application;
@@ -398,6 +400,7 @@
 				31A361A21F97DADE0061B658 /* ShoppingCreating.swift */,
 				31A361A41F97DAF00061B658 /* ShoppingRemoving.swift */,
 				313B26AC1F8C1E9F00E55447 /* ShoppingService.swift */,
+				31D828851FA2948E009CD4E5 /* ShoppingServiceAssembly.swift */,
 				31A361A01F97DAD40061B658 /* ShoppingsProviding.swift */,
 			);
 			path = Shopping;
@@ -725,6 +728,8 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -733,6 +738,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -782,28 +789,29 @@
 				31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */,
 				3179207B1F884BBB00D7359F /* TableRowViewModel.swift in Sources */,
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
-				313B26AA1F8C106700E55447 /* Container_ShoppingsTableRowViewModel.swift in Sources */,
 				31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */,
 				3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */,
-				31FAE9FF1F7EF61D00EA7660 /* Container_AppWindowFactory.swift in Sources */,
+				31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */,
 				31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */,
 				317920791F884B9A00D7359F /* TableViewController.swift in Sources */,
 				317920861F885A0100D7359F /* ShoppingsTableViewModel.swift in Sources */,
 				31A361A51F97DAF00061B658 /* ShoppingRemoving.swift in Sources */,
+				31D8288E1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift in Sources */,
 				3179207D1F884BE800D7359F /* ShoppingsTableRowViewModel.swift in Sources */,
+				31D8288A1FA29648009CD4E5 /* ShoppingsViewControllerAssembly.swift in Sources */,
 				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
-				31FAEA041F7EF93100EA7660 /* Container_ShoppingsViewController.swift in Sources */,
 				313B26AF1F8C21A200E55447 /* ShoppingsViewModel.swift in Sources */,
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
-				313B26B11F8C21DE00E55447 /* Container_ShoppingsViewModel.swift in Sources */,
+				31D828861FA2948E009CD4E5 /* ShoppingServiceAssembly.swift in Sources */,
+				31D828881FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift in Sources */,
 				31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */,
-				31D828681FA26A35009CD4E5 /* Container_AppWindowConfiguring.swift in Sources */,
-				31FAE9FD1F7EF51000EA7660 /* Container.swift in Sources */,
 				31D828721FA27057009CD4E5 /* AppWindowConfiguring.swift in Sources */,
 				319486251F7C389C00DB435B /* AppDelegate.swift in Sources */,
-				317920841F8859E600D7359F /* Container_ShoppingsTableViewModel.swift in Sources */,
+				31D828841FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift in Sources */,
+				31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */,
 				31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */,
 				31D8287D1FA282CF009CD4E5 /* ShoppingStruct.swift in Sources */,
+				31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */,
 				31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */,
 				31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */,
 				313B26AD1F8C1E9F00E55447 /* ShoppingService.swift in Sources */,
