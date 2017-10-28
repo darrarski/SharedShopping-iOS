@@ -49,7 +49,7 @@ class ShoppingServiceRealmSpec: QuickSpec {
 
                 context("remove invalid shopping") {
                     beforeEach {
-                        sut.removeShopping(ShoppingStruct(name: "Invalid", date: Date()))
+                        sut.removeShopping(ShoppingFake(name: "Invalid", date: Date()))
                     }
 
                     it("should have one shopping") {

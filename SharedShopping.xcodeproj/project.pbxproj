@@ -53,7 +53,6 @@
 		31D828761FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828751FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift */; };
 		31D828791FA27B25009CD4E5 /* ShoppingFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828781FA27B25009CD4E5 /* ShoppingFake.swift */; };
 		31D8287B1FA27F05009CD4E5 /* Shopping_Nimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8287A1FA27F05009CD4E5 /* Shopping_Nimble.swift */; };
-		31D8287D1FA282CF009CD4E5 /* ShoppingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8287C1FA282CF009CD4E5 /* ShoppingStruct.swift */; };
 		31D828801FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8287F1FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift */; };
 		31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828811FA28B0B009CD4E5 /* Assembler.swift */; };
 		31D828841FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828831FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift */; };
@@ -129,7 +128,6 @@
 		31D828751FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfiguratorSpy.swift; sourceTree = "<group>"; };
 		31D828781FA27B25009CD4E5 /* ShoppingFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingFake.swift; sourceTree = "<group>"; };
 		31D8287A1FA27F05009CD4E5 /* Shopping_Nimble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_Nimble.swift; sourceTree = "<group>"; };
-		31D8287C1FA282CF009CD4E5 /* ShoppingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingStruct.swift; sourceTree = "<group>"; };
 		31D8287F1FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_EmbeddingSpec.swift; sourceTree = "<group>"; };
 		31D828811FA28B0B009CD4E5 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		31D828831FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRowViewModelAssembly.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 			children = (
 				31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */,
 				3197416C1FA3659E00C4A3C3 /* ShoppingRealm.swift */,
-				31D8287C1FA282CF009CD4E5 /* ShoppingStruct.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -827,7 +824,6 @@
 				31D828841FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift in Sources */,
 				31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */,
 				31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */,
-				31D8287D1FA282CF009CD4E5 /* ShoppingStruct.swift in Sources */,
 				31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */,
 				31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */,
 				31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */,
