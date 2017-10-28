@@ -32,6 +32,7 @@
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
 		3197416D1FA3659E00C4A3C3 /* ShoppingRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3197416C1FA3659E00C4A3C3 /* ShoppingRealm.swift */; };
 		3197416F1FA3669300C4A3C3 /* ShoppingServiceRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3197416E1FA3669300C4A3C3 /* ShoppingServiceRealm.swift */; };
+		319FA82F1FA4F84A009DB023 /* ShoppingRealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319FA82E1FA4F84A009DB023 /* ShoppingRealmSpec.swift */; };
 		31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361A01F97DAD40061B658 /* ShoppingsProviding.swift */; };
 		31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361A21F97DADE0061B658 /* ShoppingCreating.swift */; };
 		31A361A51F97DAF00061B658 /* ShoppingRemoving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361A41F97DAF00061B658 /* ShoppingRemoving.swift */; };
@@ -105,6 +106,7 @@
 		319486301F7C389C00DB435B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3197416C1FA3659E00C4A3C3 /* ShoppingRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRealm.swift; sourceTree = "<group>"; };
 		3197416E1FA3669300C4A3C3 /* ShoppingServiceRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceRealm.swift; sourceTree = "<group>"; };
+		319FA82E1FA4F84A009DB023 /* ShoppingRealmSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRealmSpec.swift; sourceTree = "<group>"; };
 		31A361A01F97DAD40061B658 /* ShoppingsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsProviding.swift; sourceTree = "<group>"; };
 		31A361A21F97DADE0061B658 /* ShoppingCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCreating.swift; sourceTree = "<group>"; };
 		31A361A41F97DAF00061B658 /* ShoppingRemoving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRemoving.swift; sourceTree = "<group>"; };
@@ -488,6 +490,7 @@
 			children = (
 				31D8287A1FA27F05009CD4E5 /* Shopping_Nimble.swift */,
 				31D828781FA27B25009CD4E5 /* ShoppingFake.swift */,
+				319FA82E1FA4F84A009DB023 /* ShoppingRealmSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -854,6 +857,7 @@
 				31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */,
 				31D8286E1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift in Sources */,
 				31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */,
+				319FA82F1FA4F84A009DB023 /* ShoppingRealmSpec.swift in Sources */,
 				31D8286C1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift in Sources */,
 				31D828761FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift in Sources */,
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
