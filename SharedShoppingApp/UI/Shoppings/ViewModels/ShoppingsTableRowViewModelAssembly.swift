@@ -18,7 +18,7 @@ class ShoppingsTableRowViewModelAssembly: Assembly {
                 shoppingRemover: resolver ~> ShoppingService.self,
                 shopping: shopping
             )
-        }
+        }.inObjectScope(.transient)
     }
 
 }

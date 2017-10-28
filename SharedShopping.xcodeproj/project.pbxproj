@@ -16,6 +16,8 @@
 		313B26B31F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B21F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift */; };
 		313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */; };
 		313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */; };
+		316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316857881FA3BD67009DA75D /* RealmAssembly.swift */; };
+		3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */; };
 		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
 		317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920751F884B6F00D7359F /* UIViewController_Embedding.swift */; };
 		317920791F884B9A00D7359F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920781F884B9A00D7359F /* TableViewController.swift */; };
@@ -28,10 +30,12 @@
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
 		3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */; };
+		3197416D1FA3659E00C4A3C3 /* ShoppingRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3197416C1FA3659E00C4A3C3 /* ShoppingRealm.swift */; };
+		3197416F1FA3669300C4A3C3 /* ShoppingServiceRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3197416E1FA3669300C4A3C3 /* ShoppingServiceRealm.swift */; };
+		319FA82F1FA4F84A009DB023 /* ShoppingRealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319FA82E1FA4F84A009DB023 /* ShoppingRealmSpec.swift */; };
 		31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361A01F97DAD40061B658 /* ShoppingsProviding.swift */; };
 		31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361A21F97DADE0061B658 /* ShoppingCreating.swift */; };
 		31A361A51F97DAF00061B658 /* ShoppingRemoving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361A41F97DAF00061B658 /* ShoppingRemoving.swift */; };
-		31A361A91F97DBDC0061B658 /* ShoppingServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361A81F97DBDC0061B658 /* ShoppingServiceSpec.swift */; };
 		31A361AB1F97E0080061B658 /* ShoppingCreatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361AA1F97E0080061B658 /* ShoppingCreatorSpy.swift */; };
 		31A361AD1F97E3000061B658 /* ShoppingsProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361AC1F97E3000061B658 /* ShoppingsProviderStub.swift */; };
 		31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361AF1F97F6540061B658 /* MethodCallObserver.swift */; };
@@ -50,7 +54,6 @@
 		31D828761FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828751FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift */; };
 		31D828791FA27B25009CD4E5 /* ShoppingFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828781FA27B25009CD4E5 /* ShoppingFake.swift */; };
 		31D8287B1FA27F05009CD4E5 /* Shopping_Nimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8287A1FA27F05009CD4E5 /* Shopping_Nimble.swift */; };
-		31D8287D1FA282CF009CD4E5 /* ShoppingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8287C1FA282CF009CD4E5 /* ShoppingStruct.swift */; };
 		31D828801FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8287F1FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift */; };
 		31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828811FA28B0B009CD4E5 /* Assembler.swift */; };
 		31D828841FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828831FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift */; };
@@ -85,6 +88,8 @@
 		313B26B21F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRowActionSpy.swift; sourceTree = "<group>"; };
+		316857881FA3BD67009DA75D /* RealmAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAssembly.swift; sourceTree = "<group>"; };
+		3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceRealmSpec.swift; sourceTree = "<group>"; };
 		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
 		317920751F884B6F00D7359F /* UIViewController_Embedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Embedding.swift; sourceTree = "<group>"; };
 		317920781F884B9A00D7359F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -99,10 +104,12 @@
 		3194862B1F7C389C00DB435B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3194862E1F7C389C00DB435B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		319486301F7C389C00DB435B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3197416C1FA3659E00C4A3C3 /* ShoppingRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRealm.swift; sourceTree = "<group>"; };
+		3197416E1FA3669300C4A3C3 /* ShoppingServiceRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceRealm.swift; sourceTree = "<group>"; };
+		319FA82E1FA4F84A009DB023 /* ShoppingRealmSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRealmSpec.swift; sourceTree = "<group>"; };
 		31A361A01F97DAD40061B658 /* ShoppingsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsProviding.swift; sourceTree = "<group>"; };
 		31A361A21F97DADE0061B658 /* ShoppingCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCreating.swift; sourceTree = "<group>"; };
 		31A361A41F97DAF00061B658 /* ShoppingRemoving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRemoving.swift; sourceTree = "<group>"; };
-		31A361A81F97DBDC0061B658 /* ShoppingServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceSpec.swift; sourceTree = "<group>"; };
 		31A361AA1F97E0080061B658 /* ShoppingCreatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCreatorSpy.swift; sourceTree = "<group>"; };
 		31A361AC1F97E3000061B658 /* ShoppingsProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsProviderStub.swift; sourceTree = "<group>"; };
 		31A361AF1F97F6540061B658 /* MethodCallObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodCallObserver.swift; sourceTree = "<group>"; };
@@ -123,7 +130,6 @@
 		31D828751FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfiguratorSpy.swift; sourceTree = "<group>"; };
 		31D828781FA27B25009CD4E5 /* ShoppingFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingFake.swift; sourceTree = "<group>"; };
 		31D8287A1FA27F05009CD4E5 /* Shopping_Nimble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_Nimble.swift; sourceTree = "<group>"; };
-		31D8287C1FA282CF009CD4E5 /* ShoppingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingStruct.swift; sourceTree = "<group>"; };
 		31D8287F1FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_EmbeddingSpec.swift; sourceTree = "<group>"; };
 		31D828811FA28B0B009CD4E5 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		31D828831FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRowViewModelAssembly.swift; sourceTree = "<group>"; };
@@ -188,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */,
-				31D8287C1FA282CF009CD4E5 /* ShoppingStruct.swift */,
+				3197416C1FA3659E00C4A3C3 /* ShoppingRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				31A3619F1F97DAC60061B658 /* Shopping */,
+				316857881FA3BD67009DA75D /* RealmAssembly.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -401,6 +408,7 @@
 				31A361A41F97DAF00061B658 /* ShoppingRemoving.swift */,
 				313B26AC1F8C1E9F00E55447 /* ShoppingService.swift */,
 				31D828851FA2948E009CD4E5 /* ShoppingServiceAssembly.swift */,
+				3197416E1FA3669300C4A3C3 /* ShoppingServiceRealm.swift */,
 				31A361A01F97DAD40061B658 /* ShoppingsProviding.swift */,
 			);
 			path = Shopping;
@@ -419,7 +427,7 @@
 			children = (
 				31A361AA1F97E0080061B658 /* ShoppingCreatorSpy.swift */,
 				31A361B11F97FE710061B658 /* ShoppingRemoverSpy.swift */,
-				31A361A81F97DBDC0061B658 /* ShoppingServiceSpec.swift */,
+				3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */,
 				31A361AC1F97E3000061B658 /* ShoppingsProviderStub.swift */,
 			);
 			path = Shopping;
@@ -482,6 +490,7 @@
 			children = (
 				31D8287A1FA27F05009CD4E5 /* Shopping_Nimble.swift */,
 				31D828781FA27B25009CD4E5 /* ShoppingFake.swift */,
+				319FA82E1FA4F84A009DB023 /* ShoppingRealmSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -724,8 +733,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${PODS_ROOT}/Reveal-SDK/RevealServer-11/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
@@ -734,8 +746,11 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
@@ -792,6 +807,8 @@
 				31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */,
 				3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */,
+				3197416D1FA3659E00C4A3C3 /* ShoppingRealm.swift in Sources */,
+				3197416F1FA3669300C4A3C3 /* ShoppingServiceRealm.swift in Sources */,
 				31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */,
 				317920791F884B9A00D7359F /* TableViewController.swift in Sources */,
 				317920861F885A0100D7359F /* ShoppingsTableViewModel.swift in Sources */,
@@ -810,11 +827,11 @@
 				31D828841FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift in Sources */,
 				31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */,
 				31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */,
-				31D8287D1FA282CF009CD4E5 /* ShoppingStruct.swift in Sources */,
 				31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */,
 				31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */,
 				31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */,
 				313B26AD1F8C1E9F00E55447 /* ShoppingService.swift in Sources */,
+				316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,18 +845,19 @@
 				313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */,
 				317920801F884CFA00D7359F /* TableViewControllerSpec.swift in Sources */,
 				31D828801FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift in Sources */,
+				3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */,
 				313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */,
 				310BB4721F99637700031540 /* OnSimulator.swift in Sources */,
 				313B26A61F8BFF8900E55447 /* UITableViewSpy.swift in Sources */,
 				313B26A31F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift in Sources */,
 				31D828741FA27375009CD4E5 /* AppWindowFactoryStub.swift in Sources */,
 				31A361AB1F97E0080061B658 /* ShoppingCreatorSpy.swift in Sources */,
-				31A361A91F97DBDC0061B658 /* ShoppingServiceSpec.swift in Sources */,
 				31D828701FA26ED8009CD4E5 /* UIWindowSpy.swift in Sources */,
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
 				31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */,
 				31D8286E1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift in Sources */,
 				31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */,
+				319FA82F1FA4F84A009DB023 /* ShoppingRealmSpec.swift in Sources */,
 				31D8286C1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift in Sources */,
 				31D828761FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift in Sources */,
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
