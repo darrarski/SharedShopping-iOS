@@ -26,6 +26,9 @@
 		317920801F884CFA00D7359F /* TableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */; };
 		317920821F88597000D7359F /* TableRowViewModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920811F88597000D7359F /* TableRowViewModelStub.swift */; };
 		317920861F885A0100D7359F /* ShoppingsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */; };
+		31847DD81FA7D8AC0024E150 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31847DD71FA7D8AC0024E150 /* ShoppingViewController.swift */; };
+		31847DDA1FA7D8B80024E150 /* ShoppingViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31847DD91FA7D8B80024E150 /* ShoppingViewControllerAssembly.swift */; };
+		31847DDD1FA7D94D0024E150 /* ShoppingViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31847DDC1FA7D94D0024E150 /* ShoppingViewControllerSpec.swift */; };
 		3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3185C96C1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift */; };
 		319486251F7C389C00DB435B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319486241F7C389C00DB435B /* AppDelegate.swift */; };
 		3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3194862B1F7C389C00DB435B /* Assets.xcassets */; };
@@ -98,6 +101,9 @@
 		3179207F1F884CFA00D7359F /* TableViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerSpec.swift; sourceTree = "<group>"; };
 		317920811F88597000D7359F /* TableRowViewModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowViewModelStub.swift; sourceTree = "<group>"; };
 		317920851F885A0100D7359F /* ShoppingsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModel.swift; sourceTree = "<group>"; };
+		31847DD71FA7D8AC0024E150 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
+		31847DD91FA7D8B80024E150 /* ShoppingViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewControllerAssembly.swift; sourceTree = "<group>"; };
+		31847DDC1FA7D94D0024E150 /* ShoppingViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewControllerSpec.swift; sourceTree = "<group>"; };
 		3185C96C1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Differ_TableViewControllerUpdates.swift; sourceTree = "<group>"; };
 		319486211F7C389C00DB435B /* SharedShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		319486241F7C389C00DB435B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -325,6 +331,39 @@
 			path = Table;
 			sourceTree = "<group>";
 		};
+		31847DD51FA7D8890024E150 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				31847DD61FA7D89C0024E150 /* ViewControllers */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		31847DD61FA7D89C0024E150 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31847DD71FA7D8AC0024E150 /* ShoppingViewController.swift */,
+				31847DD91FA7D8B80024E150 /* ShoppingViewControllerAssembly.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31847DDB1FA7D93E0024E150 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				31847DDE1FA7D9530024E150 /* ViewControllers */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		31847DDE1FA7D9530024E150 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31847DDC1FA7D94D0024E150 /* ShoppingViewControllerSpec.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		319486181F7C389C00DB435B = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +426,7 @@
 			children = (
 				313B269D1F8BEE7B00E55447 /* Helpers */,
 				3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */,
+				31847DD51FA7D8890024E150 /* Shopping */,
 				31FAEA001F7EF8FD00EA7660 /* Shoppings */,
 				317920771F884B8E00D7359F /* Table */,
 			);
@@ -517,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				31D8287E1FA2836D009CD4E5 /* Helpers */,
+				31847DDB1FA7D93E0024E150 /* Shopping */,
 				31FAEA061F7EFA1600EA7660 /* Shoppings */,
 				3179207E1F884CED00D7359F /* Table */,
 			);
@@ -831,6 +872,8 @@
 				31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */,
 				31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */,
 				313B26AD1F8C1E9F00E55447 /* ShoppingService.swift in Sources */,
+				31847DDA1FA7D8B80024E150 /* ShoppingViewControllerAssembly.swift in Sources */,
+				31847DD81FA7D8AC0024E150 /* ShoppingViewController.swift in Sources */,
 				316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -863,6 +906,7 @@
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
 				31A361AD1F97E3000061B658 /* ShoppingsProviderStub.swift in Sources */,
 				31D8287B1FA27F05009CD4E5 /* Shopping_Nimble.swift in Sources */,
+				31847DDD1FA7D94D0024E150 /* ShoppingViewControllerSpec.swift in Sources */,
 				313B26B31F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
