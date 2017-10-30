@@ -50,6 +50,10 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
         return shopping.isEqual(to: other.shopping)
     }
 
+    func didSelect() {
+        // TODO:
+    }
+
     // MARK: Private
 
     private let dateFormatter: DateFormatter

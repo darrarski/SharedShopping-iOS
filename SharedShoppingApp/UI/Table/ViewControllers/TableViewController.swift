@@ -44,6 +44,10 @@ class TableViewController: UITableViewController {
         return rowViewModels[indexPath.row].actions
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        rowViewModels[indexPath.row].didSelect()
+    }
+
     // MARK: UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

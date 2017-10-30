@@ -117,6 +117,19 @@ class TableViewControllerSpec: QuickSpec {
                         expect(params[1] as? Int).to(equal(UITableViewRowAnimation.automatic.rawValue))
                     }
                 }
+
+                context("select cell") {
+                    var indexPath: IndexPath!
+
+                    beforeEach {
+                        indexPath = IndexPath(row: 12, section: 0)
+                        sut.tableView(sut.tableView, didSelectRowAt: indexPath)
+                    }
+
+                    it("should call didSelect on row") {
+                        expect(inputs.rowViewModelsStub.value[indexPath.row].didSelectCalled).to(beTrue())
+                    }
+                }
             }
         }
     }

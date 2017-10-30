@@ -19,6 +19,7 @@ class TableRowViewModelStub: TableRowViewModel {
     var heightCalled = false
     var cellAtIndexPathInTableViewCalled: (IndexPath, UITableView)?
     var actionsCalled = false
+    var didSelectCalled = false
 
     // MARK: TableRowViewModel
 
@@ -49,6 +50,10 @@ class TableRowViewModelStub: TableRowViewModel {
     func isEqual(to other: TableRowViewModel) -> Bool {
         guard let other = other as? TableRowViewModelStub else { return false }
         return shopping.isEqual(to: other.shopping)
+    }
+
+    func didSelect() {
+        didSelectCalled = true
     }
 
 }
