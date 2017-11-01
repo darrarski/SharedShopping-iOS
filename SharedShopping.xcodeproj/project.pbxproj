@@ -16,6 +16,8 @@
 		313B26B31F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B21F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift */; };
 		313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */; };
 		313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */; };
+		3154E0991FA954D700529923 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0971FA954D700529923 /* fabric.apikey */; };
+		3154E09A1FA954D700529923 /* fabric.buildsecret in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0981FA954D700529923 /* fabric.buildsecret */; };
 		316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316857881FA3BD67009DA75D /* RealmAssembly.swift */; };
 		3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */; };
 		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
@@ -88,6 +90,8 @@
 		313B26B21F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRowActionSpy.swift; sourceTree = "<group>"; };
+		3154E0971FA954D700529923 /* fabric.apikey */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.apikey; sourceTree = "<group>"; };
+		3154E0981FA954D700529923 /* fabric.buildsecret */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = "<group>"; };
 		316857881FA3BD67009DA75D /* RealmAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAssembly.swift; sourceTree = "<group>"; };
 		3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceRealmSpec.swift; sourceTree = "<group>"; };
 		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -306,6 +310,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		3154E0961FA954BB00529923 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				3154E0971FA954D700529923 /* fabric.apikey */,
+				3154E0981FA954D700529923 /* fabric.buildsecret */,
+			);
+			path = Secrets;
+			sourceTree = "<group>";
+		};
 		317920771F884B8E00D7359F /* Table */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +344,7 @@
 				25209D7451839EBBD253DAF0 /* Frameworks */,
 				1FABA155950D8D51133875C6 /* Pods */,
 				319486221F7C389C00DB435B /* Products */,
+				3154E0961FA954BB00529923 /* Secrets */,
 				319486231F7C389C00DB435B /* SharedShoppingApp */,
 				31AAAEC11F7C43DB000C29AB /* SharedShoppingAppTests */,
 			);
@@ -624,6 +638,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3154E0991FA954D700529923 /* fabric.apikey in Resources */,
+				3154E09A1FA954D700529923 /* fabric.buildsecret in Resources */,
 				3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */,
 				3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */,
 			);
