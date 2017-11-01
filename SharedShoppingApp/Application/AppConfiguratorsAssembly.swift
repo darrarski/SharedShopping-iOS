@@ -3,9 +3,17 @@ import Swinject
 class AppConfiguratorsAssembly: Assembly {
 
     func assemble(container: Container) {
-        container.register([AppConfiguring].self) { _ in [
-            CrashlyticsConfigurator()
-        ]}
+        if isRunningTests {
+            container.register([AppConfiguring].self) { _ in [] }
+        } else {
+            container.register([AppConfiguring].self) { _ in
+                [CrashlyticsConfigurator()]
+            }
+        }
+    }
+
+    private var isRunningTests: Bool {
+        return NSClassFromString("XCTest") != nil
     }
 
 }
