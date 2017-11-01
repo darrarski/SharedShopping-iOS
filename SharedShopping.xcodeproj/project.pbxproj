@@ -22,6 +22,7 @@
 		3154E09E1FA957C700529923 /* CrashlyticsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09D1FA957C700529923 /* CrashlyticsConfigurator.swift */; };
 		3154E0A01FA9580400529923 /* AppConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09F1FA9580400529923 /* AppConfiguring.swift */; };
 		3154E0A21FA958FC00529923 /* AppConfiguratorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E0A11FA958FC00529923 /* AppConfiguratorSpy.swift */; };
+		3154E0A41FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E0A31FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift */; };
 		316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316857881FA3BD67009DA75D /* RealmAssembly.swift */; };
 		3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */; };
 		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
@@ -100,6 +101,7 @@
 		3154E09D1FA957C700529923 /* CrashlyticsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticsConfigurator.swift; sourceTree = "<group>"; };
 		3154E09F1FA9580400529923 /* AppConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguring.swift; sourceTree = "<group>"; };
 		3154E0A11FA958FC00529923 /* AppConfiguratorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguratorSpy.swift; sourceTree = "<group>"; };
+		3154E0A31FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticsConfiguratorSpec.swift; sourceTree = "<group>"; };
 		316857881FA3BD67009DA75D /* RealmAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAssembly.swift; sourceTree = "<group>"; };
 		3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceRealmSpec.swift; sourceTree = "<group>"; };
 		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -478,14 +480,15 @@
 		31A6F86E1F7C4D4F00D40F15 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3154E0A11FA958FC00529923 /* AppConfiguratorSpy.swift */,
 				31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */,
 				31D8286B1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift */,
 				31D828751FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift */,
 				31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */,
 				31D828731FA27375009CD4E5 /* AppWindowFactoryStub.swift */,
+				3154E0A31FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift */,
 				31D8286D1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift */,
 				31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */,
-				3154E0A11FA958FC00529923 /* AppConfiguratorSpy.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -908,6 +911,7 @@
 				31D8286C1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift in Sources */,
 				31D828761FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift in Sources */,
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
+				3154E0A41FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift in Sources */,
 				31A361AD1F97E3000061B658 /* ShoppingsProviderStub.swift in Sources */,
 				31D8287B1FA27F05009CD4E5 /* Shopping_Nimble.swift in Sources */,
 				313B26B31F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift in Sources */,

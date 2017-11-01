@@ -1,16 +1,26 @@
 import Foundation
-import Crashlytics
 
 class CrashlyticsConfigurator: AppConfiguring {
 
-    func configure() {
-        Crashlytics.start(withAPIKey: fabricApiKey)
+    init(apiKeyURL: URL, start: @escaping (String) -> Void) {
+        self.apiKeyURL = apiKeyURL
+        self.start = start
     }
+
+    // MARK: AppConfiguring
+
+    func configure() {
+        start(fabricApiKey)
+    }
+
+    // MARK: Private
+
+    private let apiKeyURL: URL
+    private let start: (String) -> Void
 
     private var fabricApiKey: String {
         // swiftlint:disable force_unwrapping force_try
-        let url = Bundle.main.url(forResource: "fabric", withExtension: "apikey")!
-        let data = try! Data(contentsOf: url)
+        let data = try! Data(contentsOf: apiKeyURL)
         return String(data: data, encoding: .utf8)!
     }
 

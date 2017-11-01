@@ -1,19 +1,24 @@
 import Swinject
+import SwinjectAutoregistration
+import Crashlytics
 
 class AppConfiguratorsAssembly: Assembly {
 
     func assemble(container: Container) {
-        if isRunningTests {
-            container.register([AppConfiguring].self) { _ in [] }
-        } else {
-            container.register([AppConfiguring].self) { _ in
-                [CrashlyticsConfigurator()]
-            }
+        container.register([AppConfiguring].self) { resolver in
+            let isRunningTests = NSClassFromString("XCTest") != nil
+            guard !isRunningTests else { return [] }
+            return [
+                resolver ~> CrashlyticsConfigurator.self
+            ]
         }
-    }
-
-    private var isRunningTests: Bool {
-        return NSClassFromString("XCTest") != nil
+        container.register(CrashlyticsConfigurator.self) { _ in
+            CrashlyticsConfigurator(
+                // swiftlint:disable:next force_unwrapping
+                apiKeyURL: Bundle.main.url(forResource: "fabric", withExtension: "apikey")!,
+                start: { Crashlytics.start(withAPIKey: $0) }
+            )
+        }
     }
 
 }
