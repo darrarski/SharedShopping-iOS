@@ -18,6 +18,7 @@
 		313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */; };
 		3154E0991FA954D700529923 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0971FA954D700529923 /* fabric.apikey */; };
 		3154E09A1FA954D700529923 /* fabric.buildsecret in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0981FA954D700529923 /* fabric.buildsecret */; };
+		3154E0A01FA9580400529923 /* AppConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09F1FA9580400529923 /* AppConfiguring.swift */; };
 		316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316857881FA3BD67009DA75D /* RealmAssembly.swift */; };
 		3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */; };
 		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
@@ -92,6 +93,7 @@
 		313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRowActionSpy.swift; sourceTree = "<group>"; };
 		3154E0971FA954D700529923 /* fabric.apikey */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.apikey; sourceTree = "<group>"; };
 		3154E0981FA954D700529923 /* fabric.buildsecret */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = "<group>"; };
+		3154E09F1FA9580400529923 /* AppConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguring.swift; sourceTree = "<group>"; };
 		316857881FA3BD67009DA75D /* RealmAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAssembly.swift; sourceTree = "<group>"; };
 		3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceRealmSpec.swift; sourceTree = "<group>"; };
 		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 		319486361F7C38F800DB435B /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3154E09F1FA9580400529923 /* AppConfiguring.swift */,
 				319486241F7C389C00DB435B /* AppDelegate.swift */,
 				31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */,
 				31D828711FA27057009CD4E5 /* AppWindowConfiguring.swift */,
@@ -849,6 +852,7 @@
 				31D8288A1FA29648009CD4E5 /* ShoppingsViewControllerAssembly.swift in Sources */,
 				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
 				313B26AF1F8C21A200E55447 /* ShoppingsViewModel.swift in Sources */,
+				3154E0A01FA9580400529923 /* AppConfiguring.swift in Sources */,
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
 				31D828861FA2948E009CD4E5 /* ShoppingServiceAssembly.swift in Sources */,
 				31D828881FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift in Sources */,
