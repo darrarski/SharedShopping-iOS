@@ -16,6 +16,13 @@
 		313B26B31F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B21F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift */; };
 		313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */; };
 		313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */; };
+		3154E0991FA954D700529923 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0971FA954D700529923 /* fabric.apikey */; };
+		3154E09A1FA954D700529923 /* fabric.buildsecret in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0981FA954D700529923 /* fabric.buildsecret */; };
+		3154E09C1FA9576F00529923 /* AppConfiguratorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09B1FA9576F00529923 /* AppConfiguratorsAssembly.swift */; };
+		3154E09E1FA957C700529923 /* CrashlyticsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09D1FA957C700529923 /* CrashlyticsConfigurator.swift */; };
+		3154E0A01FA9580400529923 /* AppConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09F1FA9580400529923 /* AppConfiguring.swift */; };
+		3154E0A21FA958FC00529923 /* AppConfiguratorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E0A11FA958FC00529923 /* AppConfiguratorSpy.swift */; };
+		3154E0A41FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E0A31FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift */; };
 		316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316857881FA3BD67009DA75D /* RealmAssembly.swift */; };
 		3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */; };
 		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
@@ -91,6 +98,13 @@
 		313B26B21F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRowActionSpy.swift; sourceTree = "<group>"; };
+		3154E0971FA954D700529923 /* fabric.apikey */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.apikey; sourceTree = "<group>"; };
+		3154E0981FA954D700529923 /* fabric.buildsecret */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = "<group>"; };
+		3154E09B1FA9576F00529923 /* AppConfiguratorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguratorsAssembly.swift; sourceTree = "<group>"; };
+		3154E09D1FA957C700529923 /* CrashlyticsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticsConfigurator.swift; sourceTree = "<group>"; };
+		3154E09F1FA9580400529923 /* AppConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguring.swift; sourceTree = "<group>"; };
+		3154E0A11FA958FC00529923 /* AppConfiguratorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguratorSpy.swift; sourceTree = "<group>"; };
+		3154E0A31FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticsConfiguratorSpec.swift; sourceTree = "<group>"; };
 		316857881FA3BD67009DA75D /* RealmAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAssembly.swift; sourceTree = "<group>"; };
 		3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceRealmSpec.swift; sourceTree = "<group>"; };
 		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -312,6 +326,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		3154E0961FA954BB00529923 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				3154E0971FA954D700529923 /* fabric.apikey */,
+				3154E0981FA954D700529923 /* fabric.buildsecret */,
+			);
+			path = Secrets;
+			sourceTree = "<group>";
+		};
 		317920771F884B8E00D7359F /* Table */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +393,7 @@
 				25209D7451839EBBD253DAF0 /* Frameworks */,
 				1FABA155950D8D51133875C6 /* Pods */,
 				319486221F7C389C00DB435B /* Products */,
+				3154E0961FA954BB00529923 /* Secrets */,
 				319486231F7C389C00DB435B /* SharedShoppingApp */,
 				31AAAEC11F7C43DB000C29AB /* SharedShoppingAppTests */,
 			);
@@ -401,6 +425,8 @@
 		319486361F7C38F800DB435B /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3154E09B1FA9576F00529923 /* AppConfiguratorsAssembly.swift */,
+				3154E09F1FA9580400529923 /* AppConfiguring.swift */,
 				319486241F7C389C00DB435B /* AppDelegate.swift */,
 				31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */,
 				31D828711FA27057009CD4E5 /* AppWindowConfiguring.swift */,
@@ -408,6 +434,7 @@
 				31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */,
 				31D828611FA26708009CD4E5 /* AppWindowFactory.swift */,
 				31D828811FA28B0B009CD4E5 /* Assembler.swift */,
+				3154E09D1FA957C700529923 /* CrashlyticsConfigurator.swift */,
 				31D828691FA26D41009CD4E5 /* TestAppWindowConfigurator.swift */,
 			);
 			path = Application;
@@ -493,11 +520,13 @@
 		31A6F86E1F7C4D4F00D40F15 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3154E0A11FA958FC00529923 /* AppConfiguratorSpy.swift */,
 				31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */,
 				31D8286B1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift */,
 				31D828751FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift */,
 				31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */,
 				31D828731FA27375009CD4E5 /* AppWindowFactoryStub.swift */,
+				3154E0A31FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift */,
 				31D8286D1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift */,
 				31D8286F1FA26ED8009CD4E5 /* UIWindowSpy.swift */,
 			);
@@ -587,6 +616,7 @@
 				3194861F1F7C389C00DB435B /* Resources */,
 				AF7FFFBC407120512F5E1DC8 /* [CP] Embed Pods Frameworks */,
 				D312E6F2432E53D9B0F4F5BC /* [CP] Copy Pods Resources */,
+				3114C4FA1FA94CD000521D48 /* Run Fabric */,
 			);
 			buildRules = (
 			);
@@ -664,6 +694,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3154E0991FA954D700529923 /* fabric.apikey in Resources */,
+				3154E09A1FA954D700529923 /* fabric.buildsecret in Resources */,
 				3194862F1F7C389C00DB435B /* LaunchScreen.storyboard in Resources */,
 				3194862C1F7C389C00DB435B /* Assets.xcassets in Resources */,
 			);
@@ -696,6 +728,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3114C4FA1FA94CD000521D48 /* Run Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Fabric";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FABRIC_APIKEY=$(cat ${SRCROOT}/Secrets/fabric.apikey)\nFABRIC_BUILDSECRET=$(cat ${SRCROOT}/Secrets/fabric.buildsecret)\n\"${PODS_ROOT}/Fabric/run\" ${FABRIC_APIKEY} ${FABRIC_BUILDSECRET}";
 		};
 		315865A51F7C3EF100C33EA5 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -842,6 +888,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3154E09C1FA9576F00529923 /* AppConfiguratorsAssembly.swift in Sources */,
 				31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */,
 				3179207B1F884BBB00D7359F /* TableRowViewModel.swift in Sources */,
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
@@ -858,7 +905,9 @@
 				3179207D1F884BE800D7359F /* ShoppingsTableRowViewModel.swift in Sources */,
 				31D8288A1FA29648009CD4E5 /* ShoppingsViewControllerAssembly.swift in Sources */,
 				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
+				3154E09E1FA957C700529923 /* CrashlyticsConfigurator.swift in Sources */,
 				313B26AF1F8C21A200E55447 /* ShoppingsViewModel.swift in Sources */,
+				3154E0A01FA9580400529923 /* AppConfiguring.swift in Sources */,
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
 				31D828861FA2948E009CD4E5 /* ShoppingServiceAssembly.swift in Sources */,
 				31D828881FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift in Sources */,
@@ -901,9 +950,11 @@
 				31D8286E1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift in Sources */,
 				31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */,
 				319FA82F1FA4F84A009DB023 /* ShoppingRealmSpec.swift in Sources */,
+				3154E0A21FA958FC00529923 /* AppConfiguratorSpy.swift in Sources */,
 				31D8286C1FA26E2F009CD4E5 /* AppWindowConfiguratorSpec.swift in Sources */,
 				31D828761FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift in Sources */,
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
+				3154E0A41FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift in Sources */,
 				31A361AD1F97E3000061B658 /* ShoppingsProviderStub.swift in Sources */,
 				31D8287B1FA27F05009CD4E5 /* Shopping_Nimble.swift in Sources */,
 				31847DDD1FA7D94D0024E150 /* ShoppingViewControllerSpec.swift in Sources */,
@@ -965,7 +1016,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 2;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
