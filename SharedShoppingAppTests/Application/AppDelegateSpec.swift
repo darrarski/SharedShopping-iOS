@@ -8,13 +8,20 @@ class AppDelegateSpec: QuickSpec {
     override func spec() {
         describe("AppDelegate") {
             var sut: AppDelegate!
+            var appConfiguratorSpies: [AppConfiguratorSpy]!
             var appWindowFactoryStub: AppWindowFactoryStub!
             var appWindowConfiguratorSpy: AppWindowConfiguratorSpy!
 
             beforeEach {
+                appConfiguratorSpies = [
+                    AppConfiguratorSpy(),
+                    AppConfiguratorSpy(),
+                    AppConfiguratorSpy()
+                ]
                 appWindowFactoryStub = AppWindowFactoryStub()
                 appWindowConfiguratorSpy = AppWindowConfiguratorSpy()
                 sut = AppDelegate()
+                sut.appConfigurators = appConfiguratorSpies
                 sut.appWindowFactory = appWindowFactoryStub
                 sut.appWindowConfigurator = appWindowConfiguratorSpy
             }
@@ -24,6 +31,10 @@ class AppDelegateSpec: QuickSpec {
 
                 beforeEach {
                     result = sut.application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
+                }
+
+                it("should configure app") {
+                    expect(appConfiguratorSpies.map { $0.didConfigure }).notTo(contain(false))
                 }
 
                 it("should have window") {
