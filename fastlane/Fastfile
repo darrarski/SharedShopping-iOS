@@ -13,6 +13,20 @@ platform :ios do
 
   desc 'Bootstrap project'
   lane :setup do
+    fabricApiKeyFile = '../Secrets/fabric.apikey'
+    unless File.file?(fabricApiKeyFile) then
+      File.write(fabricApiKeyFile, prompt(text: 'Enter Fabric API Key:'))
+    else
+      puts "Fabric API Key found in #{fabricApiKeyFile}"
+    end
+
+    fabricBuildSecretFile = '../Secrets/fabric.buildsecret'
+    unless File.file?(fabricBuildSecretFile) then
+      File.write(fabricBuildSecretFile, prompt(text: 'Enter Fabric Build Secret:'))
+    else
+      puts "Fabric Build Secret found in #{fabricBuildSecretFile}"
+    end
+
     system 'diff ../Podfile.lock ../Pods/Manifest.lock > /dev/null'
     if $?.exitstatus != 0 then
       puts 'The sandbox is not in sync with the Podfile.lock, installing pods'

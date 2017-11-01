@@ -1,9 +1,13 @@
 ## Build generated
 build/
 DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
 xcov_output/
 
-## Various settings
+## Xcode
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -13,18 +17,10 @@ xcov_output/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-
-## Other
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
 *.generated.swift
-
-## Obj-C/Swift specific
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
 
 ## Playgrounds
 timeline.xctimeline
@@ -33,7 +29,7 @@ playground.xcworkspace
 # CocoaPods
 Pods/
 
-# fastlane
+# Fastlane
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
@@ -43,3 +39,9 @@ fastlane/metadata/
 
 ## AppCode
 .idea/
+
+## Secrets
+Secrets/*
+
+## Keep
+!.gitkeep
