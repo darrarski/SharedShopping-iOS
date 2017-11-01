@@ -18,6 +18,7 @@
 		313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */; };
 		3154E0991FA954D700529923 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0971FA954D700529923 /* fabric.apikey */; };
 		3154E09A1FA954D700529923 /* fabric.buildsecret in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0981FA954D700529923 /* fabric.buildsecret */; };
+		3154E09C1FA9576F00529923 /* AppConfiguratorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09B1FA9576F00529923 /* AppConfiguratorsAssembly.swift */; };
 		3154E09E1FA957C700529923 /* CrashlyticsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09D1FA957C700529923 /* CrashlyticsConfigurator.swift */; };
 		3154E0A01FA9580400529923 /* AppConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09F1FA9580400529923 /* AppConfiguring.swift */; };
 		3154E0A21FA958FC00529923 /* AppConfiguratorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E0A11FA958FC00529923 /* AppConfiguratorSpy.swift */; };
@@ -95,6 +96,7 @@
 		313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRowActionSpy.swift; sourceTree = "<group>"; };
 		3154E0971FA954D700529923 /* fabric.apikey */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.apikey; sourceTree = "<group>"; };
 		3154E0981FA954D700529923 /* fabric.buildsecret */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = "<group>"; };
+		3154E09B1FA9576F00529923 /* AppConfiguratorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguratorsAssembly.swift; sourceTree = "<group>"; };
 		3154E09D1FA957C700529923 /* CrashlyticsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticsConfigurator.swift; sourceTree = "<group>"; };
 		3154E09F1FA9580400529923 /* AppConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguring.swift; sourceTree = "<group>"; };
 		3154E0A11FA958FC00529923 /* AppConfiguratorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguratorSpy.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 		319486361F7C38F800DB435B /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3154E09B1FA9576F00529923 /* AppConfiguratorsAssembly.swift */,
 				3154E09F1FA9580400529923 /* AppConfiguring.swift */,
 				319486241F7C389C00DB435B /* AppDelegate.swift */,
 				31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */,
@@ -841,6 +844,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3154E09C1FA9576F00529923 /* AppConfiguratorsAssembly.swift in Sources */,
 				31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */,
 				3179207B1F884BBB00D7359F /* TableRowViewModel.swift in Sources */,
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
