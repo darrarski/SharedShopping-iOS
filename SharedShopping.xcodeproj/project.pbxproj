@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		042F49DE31344DD119989289 /* Pods_SharedShoppingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */; };
-		310BB4721F99637700031540 /* OnSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BB4711F99637700031540 /* OnSimulator.swift */; };
 		3130F3E51FAA8DBE00CD39C2 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130F3E41FAA8DBE00CD39C2 /* NavigationViewController.swift */; };
 		3130F3E81FAA8EF100CD39C2 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130F3E71FAA8EF100CD39C2 /* NavigationViewModel.swift */; };
 		3130F3EA1FAA8FF500CD39C2 /* NavigationViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130F3E91FAA8FF500CD39C2 /* NavigationViewControllerAssembly.swift */; };
@@ -96,7 +95,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		310BB4711F99637700031540 /* OnSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSimulator.swift; sourceTree = "<group>"; };
 		3130F3E41FAA8DBE00CD39C2 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		3130F3E71FAA8EF100CD39C2 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		3130F3E91FAA8FF500CD39C2 /* NavigationViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerAssembly.swift; sourceTree = "<group>"; };
@@ -569,7 +567,6 @@
 			isa = PBXGroup;
 			children = (
 				31A361AF1F97F6540061B658 /* MethodCallObserver.swift */,
-				310BB4711F99637700031540 /* OnSimulator.swift */,
 			);
 			path = TestHelpers;
 			sourceTree = "<group>";
@@ -1010,7 +1007,6 @@
 				31D828801FA2837D009CD4E5 /* UIViewController_EmbeddingSpec.swift in Sources */,
 				3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */,
 				313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */,
-				310BB4721F99637700031540 /* OnSimulator.swift in Sources */,
 				313B26A61F8BFF8900E55447 /* UITableViewSpy.swift in Sources */,
 				313B26A31F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift in Sources */,
 				31D828741FA27375009CD4E5 /* AppWindowFactoryStub.swift in Sources */,
