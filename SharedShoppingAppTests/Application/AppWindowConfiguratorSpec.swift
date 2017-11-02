@@ -23,13 +23,8 @@ class AppWindowConfiguratorSpec: QuickSpec {
                     sut.configureWindow(windowSpy)
                 }
 
-                it("should window have root navigation controller") {
-                    expect(windowSpy.rootViewController).to(beAKindOf(UINavigationController.self))
-                }
-
-                it("should window root navigation controller have correct root") {
-                    expect((windowSpy.rootViewController as? UINavigationController)?.viewControllers.first)
-                        .to(be(viewController))
+                it("should window have correct root view controller") {
+                    expect(windowSpy.rootViewController).to(be(viewController))
                 }
 
                 it("should make window key and visible") {

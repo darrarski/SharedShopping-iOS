@@ -9,8 +9,7 @@ class AppWindowConfigurator: AppWindowConfiguring {
     // MARK: AppWindowConfiguring
 
     func configureWindow(_ window: UIWindow) {
-        let navigationController = UINavigationController(rootViewController: rootViewController())
-        window.rootViewController = navigationController
+        window.rootViewController = rootViewController()
         window.makeKeyAndVisible()
     }
 
