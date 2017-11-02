@@ -156,19 +156,6 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 it("should have correct date") {
                     expect(cellStub.subtitleLabel.text).to(equal(dateFormatter.string(from: shopping.date)))
                 }
-
-                describe("when wrong cell is dequeued") {
-                    beforeEach {
-                        tableView.cellStub = { UITableViewCell(style: .default, reuseIdentifier: $0) }
-                    }
-
-                    it("should throw assertion") {
-                        onSimulator {
-                            expect { _ = sut.cell(at: IndexPath(row: 0, section: 0), in: tableView) }
-                                .to(throwAssertion())
-                        }
-                    }
-                }
             }
 
             it("should have one action") {

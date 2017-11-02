@@ -7,14 +7,6 @@ import RxSwift
 class TableViewControllerSpec: QuickSpec {
 
     override func spec() {
-        describe("TableViewController init with coder") {
-            it("should throw fatal error") {
-                onSimulator {
-                    expect { _ = TableViewController(coder: NSCoder()) }.to(throwAssertion())
-                }
-            }
-        }
-
         describe("TableViewController") {
             var sut: TableViewController!
             var inputs: Inputs!

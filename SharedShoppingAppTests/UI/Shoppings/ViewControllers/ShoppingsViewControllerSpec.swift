@@ -6,14 +6,6 @@ import Nimble
 class ShoppingsViewControllerSpec: QuickSpec {
 
     override func spec() {
-        describe("ShoppingsViewController init with coder") {
-            it("should throw fatal error") {
-                onSimulator {
-                    expect { _ = ShoppingsViewController(coder: NSCoder()) }.to(throwAssertion())
-                }
-            }
-        }
-
         describe("ShoppingsViewController") {
             var sut: ShoppingsViewController!
             var tableViewController: UIViewController!
