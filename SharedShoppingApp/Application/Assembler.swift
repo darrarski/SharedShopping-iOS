@@ -9,6 +9,7 @@ extension Assembler {
             AppWindowConfiguringAssembly(),
             RealmAssembly(),
             ShoppingServiceAssembly(),
+            NavigationViewControllerAssembly(),
             ShoppingsViewControllerAssembly(),
             ShoppingsViewModelAssembly(),
             ShoppingsTableViewModelAssembly(),
