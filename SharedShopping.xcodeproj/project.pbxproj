@@ -12,6 +12,7 @@
 		3130F3E51FAA8DBE00CD39C2 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130F3E41FAA8DBE00CD39C2 /* NavigationViewController.swift */; };
 		3130F3E81FAA8EF100CD39C2 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130F3E71FAA8EF100CD39C2 /* NavigationViewModel.swift */; };
 		3130F3EA1FAA8FF500CD39C2 /* NavigationViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130F3E91FAA8FF500CD39C2 /* NavigationViewControllerAssembly.swift */; };
+		3130F3EC1FAA900000CD39C2 /* NavigationViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130F3EB1FAA900000CD39C2 /* NavigationViewModelAssembly.swift */; };
 		3130F3F11FAA970700CD39C2 /* NavigationViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130F3F01FAA970700CD39C2 /* NavigationViewControllerSpec.swift */; };
 		3130F3F31FAA971200CD39C2 /* NavigationViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130F3F21FAA971200CD39C2 /* NavigationViewModelSpec.swift */; };
 		313B26A31F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26A21F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift */; };
@@ -99,6 +100,7 @@
 		3130F3E41FAA8DBE00CD39C2 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		3130F3E71FAA8EF100CD39C2 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		3130F3E91FAA8FF500CD39C2 /* NavigationViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerAssembly.swift; sourceTree = "<group>"; };
+		3130F3EB1FAA900000CD39C2 /* NavigationViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModelAssembly.swift; sourceTree = "<group>"; };
 		3130F3F01FAA970700CD39C2 /* NavigationViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerSpec.swift; sourceTree = "<group>"; };
 		3130F3F21FAA971200CD39C2 /* NavigationViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26A21F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRowViewModelSpec.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				3130F3E71FAA8EF100CD39C2 /* NavigationViewModel.swift */,
+				3130F3EB1FAA900000CD39C2 /* NavigationViewModelAssembly.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -983,6 +986,7 @@
 				31D828841FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift in Sources */,
 				31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */,
 				31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */,
+				3130F3EC1FAA900000CD39C2 /* NavigationViewModelAssembly.swift in Sources */,
 				31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */,
 				31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */,
 				31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */,
