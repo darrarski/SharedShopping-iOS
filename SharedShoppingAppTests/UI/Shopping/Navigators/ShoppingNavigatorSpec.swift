@@ -6,7 +6,7 @@ import Nimble
 class ShoppingNavigatorSpec: QuickSpec {
 
     override func spec() {
-        fdescribe("ShoppingNavigator") {
+        describe("ShoppingNavigator") {
             var sut: ShoppingNavigator!
             var navigationControllerSpy: UINavigationControllerSpy!
             var viewController: UIViewController!
