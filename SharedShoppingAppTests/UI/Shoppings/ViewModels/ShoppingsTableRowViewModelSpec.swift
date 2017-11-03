@@ -193,6 +193,16 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                     }
                 }
             }
+
+            context("select") {
+                beforeEach {
+                    sut.didSelect()
+                }
+
+                it("should present Shopping") {
+                    expect(shoppingPresenterSpy.didPresentShopping).to(equal(shopping))
+                }
+            }
         }
     }
 
