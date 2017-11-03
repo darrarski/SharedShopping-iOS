@@ -33,7 +33,7 @@ class AppWindowConfiguratorSpec: QuickSpec {
                 }
 
                 it("should navigation controlller have correct view controllers") {
-                    expect(navigationController.viewControllers).to(be([viewController]))
+                    expect(navigationController.viewControllers).to(equal([viewController]))
                 }
 
                 it("should make window key and visible") {
