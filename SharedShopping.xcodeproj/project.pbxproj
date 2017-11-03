@@ -61,6 +61,7 @@
 		31B9CB6F1FACF26D00C0DB9E /* ShoppingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6E1FACF26D00C0DB9E /* ShoppingNavigator.swift */; };
 		31B9CB741FACF98E00C0DB9E /* ShoppingNavigatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB731FACF98E00C0DB9E /* ShoppingNavigatorSpec.swift */; };
 		31B9CB761FACF9E600C0DB9E /* UINavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB751FACF9E600C0DB9E /* UINavigationControllerSpy.swift */; };
+		31B9CB7A1FAD152800C0DB9E /* ShoppingNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB791FAD152800C0DB9E /* ShoppingNavigatorSpy.swift */; };
 		31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828611FA26708009CD4E5 /* AppWindowFactory.swift */; };
 		31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */; };
 		31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */; };
@@ -156,6 +157,7 @@
 		31B9CB6E1FACF26D00C0DB9E /* ShoppingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingNavigator.swift; sourceTree = "<group>"; };
 		31B9CB731FACF98E00C0DB9E /* ShoppingNavigatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingNavigatorSpec.swift; sourceTree = "<group>"; };
 		31B9CB751FACF9E600C0DB9E /* UINavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSpy.swift; sourceTree = "<group>"; };
+		31B9CB791FAD152800C0DB9E /* ShoppingNavigatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingNavigatorSpy.swift; sourceTree = "<group>"; };
 		31D828611FA26708009CD4E5 /* AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactory.swift; sourceTree = "<group>"; };
 		31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactorySpec.swift; sourceTree = "<group>"; };
 		31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfigurator.swift; sourceTree = "<group>"; };
@@ -640,6 +642,7 @@
 			isa = PBXGroup;
 			children = (
 				31B9CB731FACF98E00C0DB9E /* ShoppingNavigatorSpec.swift */,
+				31B9CB791FAD152800C0DB9E /* ShoppingNavigatorSpy.swift */,
 			);
 			path = Navigators;
 			sourceTree = "<group>";
@@ -1032,6 +1035,7 @@
 				317920821F88597000D7359F /* TableRowViewModelStub.swift in Sources */,
 				3130F3F31FAA971200CD39C2 /* NavigationViewModelSpec.swift in Sources */,
 				31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */,
+				31B9CB7A1FAD152800C0DB9E /* ShoppingNavigatorSpy.swift in Sources */,
 				31D828791FA27B25009CD4E5 /* ShoppingFake.swift in Sources */,
 				313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */,
 				317920801F884CFA00D7359F /* TableViewControllerSpec.swift in Sources */,
