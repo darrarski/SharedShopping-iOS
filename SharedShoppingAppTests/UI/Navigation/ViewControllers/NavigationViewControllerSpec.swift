@@ -39,8 +39,9 @@ class NavigationViewControllerSpec: QuickSpec {
                     inputs.pushSubject.onNext(viewController)
                 }
 
-                it("should push") {
-                    expect(navigationControllerSpy.didPushViewController).to(be(viewController))
+                it("should push animated") {
+                    expect(navigationControllerSpy.didPushViewController?.0).to(be(viewController))
+                    expect(navigationControllerSpy.didPushViewController?.1).to(beTrue())
                 }
             }
         }
