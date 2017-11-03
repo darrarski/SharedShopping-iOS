@@ -10,7 +10,10 @@ class AppWindowConfiguringAssembly: Assembly {
             }
         } else {
             container.register(AppWindowConfiguring.self) { resolver in
-                AppWindowConfigurator(rootViewController: { resolver ~> ShoppingsViewController.self })
+                return AppWindowConfigurator(
+                    navigationController: { UINavigationController() },
+                    rootViewController: { resolver ~> ShoppingsViewController.self }
+                )
             }
         }
     }
