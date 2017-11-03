@@ -11,6 +11,7 @@ extension Assembler {
             ShoppingServiceAssembly(),
             NavigationViewControllerAssembly(),
             NavigationViewModelAssembly(),
+            ShoppingNavigatorAssembly(),
             ShoppingsViewControllerAssembly(),
             ShoppingsViewModelAssembly(),
             ShoppingsTableViewModelAssembly(),

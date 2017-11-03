@@ -4,7 +4,8 @@ import SwinjectAutoregistration
 class ShoppingsTableRowViewModelAssembly: Assembly {
 
     func assemble(container: Container) {
-        container.register(ShoppingsTableRowViewModel.self) { resolver, shopping in
+        container.register(ShoppingsTableRowViewModel.self) {
+            (resolver, shopping: Shopping, navigationController: UINavigationController) in
             ShoppingsTableRowViewModel(
                 dateFormatter: {
                     let formatter = DateFormatter()
@@ -16,16 +17,10 @@ class ShoppingsTableRowViewModelAssembly: Assembly {
                     UITableViewRowAction(style: style, title: title, handler: handler)
                 },
                 shoppingRemover: resolver ~> ShoppingService.self,
-                shoppingNavigator: ShoppingNavigatorFake(),
+                shoppingNavigator: resolver ~> (ShoppingNavigator.self, navigationController),
                 shopping: shopping
             )
         }.inObjectScope(.transient)
     }
 
-}
-
-private class ShoppingNavigatorFake: ShoppingNavigating {
-    func navigateToShopping(_ shopping: Shopping) {
-        print("Navigating to \(shopping)") // TODO:
-    }
 }
