@@ -5,6 +5,7 @@ class ShoppingsTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        accessoryType = .disclosureIndicator
         loadSubviews()
         setupLayout()
     }

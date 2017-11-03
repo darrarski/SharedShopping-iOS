@@ -7,4 +7,5 @@ protocol TableRowViewModel {
     func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell
     var actions: [UITableViewRowAction]? { get }
     func isEqual(to other: TableRowViewModel) -> Bool
+    func didSelect()
 }

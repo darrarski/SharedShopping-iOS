@@ -7,6 +7,7 @@ opt_in_rules:
   - vertical_whitespace
 disabled_rules:
   - large_tuple
+  - closure_parameter_position
 excluded:
   - Resources/R.generated.swift
 line_length: 120
@@ -30,6 +31,7 @@ identifier_name:
     - id
     - URL
     - to
+    - at
     - x
     - y
     - z
