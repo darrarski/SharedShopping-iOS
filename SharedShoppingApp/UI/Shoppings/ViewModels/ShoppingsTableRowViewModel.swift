@@ -9,12 +9,12 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     init(dateFormatter: DateFormatter,
          rowActionFactory: @escaping TableViewRowActionFactory,
          shoppingRemover: ShoppingRemoving,
-         shoppingNavigator: ShoppingNavigating,
+         shoppingPresenter: ShoppingPresenting,
          shopping: Shopping) {
         self.dateFormatter = dateFormatter
         self.rowActionFactory = rowActionFactory
         self.shoppingRemover = shoppingRemover
-        self.shoppingNavigator = shoppingNavigator
+        self.shoppingPresenter = shoppingPresenter
         self.shopping = shopping
     }
 
@@ -53,7 +53,7 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     }
 
     func didSelect() {
-        shoppingNavigator.navigateToShopping(shopping)
+        shoppingPresenter.presentShopping(shopping)
     }
 
     // MARK: Private
@@ -61,7 +61,7 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     private let dateFormatter: DateFormatter
     private let rowActionFactory: TableViewRowActionFactory
     private let shoppingRemover: ShoppingRemoving
-    private let shoppingNavigator: ShoppingNavigating
+    private let shoppingPresenter: ShoppingPresenting
     private let shopping: Shopping
 
     private func handleDeleteAction() {

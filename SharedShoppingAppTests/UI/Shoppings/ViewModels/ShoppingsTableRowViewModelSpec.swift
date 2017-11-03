@@ -10,7 +10,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
             var sut: ShoppingsTableRowViewModel!
             var dateFormatter: DateFormatter!
             var shoppingRemoverSpy: ShoppingRemoverSpy!
-            var shoppingNavigatorSpy: ShoppingNavigatorSpy!
+            var shoppingPresenterSpy: ShoppingPresenterSpy!
             var shopping: Shopping!
 
             beforeEach {
@@ -21,7 +21,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                     return formatter
                 }()
                 shoppingRemoverSpy = ShoppingRemoverSpy()
-                shoppingNavigatorSpy = ShoppingNavigatorSpy()
+                shoppingPresenterSpy = ShoppingPresenterSpy()
                 shopping = ShoppingFake(name: "Test Shopping", date: Date())
 
                 sut = ShoppingsTableRowViewModel(
@@ -30,7 +30,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                         UITableViewRowActionSpy.create(style: style, title: title, handler: handler)
                     },
                     shoppingRemover: shoppingRemoverSpy,
-                    shoppingNavigator: shoppingNavigatorSpy,
+                    shoppingPresenter: shoppingPresenterSpy,
                     shopping: shopping
                 )
             }
@@ -43,7 +43,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                         dateFormatter: DateFormatter(),
                         rowActionFactory: { UITableViewRowAction(style: $0, title: $1, handler: $2) },
                         shoppingRemover: ShoppingRemoverSpy(),
-                        shoppingNavigator: ShoppingNavigatorSpy(),
+                        shoppingPresenter: ShoppingPresenterSpy(),
                         shopping: shopping
                     )
                 }
@@ -64,7 +64,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                             UITableViewRowActionSpy.create(style: style, title: title, handler: handler)
                         },
                         shoppingRemover: shoppingRemoverSpy,
-                        shoppingNavigator: shoppingNavigatorSpy,
+                        shoppingPresenter: shoppingPresenterSpy,
                         shopping: ShoppingFake(name: "Other Shopping", date: Date())
                     )
                 }

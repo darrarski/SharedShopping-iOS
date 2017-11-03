@@ -3,11 +3,11 @@ import Nimble
 
 @testable import SharedShoppingApp
 
-class ShoppingNavigatorSpec: QuickSpec {
+class ShoppingPresenterSpec: QuickSpec {
 
     override func spec() {
-        describe("ShoppingNavigator") {
-            var sut: ShoppingNavigator!
+        describe("ShoppingPresenter") {
+            var sut: ShoppingPresenter!
             var navigationControllerSpy: UINavigationControllerSpy!
             var viewController: UIViewController!
             var didCreateViewControllerWithShopping: Shopping?
@@ -15,7 +15,7 @@ class ShoppingNavigatorSpec: QuickSpec {
             beforeEach {
                 navigationControllerSpy = UINavigationControllerSpy()
                 viewController = UIViewController()
-                sut = ShoppingNavigator(
+                sut = ShoppingPresenter(
                     navigationController: navigationControllerSpy,
                     viewControllerFactory: {
                         didCreateViewControllerWithShopping = $0
@@ -24,12 +24,12 @@ class ShoppingNavigatorSpec: QuickSpec {
                 )
             }
 
-            context("navigate to Shopping") {
+            context("present Shopping") {
                 var shoppingFake: ShoppingFake!
 
                 beforeEach {
                     shoppingFake = ShoppingFake(name: "Test", date: Date())
-                    sut.navigateToShopping(shoppingFake)
+                    sut.presentShopping(shoppingFake)
                 }
 
                 it("should create view controller with Shopping") {

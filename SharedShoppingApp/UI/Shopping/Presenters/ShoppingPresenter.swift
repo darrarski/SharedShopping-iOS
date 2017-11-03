@@ -1,6 +1,6 @@
 import UIKit
 
-class ShoppingNavigator: ShoppingNavigating {
+class ShoppingPresenter: ShoppingPresenting {
 
     init(navigationController: UINavigationController,
          viewControllerFactory: @escaping (Shopping) -> UIViewController) {
@@ -8,9 +8,9 @@ class ShoppingNavigator: ShoppingNavigating {
         self.viewControllerFactory = viewControllerFactory
     }
 
-    // MARK: ShoppingNavigating
+    // MARK: ShoppingPresenting
 
-    func navigateToShopping(_ shopping: Shopping) {
+    func presentShopping(_ shopping: Shopping) {
         let viewController = self.viewControllerFactory(shopping)
         navigationController.pushViewController(viewController, animated: true)
     }

@@ -17,7 +17,7 @@ class ShoppingsTableRowViewModelAssembly: Assembly {
                     UITableViewRowAction(style: style, title: title, handler: handler)
                 },
                 shoppingRemover: resolver ~> ShoppingService.self,
-                shoppingNavigator: resolver ~> (ShoppingNavigator.self, navigationController),
+                shoppingPresenter: resolver ~> (ShoppingPresenter.self, navigationController),
                 shopping: shopping
             )
         }.inObjectScope(.transient)
