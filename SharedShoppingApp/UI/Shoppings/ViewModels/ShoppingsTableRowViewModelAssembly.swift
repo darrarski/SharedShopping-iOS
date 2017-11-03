@@ -16,9 +16,16 @@ class ShoppingsTableRowViewModelAssembly: Assembly {
                     UITableViewRowAction(style: style, title: title, handler: handler)
                 },
                 shoppingRemover: resolver ~> ShoppingService.self,
+                shoppingNavigator: ShoppingNavigatorFake(),
                 shopping: shopping
             )
         }.inObjectScope(.transient)
     }
 
+}
+
+private class ShoppingNavigatorFake: ShoppingNavigating {
+    func navigateToShopping(_ shopping: Shopping) {
+        print("Navigating to \(shopping)") // TODO:
+    }
 }
