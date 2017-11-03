@@ -58,6 +58,8 @@
 		31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361B41F9803240061B658 /* Variable_AsWeakObserver.swift */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31B9CB6D1FACF22E00C0DB9E /* ShoppingNavigating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6C1FACF22E00C0DB9E /* ShoppingNavigating.swift */; };
+		31B9CB6F1FACF26D00C0DB9E /* ShoppingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6E1FACF26D00C0DB9E /* ShoppingNavigator.swift */; };
+		31B9CB741FACF98E00C0DB9E /* ShoppingNavigatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB731FACF98E00C0DB9E /* ShoppingNavigatorSpec.swift */; };
 		31B9CB761FACF9E600C0DB9E /* UINavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB751FACF9E600C0DB9E /* UINavigationControllerSpy.swift */; };
 		31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828611FA26708009CD4E5 /* AppWindowFactory.swift */; };
 		31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */; };
@@ -151,6 +153,8 @@
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31B9CB6C1FACF22E00C0DB9E /* ShoppingNavigating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingNavigating.swift; sourceTree = "<group>"; };
+		31B9CB6E1FACF26D00C0DB9E /* ShoppingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingNavigator.swift; sourceTree = "<group>"; };
+		31B9CB731FACF98E00C0DB9E /* ShoppingNavigatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingNavigatorSpec.swift; sourceTree = "<group>"; };
 		31B9CB751FACF9E600C0DB9E /* UINavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSpy.swift; sourceTree = "<group>"; };
 		31D828611FA26708009CD4E5 /* AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactory.swift; sourceTree = "<group>"; };
 		31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactorySpec.swift; sourceTree = "<group>"; };
@@ -442,6 +446,7 @@
 		31847DDB1FA7D93E0024E150 /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
+				31B9CB721FACF98100C0DB9E /* Navigators */,
 				31847DDE1FA7D9530024E150 /* ViewControllers */,
 			);
 			path = Shopping;
@@ -626,6 +631,15 @@
 			isa = PBXGroup;
 			children = (
 				31B9CB6C1FACF22E00C0DB9E /* ShoppingNavigating.swift */,
+				31B9CB6E1FACF26D00C0DB9E /* ShoppingNavigator.swift */,
+			);
+			path = Navigators;
+			sourceTree = "<group>";
+		};
+		31B9CB721FACF98100C0DB9E /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				31B9CB731FACF98E00C0DB9E /* ShoppingNavigatorSpec.swift */,
 			);
 			path = Navigators;
 			sourceTree = "<group>";
@@ -996,6 +1010,7 @@
 				319486251F7C389C00DB435B /* AppDelegate.swift in Sources */,
 				31D828841FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift in Sources */,
 				31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */,
+				31B9CB6F1FACF26D00C0DB9E /* ShoppingNavigator.swift in Sources */,
 				31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */,
 				3130F3EC1FAA900000CD39C2 /* NavigationViewModelAssembly.swift in Sources */,
 				31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */,
@@ -1013,6 +1028,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B9CB741FACF98E00C0DB9E /* ShoppingNavigatorSpec.swift in Sources */,
 				317920821F88597000D7359F /* TableRowViewModelStub.swift in Sources */,
 				3130F3F31FAA971200CD39C2 /* NavigationViewModelSpec.swift in Sources */,
 				31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */,
