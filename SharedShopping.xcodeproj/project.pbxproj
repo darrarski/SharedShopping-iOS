@@ -57,6 +57,7 @@
 		31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361B11F97FE710061B658 /* ShoppingRemoverSpy.swift */; };
 		31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361B41F9803240061B658 /* Variable_AsWeakObserver.swift */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
+		31B9CB6D1FACF22E00C0DB9E /* ShoppingNavigating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6C1FACF22E00C0DB9E /* ShoppingNavigating.swift */; };
 		31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828611FA26708009CD4E5 /* AppWindowFactory.swift */; };
 		31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */; };
 		31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */; };
@@ -148,6 +149,7 @@
 		31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31B9CB6C1FACF22E00C0DB9E /* ShoppingNavigating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingNavigating.swift; sourceTree = "<group>"; };
 		31D828611FA26708009CD4E5 /* AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactory.swift; sourceTree = "<group>"; };
 		31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactorySpec.swift; sourceTree = "<group>"; };
 		31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfigurator.swift; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 		31847DD51FA7D8890024E150 /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
+				31B9CB6B1FACF21A00C0DB9E /* Navigators */,
 				31847DD61FA7D89C0024E150 /* ViewControllers */,
 			);
 			path = Shopping;
@@ -614,6 +617,14 @@
 				31AAAEC41F7C43DB000C29AB /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31B9CB6B1FACF21A00C0DB9E /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				31B9CB6C1FACF22E00C0DB9E /* ShoppingNavigating.swift */,
+			);
+			path = Navigators;
 			sourceTree = "<group>";
 		};
 		31D828771FA27B09009CD4E5 /* Models */ = {
@@ -985,6 +996,7 @@
 				31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */,
 				3130F3EC1FAA900000CD39C2 /* NavigationViewModelAssembly.swift in Sources */,
 				31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */,
+				31B9CB6D1FACF22E00C0DB9E /* ShoppingNavigating.swift in Sources */,
 				31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */,
 				31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */,
 				313B26AD1F8C1E9F00E55447 /* ShoppingService.swift in Sources */,
