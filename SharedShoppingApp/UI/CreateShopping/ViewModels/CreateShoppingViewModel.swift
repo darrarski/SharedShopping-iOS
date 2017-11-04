@@ -1,9 +1,17 @@
 class CreateShoppingViewModel: CreateShoppingViewControllerOutputs {
 
+    init(shoppingCreator: ShoppingCreating) {
+        self.shoppingCreator = shoppingCreator
+    }
+
     // MARK: CreateShoppingViewControllerOutputs
 
     func createShopping() {
-        // TODO:
+        _ = shoppingCreator.createShopping()
     }
+
+    // MARK: Private
+
+    private let shoppingCreator: ShoppingCreating
 
 }
