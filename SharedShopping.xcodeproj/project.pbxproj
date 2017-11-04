@@ -31,6 +31,7 @@
 		315FD4E31FAD46DA00A9C555 /* CreateShoppingPresenterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4E21FAD46DA00A9C555 /* CreateShoppingPresenterAssembly.swift */; };
 		315FD4E51FAD497700A9C555 /* CreateShoppingPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4E41FAD497700A9C555 /* CreateShoppingPresenterSpy.swift */; };
 		315FD4E71FAD49CB00A9C555 /* CreateShoppingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4E61FAD49CB00A9C555 /* CreateShoppingViewModel.swift */; };
+		315FD4E91FAD4C7300A9C555 /* CreateShoppingViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4E81FAD4C7300A9C555 /* CreateShoppingViewModelAssembly.swift */; };
 		315FD4EC1FAD4D8B00A9C555 /* CreateShoppingViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4EB1FAD4D8A00A9C555 /* CreateShoppingViewModelSpec.swift */; };
 		316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316857881FA3BD67009DA75D /* RealmAssembly.swift */; };
 		3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */; };
@@ -140,6 +141,7 @@
 		315FD4E21FAD46DA00A9C555 /* CreateShoppingPresenterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingPresenterAssembly.swift; sourceTree = "<group>"; };
 		315FD4E41FAD497700A9C555 /* CreateShoppingPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingPresenterSpy.swift; sourceTree = "<group>"; };
 		315FD4E61FAD49CB00A9C555 /* CreateShoppingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewModel.swift; sourceTree = "<group>"; };
+		315FD4E81FAD4C7300A9C555 /* CreateShoppingViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewModelAssembly.swift; sourceTree = "<group>"; };
 		315FD4EB1FAD4D8A00A9C555 /* CreateShoppingViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewModelSpec.swift; sourceTree = "<group>"; };
 		316857881FA3BD67009DA75D /* RealmAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAssembly.swift; sourceTree = "<group>"; };
 		3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceRealmSpec.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				315FD4E61FAD49CB00A9C555 /* CreateShoppingViewModel.swift */,
+				315FD4E81FAD4C7300A9C555 /* CreateShoppingViewModelAssembly.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1169,6 +1172,7 @@
 				315FD4E31FAD46DA00A9C555 /* CreateShoppingPresenterAssembly.swift in Sources */,
 				31B9CB6F1FACF26D00C0DB9E /* ShoppingPresenter.swift in Sources */,
 				31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */,
+				315FD4E91FAD4C7300A9C555 /* CreateShoppingViewModelAssembly.swift in Sources */,
 				315FD4E71FAD49CB00A9C555 /* CreateShoppingViewModel.swift in Sources */,
 				31B9CB781FACFE0B00C0DB9E /* ShoppingPresenterAssembly.swift in Sources */,
 				31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */,
