@@ -8,11 +8,11 @@ class ShoppingsViewModelSpec: QuickSpec {
     override func spec() {
         describe("ShoppingsViewModel") {
             var sut: ShoppingsViewModel!
-            var shoppingCreatorSpy: ShoppingCreatorSpy!
+            var createShoppingPresenterSpy: CreateShoppingPresenterSpy!
 
             beforeEach {
-                shoppingCreatorSpy = ShoppingCreatorSpy()
-                sut = ShoppingsViewModel(shoppingCreator: shoppingCreatorSpy)
+                createShoppingPresenterSpy = CreateShoppingPresenterSpy()
+                sut = ShoppingsViewModel(createShoppingPresenter: createShoppingPresenterSpy)
             }
 
             it("should have correct title") {
@@ -24,8 +24,8 @@ class ShoppingsViewModelSpec: QuickSpec {
                     sut.addShopping()
                 }
 
-                it("should add shopping") {
-                    expect(shoppingCreatorSpy.didCreateShopping).notTo(beNil())
+                it("should present Create Shopping") {
+                    expect(createShoppingPresenterSpy.didPresentCreateShopping).to(beTrue())
                 }
             }
         }
