@@ -9,18 +9,18 @@ class CreatedShoppingPresenterSpec: QuickSpec {
         describe("CreatedShoppingPresenter") {
             var sut: CreatedShoppingPresenter!
             var navigationControllerSpy: UINavigationControllerSpy!
-            var viewController: UIViewController!
-            var didCreateViewController: Bool!
+            var shoppingViewController: UIViewController!
+            var didCreateShoppingViewController: Bool!
 
             beforeEach {
                 navigationControllerSpy = UINavigationControllerSpy()
-                viewController = UIViewController()
-                didCreateViewController = false
+                shoppingViewController = UIViewController()
+                didCreateShoppingViewController = false
                 sut = CreatedShoppingPresenter(
                     navigationController: navigationControllerSpy,
-                    viewControllerFactory: { _ in
-                        didCreateViewController = true
-                        return viewController
+                    shoppingViewControllerFactory: { _ in
+                        didCreateShoppingViewController = true
+                        return shoppingViewController
                     }
                 )
             }
@@ -43,7 +43,7 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                 }
 
                 it("should create view controller") {
-                    expect(didCreateViewController).to(beTrue())
+                    expect(didCreateShoppingViewController).to(beTrue())
                 }
 
                 it("should update view controller") {
@@ -51,7 +51,7 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                         firstViewController,
                         secondViewController,
                         thirdViewController,
-                        viewController
+                        shoppingViewController
                     ]))
                 }
             }
@@ -74,14 +74,14 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                 }
 
                 it("should create view controller") {
-                    expect(didCreateViewController).to(beTrue())
+                    expect(didCreateShoppingViewController).to(beTrue())
                 }
 
                 it("should update view controller") {
                     expect(navigationControllerSpy.viewControllers).toEventually(equal([
                         firstViewController,
                         secondViewController,
-                        viewController
+                        shoppingViewController
                     ]))
                 }
             }
@@ -104,13 +104,13 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                 }
 
                 it("should create view controller") {
-                    expect(didCreateViewController).to(beTrue())
+                    expect(didCreateShoppingViewController).to(beTrue())
                 }
 
                 it("should update view controller") {
                     expect(navigationControllerSpy.viewControllers).toEventually(equal([
                         firstViewController,
-                        viewController
+                        shoppingViewController
                     ]))
                 }
             }

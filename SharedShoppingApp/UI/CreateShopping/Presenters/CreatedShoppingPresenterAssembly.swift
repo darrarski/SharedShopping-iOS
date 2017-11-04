@@ -7,7 +7,7 @@ class CreatedShoppingPresenterAssembly: Assembly {
         container.register(CreatedShoppingPresenter.self) { resolver, navigationController in
             CreatedShoppingPresenter(
                 navigationController: navigationController,
-                viewControllerFactory: { _ in resolver ~> ShoppingViewController.self }
+                shoppingViewControllerFactory: { _ in resolver ~> ShoppingViewController.self }
             )
         }
     }
