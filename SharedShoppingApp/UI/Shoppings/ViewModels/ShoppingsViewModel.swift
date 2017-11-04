@@ -1,7 +1,7 @@
 class ShoppingsViewModel: ShoppingsViewControllerInputs, ShoppingsViewControllerOutputs {
 
-    init(shoppingCreator: ShoppingCreating) {
-        self.shoppingCreator = shoppingCreator
+    init(createShoppingPresenter: CreateShoppingPresenting) {
+        self.createShoppingPresenter = createShoppingPresenter
     }
 
     // MARK: ShoppingsViewControllerInputs
@@ -11,11 +11,11 @@ class ShoppingsViewModel: ShoppingsViewControllerInputs, ShoppingsViewController
     // MARK: ShoppingsViewControllerOutputs
 
     func addShopping() {
-        _ = shoppingCreator.createShopping()
+        createShoppingPresenter.presentCreateShopping()
     }
 
     // MARK: Private
 
-    private let shoppingCreator: ShoppingCreating
+    private let createShoppingPresenter: CreateShoppingPresenting
 
 }

@@ -1,8 +1,8 @@
 import UIKit
 
-class ShoppingPresenter: ShoppingPresenting {
+class CreateShoppingPresenter: CreateShoppingPresenting {
 
-    typealias ViewControllerFactory = (Shopping) -> UIViewController
+    typealias ViewControllerFactory = () -> UIViewController
 
     init(navigationController: UINavigationController,
          viewControllerFactory: @escaping ViewControllerFactory) {
@@ -10,14 +10,14 @@ class ShoppingPresenter: ShoppingPresenting {
         self.viewControllerFactory = viewControllerFactory
     }
 
-    // MARK: ShoppingPresenting
+    // MARK: CreateShoppingPresenting
 
-    func presentShopping(_ shopping: Shopping) {
-        let viewController = self.viewControllerFactory(shopping)
+    func presentCreateShopping() {
+        let viewController = self.viewControllerFactory()
         navigationController.pushViewController(viewController, animated: true)
     }
 
-    // MARK: Private
+    // MARK: Priavte
 
     private let navigationController: UINavigationController
     private let viewControllerFactory: ViewControllerFactory

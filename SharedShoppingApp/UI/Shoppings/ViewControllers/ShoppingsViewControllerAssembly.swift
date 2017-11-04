@@ -6,7 +6,7 @@ class ShoppingsViewControllerAssembly: Assembly {
     func assemble(container: Container) {
         container.register(ShoppingsViewController.self) {
             (resolver, navigationController: UINavigationController) in
-            let viewModel = resolver ~> ShoppingsViewModel.self
+            let viewModel = resolver ~> (ShoppingsViewModel.self, navigationController)
             return ShoppingsViewController(
                 tableViewControllerFactory: {
                     TableViewController(

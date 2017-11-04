@@ -36,7 +36,23 @@ class ShoppingsViewControllerSpec: QuickSpec {
                     expect(sut.title).to(equal(inputs.title))
                 }
 
-                describe("right bar button item in navigation item") {
+                describe("back bar button item") {
+                    var button: UIBarButtonItem?
+
+                    beforeEach {
+                        button = sut.navigationItem.backBarButtonItem
+                    }
+
+                    it("should not be nil") {
+                        expect(button).notTo(beNil())
+                    }
+
+                    it("should have empty title") {
+                        expect(button?.title).to(equal(""))
+                    }
+                }
+
+                describe("right bar button item") {
                     var button: UIBarButtonItem?
 
                     beforeEach {
