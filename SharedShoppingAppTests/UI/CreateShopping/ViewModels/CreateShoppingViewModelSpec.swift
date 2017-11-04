@@ -9,10 +9,15 @@ class CreateShoppingViewModelSpec: QuickSpec {
         describe("CreateShoppingViewModel") {
             var sut: CreateShoppingViewModel!
             var shoppingCreatorSpy: ShoppingCreatorSpy!
+            var createdShoppingPresenterSpy: CreatedShoppingPresenterSpy!
 
             beforeEach {
                 shoppingCreatorSpy = ShoppingCreatorSpy()
-                sut = CreateShoppingViewModel(shoppingCreator: shoppingCreatorSpy)
+                createdShoppingPresenterSpy = CreatedShoppingPresenterSpy()
+                sut = CreateShoppingViewModel(
+                    shoppingCreator: shoppingCreatorSpy,
+                    createdShoppingPresenter: createdShoppingPresenterSpy
+                )
             }
 
             context("create shopping") {
@@ -22,6 +27,11 @@ class CreateShoppingViewModelSpec: QuickSpec {
 
                 it("should create shopping") {
                     expect(shoppingCreatorSpy.didCreateShopping).notTo(beNil())
+                }
+
+                it("should present created shopping") {
+                    expect(createdShoppingPresenterSpy.didPresentCreatedShopping)
+                        .to(equal(shoppingCreatorSpy.didCreateShopping))
                 }
             }
         }
