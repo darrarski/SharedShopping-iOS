@@ -15,7 +15,10 @@ class CreatedShoppingPresenter: CreatedShoppingPresenting {
     func presentCreatedShopping(_ shopping: Shopping) {
         let viewController = self.viewControllerFactory(shopping)
         var viewControllers = navigationController.viewControllers
-        _ = viewControllers.popLast()
+        let index = viewControllers.index(where: { $0.isKind(of: CreateShoppingViewController.self) })
+        if let index = index {
+            viewControllers.removeSubrange((index..<viewControllers.endIndex))
+        }
         viewControllers.append(viewController)
         navigationController.setViewControllers(viewControllers, animated: true)
     }
