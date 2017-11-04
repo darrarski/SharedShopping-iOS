@@ -57,6 +57,18 @@
 		31B9CB761FACF9E600C0DB9E /* UINavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB751FACF9E600C0DB9E /* UINavigationControllerSpy.swift */; };
 		31B9CB781FACFE0B00C0DB9E /* ShoppingPresenterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB771FACFE0B00C0DB9E /* ShoppingPresenterAssembly.swift */; };
 		31B9CB7A1FAD152800C0DB9E /* ShoppingPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB791FAD152800C0DB9E /* ShoppingPresenterSpy.swift */; };
+		31C1CB8A1FAD29240058B2E5 /* AlertPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB891FAD29240058B2E5 /* AlertPresenting.swift */; };
+		31C1CB8C1FAD292B0058B2E5 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB8B1FAD292B0058B2E5 /* AlertPresenter.swift */; };
+		31C1CB8E1FAD29350058B2E5 /* AlertPresenterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB8D1FAD29350058B2E5 /* AlertPresenterAssembly.swift */; };
+		31C1CB911FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB901FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift */; };
+		31C1CB931FAD2A860058B2E5 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB921FAD2A860058B2E5 /* AlertViewModel.swift */; };
+		31C1CB951FAD2ABF0058B2E5 /* AlertActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB941FAD2ABF0058B2E5 /* AlertActionViewModel.swift */; };
+		31C1CB971FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB961FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift */; };
+		31C1CB9D1FAD2E300058B2E5 /* AlertPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB9C1FAD2E300058B2E5 /* AlertPresenterSpec.swift */; };
+		31C1CB9F1FAD31350058B2E5 /* AlertViewControllerFactorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB9E1FAD31350058B2E5 /* AlertViewControllerFactorySpy.swift */; };
+		31C1CBA11FAD317A0058B2E5 /* AlertViewControllerFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CBA01FAD317A0058B2E5 /* AlertViewControllerFactorySpec.swift */; };
+		31C1CBA41FAD38390058B2E5 /* UIAlertActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CBA31FAD38390058B2E5 /* UIAlertActionSpy.swift */; };
+		31C1CBA61FAD3E580058B2E5 /* AlertPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CBA51FAD3E580058B2E5 /* AlertPresenterSpy.swift */; };
 		31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828611FA26708009CD4E5 /* AppWindowFactory.swift */; };
 		31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */; };
 		31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */; };
@@ -148,6 +160,18 @@
 		31B9CB751FACF9E600C0DB9E /* UINavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSpy.swift; sourceTree = "<group>"; };
 		31B9CB771FACFE0B00C0DB9E /* ShoppingPresenterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingPresenterAssembly.swift; sourceTree = "<group>"; };
 		31B9CB791FAD152800C0DB9E /* ShoppingPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingPresenterSpy.swift; sourceTree = "<group>"; };
+		31C1CB891FAD29240058B2E5 /* AlertPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenting.swift; sourceTree = "<group>"; };
+		31C1CB8B1FAD292B0058B2E5 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		31C1CB8D1FAD29350058B2E5 /* AlertPresenterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterAssembly.swift; sourceTree = "<group>"; };
+		31C1CB901FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControllerFactory.swift; sourceTree = "<group>"; };
+		31C1CB921FAD2A860058B2E5 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		31C1CB941FAD2ABF0058B2E5 /* AlertActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionViewModel.swift; sourceTree = "<group>"; };
+		31C1CB961FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControllerFactoryAssembly.swift; sourceTree = "<group>"; };
+		31C1CB9C1FAD2E300058B2E5 /* AlertPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterSpec.swift; sourceTree = "<group>"; };
+		31C1CB9E1FAD31350058B2E5 /* AlertViewControllerFactorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControllerFactorySpy.swift; sourceTree = "<group>"; };
+		31C1CBA01FAD317A0058B2E5 /* AlertViewControllerFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControllerFactorySpec.swift; sourceTree = "<group>"; };
+		31C1CBA31FAD38390058B2E5 /* UIAlertActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionSpy.swift; sourceTree = "<group>"; };
+		31C1CBA51FAD3E580058B2E5 /* AlertPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterSpy.swift; sourceTree = "<group>"; };
 		31D828611FA26708009CD4E5 /* AppWindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactory.swift; sourceTree = "<group>"; };
 		31D828631FA267C5009CD4E5 /* AppWindowFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowFactorySpec.swift; sourceTree = "<group>"; };
 		31D828651FA269AC009CD4E5 /* AppWindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfigurator.swift; sourceTree = "<group>"; };
@@ -479,6 +503,7 @@
 		319486381F7C391B00DB435B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				31C1CB831FAD27D00058B2E5 /* Alert */,
 				313B269D1F8BEE7B00E55447 /* Helpers */,
 				3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */,
 				31847DD51FA7D8890024E150 /* Shopping */,
@@ -600,6 +625,80 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
+		31C1CB831FAD27D00058B2E5 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				31C1CB851FAD27E20058B2E5 /* Presenters */,
+				31C1CB8F1FAD29E30058B2E5 /* ViewControllers */,
+				31C1CB861FAD27ED0058B2E5 /* ViewModels */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		31C1CB851FAD27E20058B2E5 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				31C1CB8B1FAD292B0058B2E5 /* AlertPresenter.swift */,
+				31C1CB8D1FAD29350058B2E5 /* AlertPresenterAssembly.swift */,
+				31C1CB891FAD29240058B2E5 /* AlertPresenting.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		31C1CB861FAD27ED0058B2E5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				31C1CB941FAD2ABF0058B2E5 /* AlertActionViewModel.swift */,
+				31C1CB921FAD2A860058B2E5 /* AlertViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		31C1CB8F1FAD29E30058B2E5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31C1CB901FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift */,
+				31C1CB961FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31C1CB981FAD2E070058B2E5 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				31C1CB991FAD2E0C0058B2E5 /* Presenters */,
+				31C1CB9A1FAD2E110058B2E5 /* ViewControllers */,
+				31C1CBA21FAD38230058B2E5 /* Views */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		31C1CB991FAD2E0C0058B2E5 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				31C1CB9C1FAD2E300058B2E5 /* AlertPresenterSpec.swift */,
+				31C1CBA51FAD3E580058B2E5 /* AlertPresenterSpy.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		31C1CB9A1FAD2E110058B2E5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31C1CBA01FAD317A0058B2E5 /* AlertViewControllerFactorySpec.swift */,
+				31C1CB9E1FAD31350058B2E5 /* AlertViewControllerFactorySpy.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31C1CBA21FAD38230058B2E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31C1CBA31FAD38390058B2E5 /* UIAlertActionSpy.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		31D828771FA27B09009CD4E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +730,7 @@
 		31FAEA051F7EFA0800EA7660 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				31C1CB981FAD2E070058B2E5 /* Alert */,
 				3130F3ED1FAA96E900CD39C2 /* Navigation */,
 				31D8287E1FA2836D009CD4E5 /* Helpers */,
 				31847DDB1FA7D93E0024E150 /* Shopping */,
@@ -937,6 +1037,7 @@
 			files = (
 				3154E09C1FA9576F00529923 /* AppConfiguratorsAssembly.swift in Sources */,
 				31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */,
+				31C1CB8E1FAD29350058B2E5 /* AlertPresenterAssembly.swift in Sources */,
 				3179207B1F884BBB00D7359F /* TableRowViewModel.swift in Sources */,
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
 				31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */,
@@ -950,18 +1051,24 @@
 				31A361A51F97DAF00061B658 /* ShoppingRemoving.swift in Sources */,
 				31D8288E1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift in Sources */,
 				3179207D1F884BE800D7359F /* ShoppingsTableRowViewModel.swift in Sources */,
+				31C1CB971FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift in Sources */,
 				31D8288A1FA29648009CD4E5 /* ShoppingsViewControllerAssembly.swift in Sources */,
 				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
 				3154E09E1FA957C700529923 /* CrashlyticsConfigurator.swift in Sources */,
 				313B26AF1F8C21A200E55447 /* ShoppingsViewModel.swift in Sources */,
+				31C1CB8A1FAD29240058B2E5 /* AlertPresenting.swift in Sources */,
+				31C1CB951FAD2ABF0058B2E5 /* AlertActionViewModel.swift in Sources */,
+				31C1CB911FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift in Sources */,
 				3154E0A01FA9580400529923 /* AppConfiguring.swift in Sources */,
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
 				31D828861FA2948E009CD4E5 /* ShoppingServiceAssembly.swift in Sources */,
 				31D828881FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift in Sources */,
 				31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */,
+				31C1CB931FAD2A860058B2E5 /* AlertViewModel.swift in Sources */,
 				31D828721FA27057009CD4E5 /* AppWindowConfiguring.swift in Sources */,
 				319486251F7C389C00DB435B /* AppDelegate.swift in Sources */,
 				31D828841FA28F0D009CD4E5 /* ShoppingsTableRowViewModelAssembly.swift in Sources */,
+				31C1CB8C1FAD292B0058B2E5 /* AlertPresenter.swift in Sources */,
 				31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */,
 				31B9CB6F1FACF26D00C0DB9E /* ShoppingPresenter.swift in Sources */,
 				31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */,
@@ -981,6 +1088,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C1CBA61FAD3E580058B2E5 /* AlertPresenterSpy.swift in Sources */,
 				31B9CB741FACF98E00C0DB9E /* ShoppingPresenterSpec.swift in Sources */,
 				317920821F88597000D7359F /* TableRowViewModelStub.swift in Sources */,
 				31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */,
@@ -996,9 +1104,13 @@
 				313B26A31F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift in Sources */,
 				31D828741FA27375009CD4E5 /* AppWindowFactoryStub.swift in Sources */,
 				31A361AB1F97E0080061B658 /* ShoppingCreatorSpy.swift in Sources */,
+				31C1CBA41FAD38390058B2E5 /* UIAlertActionSpy.swift in Sources */,
 				31D828701FA26ED8009CD4E5 /* UIWindowSpy.swift in Sources */,
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
+				31C1CB9F1FAD31350058B2E5 /* AlertViewControllerFactorySpy.swift in Sources */,
 				31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */,
+				31C1CB9D1FAD2E300058B2E5 /* AlertPresenterSpec.swift in Sources */,
+				31C1CBA11FAD317A0058B2E5 /* AlertViewControllerFactorySpec.swift in Sources */,
 				31D8286E1FA26E5C009CD4E5 /* TestAppWindowConfiguratorSpec.swift in Sources */,
 				31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */,
 				319FA82F1FA4F84A009DB023 /* ShoppingRealmSpec.swift in Sources */,
