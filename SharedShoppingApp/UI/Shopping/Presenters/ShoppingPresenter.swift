@@ -2,8 +2,10 @@ import UIKit
 
 class ShoppingPresenter: ShoppingPresenting {
 
+    typealias ViewControllerFactory = (Shopping) -> UIViewController
+
     init(navigationController: UINavigationController,
-         viewControllerFactory: @escaping (Shopping) -> UIViewController) {
+         viewControllerFactory: @escaping ViewControllerFactory) {
         self.navigationController = navigationController
         self.viewControllerFactory = viewControllerFactory
     }
@@ -18,6 +20,6 @@ class ShoppingPresenter: ShoppingPresenting {
     // MARK: Private
 
     private let navigationController: UINavigationController
-    private let viewControllerFactory: (Shopping) -> UIViewController
+    private let viewControllerFactory: ViewControllerFactory
 
 }
