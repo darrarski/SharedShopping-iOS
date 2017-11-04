@@ -25,6 +25,7 @@
 		315FD4D41FAD439200A9C555 /* CreateShoppingPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4D31FAD439200A9C555 /* CreateShoppingPresenting.swift */; };
 		315FD4D61FAD43B000A9C555 /* CreateShoppingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4D51FAD43B000A9C555 /* CreateShoppingPresenter.swift */; };
 		315FD4D81FAD449B00A9C555 /* CreateShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4D71FAD449B00A9C555 /* CreateShoppingViewController.swift */; };
+		315FD4DA1FAD44F100A9C555 /* CreateShoppingViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4D91FAD44F100A9C555 /* CreateShoppingViewControllerAssembly.swift */; };
 		315FD4DF1FAD454200A9C555 /* CreateShoppingPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4DE1FAD454200A9C555 /* CreateShoppingPresenterSpec.swift */; };
 		315FD4E11FAD455100A9C555 /* CreateShoppingViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4E01FAD455100A9C555 /* CreateShoppingViewControllerSpec.swift */; };
 		316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316857881FA3BD67009DA75D /* RealmAssembly.swift */; };
@@ -129,6 +130,7 @@
 		315FD4D31FAD439200A9C555 /* CreateShoppingPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingPresenting.swift; sourceTree = "<group>"; };
 		315FD4D51FAD43B000A9C555 /* CreateShoppingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingPresenter.swift; sourceTree = "<group>"; };
 		315FD4D71FAD449B00A9C555 /* CreateShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewController.swift; sourceTree = "<group>"; };
+		315FD4D91FAD44F100A9C555 /* CreateShoppingViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewControllerAssembly.swift; sourceTree = "<group>"; };
 		315FD4DE1FAD454200A9C555 /* CreateShoppingPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingPresenterSpec.swift; sourceTree = "<group>"; };
 		315FD4E01FAD455100A9C555 /* CreateShoppingViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewControllerSpec.swift; sourceTree = "<group>"; };
 		316857881FA3BD67009DA75D /* RealmAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAssembly.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				315FD4D71FAD449B00A9C555 /* CreateShoppingViewController.swift */,
+				315FD4D91FAD44F100A9C555 /* CreateShoppingViewControllerAssembly.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1122,6 +1125,7 @@
 				31A361A51F97DAF00061B658 /* ShoppingRemoving.swift in Sources */,
 				31D8288E1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift in Sources */,
 				3179207D1F884BE800D7359F /* ShoppingsTableRowViewModel.swift in Sources */,
+				315FD4DA1FAD44F100A9C555 /* CreateShoppingViewControllerAssembly.swift in Sources */,
 				31C1CB971FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift in Sources */,
 				31D8288A1FA29648009CD4E5 /* ShoppingsViewControllerAssembly.swift in Sources */,
 				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
