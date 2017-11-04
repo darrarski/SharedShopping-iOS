@@ -1,8 +1,13 @@
 import UIKit
 
+protocol CreateShoppingViewControllerOutputs {
+    func createShopping()
+}
+
 class CreateShoppingViewController: UIViewController {
 
-    init() {
+    init(outputs: CreateShoppingViewControllerOutputs) {
+        self.outputs = outputs
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -16,5 +21,21 @@ class CreateShoppingViewController: UIViewController {
         view = UIView(frame: .zero)
         view.backgroundColor = .white
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create",
+                                                            style: .done,
+                                                            target: self,
+                                                            action: #selector(rightBarButtonItemAction))
+    }
+
+    @objc func rightBarButtonItemAction() {
+        outputs.createShopping()
+    }
+
+    // MARK: Private
+
+    private let outputs: CreateShoppingViewControllerOutputs
 
 }
