@@ -33,6 +33,7 @@
 		315FD4E71FAD49CB00A9C555 /* CreateShoppingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4E61FAD49CB00A9C555 /* CreateShoppingViewModel.swift */; };
 		315FD4E91FAD4C7300A9C555 /* CreateShoppingViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4E81FAD4C7300A9C555 /* CreateShoppingViewModelAssembly.swift */; };
 		315FD4EC1FAD4D8B00A9C555 /* CreateShoppingViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4EB1FAD4D8A00A9C555 /* CreateShoppingViewModelSpec.swift */; };
+		315FD4F41FAD50D000A9C555 /* CreatedShoppingPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4F31FAD50D000A9C555 /* CreatedShoppingPresenting.swift */; };
 		316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316857881FA3BD67009DA75D /* RealmAssembly.swift */; };
 		3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */; };
 		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
@@ -143,6 +144,7 @@
 		315FD4E61FAD49CB00A9C555 /* CreateShoppingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewModel.swift; sourceTree = "<group>"; };
 		315FD4E81FAD4C7300A9C555 /* CreateShoppingViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewModelAssembly.swift; sourceTree = "<group>"; };
 		315FD4EB1FAD4D8A00A9C555 /* CreateShoppingViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewModelSpec.swift; sourceTree = "<group>"; };
+		315FD4F31FAD50D000A9C555 /* CreatedShoppingPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedShoppingPresenting.swift; sourceTree = "<group>"; };
 		316857881FA3BD67009DA75D /* RealmAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAssembly.swift; sourceTree = "<group>"; };
 		3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceRealmSpec.swift; sourceTree = "<group>"; };
 		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 		315FD4D11FAD437800A9C555 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				315FD4F31FAD50D000A9C555 /* CreatedShoppingPresenting.swift */,
 				315FD4D51FAD43B000A9C555 /* CreateShoppingPresenter.swift */,
 				315FD4E21FAD46DA00A9C555 /* CreateShoppingPresenterAssembly.swift */,
 				315FD4D31FAD439200A9C555 /* CreateShoppingPresenting.swift */,
@@ -1139,6 +1142,7 @@
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
 				31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */,
 				3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */,
+				315FD4F41FAD50D000A9C555 /* CreatedShoppingPresenting.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */,
 				3197416D1FA3659E00C4A3C3 /* ShoppingRealm.swift in Sources */,
 				3197416F1FA3669300C4A3C3 /* ShoppingServiceRealm.swift in Sources */,
