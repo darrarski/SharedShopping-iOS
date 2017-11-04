@@ -18,6 +18,7 @@ class ShoppingsTableRowViewModelAssembly: Assembly {
                 },
                 shoppingRemover: resolver ~> ShoppingService.self,
                 shoppingPresenter: resolver ~> (ShoppingPresenter.self, navigationController),
+                alertPresenter: resolver ~> (AlertPresenter.self, navigationController as UIViewController),
                 shopping: shopping
             )
         }.inObjectScope(.transient)

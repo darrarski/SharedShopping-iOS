@@ -10,11 +10,13 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
          rowActionFactory: @escaping TableViewRowActionFactory,
          shoppingRemover: ShoppingRemoving,
          shoppingPresenter: ShoppingPresenting,
+         alertPresenter: AlertPresenting,
          shopping: Shopping) {
         self.dateFormatter = dateFormatter
         self.rowActionFactory = rowActionFactory
         self.shoppingRemover = shoppingRemover
         self.shoppingPresenter = shoppingPresenter
+        self.alertPresenter = alertPresenter
         self.shopping = shopping
     }
 
@@ -62,10 +64,30 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     private let rowActionFactory: TableViewRowActionFactory
     private let shoppingRemover: ShoppingRemoving
     private let shoppingPresenter: ShoppingPresenting
+    private let alertPresenter: AlertPresenting
     private let shopping: Shopping
 
     private func handleDeleteAction() {
-        shoppingRemover.removeShopping(shopping)
+        let viewModel = AlertViewModel(
+            title: "Delete Shopping",
+            message: "Are you sure you want to delete selected Shopping with all contained data?",
+            actions: [
+                AlertActionViewModel(
+                    title: "Cancel",
+                    style: .cancel,
+                    handler: {}
+                ),
+                AlertActionViewModel(
+                    title: "Delete",
+                    style: .destruct,
+                    handler: { [weak self] in
+                        guard let shopping = self?.shopping else { return }
+                        self?.shoppingRemover.removeShopping(shopping)
+                    }
+                )
+            ]
+        )
+        alertPresenter.presentAlert(viewModel)
     }
 
 }

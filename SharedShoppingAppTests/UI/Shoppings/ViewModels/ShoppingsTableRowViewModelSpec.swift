@@ -11,6 +11,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
             var dateFormatter: DateFormatter!
             var shoppingRemoverSpy: ShoppingRemoverSpy!
             var shoppingPresenterSpy: ShoppingPresenterSpy!
+            var alertPresenterSpy: AlertPresenterSpy!
             var shopping: Shopping!
 
             beforeEach {
@@ -22,6 +23,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 }()
                 shoppingRemoverSpy = ShoppingRemoverSpy()
                 shoppingPresenterSpy = ShoppingPresenterSpy()
+                alertPresenterSpy = AlertPresenterSpy()
                 shopping = ShoppingFake(name: "Test Shopping", date: Date())
 
                 sut = ShoppingsTableRowViewModel(
@@ -31,6 +33,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                     },
                     shoppingRemover: shoppingRemoverSpy,
                     shoppingPresenter: shoppingPresenterSpy,
+                    alertPresenter: alertPresenterSpy,
                     shopping: shopping
                 )
             }
@@ -44,6 +47,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                         rowActionFactory: { UITableViewRowAction(style: $0, title: $1, handler: $2) },
                         shoppingRemover: ShoppingRemoverSpy(),
                         shoppingPresenter: ShoppingPresenterSpy(),
+                        alertPresenter: AlertPresenterSpy(),
                         shopping: shopping
                     )
                 }
@@ -65,6 +69,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                         },
                         shoppingRemover: shoppingRemoverSpy,
                         shoppingPresenter: shoppingPresenterSpy,
+                        alertPresenter: alertPresenterSpy,
                         shopping: ShoppingFake(name: "Other Shopping", date: Date())
                     )
                 }
@@ -188,8 +193,80 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                         action.handler(action, IndexPath(row: 12, section: 17))
                     }
 
-                    it("should delete shopping") {
-                        expect(shoppingRemoverSpy.didRemoveShopping).to(equal(shopping))
+                    describe("presented alert") {
+                        var alert: AlertViewModel?
+
+                        beforeEach {
+                            alert = alertPresenterSpy.didPresentAlert
+                        }
+
+                        it("should not be nil") {
+                            expect(alert).notTo(beNil())
+                        }
+
+                        it("should have correct title") {
+                            expect(alert?.title).to(equal("Delete Shopping"))
+                        }
+
+                        it("should have correct message") {
+                            expect(alert?.message).to(equal("Are you sure you want to delete selected Shopping with all contained data?"))
+                        }
+
+                        it("should have two actions") {
+                            expect(alert?.actions).to(haveCount(2))
+                        }
+
+                        describe("first action") {
+                            var action: AlertActionViewModel?
+
+                            beforeEach {
+                                action = alert?.actions.first
+                            }
+
+                            it("should have correct title") {
+                                expect(action?.title).to(equal("Cancel"))
+                            }
+
+                            it("should have correct style") {
+                                expect(action?.style).to(equal(AlertActionViewModel.Style.cancel))
+                            }
+
+                            context("perform") {
+                                beforeEach {
+                                    action?.handler()
+                                }
+
+                                it("should not delete shopping") {
+                                    expect(shoppingRemoverSpy.didRemoveShopping).to(beNil())
+                                }
+                            }
+                        }
+
+                        describe("last action") {
+                            var action: AlertActionViewModel?
+
+                            beforeEach {
+                                action = alert?.actions.last
+                            }
+
+                            it("should have correct title") {
+                                expect(action?.title).to(equal("Delete"))
+                            }
+
+                            it("should have correct style") {
+                                expect(action?.style).to(equal(AlertActionViewModel.Style.destruct))
+                            }
+
+                            context("perform") {
+                                beforeEach {
+                                    action?.handler()
+                                }
+
+                                it("should delete shopping") {
+                                    expect(shoppingRemoverSpy.didRemoveShopping).to(equal(shopping))
+                                }
+                            }
+                        }
                     }
                 }
             }
