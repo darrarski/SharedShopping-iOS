@@ -80,14 +80,15 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
                 AlertActionViewModel(
                     title: "Delete",
                     style: .destruct,
-                    handler: { [weak self] in
-                        guard let shopping = self?.shopping else { return }
-                        self?.shoppingRemover.removeShopping(shopping)
-                    }
+                    handler: { [weak self] in self?.deleteShopping() }
                 )
             ]
         )
         alertPresenter.presentAlert(viewModel)
+    }
+
+    private func deleteShopping() {
+        shoppingRemover.removeShopping(shopping)
     }
 
 }
