@@ -17,6 +17,7 @@ extension Assembler {
             ShoppingViewControllerAssembly(),
             AlertPresenterAssembly(),
             AlertViewControllerFactoryAssembly(),
+            CreateShoppingPresenterAssembly(),
             CreateShoppingViewControllerAssembly()
         ])
     }
