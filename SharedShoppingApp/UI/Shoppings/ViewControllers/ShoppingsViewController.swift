@@ -33,6 +33,7 @@ class ShoppingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = inputs.title
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(rightBarButtonItemAction))
