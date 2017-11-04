@@ -62,6 +62,7 @@
 		31C1CB911FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB901FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift */; };
 		31C1CB931FAD2A860058B2E5 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB921FAD2A860058B2E5 /* AlertViewModel.swift */; };
 		31C1CB951FAD2ABF0058B2E5 /* AlertActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB941FAD2ABF0058B2E5 /* AlertActionViewModel.swift */; };
+		31C1CB971FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB961FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift */; };
 		31C1CB9D1FAD2E300058B2E5 /* AlertPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB9C1FAD2E300058B2E5 /* AlertPresenterSpec.swift */; };
 		31C1CB9F1FAD31350058B2E5 /* AlertViewControllerFactorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CB9E1FAD31350058B2E5 /* AlertViewControllerFactorySpy.swift */; };
 		31C1CBA11FAD317A0058B2E5 /* AlertViewControllerFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1CBA01FAD317A0058B2E5 /* AlertViewControllerFactorySpec.swift */; };
@@ -162,6 +163,7 @@
 		31C1CB901FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControllerFactory.swift; sourceTree = "<group>"; };
 		31C1CB921FAD2A860058B2E5 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		31C1CB941FAD2ABF0058B2E5 /* AlertActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionViewModel.swift; sourceTree = "<group>"; };
+		31C1CB961FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControllerFactoryAssembly.swift; sourceTree = "<group>"; };
 		31C1CB9C1FAD2E300058B2E5 /* AlertPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterSpec.swift; sourceTree = "<group>"; };
 		31C1CB9E1FAD31350058B2E5 /* AlertViewControllerFactorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControllerFactorySpy.swift; sourceTree = "<group>"; };
 		31C1CBA01FAD317A0058B2E5 /* AlertViewControllerFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControllerFactorySpec.swift; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 			isa = PBXGroup;
 			children = (
 				31C1CB901FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift */,
+				31C1CB961FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1041,6 +1044,7 @@
 				31A361A51F97DAF00061B658 /* ShoppingRemoving.swift in Sources */,
 				31D8288E1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift in Sources */,
 				3179207D1F884BE800D7359F /* ShoppingsTableRowViewModel.swift in Sources */,
+				31C1CB971FAD2D660058B2E5 /* AlertViewControllerFactoryAssembly.swift in Sources */,
 				31D8288A1FA29648009CD4E5 /* ShoppingsViewControllerAssembly.swift in Sources */,
 				317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */,
 				3154E09E1FA957C700529923 /* CrashlyticsConfigurator.swift in Sources */,
