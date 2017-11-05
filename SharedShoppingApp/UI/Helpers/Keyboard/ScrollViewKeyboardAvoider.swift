@@ -1,4 +1,5 @@
 import UIKit
+import RxSwift
 
 class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
 
@@ -10,7 +11,23 @@ class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
 
     // MARK: ScrollViewKeyboardAvoiding
 
-    func handleKeyboardFrameChange(_ change: KeyboardFrameChange, for scrollView: UIScrollView) {
+    func observeKeyboardFrameChanges(for scrollView: UIScrollView) -> AnyObserver<KeyboardFrameChange> {
+        return AnyObserver(eventHandler: { [weak self, weak scrollView] event in
+            switch event {
+            case .completed, .error:
+                return
+            case .next(let change):
+                guard let scrollView = scrollView else { return }
+                self?.handleKeyboardFrameChange(change, for: scrollView)
+            }
+        })
+    }
+
+    // MARK: Private
+
+    private let animate: Animator
+
+    private func handleKeyboardFrameChange(_ change: KeyboardFrameChange, for scrollView: UIScrollView) {
         guard let superview = scrollView.superview else { return }
         let keyboardFrame = superview.convert(change.frame, from: nil)
         var insets = UIEdgeInsets.zero
@@ -23,9 +40,5 @@ class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
             scrollView.scrollIndicatorInsets = insets
         }
     }
-
-    // MARK: Private
-
-    private let animate: Animator
 
 }

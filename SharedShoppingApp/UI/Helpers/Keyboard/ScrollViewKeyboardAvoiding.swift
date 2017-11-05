@@ -1,5 +1,6 @@
 import UIKit
+import RxSwift
 
 protocol ScrollViewKeyboardAvoiding {
-    func handleKeyboardFrameChange(_ change: KeyboardFrameChange, for scrollView: UIScrollView)
+    func observeKeyboardFrameChanges(for scrollView: UIScrollView) -> AnyObserver<KeyboardFrameChange>
 }
