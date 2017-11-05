@@ -26,9 +26,12 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
 
                 describe("full screen scroll view") {
                     var scrollView: UIScrollView!
+                    var superview: UIView!
 
                     beforeEach {
                         scrollView = fullScreenScrollView(screenSize: screenSize)
+                        superview = UIView(frame: CGRect(origin: .zero, size: screenSize))
+                        superview.addSubview(scrollView)
                     }
 
                     context("standard keyboard becomes fully visible") {
@@ -98,10 +101,13 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
                 describe("full screen scroll view with margins") {
                     var scrollView: UIScrollView!
                     var margin: CGFloat!
+                    var superview: UIView!
 
                     beforeEach {
                         margin = 20
                         scrollView = fullScreenScrollView(screenSize: screenSize, margin: margin)
+                        superview = UIView(frame: CGRect(origin: .zero, size: screenSize))
+                        superview.addSubview(scrollView)
                     }
 
                     context("standard keyboard becomes fully visible") {
@@ -171,14 +177,7 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
         }
 
         func fullScreenScrollView(screenSize: CGSize, margin: CGFloat = 0) -> UIScrollView {
-            return UIScrollView(
-                frame: CGRect(
-                    x: margin,
-                    y: margin,
-                    width: screenSize.width - (margin * 2),
-                    height: screenSize.height - (margin * 2)
-                )
-            )
+            return UIScrollView(frame: CGRect(origin: .zero, size: screenSize).insetBy(dx: margin, dy: margin))
         }
 
         func standardKeyboardFullyVisible(screenSize: CGSize) -> KeyboardFrameChange {
