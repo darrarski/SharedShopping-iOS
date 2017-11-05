@@ -16,7 +16,7 @@ class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
         var insets = UIEdgeInsets.zero
         let bottomCoverage = scrollView.frame.maxY - keyboardFrame.minY
         if bottomCoverage > 0 {
-            insets.bottom = bottomCoverage
+            insets.bottom = max(bottomCoverage - scrollView.safeAreaInsets.bottom, scrollView.safeAreaInsets.bottom)
         }
         animate(change.animationDuration) {
             scrollView.contentInset = insets
