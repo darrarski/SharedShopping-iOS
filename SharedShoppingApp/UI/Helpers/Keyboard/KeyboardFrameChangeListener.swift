@@ -1,4 +1,4 @@
-import RxSwift
+import UIKit
 
 class KeyboardFrameChangeListener: KeyboardFrameChangeListening {
 
@@ -9,14 +9,11 @@ class KeyboardFrameChangeListener: KeyboardFrameChangeListening {
 
     // MARK: KeyboardFrameChangeListening
 
-    var keyboardWillChangeFrame: Observable<KeyboardFrameChange> {
-        return keyboardWillChangeFrameSubject.asObservable()
-    }
+    var keyboardFrameWillChange: ((KeyboardFrameChange) -> Void)?
 
     // MARK: Private
 
     private let notificationCenter: NotificationCenter
-    private let keyboardWillChangeFrameSubject = PublishSubject<KeyboardFrameChange>()
     private var token: NSObjectProtocol?
 
     private func observe() {
@@ -34,7 +31,7 @@ class KeyboardFrameChangeListener: KeyboardFrameChangeListening {
             return
         }
         let change = KeyboardFrameChange(frame: endFrame, animationDuration: animationDuration)
-        keyboardWillChangeFrameSubject.onNext(change)
+        keyboardFrameWillChange?(change)
     }
 
 }

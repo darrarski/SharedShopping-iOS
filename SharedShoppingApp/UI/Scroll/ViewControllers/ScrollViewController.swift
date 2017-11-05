@@ -1,5 +1,4 @@
 import UIKit
-import RxSwift
 
 class ScrollViewController: UIViewController, UIScrollViewDelegate {
 
@@ -36,7 +35,10 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollWrapperView.scrollView.delegate = self
-        setupBindings()
+        keyboardListener.keyboardFrameWillChange = { [weak self] change in
+            guard let scrollView = self?.scrollView else { return }
+            self?.scrollViewKeyboardAvoider.handleKeyboardFrameChange(change, for: scrollView)
+        }
     }
 
     // MARK: UIScrollViewDelegate
@@ -49,15 +51,5 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
 
     private let keyboardListener: KeyboardFrameChangeListening
     private let scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding
-    private let disposeBag = DisposeBag()
-
-    private func setupBindings() {
-        keyboardListener.keyboardWillChangeFrame
-            .subscribe(onNext: { [weak self] change in
-                guard let scrollView = self?.scrollView else { return }
-                self?.scrollViewKeyboardAvoider.handleKeyboardFrameChange(change, for: scrollView)
-            })
-            .disposed(by: disposeBag)
-    }
 
 }

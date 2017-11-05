@@ -1,20 +1,13 @@
-import RxSwift
 @testable import SharedShoppingApp
 
 class KeyboardFrameChangeListenerMock: KeyboardFrameChangeListening {
 
     func simulateKeyboardFrameChange(_ change: KeyboardFrameChange) {
-        keyboardWillChangeFrameSubject.onNext(change)
+        keyboardFrameWillChange?(change)
     }
 
     // MARK: KeyboardFrameChangeListening
 
-    var keyboardWillChangeFrame: Observable<KeyboardFrameChange> {
-        return keyboardWillChangeFrameSubject.asObservable()
-    }
-
-    // MARK: Private
-
-    private let keyboardWillChangeFrameSubject = PublishSubject<KeyboardFrameChange>()
+    var keyboardFrameWillChange: ((KeyboardFrameChange) -> Void)?
 
 }
