@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-class ScrollViewController: UIViewController {
+class ScrollViewController: UIViewController, UIScrollViewDelegate {
 
     init(keyboardListener: KeyboardFrameChangeListening,
          scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding) {
@@ -27,11 +27,18 @@ class ScrollViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.scrollView.delegate = self
         setupBindings()
     }
 
     private var scrollView: ScrollView! {
         return self.view as? ScrollView
+    }
+
+    // MARK: UIScrollViewDelegate
+
+    func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
+        self.scrollView.updateVisibleContentLayoutGuide(insets: scrollView.adjustedContentInset)
     }
 
     // MARK: Private
