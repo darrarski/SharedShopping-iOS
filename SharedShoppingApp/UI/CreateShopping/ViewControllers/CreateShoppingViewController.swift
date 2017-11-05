@@ -6,7 +6,9 @@ protocol CreateShoppingViewControllerOutputs {
 
 class CreateShoppingViewController: UIViewController {
 
-    init(outputs: CreateShoppingViewControllerOutputs) {
+    init(scrollViewController: ScrollViewController,
+         outputs: CreateShoppingViewControllerOutputs) {
+        self.scrollViewController = scrollViewController
         self.outputs = outputs
         super.init(nibName: nil, bundle: nil)
     }
@@ -36,6 +38,7 @@ class CreateShoppingViewController: UIViewController {
 
     // MARK: Private
 
+    private let scrollViewController: ScrollViewController
     private let outputs: CreateShoppingViewControllerOutputs
 
 }
