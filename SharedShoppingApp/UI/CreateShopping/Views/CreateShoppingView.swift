@@ -17,8 +17,9 @@ class CreateShoppingView: UIView {
 
     let textView: UITextView = {
         let view = UITextView(frame: .zero)
-        view.backgroundColor = .clear
+        view.backgroundColor = .white
         view.isScrollEnabled = false
+        view.font = UIFont.preferredFont(forTextStyle: .body)
         return view
     }()
 
@@ -30,7 +31,7 @@ class CreateShoppingView: UIView {
 
     private func setupLayout() {
         textView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.equalTo(UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
         }
     }
 
