@@ -47,11 +47,14 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
                 describe("full screen scroll view") {
                     var scrollView: UIScrollView!
                     var superview: UIView!
+                    var layoutCallObserver: MethodCallObserver!
 
                     beforeEach {
                         scrollView = fullScreenScrollView(screenSize: screenSize)
                         superview = UIView(frame: CGRect(origin: .zero, size: screenSize))
                         superview.addSubview(scrollView)
+                        layoutCallObserver = MethodCallObserver()
+                        layoutCallObserver.observe(scrollView, #selector(UIScrollView.layoutIfNeeded))
                     }
 
                     context("standard keyboard becomes fully visible") {
@@ -72,6 +75,11 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
 
                         it("should set correct bottom indicator inset") {
                             expect(scrollView.scrollIndicatorInsets.bottom).to(equal(change.frame.size.height))
+                        }
+
+                        it("should update layout once") {
+                            expect(layoutCallObserver.observedCalls).to(haveCount(1))
+                            expect(layoutCallObserver.observedCalls.last?.0).to(equal(#selector(UIScrollView.layoutIfNeeded)))
                         }
                     }
 
