@@ -35,14 +35,28 @@ class ScrollView: UIView {
 
     // MARK: Layout
 
+    func updateVisibleContentLayoutGuide(insets: UIEdgeInsets) {
+        visibleContentLayoutGuide.snp.updateConstraints {
+            $0.edges.equalTo(insets)
+        }
+    }
+
+    private let visibleContentLayoutGuide = UILayoutGuide()
+
     private func setupLayout() {
+        addLayoutGuide(visibleContentLayoutGuide)
         scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        visibleContentLayoutGuide.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         containerView.snp.makeConstraints {
             $0.width.equalToSuperview()
             $0.edges.equalToSuperview()
+            $0.height.greaterThanOrEqualTo(visibleContentLayoutGuide.snp.height)
         }
+        updateVisibleContentLayoutGuide(insets: scrollView.adjustedContentInset)
     }
 
     private func setupLayout(contentView: UIView) {
