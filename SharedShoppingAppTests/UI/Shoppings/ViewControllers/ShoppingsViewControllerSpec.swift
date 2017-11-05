@@ -8,68 +8,85 @@ class ShoppingsViewControllerSpec: QuickSpec {
     override func spec() {
         describe("ShoppingsViewController") {
             var sut: ShoppingsViewController!
-            var tableViewController: UIViewController!
-            var inputs: Inputs!
-            var outputs: Outputs!
 
-            beforeEach {
-                tableViewController = UIViewController(nibName: nil, bundle: nil)
-                inputs = Inputs()
-                outputs = Outputs()
-                sut = ShoppingsViewController(
-                    tableViewControllerFactory: { tableViewController },
-                    inputs: inputs,
-                    outputs: outputs
-                )
+            context("init with coder") {
+                beforeEach {
+                    sut = ShoppingsViewController(coder: NSCoder())
+                }
+
+                it("should be nil") {
+                    expect(sut).to(beNil())
+                }
             }
 
-            context("load view") {
+            context("init") {
+                var tableViewController: UIViewController!
+                var inputs: Inputs!
+                var outputs: Outputs!
+
+                it("should not init with coder") {
+                    expect(ShoppingViewController(coder: NSCoder())).to(beNil())
+                }
+
                 beforeEach {
-                    _ = sut.view
+                    tableViewController = UIViewController(nibName: nil, bundle: nil)
+                    inputs = Inputs()
+                    outputs = Outputs()
+                    sut = ShoppingsViewController(
+                        tableViewControllerFactory: { tableViewController },
+                        inputs: inputs,
+                        outputs: outputs
+                    )
                 }
 
-                it("should embed tableViewController") {
-                    expect(sut.childViewControllers).to(contain(tableViewController))
-                }
-
-                it("should have correct title") {
-                    expect(sut.title).to(equal(inputs.title))
-                }
-
-                describe("back bar button item") {
-                    var button: UIBarButtonItem?
-
+                context("load view") {
                     beforeEach {
-                        button = sut.navigationItem.backBarButtonItem
+                        _ = sut.view
                     }
 
-                    it("should not be nil") {
-                        expect(button).notTo(beNil())
+                    it("should embed tableViewController") {
+                        expect(sut.childViewControllers).to(contain(tableViewController))
                     }
 
-                    it("should have empty title") {
-                        expect(button?.title).to(equal(""))
-                    }
-                }
-
-                describe("right bar button item") {
-                    var button: UIBarButtonItem?
-
-                    beforeEach {
-                        button = sut.navigationItem.rightBarButtonItem
+                    it("should have correct title") {
+                        expect(sut.title).to(equal(inputs.title))
                     }
 
-                    it("should not be nil") {
-                        expect(button).notTo(beNil())
-                    }
+                    describe("back bar button item") {
+                        var button: UIBarButtonItem?
 
-                    context("tap") {
                         beforeEach {
-                            _ = button?.target?.perform(button?.action)
+                            button = sut.navigationItem.backBarButtonItem
                         }
 
-                        it("should call addShopping") {
-                            expect(outputs.addShoppingCalled).to(beTrue())
+                        it("should not be nil") {
+                            expect(button).notTo(beNil())
+                        }
+
+                        it("should have empty title") {
+                            expect(button?.title).to(equal(""))
+                        }
+                    }
+
+                    describe("right bar button item") {
+                        var button: UIBarButtonItem?
+
+                        beforeEach {
+                            button = sut.navigationItem.rightBarButtonItem
+                        }
+
+                        it("should not be nil") {
+                            expect(button).notTo(beNil())
+                        }
+
+                        context("tap") {
+                            beforeEach {
+                                _ = button?.target?.perform(button?.action)
+                            }
+
+                            it("should call addShopping") {
+                                expect(outputs.addShoppingCalled).to(beTrue())
+                            }
                         }
                     }
                 }

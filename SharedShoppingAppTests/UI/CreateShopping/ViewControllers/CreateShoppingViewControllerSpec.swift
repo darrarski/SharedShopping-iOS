@@ -8,42 +8,55 @@ class CreateShoppingViewControllerSpec: QuickSpec {
     override func spec() {
         describe("CreateShoppingViewController") {
             var sut: CreateShoppingViewController!
-            var outputs: Outputs!
 
-            beforeEach {
-                outputs = Outputs()
-                sut = CreateShoppingViewController(
-                    scrollViewController: ScrollViewController(
-                        keyboardListener: KeyboardFrameChangeListenerMock(),
-                        scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiderSpy()
-                    ),
-                    outputs: outputs
-                )
-            }
-
-            context("load view") {
+            context("init with coder") {
                 beforeEach {
-                    _ = sut.view
+                    sut = CreateShoppingViewController(coder: NSCoder())
                 }
 
-                describe("right bar button item in navigation item") {
-                    var button: UIBarButtonItem?
+                it("should be nil") {
+                    expect(sut).to(beNil())
+                }
+            }
 
+            context("init") {
+                var outputs: Outputs!
+
+                beforeEach {
+                    outputs = Outputs()
+                    sut = CreateShoppingViewController(
+                        scrollViewController: ScrollViewController(
+                            keyboardListener: KeyboardFrameChangeListenerMock(),
+                            scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiderSpy()
+                        ),
+                        outputs: outputs
+                    )
+                }
+
+                context("load view") {
                     beforeEach {
-                        button = sut.navigationItem.rightBarButtonItem
+                        _ = sut.view
                     }
 
-                    it("should not be nil") {
-                        expect(button).notTo(beNil())
-                    }
+                    describe("right bar button item in navigation item") {
+                        var button: UIBarButtonItem?
 
-                    context("tap") {
                         beforeEach {
-                            _ = button?.target?.perform(button?.action)
+                            button = sut.navigationItem.rightBarButtonItem
                         }
 
-                        it("should create shopping") {
-                            expect(outputs.didCreateShopping).to(beTrue())
+                        it("should not be nil") {
+                            expect(button).notTo(beNil())
+                        }
+
+                        context("tap") {
+                            beforeEach {
+                                _ = button?.target?.perform(button?.action)
+                            }
+
+                            it("should create shopping") {
+                                expect(outputs.didCreateShopping).to(beTrue())
+                            }
                         }
                     }
                 }
