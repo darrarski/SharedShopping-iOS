@@ -26,10 +26,6 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                     _ = sut.view
                 }
 
-                it("should view have white background") {
-                    expect(sut.view.backgroundColor).to(equal(UIColor.white))
-                }
-
                 describe("right bar button item in navigation item") {
                     var button: UIBarButtonItem?
 
