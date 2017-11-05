@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		042F49DE31344DD119989289 /* Pods_SharedShoppingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */; };
+		310C7BE01FAE234100FB7762 /* CreateShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7BDF1FAE234100FB7762 /* CreateShoppingView.swift */; };
 		310C7BE41FAE5F4000FB7762 /* KeyboardFrameChangeListening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7BE31FAE5F4000FB7762 /* KeyboardFrameChangeListening.swift */; };
 		310C7BE61FAE5F5800FB7762 /* KeyboardFrameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7BE51FAE5F5800FB7762 /* KeyboardFrameChange.swift */; };
 		310C7BE81FAE5F9E00FB7762 /* KeyboardFrameChangeListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7BE71FAE5F9E00FB7762 /* KeyboardFrameChangeListener.swift */; };
@@ -136,6 +137,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		310C7BDF1FAE234100FB7762 /* CreateShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingView.swift; sourceTree = "<group>"; };
 		310C7BE31FAE5F4000FB7762 /* KeyboardFrameChangeListening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListening.swift; sourceTree = "<group>"; };
 		310C7BE51FAE5F5800FB7762 /* KeyboardFrameChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChange.swift; sourceTree = "<group>"; };
 		310C7BE71FAE5F9E00FB7762 /* KeyboardFrameChangeListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListener.swift; sourceTree = "<group>"; };
@@ -300,6 +302,14 @@
 				3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		310C7BDE1FAE233200FB7762 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				310C7BDF1FAE234100FB7762 /* CreateShoppingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		310C7BE21FAE5F2F00FB7762 /* Keyboard */ = {
@@ -515,6 +525,7 @@
 				315FD4D11FAD437800A9C555 /* Presenters */,
 				315FD4D01FAD437300A9C555 /* ViewControllers */,
 				315FD4D21FAD437F00A9C555 /* ViewModels */,
+				310C7BDE1FAE233200FB7762 /* Views */,
 			);
 			path = CreateShopping;
 			sourceTree = "<group>";
@@ -1242,6 +1253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				310C7BE01FAE234100FB7762 /* CreateShoppingView.swift in Sources */,
 				3154E09C1FA9576F00529923 /* AppConfiguratorsAssembly.swift in Sources */,
 				31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */,
 				31C1CB8E1FAD29350058B2E5 /* AlertPresenterAssembly.swift in Sources */,

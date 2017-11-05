@@ -22,6 +22,8 @@ class CreateShoppingViewController: UIViewController {
     override func loadView() {
         view = UIView(frame: .zero)
         view.backgroundColor = .white
+        embed(scrollViewController, in: view)
+        scrollViewController.contentView = CreateShoppingView()
     }
 
     override func viewDidLoad() {
