@@ -1,5 +1,3 @@
-import RxSwift
-
-protocol KeyboardFrameChangeListening {
-    var keyboardWillChangeFrame: Observable<KeyboardFrameChange> { get }
+protocol KeyboardFrameChangeListening: class {
+    var keyboardFrameWillChange: ((KeyboardFrameChange) -> Void)? { get set }
 }

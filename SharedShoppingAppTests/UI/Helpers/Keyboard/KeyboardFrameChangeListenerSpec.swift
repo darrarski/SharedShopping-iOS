@@ -1,6 +1,5 @@
 import Quick
 import Nimble
-import RxTest
 
 @testable import SharedShoppingApp
 
@@ -10,15 +9,13 @@ class KeyboardFrameChangeListenerSpec: QuickSpec {
         describe("KeyboardFrameChangeListener") {
             var sut: KeyboardFrameChangeListener!
             var notificationCenter: NotificationCenter!
-            var scheduler: TestScheduler!
-            var keyboardWillChangeFrameObserver: TestableObserver<KeyboardFrameChange>!
+            var keyboardFameChanges: [KeyboardFrameChange]!
 
             beforeEach {
                 notificationCenter = NotificationCenter()
+                keyboardFameChanges = []
                 sut = KeyboardFrameChangeListener(notificationCenter: notificationCenter)
-                scheduler = TestScheduler(initialClock: 0)
-                keyboardWillChangeFrameObserver = scheduler.createObserver(KeyboardFrameChange.self)
-                _ = sut.keyboardWillChangeFrame.subscribe(keyboardWillChangeFrameObserver)
+                sut.keyboardFrameWillChange = { keyboardFameChanges.append($0) }
             }
 
             context("keyboard will change frame notification") {
@@ -39,14 +36,14 @@ class KeyboardFrameChangeListenerSpec: QuickSpec {
                 }
 
                 it("should emit one change") {
-                    expect(keyboardWillChangeFrameObserver.events).to(haveCount(1))
+                    expect(keyboardFameChanges).to(haveCount(1))
                 }
 
                 describe("last emited change") {
                     var change: KeyboardFrameChange?
 
                     beforeEach {
-                        change = keyboardWillChangeFrameObserver.events.last?.value.element
+                        change = keyboardFameChanges.last
                     }
 
                     it("should not be nil") {
@@ -73,7 +70,7 @@ class KeyboardFrameChangeListenerSpec: QuickSpec {
                 }
 
                 it("should not emit changes") {
-                    expect(keyboardWillChangeFrameObserver.events).to(beEmpty())
+                    expect(keyboardFameChanges).to(beEmpty())
                 }
             }
         }

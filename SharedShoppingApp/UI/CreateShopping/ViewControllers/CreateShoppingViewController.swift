@@ -21,7 +21,7 @@ class CreateShoppingViewController: UIViewController {
 
     override func loadView() {
         view = UIView(frame: .zero)
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.96, alpha:1.00)
         embed(scrollViewController, in: view)
         scrollViewController.contentView = CreateShoppingView()
         scrollViewController.scrollView.alwaysBounceVertical = true
