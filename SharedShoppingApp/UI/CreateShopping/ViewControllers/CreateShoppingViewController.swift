@@ -6,7 +6,9 @@ protocol CreateShoppingViewControllerOutputs {
 
 class CreateShoppingViewController: UIViewController {
 
-    init(outputs: CreateShoppingViewControllerOutputs) {
+    init(scrollViewController: ScrollViewController,
+         outputs: CreateShoppingViewControllerOutputs) {
+        self.scrollViewController = scrollViewController
         self.outputs = outputs
         super.init(nibName: nil, bundle: nil)
     }
@@ -20,6 +22,9 @@ class CreateShoppingViewController: UIViewController {
     override func loadView() {
         view = UIView(frame: .zero)
         view.backgroundColor = .white
+        embed(scrollViewController, in: view)
+        scrollViewController.contentView = CreateShoppingView()
+        scrollViewController.scrollView.alwaysBounceVertical = true
     }
 
     override func viewDidLoad() {
@@ -36,6 +41,7 @@ class CreateShoppingViewController: UIViewController {
 
     // MARK: Private
 
+    private let scrollViewController: ScrollViewController
     private let outputs: CreateShoppingViewControllerOutputs
 
 }

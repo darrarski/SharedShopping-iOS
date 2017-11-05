@@ -12,7 +12,13 @@ class CreateShoppingViewControllerSpec: QuickSpec {
 
             beforeEach {
                 outputs = Outputs()
-                sut = CreateShoppingViewController(outputs: outputs)
+                sut = CreateShoppingViewController(
+                    scrollViewController: ScrollViewController(
+                        keyboardListener: KeyboardFrameChangeListenerMock(),
+                        scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiderSpy()
+                    ),
+                    outputs: outputs
+                )
             }
 
             context("load view") {

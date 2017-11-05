@@ -2,18 +2,18 @@ import UIKit
 
 class CreatedShoppingPresenter: CreatedShoppingPresenting {
 
-    typealias ViewControllerFactory = (Shopping) -> UIViewController
+    typealias ShoppingViewControllerFactory = (Shopping) -> UIViewController
 
     init(navigationController: UINavigationController,
-         viewControllerFactory: @escaping ViewControllerFactory) {
+         shoppingViewControllerFactory: @escaping ShoppingViewControllerFactory) {
         self.navigationController = navigationController
-        self.viewControllerFactory = viewControllerFactory
+        self.shoppingViewControllerFactory = shoppingViewControllerFactory
     }
 
     // MARK: CreatedShoppingPresenting
 
     func presentCreatedShopping(_ shopping: Shopping) {
-        let viewController = self.viewControllerFactory(shopping)
+        let viewController = self.shoppingViewControllerFactory(shopping)
         var viewControllers = navigationController.viewControllers
         let index = viewControllers.index(where: { $0.isKind(of: CreateShoppingViewController.self) })
         if let index = index {
@@ -26,6 +26,6 @@ class CreatedShoppingPresenter: CreatedShoppingPresenting {
     // MARK: Private
 
     private let navigationController: UINavigationController
-    private let viewControllerFactory: ViewControllerFactory
+    private let shoppingViewControllerFactory: ShoppingViewControllerFactory
 
 }
