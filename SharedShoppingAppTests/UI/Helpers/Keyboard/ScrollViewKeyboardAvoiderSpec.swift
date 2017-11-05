@@ -17,26 +17,6 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
                 })
             }
 
-            context("observe error") {
-                beforeEach {
-                    sut.observeKeyboardFrameChanges(for: UIScrollView()).onError(NSError(domain: "test", code: 0, userInfo: nil))
-                }
-
-                it("should not animate") {
-                    expect(didAnimateWithDuration).to(beNil())
-                }
-            }
-
-            context("observe completed") {
-                beforeEach {
-                    sut.observeKeyboardFrameChanges(for: UIScrollView()).onCompleted()
-                }
-
-                it("should not animate") {
-                    expect(didAnimateWithDuration).to(beNil())
-                }
-            }
-
             describe("portrait screen") {
                 var screenSize: CGSize!
 
@@ -62,7 +42,7 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
 
                         beforeEach {
                             change = standardKeyboardFullyVisible(screenSize: screenSize)
-                            sut.observeKeyboardFrameChanges(for: scrollView).onNext(change)
+                            sut.handleKeyboardFrameChange(change, for: scrollView)
                         }
 
                         it("should animate with correct duration") {
@@ -88,7 +68,7 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
 
                         beforeEach {
                             change = standardKeyboardNotVisible(screenSize: screenSize)
-                            sut.observeKeyboardFrameChanges(for: scrollView).onNext(change)
+                            sut.handleKeyboardFrameChange(change, for: scrollView)
                         }
 
                         it("should animate with correct duration") {
@@ -109,7 +89,7 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
 
                         beforeEach {
                             change = standardKeyboardPartiallyVisible(screenSize: screenSize)
-                            sut.observeKeyboardFrameChanges(for: scrollView).onNext(change)
+                            sut.handleKeyboardFrameChange(change, for: scrollView)
                         }
 
                         it("should animate with correct duration") {
@@ -143,7 +123,7 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
 
                         beforeEach {
                             change = standardKeyboardFullyVisible(screenSize: screenSize)
-                            sut.observeKeyboardFrameChanges(for: scrollView).onNext(change)
+                            sut.handleKeyboardFrameChange(change, for: scrollView)
                         }
 
                         it("should animate with correct duration") {
@@ -164,7 +144,7 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
 
                         beforeEach {
                             change = standardKeyboardNotVisible(screenSize: screenSize)
-                            sut.observeKeyboardFrameChanges(for: scrollView).onNext(change)
+                            sut.handleKeyboardFrameChange(change, for: scrollView)
                         }
 
                         it("should animate with correct duration") {
@@ -185,7 +165,7 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
 
                         beforeEach {
                             change = standardKeyboardPartiallyVisible(screenSize: screenSize)
-                            sut.observeKeyboardFrameChanges(for: scrollView).onNext(change)
+                            sut.handleKeyboardFrameChange(change, for: scrollView)
                         }
 
                         it("should animate with correct duration") {

@@ -41,14 +41,14 @@ class ScrollViewControllerSpec: QuickSpec {
                     }
 
                     it("should avoid keyboard in correct scroll view") {
-                        expect(scrollViewKeyboardAvoiderSpy.handledKeyboardChanges.first?.0)
+                        expect(scrollViewKeyboardAvoiderSpy.handledKeyboardChanges.first?.1)
                             .to(be((sut.view as! ScrollWrapperView).scrollView))
                     }
 
                     it("should avoid keyboard using correct change") {
-                        expect(scrollViewKeyboardAvoiderSpy.handledKeyboardChanges.first?.1.frame)
+                        expect(scrollViewKeyboardAvoiderSpy.handledKeyboardChanges.first?.0.frame)
                             .to(equal(change.frame))
-                        expect(scrollViewKeyboardAvoiderSpy.handledKeyboardChanges.first?.1.animationDuration)
+                        expect(scrollViewKeyboardAvoiderSpy.handledKeyboardChanges.first?.0.animationDuration)
                             .to(equal(change.animationDuration))
                     }
                 }

@@ -53,7 +53,10 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
 
     private func setupBindings() {
         keyboardListener.keyboardWillChangeFrame
-            .bind(to: scrollViewKeyboardAvoider.observeKeyboardFrameChanges(for: scrollWrapperView.scrollView))
+            .subscribe(onNext: { [weak self] change in
+                guard let scrollView = self?.scrollView else { return }
+                self?.scrollViewKeyboardAvoider.handleKeyboardFrameChange(change, for: scrollView)
+            })
             .disposed(by: disposeBag)
     }
 
