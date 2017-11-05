@@ -14,14 +14,14 @@ class CreateShoppingViewController: UIViewController {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 
     // MARK: View
 
     override func loadView() {
         view = UIView(frame: .zero)
-        view.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.96, alpha:1.00)
+        view.backgroundColor = UIColor(red: 0.94, green: 0.94, blue: 0.96, alpha: 1)
         embed(scrollViewController, in: view)
         scrollViewController.contentView = CreateShoppingView()
         scrollViewController.scrollView.alwaysBounceVertical = true

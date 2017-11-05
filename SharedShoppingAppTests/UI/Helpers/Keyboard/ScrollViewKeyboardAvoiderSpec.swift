@@ -17,6 +17,32 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
                 })
             }
 
+            describe("scroll view without superview") {
+                var scrollView: UIScrollView!
+                var layoutCallObserver: MethodCallObserver!
+
+                beforeEach {
+                    scrollView = UIScrollView()
+                    layoutCallObserver = MethodCallObserver()
+                    layoutCallObserver.observe(scrollView, #selector(UIScrollView.layoutIfNeeded))
+                }
+
+                context("keyboard frame changes") {
+                    beforeEach {
+                        let change = KeyboardFrameChange(frame: .zero, animationDuration: 0)
+                        sut.handleKeyboardFrameChange(change, for: scrollView)
+                    }
+
+                    it("should not animate") {
+                        expect(didAnimateWithDuration).to(beNil())
+                    }
+
+                    it("should not update layout") {
+                        expect(layoutCallObserver.observedCalls).to(beEmpty())
+                    }
+                }
+            }
+
             describe("portrait screen") {
                 var screenSize: CGSize!
 
