@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class ScrollView: UIView {
+class ScrollWrapperView: UIView {
 
     init() {
         super.init(frame: .zero)
@@ -67,7 +67,7 @@ class ScrollView: UIView {
 
 }
 
-private extension ScrollView {
+private extension ScrollWrapperView {
     struct Factory {
         static var scrollView: UIScrollView {
             let view = UIScrollView(frame: .zero)

@@ -24,7 +24,7 @@
 		313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */; };
 		313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */; };
 		313E6C1A1FAF8ADB00240305 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C191FAF8ADB00240305 /* ScrollViewController.swift */; };
-		313E6C1C1FAF8AE300240305 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C1B1FAF8AE300240305 /* ScrollView.swift */; };
+		313E6C1C1FAF8AE300240305 /* ScrollWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C1B1FAF8AE300240305 /* ScrollWrapperView.swift */; };
 		313E6C201FAF985A00240305 /* ScrollViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C1F1FAF985A00240305 /* ScrollViewControllerSpec.swift */; };
 		313E6C221FAF98A300240305 /* KeyboardFrameChangeListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C211FAF98A300240305 /* KeyboardFrameChangeListenerMock.swift */; };
 		313E6C241FAF992900240305 /* ScrollViewKeyboardAvoiderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C231FAF992900240305 /* ScrollViewKeyboardAvoiderSpy.swift */; };
@@ -153,7 +153,7 @@
 		313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRowActionSpy.swift; sourceTree = "<group>"; };
 		313E6C191FAF8ADB00240305 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
-		313E6C1B1FAF8AE300240305 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		313E6C1B1FAF8AE300240305 /* ScrollWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollWrapperView.swift; sourceTree = "<group>"; };
 		313E6C1F1FAF985A00240305 /* ScrollViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerSpec.swift; sourceTree = "<group>"; };
 		313E6C211FAF98A300240305 /* KeyboardFrameChangeListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListenerMock.swift; sourceTree = "<group>"; };
 		313E6C231FAF992900240305 /* ScrollViewKeyboardAvoiderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewKeyboardAvoiderSpy.swift; sourceTree = "<group>"; };
@@ -489,7 +489,7 @@
 		313E6C181FAF8ACC00240305 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				313E6C1B1FAF8AE300240305 /* ScrollView.swift */,
+				313E6C1B1FAF8AE300240305 /* ScrollWrapperView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1307,7 +1307,7 @@
 				3110348A1FAE8CAE00385F78 /* ScrollViewKeyboardAvoider.swift in Sources */,
 				31B9CB781FACFE0B00C0DB9E /* ShoppingPresenterAssembly.swift in Sources */,
 				31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */,
-				313E6C1C1FAF8AE300240305 /* ScrollView.swift in Sources */,
+				313E6C1C1FAF8AE300240305 /* ScrollWrapperView.swift in Sources */,
 				31B9CB6D1FACF22E00C0DB9E /* ShoppingPresenting.swift in Sources */,
 				31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */,
 				310C7BE61FAE5F5800FB7762 /* KeyboardFrameChange.swift in Sources */,

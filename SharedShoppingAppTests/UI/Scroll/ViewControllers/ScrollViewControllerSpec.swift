@@ -42,7 +42,7 @@ class ScrollViewControllerSpec: QuickSpec {
 
                     it("should avoid keyboard in correct scroll view") {
                         expect(scrollViewKeyboardAvoiderSpy.handledKeyboardChanges.first?.0)
-                            .to(be((sut.view as! ScrollView).scrollView))
+                            .to(be((sut.view as! ScrollWrapperView).scrollView))
                     }
 
                     it("should avoid keyboard using correct change") {
@@ -62,7 +62,7 @@ class ScrollViewControllerSpec: QuickSpec {
                     }
 
                     it("should content view be embedded in scroll view") {
-                        expect(view).to(beAChildOf((sut.view as! ScrollView).scrollView))
+                        expect(view).to(beAChildOf((sut.view as! ScrollWrapperView).scrollView))
                     }
 
                     it("should have correct content view") {

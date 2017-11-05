@@ -16,29 +16,33 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
 
     // MARK: View
 
+    var scrollView: UIScrollView {
+        return scrollWrapperView.scrollView
+    }
+
     var contentView: UIView? {
-        get { return scrollView.contentView }
-        set { scrollView.contentView = newValue }
+        get { return scrollWrapperView.contentView }
+        set { scrollWrapperView.contentView = newValue }
+    }
+
+    private var scrollWrapperView: ScrollWrapperView! {
+        return self.view as? ScrollWrapperView
     }
 
     override func loadView() {
-        view = ScrollView()
+        view = ScrollWrapperView()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.scrollView.delegate = self
+        scrollWrapperView.scrollView.delegate = self
         setupBindings()
-    }
-
-    private var scrollView: ScrollView! {
-        return self.view as? ScrollView
     }
 
     // MARK: UIScrollViewDelegate
 
     func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
-        self.scrollView.updateVisibleContentLayoutGuide(insets: scrollView.adjustedContentInset)
+        self.scrollWrapperView.updateVisibleContentLayoutGuide(insets: scrollView.adjustedContentInset)
     }
 
     // MARK: Private
@@ -49,7 +53,7 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
 
     private func setupBindings() {
         keyboardListener.keyboardWillChangeFrame
-            .bind(to: scrollViewKeyboardAvoider.observeKeyboardFrameChanges(for: scrollView.scrollView))
+            .bind(to: scrollViewKeyboardAvoider.observeKeyboardFrameChanges(for: scrollWrapperView.scrollView))
             .disposed(by: disposeBag)
     }
 
