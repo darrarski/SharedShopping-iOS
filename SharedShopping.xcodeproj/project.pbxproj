@@ -27,6 +27,7 @@
 		313E6C201FAF985A00240305 /* ScrollViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C1F1FAF985A00240305 /* ScrollViewControllerSpec.swift */; };
 		313E6C221FAF98A300240305 /* KeyboardFrameChangeListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C211FAF98A300240305 /* KeyboardFrameChangeListenerMock.swift */; };
 		313E6C241FAF992900240305 /* ScrollViewKeyboardAvoiderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C231FAF992900240305 /* ScrollViewKeyboardAvoiderSpy.swift */; };
+		313E6C261FAFA6BB00240305 /* ScrollViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C251FAFA6BB00240305 /* ScrollViewControllerAssembly.swift */; };
 		3154E0991FA954D700529923 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0971FA954D700529923 /* fabric.apikey */; };
 		3154E09A1FA954D700529923 /* fabric.buildsecret in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0981FA954D700529923 /* fabric.buildsecret */; };
 		3154E09C1FA9576F00529923 /* AppConfiguratorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09B1FA9576F00529923 /* AppConfiguratorsAssembly.swift */; };
@@ -154,6 +155,7 @@
 		313E6C1F1FAF985A00240305 /* ScrollViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerSpec.swift; sourceTree = "<group>"; };
 		313E6C211FAF98A300240305 /* KeyboardFrameChangeListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListenerMock.swift; sourceTree = "<group>"; };
 		313E6C231FAF992900240305 /* ScrollViewKeyboardAvoiderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewKeyboardAvoiderSpy.swift; sourceTree = "<group>"; };
+		313E6C251FAFA6BB00240305 /* ScrollViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerAssembly.swift; sourceTree = "<group>"; };
 		3154E0971FA954D700529923 /* fabric.apikey */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.apikey; sourceTree = "<group>"; };
 		3154E0981FA954D700529923 /* fabric.buildsecret */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = "<group>"; };
 		3154E09B1FA9576F00529923 /* AppConfiguratorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguratorsAssembly.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				313E6C191FAF8ADB00240305 /* ScrollViewController.swift */,
+				313E6C251FAFA6BB00240305 /* ScrollViewControllerAssembly.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1283,6 +1286,7 @@
 				310C7BE81FAE5F9E00FB7762 /* KeyboardFrameChangeListener.swift in Sources */,
 				31C1CB8C1FAD292B0058B2E5 /* AlertPresenter.swift in Sources */,
 				31D828821FA28B0B009CD4E5 /* Assembler.swift in Sources */,
+				313E6C261FAFA6BB00240305 /* ScrollViewControllerAssembly.swift in Sources */,
 				315FD4E31FAD46DA00A9C555 /* CreateShoppingPresenterAssembly.swift in Sources */,
 				31B9CB6F1FACF26D00C0DB9E /* ShoppingPresenter.swift in Sources */,
 				31D8286A1FA26D41009CD4E5 /* TestAppWindowConfigurator.swift in Sources */,
