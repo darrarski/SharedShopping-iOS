@@ -11,11 +11,10 @@ class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
     // MARK: ScrollViewKeyboardAvoiding
 
     func handleKeyboardFrameChange(_ change: KeyboardFrameChange, for scrollView: UIScrollView) {
-        guard let superview = scrollView.superview else { return }
-        let keyboardFrame = superview.convert(change.frame, from: nil)
+        let keyboardFrame = scrollView.convert(change.frame, from: nil)
         var insets = UIEdgeInsets.zero
-        if intersectionExists(frame: scrollView.frame, keyboardFrame: keyboardFrame) {
-            insets.bottom = (scrollView.frame.maxY - keyboardFrame.minY) - scrollView.safeAreaInsets.bottom
+        if intersectionExists(frame: scrollView.bounds, keyboardFrame: keyboardFrame) {
+            insets.bottom = scrollView.bounds.maxY - keyboardFrame.minY
         }
         animate(change.animationDuration) {
             scrollView.contentInset = insets
