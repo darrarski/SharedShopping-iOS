@@ -22,6 +22,9 @@
 		313B26B31F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B21F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift */; };
 		313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */; };
 		313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */; };
+		313E6C1A1FAF8ADB00240305 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C191FAF8ADB00240305 /* ScrollViewController.swift */; };
+		313E6C1C1FAF8AE300240305 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C1B1FAF8AE300240305 /* ScrollView.swift */; };
+		313E6C201FAF985A00240305 /* ScrollViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C1F1FAF985A00240305 /* ScrollViewControllerSpec.swift */; };
 		313E6C221FAF98A300240305 /* KeyboardFrameChangeListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C211FAF98A300240305 /* KeyboardFrameChangeListenerMock.swift */; };
 		313E6C241FAF992900240305 /* ScrollViewKeyboardAvoiderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E6C231FAF992900240305 /* ScrollViewKeyboardAvoiderSpy.swift */; };
 		3154E0991FA954D700529923 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0971FA954D700529923 /* fabric.apikey */; };
@@ -146,6 +149,9 @@
 		313B26B21F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRowActionSpy.swift; sourceTree = "<group>"; };
+		313E6C191FAF8ADB00240305 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		313E6C1B1FAF8AE300240305 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		313E6C1F1FAF985A00240305 /* ScrollViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerSpec.swift; sourceTree = "<group>"; };
 		313E6C211FAF98A300240305 /* KeyboardFrameChangeListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListenerMock.swift; sourceTree = "<group>"; };
 		313E6C231FAF992900240305 /* ScrollViewKeyboardAvoiderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewKeyboardAvoiderSpy.swift; sourceTree = "<group>"; };
 		3154E0971FA954D700529923 /* fabric.apikey */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.apikey; sourceTree = "<group>"; };
@@ -450,6 +456,47 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		313E6C141FAF8AAB00240305 /* Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				313E6C151FAF8AB400240305 /* ViewControllers */,
+				313E6C181FAF8ACC00240305 /* Views */,
+			);
+			path = Scroll;
+			sourceTree = "<group>";
+		};
+		313E6C151FAF8AB400240305 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				313E6C191FAF8ADB00240305 /* ScrollViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		313E6C181FAF8ACC00240305 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				313E6C1B1FAF8AE300240305 /* ScrollView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		313E6C1D1FAF984700240305 /* Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				313E6C1E1FAF984B00240305 /* ViewControllers */,
+			);
+			path = Scroll;
+			sourceTree = "<group>";
+		};
+		313E6C1E1FAF984B00240305 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				313E6C1F1FAF985A00240305 /* ScrollViewControllerSpec.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		3154E0961FA954BB00529923 /* Secrets */ = {
 			isa = PBXGroup;
 			children = (
@@ -659,6 +706,7 @@
 				315FD4CF1FAD436400A9C555 /* CreateShopping */,
 				313B269D1F8BEE7B00E55447 /* Helpers */,
 				3194862D1F7C389C00DB435B /* LaunchScreen.storyboard */,
+				313E6C141FAF8AAB00240305 /* Scroll */,
 				31847DD51FA7D8890024E150 /* Shopping */,
 				31FAEA001F7EF8FD00EA7660 /* Shoppings */,
 				317920771F884B8E00D7359F /* Table */,
@@ -888,6 +936,7 @@
 				315FD4DB1FAD452400A9C555 /* CreateShopping */,
 				31D8287E1FA2836D009CD4E5 /* Helpers */,
 				3130F3ED1FAA96E900CD39C2 /* Navigation */,
+				313E6C1D1FAF984700240305 /* Scroll */,
 				31847DDB1FA7D93E0024E150 /* Shopping */,
 				31FAEA061F7EFA1600EA7660 /* Shoppings */,
 				3179207E1F884CED00D7359F /* Table */,
@@ -1220,6 +1269,7 @@
 				31C1CB911FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift in Sources */,
 				315FD4D41FAD439200A9C555 /* CreateShoppingPresenting.swift in Sources */,
 				3154E0A01FA9580400529923 /* AppConfiguring.swift in Sources */,
+				313E6C1A1FAF8ADB00240305 /* ScrollViewController.swift in Sources */,
 				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
 				31D828861FA2948E009CD4E5 /* ShoppingServiceAssembly.swift in Sources */,
 				31D828881FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift in Sources */,
@@ -1241,6 +1291,7 @@
 				3110348A1FAE8CAE00385F78 /* ScrollViewKeyboardAvoider.swift in Sources */,
 				31B9CB781FACFE0B00C0DB9E /* ShoppingPresenterAssembly.swift in Sources */,
 				31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */,
+				313E6C1C1FAF8AE300240305 /* ScrollView.swift in Sources */,
 				31B9CB6D1FACF22E00C0DB9E /* ShoppingPresenting.swift in Sources */,
 				31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */,
 				310C7BE61FAE5F5800FB7762 /* KeyboardFrameChange.swift in Sources */,
@@ -1298,6 +1349,7 @@
 				31D828761FA2739B009CD4E5 /* AppWindowConfiguratorSpy.swift in Sources */,
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
 				3154E0A41FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift in Sources */,
+				313E6C201FAF985A00240305 /* ScrollViewControllerSpec.swift in Sources */,
 				31A361AD1F97E3000061B658 /* ShoppingsProviderStub.swift in Sources */,
 				31D8287B1FA27F05009CD4E5 /* Shopping_Nimble.swift in Sources */,
 				315FD4DF1FAD454200A9C555 /* CreateShoppingPresenterSpec.swift in Sources */,
