@@ -12,6 +12,7 @@
 		310C7BE61FAE5F5800FB7762 /* KeyboardFrameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7BE51FAE5F5800FB7762 /* KeyboardFrameChange.swift */; };
 		310C7BE81FAE5F9E00FB7762 /* KeyboardFrameChangeListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7BE71FAE5F9E00FB7762 /* KeyboardFrameChangeListener.swift */; };
 		310C7BEB1FAE5FF300FB7762 /* KeyboardFrameChangeListenerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7BEA1FAE5FF300FB7762 /* KeyboardFrameChangeListenerSpec.swift */; };
+		311034881FAE8CA400385F78 /* ScrollViewKeyboardAvoiding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311034871FAE8CA400385F78 /* ScrollViewKeyboardAvoiding.swift */; };
 		313B26A31F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26A21F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift */; };
 		313B26A61F8BFF8900E55447 /* UITableViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26A51F8BFF8900E55447 /* UITableViewSpy.swift */; };
 		313B26AD1F8C1E9F00E55447 /* ShoppingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26AC1F8C1E9F00E55447 /* ShoppingService.swift */; };
@@ -131,6 +132,7 @@
 		310C7BE51FAE5F5800FB7762 /* KeyboardFrameChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChange.swift; sourceTree = "<group>"; };
 		310C7BE71FAE5F9E00FB7762 /* KeyboardFrameChangeListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListener.swift; sourceTree = "<group>"; };
 		310C7BEA1FAE5FF300FB7762 /* KeyboardFrameChangeListenerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListenerSpec.swift; sourceTree = "<group>"; };
+		311034871FAE8CA400385F78 /* ScrollViewKeyboardAvoiding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewKeyboardAvoiding.swift; sourceTree = "<group>"; };
 		313B26A21F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableRowViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26A51F8BFF8900E55447 /* UITableViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewSpy.swift; sourceTree = "<group>"; };
 		313B26AC1F8C1E9F00E55447 /* ShoppingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingService.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				310C7BE51FAE5F5800FB7762 /* KeyboardFrameChange.swift */,
 				310C7BE71FAE5F9E00FB7762 /* KeyboardFrameChangeListener.swift */,
 				310C7BE31FAE5F4000FB7762 /* KeyboardFrameChangeListening.swift */,
+				311034871FAE8CA400385F78 /* ScrollViewKeyboardAvoiding.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -1182,6 +1185,7 @@
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
 				31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */,
 				3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */,
+				311034881FAE8CA400385F78 /* ScrollViewKeyboardAvoiding.swift in Sources */,
 				315FD4F41FAD50D000A9C555 /* CreatedShoppingPresenting.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */,
 				3197416D1FA3659E00C4A3C3 /* ShoppingRealm.swift in Sources */,
