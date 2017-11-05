@@ -13,8 +13,8 @@ class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
     func handleKeyboardFrameChange(_ change: KeyboardFrameChange, for scrollView: UIScrollView) {
         let keyboardFrame = scrollView.convert(change.frame, from: nil)
         var insets = UIEdgeInsets.zero
-        if intersectionExists(frame: scrollView.bounds, keyboardFrame: keyboardFrame) {
-            insets.bottom = scrollView.bounds.maxY - keyboardFrame.minY
+        if keyboardFrame.minY < scrollView.frame.maxY && keyboardFrame.maxY >= scrollView.frame.maxY {
+            insets.bottom = scrollView.frame.maxY - keyboardFrame.minY
         }
         animate(change.animationDuration) {
             scrollView.contentInset = insets
@@ -25,12 +25,5 @@ class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
     // MARK: Private
 
     private let animate: Animator
-
-    private func intersectionExists(frame: CGRect, keyboardFrame: CGRect) -> Bool {
-        return keyboardFrame.intersects(frame) &&
-            !keyboardFrame.contains(frame) &&
-            keyboardFrame.size.height != frame.size.height &&
-            !keyboardFrame.size.equalTo(.zero)
-    }
 
 }
