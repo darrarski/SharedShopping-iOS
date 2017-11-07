@@ -24,13 +24,7 @@ class CreateShoppingViewControllerSpec: QuickSpec {
 
                 beforeEach {
                     outputs = Outputs()
-                    sut = CreateShoppingViewController(
-                        scrollViewController: ScrollViewController(
-                            keyboardListener: KeyboardFrameChangeListenerMock(),
-                            scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiderSpy()
-                        ),
-                        outputs: outputs
-                    )
+                    sut = CreateShoppingViewController(outputs: outputs)
                 }
 
                 context("load view") {

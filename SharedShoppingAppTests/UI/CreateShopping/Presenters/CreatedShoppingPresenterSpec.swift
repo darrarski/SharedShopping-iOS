@@ -65,10 +65,6 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                     firstViewController = UIViewController()
                     secondViewController = UIViewController()
                     thirdViewController = CreateShoppingViewController(
-                        scrollViewController: ScrollViewController(
-                            keyboardListener: KeyboardFrameChangeListenerMock(),
-                            scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiderSpy()
-                        ),
                         outputs: CreateShoppingViewControllerOutputsFake()
                     )
                     navigationControllerSpy.viewControllers = [
@@ -100,10 +96,6 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                 beforeEach {
                     firstViewController = UIViewController()
                     secondViewController = CreateShoppingViewController(
-                        scrollViewController: ScrollViewController(
-                            keyboardListener: KeyboardFrameChangeListenerMock(),
-                            scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiderSpy()
-                        ),
                         outputs: CreateShoppingViewControllerOutputsFake()
                     )
                     thirdViewController = UIViewController()

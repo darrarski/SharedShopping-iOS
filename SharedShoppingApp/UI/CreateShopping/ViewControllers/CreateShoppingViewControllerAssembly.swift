@@ -7,10 +7,7 @@ class CreateShoppingViewControllerAssembly: Assembly {
         container.register(CreateShoppingViewController.self) {
             (resolver, navigationController: UINavigationController) in
             let viewModel = resolver ~> (CreateShoppingViewModel.self, navigationController)
-            return CreateShoppingViewController(
-                scrollViewController: resolver ~> ScrollViewController.self,
-                outputs: viewModel
-            )
+            return CreateShoppingViewController(outputs: viewModel)
         }
     }
 

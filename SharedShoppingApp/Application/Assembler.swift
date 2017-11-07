@@ -20,8 +20,7 @@ extension Assembler {
             CreateShoppingPresenterAssembly(),
             CreatedShoppingPresenterAssembly(),
             CreateShoppingViewControllerAssembly(),
-            CreateShoppingViewModelAssembly(),
-            ScrollViewControllerAssembly()
+            CreateShoppingViewModelAssembly()
         ])
     }
 
