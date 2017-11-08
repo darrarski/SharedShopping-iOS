@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import ScrollViewController
 
 @testable import SharedShoppingApp
 
@@ -20,11 +21,16 @@ class CreateShoppingViewControllerSpec: QuickSpec {
             }
 
             context("init") {
+                var scrollViewController: ScrollViewController!
                 var outputs: Outputs!
 
                 beforeEach {
+                    scrollViewController = ScrollViewController()
                     outputs = Outputs()
-                    sut = CreateShoppingViewController(outputs: outputs)
+                    sut = CreateShoppingViewController(
+                        scrollViewController: scrollViewController,
+                        outputs: outputs
+                    )
                 }
 
                 context("load view") {
@@ -52,6 +58,18 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                                 expect(outputs.didCreateShopping).to(beTrue())
                             }
                         }
+                    }
+
+                    it("should embed scroll view controller") {
+                        expect(sut.childViewControllers).to(contain(scrollViewController))
+                    }
+
+                    it("should enable bouncing in scroll view controller") {
+                        expect(scrollViewController.scrollView.alwaysBounceVertical).to(beTrue())
+                    }
+
+                    it("should set correct view for scroll view controller content") {
+                        expect(scrollViewController.contentView).to(beAKindOf(CreateShoppingView.self))
                     }
                 }
             }

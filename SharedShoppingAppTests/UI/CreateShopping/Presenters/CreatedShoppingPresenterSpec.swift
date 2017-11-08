@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import ScrollViewController
 
 @testable import SharedShoppingApp
 
@@ -65,6 +66,7 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                     firstViewController = UIViewController()
                     secondViewController = UIViewController()
                     thirdViewController = CreateShoppingViewController(
+                        scrollViewController: ScrollViewController(),
                         outputs: CreateShoppingViewControllerOutputsFake()
                     )
                     navigationControllerSpy.viewControllers = [
@@ -96,6 +98,7 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                 beforeEach {
                     firstViewController = UIViewController()
                     secondViewController = CreateShoppingViewController(
+                        scrollViewController: ScrollViewController(),
                         outputs: CreateShoppingViewControllerOutputsFake()
                     )
                     thirdViewController = UIViewController()
