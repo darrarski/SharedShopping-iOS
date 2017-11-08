@@ -3,6 +3,7 @@ PODS:
     - Fabric (~> 1.7.2)
   - Differ (1.0.2)
   - Fabric (1.7.2)
+  - KeyboardFrameChangeListener (1.0.1)
   - Nimble (7.0.2)
   - Quick (1.2.0)
   - Realm (3.0.1):
@@ -21,6 +22,10 @@ PODS:
   - RxSwift (4.0.0)
   - RxTest (4.0.0):
     - RxSwift (~> 4.0)
+  - ScrollViewController (1.0.2):
+    - KeyboardFrameChangeListener (~> 1.0)
+    - ScrollViewKeyboardAvoider (~> 1.0)
+  - ScrollViewKeyboardAvoider (1.0.3)
   - SnapKit (4.0.0)
   - SwiftLint (0.23.1)
   - Swinject (2.1.1)
@@ -40,6 +45,7 @@ DEPENDENCIES:
   - RxRealm (~> 0.7)
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
+  - ScrollViewController (~> 1.0)
   - SnapKit (~> 4.0)
   - SwiftLint (~> 0.22)
   - Swinject (~> 2.1)
@@ -49,6 +55,7 @@ SPEC CHECKSUMS:
   Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
   Differ: a571b66c49d0fc83fe5af9a4a41f09bb09e91c85
   Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
+  KeyboardFrameChangeListener: 461c4526355872fb28b7e0768143c0aa928a23cc
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Realm: ba6144c74f835f7497791f6599d63a7755377b83
@@ -59,11 +66,13 @@ SPEC CHECKSUMS:
   RxRealm: 9e203070a6adadd8f2592b58bbc9c8cc40aa35ec
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   RxTest: 0041e792cede35e53e4749f378d21482af0e9d12
+  ScrollViewController: b213506b245dc030af531125dae23a0021851aea
+  ScrollViewKeyboardAvoider: 1031bfda527a1a1db2cbef929d87b4f918754be9
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectAutoregistration: d06b56bd8f912b9fb9c59c15181342558a734b1b
 
-PODFILE CHECKSUM: cfcb625a5582151501cf4dde5c4ddb5a58e09bc9
+PODFILE CHECKSUM: 8247b73d161a4f33fb9e2e4cbb2d3abb3f09e594
 
 COCOAPODS: 1.3.1
