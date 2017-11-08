@@ -16,6 +16,7 @@ target 'SharedShoppingApp' do
   pod 'RxRealm', '~> 0.7'
   pod 'SnapKit', '~> 4.0'
   pod 'Differ', '~> 1.0'
+  pod 'ScrollViewController', '~> 1.0'
   target 'SharedShoppingAppTests' do
     inherit! :search_paths
     pod 'Quick', '~> 1.1'

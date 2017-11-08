@@ -1,5 +1,6 @@
 import Swinject
 import SwinjectAutoregistration
+import ScrollViewController
 
 class CreateShoppingViewControllerAssembly: Assembly {
 
@@ -8,7 +9,7 @@ class CreateShoppingViewControllerAssembly: Assembly {
             (resolver, navigationController: UINavigationController) in
             let viewModel = resolver ~> (CreateShoppingViewModel.self, navigationController)
             return CreateShoppingViewController(
-                scrollViewController: resolver ~> ScrollViewController.self,
+                scrollViewController: ScrollViewController(),
                 outputs: viewModel
             )
         }
