@@ -8,6 +8,10 @@ class CreateShoppingViewModel: CreateShoppingViewControllerOutputs {
 
     // MARK: CreateShoppingViewControllerOutputs
 
+    func viewDidAppear() {
+        // TODO:
+    }
+
     func createShopping() {
         let shopping = shoppingCreator.createShopping()
         createdShoppingPresenter.presentCreatedShopping(shopping)

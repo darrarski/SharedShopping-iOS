@@ -71,6 +71,16 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                     it("should set correct view for scroll view controller content") {
                         expect(scrollViewController.contentView).to(beAKindOf(CreateShoppingView.self))
                     }
+
+                    context("when view did appear") {
+                        beforeEach {
+                            sut.viewDidAppear(false)
+                        }
+
+                        it("should call outputs.viewDidAppear") {
+                            expect(outputs.viewDidAppearCalled).to(beTrue())
+                        }
+                    }
                 }
             }
         }
@@ -78,9 +88,14 @@ class CreateShoppingViewControllerSpec: QuickSpec {
 
     private class Outputs: CreateShoppingViewControllerOutputs {
 
+        var viewDidAppearCalled = false
         var didCreateShopping = false
 
         // MARK: CreateShoppingViewControllerOutputs
+
+        func viewDidAppear() {
+            viewDidAppearCalled = true
+        }
 
         func createShopping() {
             didCreateShopping = true

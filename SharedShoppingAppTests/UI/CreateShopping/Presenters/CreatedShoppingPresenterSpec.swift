@@ -128,6 +128,7 @@ class CreatedShoppingPresenterSpec: QuickSpec {
 
         // MARK: CreateShoppingViewControllerOutputs
 
+        func viewDidAppear() {}
         func createShopping() {}
 
     }

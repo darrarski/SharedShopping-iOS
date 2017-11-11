@@ -2,6 +2,7 @@ import UIKit
 import ScrollViewController
 
 protocol CreateShoppingViewControllerOutputs {
+    func viewDidAppear()
     func createShopping()
 }
 
@@ -34,6 +35,11 @@ class CreateShoppingViewController: UIViewController {
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(rightBarButtonItemAction))
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        outputs.viewDidAppear()
     }
 
     @objc func rightBarButtonItemAction() {
