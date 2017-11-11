@@ -17,6 +17,7 @@
 		313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */; };
 		313B26B71F8C367D00E55447 /* UITableViewRowActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */; };
 		315456561FB7943B0045A78D /* CreateShoppingViewControllerFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315456551FB7943B0045A78D /* CreateShoppingViewControllerFake.swift */; };
+		315456581FB7A1800045A78D /* SimpleTestableObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315456571FB7A1800045A78D /* SimpleTestableObserver.swift */; };
 		3154E0991FA954D700529923 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0971FA954D700529923 /* fabric.apikey */; };
 		3154E09A1FA954D700529923 /* fabric.buildsecret in Resources */ = {isa = PBXBuildFile; fileRef = 3154E0981FA954D700529923 /* fabric.buildsecret */; };
 		3154E09C1FA9576F00529923 /* AppConfiguratorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154E09B1FA9576F00529923 /* AppConfiguratorsAssembly.swift */; };
@@ -134,6 +135,7 @@
 		313B26B41F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModelSpec.swift; sourceTree = "<group>"; };
 		313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRowActionSpy.swift; sourceTree = "<group>"; };
 		315456551FB7943B0045A78D /* CreateShoppingViewControllerFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewControllerFake.swift; sourceTree = "<group>"; };
+		315456571FB7A1800045A78D /* SimpleTestableObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTestableObserver.swift; sourceTree = "<group>"; };
 		3154E0971FA954D700529923 /* fabric.apikey */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.apikey; sourceTree = "<group>"; };
 		3154E0981FA954D700529923 /* fabric.buildsecret */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = "<group>"; };
 		3154E09B1FA9576F00529923 /* AppConfiguratorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguratorsAssembly.swift; sourceTree = "<group>"; };
@@ -682,6 +684,7 @@
 			isa = PBXGroup;
 			children = (
 				31A361AF1F97F6540061B658 /* MethodCallObserver.swift */,
+				315456571FB7A1800045A78D /* SimpleTestableObserver.swift */,
 			);
 			path = TestHelpers;
 			sourceTree = "<group>";
@@ -1256,6 +1259,7 @@
 				31D828701FA26ED8009CD4E5 /* UIWindowSpy.swift in Sources */,
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
 				31C1CB9F1FAD31350058B2E5 /* AlertViewControllerFactorySpy.swift in Sources */,
+				315456581FB7A1800045A78D /* SimpleTestableObserver.swift in Sources */,
 				31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */,
 				31C1CB9D1FAD2E300058B2E5 /* AlertPresenterSpec.swift in Sources */,
 				31C1CBA11FAD317A0058B2E5 /* AlertViewControllerFactorySpec.swift in Sources */,
