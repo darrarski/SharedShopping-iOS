@@ -10,6 +10,7 @@ class CreateShoppingViewControllerAssembly: Assembly {
             let viewModel = resolver ~> (CreateShoppingViewModel.self, navigationController)
             return CreateShoppingViewController(
                 scrollViewController: ScrollViewController(),
+                inputs: viewModel,
                 outputs: viewModel
             )
         }

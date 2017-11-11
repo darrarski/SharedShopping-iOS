@@ -65,10 +65,7 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                 beforeEach {
                     firstViewController = UIViewController()
                     secondViewController = UIViewController()
-                    thirdViewController = CreateShoppingViewController(
-                        scrollViewController: ScrollViewController(),
-                        outputs: CreateShoppingViewControllerOutputsFake()
-                    )
+                    thirdViewController = CreateShoppingViewControllerFake()
                     navigationControllerSpy.viewControllers = [
                         firstViewController,
                         secondViewController,
@@ -97,10 +94,7 @@ class CreatedShoppingPresenterSpec: QuickSpec {
 
                 beforeEach {
                     firstViewController = UIViewController()
-                    secondViewController = CreateShoppingViewController(
-                        scrollViewController: ScrollViewController(),
-                        outputs: CreateShoppingViewControllerOutputsFake()
-                    )
+                    secondViewController = CreateShoppingViewControllerFake()
                     thirdViewController = UIViewController()
                     navigationControllerSpy.viewControllers = [
                         firstViewController,
@@ -122,14 +116,6 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                 }
             }
         }
-    }
-
-    private struct CreateShoppingViewControllerOutputsFake: CreateShoppingViewControllerOutputs {
-
-        // MARK: CreateShoppingViewControllerOutputs
-
-        func createShopping() {}
-
     }
 
 }

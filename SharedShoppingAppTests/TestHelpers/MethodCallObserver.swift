@@ -4,26 +4,32 @@ import RxTest
 
 class MethodCallObserver {
 
+    struct ObservedCall {
+        let target: AnyObject
+        let selector: Selector
+        let parameters: [Any]
+    }
+
     init() {
         scheduler = TestScheduler(initialClock: 0)
-        observer = scheduler.createObserver((Selector, [Any]).self)
+        observer = scheduler.createObserver(ObservedCall.self)
     }
 
     func observe<T: AnyObject & ReactiveCompatible>(_ target: T, _ selector: Selector) {
         target.rx.sentMessage(selector)
-            .map { (selector, $0) }
+            .map { ObservedCall(target: target, selector: selector, parameters: $0) }
             .subscribe(observer)
             .disposed(by: disposeBag)
     }
 
-    var observedCalls: [(Selector, [Any])] {
+    var observedCalls: [ObservedCall] {
         return observer.events.flatMap { $0.value.element }
     }
 
     // MARK: Private
 
     private let scheduler: TestScheduler
-    private let observer: TestableObserver<(Selector, [Any])>
+    private let observer: TestableObserver<ObservedCall>
     private let disposeBag = DisposeBag()
 
 }

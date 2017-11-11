@@ -101,7 +101,7 @@ class TableViewControllerSpec: QuickSpec {
                         }
 
                         it("should call table view methods in correct order") {
-                            expect(methodCallObserver.observedCalls.map { $0.0.description }).to(equal([
+                            expect(methodCallObserver.observedCalls.map { $0.selector.description }).to(equal([
                                 #selector(sut.tableView.beginUpdates),
                                 #selector(sut.tableView.insertRows(at:with:)),
                                 #selector(sut.tableView.deleteRows(at:with:)),
@@ -110,13 +110,13 @@ class TableViewControllerSpec: QuickSpec {
                         }
 
                         it("should pass correct params to insert rows method") {
-                            let params = methodCallObserver.observedCalls[1].1
+                            let params = methodCallObserver.observedCalls[1].parameters
                             expect(params[0] as? [IndexPath]).to(equal([IndexPath(row: 7, section: 0)]))
                             expect(params[1] as? Int).to(equal(UITableViewRowAnimation.automatic.rawValue))
                         }
 
                         it("should pass correct params to delete rows method") {
-                            let params = methodCallObserver.observedCalls[2].1
+                            let params = methodCallObserver.observedCalls[2].parameters
                             expect(params[0] as? [IndexPath]).to(equal([IndexPath(row: 10, section: 0)]))
                             expect(params[1] as? Int).to(equal(UITableViewRowAnimation.automatic.rawValue))
                         }

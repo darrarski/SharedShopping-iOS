@@ -1,4 +1,6 @@
-class CreateShoppingViewModel: CreateShoppingViewControllerOutputs {
+import RxSwift
+
+class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppingViewControllerOutputs {
 
     init(shoppingCreator: ShoppingCreating,
          createdShoppingPresenter: CreatedShoppingPresenting) {
@@ -6,7 +8,17 @@ class CreateShoppingViewModel: CreateShoppingViewControllerOutputs {
         self.createdShoppingPresenter = createdShoppingPresenter
     }
 
+    // MARK: CreateShoppingViewControllerInputs
+
+    var startEditing: Observable<Void> {
+        return startEditingSubject.asObservable()
+    }
+
     // MARK: CreateShoppingViewControllerOutputs
+
+    func viewDidAppear() {
+        startEditingSubject.onNext(())
+    }
 
     func createShopping() {
         let shopping = shoppingCreator.createShopping()
@@ -17,5 +29,6 @@ class CreateShoppingViewModel: CreateShoppingViewControllerOutputs {
 
     private let shoppingCreator: ShoppingCreating
     private let createdShoppingPresenter: CreatedShoppingPresenting
+    private let startEditingSubject = PublishSubject<Void>()
 
 }
