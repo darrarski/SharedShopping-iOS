@@ -67,6 +67,7 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                     secondViewController = UIViewController()
                     thirdViewController = CreateShoppingViewController(
                         scrollViewController: ScrollViewController(),
+                        inputs: CreateShoppingViewControllerInputsFake(),
                         outputs: CreateShoppingViewControllerOutputsFake()
                     )
                     navigationControllerSpy.viewControllers = [
@@ -99,6 +100,7 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                     firstViewController = UIViewController()
                     secondViewController = CreateShoppingViewController(
                         scrollViewController: ScrollViewController(),
+                        inputs: CreateShoppingViewControllerInputsFake(),
                         outputs: CreateShoppingViewControllerOutputsFake()
                     )
                     thirdViewController = UIViewController()
@@ -122,6 +124,10 @@ class CreatedShoppingPresenterSpec: QuickSpec {
                 }
             }
         }
+    }
+
+    private struct CreateShoppingViewControllerInputsFake: CreateShoppingViewControllerInputs {
+
     }
 
     private struct CreateShoppingViewControllerOutputsFake: CreateShoppingViewControllerOutputs {

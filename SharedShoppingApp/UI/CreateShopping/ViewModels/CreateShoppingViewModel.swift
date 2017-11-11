@@ -1,10 +1,12 @@
-class CreateShoppingViewModel: CreateShoppingViewControllerOutputs {
+class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppingViewControllerOutputs {
 
     init(shoppingCreator: ShoppingCreating,
          createdShoppingPresenter: CreatedShoppingPresenting) {
         self.shoppingCreator = shoppingCreator
         self.createdShoppingPresenter = createdShoppingPresenter
     }
+
+    // MARK: CreateShoppingViewControllerInputs
 
     // MARK: CreateShoppingViewControllerOutputs
 

@@ -1,6 +1,10 @@
 import UIKit
 import ScrollViewController
 
+protocol CreateShoppingViewControllerInputs {
+
+}
+
 protocol CreateShoppingViewControllerOutputs {
     func viewDidAppear()
     func createShopping()
@@ -9,8 +13,10 @@ protocol CreateShoppingViewControllerOutputs {
 class CreateShoppingViewController: UIViewController {
 
     init(scrollViewController: ScrollViewController,
+         inputs: CreateShoppingViewControllerInputs,
          outputs: CreateShoppingViewControllerOutputs) {
         self.scrollViewController = scrollViewController
+        self.inputs = inputs
         self.outputs = outputs
         super.init(nibName: nil, bundle: nil)
     }
@@ -49,6 +55,7 @@ class CreateShoppingViewController: UIViewController {
     // MARK: Private
 
     private let scrollViewController: ScrollViewController
+    private let inputs: CreateShoppingViewControllerInputs
     private let outputs: CreateShoppingViewControllerOutputs
 
 }

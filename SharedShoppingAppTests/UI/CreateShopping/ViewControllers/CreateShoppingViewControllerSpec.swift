@@ -22,13 +22,16 @@ class CreateShoppingViewControllerSpec: QuickSpec {
 
             context("init") {
                 var scrollViewController: ScrollViewController!
+                var inputs: Inputs!
                 var outputs: Outputs!
 
                 beforeEach {
                     scrollViewController = ScrollViewController()
+                    inputs = Inputs()
                     outputs = Outputs()
                     sut = CreateShoppingViewController(
                         scrollViewController: scrollViewController,
+                        inputs: inputs,
                         outputs: outputs
                     )
                 }
@@ -84,6 +87,12 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                 }
             }
         }
+    }
+
+    private class Inputs: CreateShoppingViewControllerInputs {
+
+        // MARK: CreateShoppingViewControllerInputs
+
     }
 
     private class Outputs: CreateShoppingViewControllerOutputs {
