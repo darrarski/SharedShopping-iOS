@@ -105,7 +105,7 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                         }
 
                         it("should make text view first responder") {
-                            expect(observer.observedCalls.last?.0).to(equal(selector))
+                            expect(observer.observedCalls.last?.selector).to(equal(selector))
                         }
                     }
                 }
