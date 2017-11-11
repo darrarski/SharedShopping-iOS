@@ -1,3 +1,5 @@
+import RxSwift
+
 class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppingViewControllerOutputs {
 
     init(shoppingCreator: ShoppingCreating,
@@ -7,6 +9,10 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
     }
 
     // MARK: CreateShoppingViewControllerInputs
+
+    var startEditing: Observable<Void> {
+        return Observable.never() // TODO:
+    }
 
     // MARK: CreateShoppingViewControllerOutputs
 

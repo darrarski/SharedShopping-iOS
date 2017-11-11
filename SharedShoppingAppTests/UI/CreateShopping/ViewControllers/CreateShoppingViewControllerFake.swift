@@ -1,6 +1,7 @@
 import UIKit
-import ScrollViewController
 @testable import SharedShoppingApp
+import ScrollViewController
+import RxSwift
 
 class CreateShoppingViewControllerFake: CreateShoppingViewController {
 
@@ -17,6 +18,10 @@ class CreateShoppingViewControllerFake: CreateShoppingViewController {
 }
 
 private struct InputsFake: CreateShoppingViewControllerInputs {
+
+    var startEditing: Observable<Void> {
+        return Observable.never()
+    }
 
 }
 
