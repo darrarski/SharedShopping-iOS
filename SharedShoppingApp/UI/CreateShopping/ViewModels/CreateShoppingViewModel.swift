@@ -11,13 +11,13 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
     // MARK: CreateShoppingViewControllerInputs
 
     var startEditing: Observable<Void> {
-        return Observable.never() // TODO:
+        return startEditingSubject.asObservable()
     }
 
     // MARK: CreateShoppingViewControllerOutputs
 
     func viewDidAppear() {
-        // TODO:
+        startEditingSubject.onNext(())
     }
 
     func createShopping() {
@@ -29,5 +29,6 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
 
     private let shoppingCreator: ShoppingCreating
     private let createdShoppingPresenter: CreatedShoppingPresenting
+    private let startEditingSubject = PublishSubject<Void>()
 
 }

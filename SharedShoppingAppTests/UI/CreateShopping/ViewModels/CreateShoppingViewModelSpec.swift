@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import RxSwift
 
 @testable import SharedShoppingApp
 
@@ -32,6 +33,20 @@ class CreateShoppingViewModelSpec: QuickSpec {
                 it("should present created shopping") {
                     expect(createdShoppingPresenterSpy.didPresentCreatedShopping)
                         .to(equal(shoppingCreatorSpy.didCreateShopping))
+                }
+            }
+
+            context("view did appear") {
+                var startEditingObserver: SimpleTestableObserver<Void>!
+
+                beforeEach {
+                    startEditingObserver = SimpleTestableObserver<Void>()
+                    _ = sut.startEditing.subscribe(startEditingObserver.observer)
+                    sut.viewDidAppear()
+                }
+
+                it("should start editing") {
+                    expect(startEditingObserver.events).to(equal([Event<Void>.next(())]))
                 }
             }
         }
