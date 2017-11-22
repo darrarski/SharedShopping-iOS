@@ -112,7 +112,9 @@
 		31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */; };
 		31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */; };
 		31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */; };
+		6988A6C6B8897F1EF4A7073A /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4331A841FE9A7AD0B926F90A /* EarlGrey.framework */; };
 		BE7A26929F5ADFD2AD068633 /* Pods_SharedShoppingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */; };
+		DAD472E94DAF9B749CC79EAC /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = 4331A841FE9A7AD0B926F90A /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,20 @@
 			remoteInfo = SharedShoppingApp;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5736CD5C87FA059529013CAC /* EarlGrey Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(TEST_HOST)/../";
+			dstSubfolderSpec = 0;
+			files = (
+				DAD472E94DAF9B749CC79EAC /* EarlGrey.framework in EarlGrey Copy Files */,
+			);
+			name = "EarlGrey Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		310C7BDF1FAE234100FB7762 /* CreateShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingView.swift; sourceTree = "<group>"; };
@@ -236,9 +252,11 @@
 		31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewControllerSpec.swift; sourceTree = "<group>"; };
 		3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4177C5561BED78236EB9CE18 /* Pods-SharedShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4331A841FE9A7AD0B926F90A /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Pods/EarlGrey/EarlGrey/EarlGrey.framework; sourceTree = SOURCE_ROOT; };
 		4F2C53193E751D3D2C19E495 /* Pods-SharedShoppingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingAppTests/Pods-SharedShoppingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		76CDE8C7A8C2C00A0E3C880C /* Pods-SharedShoppingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingApp/Pods-SharedShoppingApp.release.xcconfig"; sourceTree = "<group>"; };
 		9A7ABAC7A318911EFE92EF12 /* Pods-SharedShoppingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedShoppingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedShoppingAppTests/Pods-SharedShoppingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF72C6F02BFF92988FE80FC0 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedShoppingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -256,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE7A26929F5ADFD2AD068633 /* Pods_SharedShoppingAppTests.framework in Frameworks */,
+				6988A6C6B8897F1EF4A7073A /* EarlGrey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +297,7 @@
 			children = (
 				FFF508ADFF86653D01AD5541 /* Pods_SharedShoppingApp.framework */,
 				3FE1EB989DA666332B1D3829 /* Pods_SharedShoppingAppTests.framework */,
+				4331A841FE9A7AD0B926F90A /* EarlGrey.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -722,6 +742,7 @@
 				31AAAECA1F7C442B000C29AB /* Supporting Files */,
 				31A361AE1F97F6350061B658 /* TestHelpers */,
 				31FAEA051F7EFA0800EA7660 /* UI */,
+				EF72C6F02BFF92988FE80FC0 /* EarlGrey.swift */,
 			);
 			path = SharedShoppingAppTests;
 			sourceTree = "<group>";
@@ -914,6 +935,7 @@
 				31AAAEBE1F7C43DB000C29AB /* Resources */,
 				3BB1EAE75E34E6DAEDA2B1C8 /* [CP] Embed Pods Frameworks */,
 				3ABCB7946FDE9BF5AA88E191 /* [CP] Copy Pods Resources */,
+				5736CD5C87FA059529013CAC /* EarlGrey Copy Files */,
 			);
 			buildRules = (
 			);
@@ -1070,6 +1092,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SharedShoppingAppTests/Pods-SharedShoppingAppTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${PODS_ROOT}/EarlGrey/EarlGrey/EarlGrey.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
@@ -1078,6 +1101,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EarlGrey.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",

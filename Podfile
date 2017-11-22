@@ -23,6 +23,7 @@ target 'SharedShoppingApp' do
     pod 'Nimble', '~> 7.0'
     pod 'RxTest', '~> 4.0'
     pod 'RxBlocking', '~> 4.0'
+    pod 'EarlGrey', '~> 1.12'
   end
 end
 

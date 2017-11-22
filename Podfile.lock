@@ -2,6 +2,7 @@ PODS:
   - Crashlytics (3.9.3):
     - Fabric (~> 1.7.2)
   - Differ (1.0.2)
+  - EarlGrey (1.12.1)
   - Fabric (1.7.2)
   - KeyboardFrameChangeListener (1.0.1)
   - Nimble (7.0.2)
@@ -35,6 +36,7 @@ PODS:
 DEPENDENCIES:
   - Crashlytics (~> 3.9)
   - Differ (~> 1.0)
+  - EarlGrey (~> 1.12)
   - Fabric (~> 1.7)
   - Nimble (~> 7.0)
   - Quick (~> 1.1)
@@ -54,6 +56,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
   Differ: a571b66c49d0fc83fe5af9a4a41f09bb09e91c85
+  EarlGrey: f7774b813c888ebdb9a21e612d67874d17d5a326
   Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
   KeyboardFrameChangeListener: 461c4526355872fb28b7e0768143c0aa928a23cc
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
@@ -73,6 +76,6 @@ SPEC CHECKSUMS:
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectAutoregistration: d06b56bd8f912b9fb9c59c15181342558a734b1b
 
-PODFILE CHECKSUM: 8247b73d161a4f33fb9e2e4cbb2d3abb3f09e594
+PODFILE CHECKSUM: 77376eacf25da80f0d7e0cfb590c93d4c66b863c
 
 COCOAPODS: 1.3.1
