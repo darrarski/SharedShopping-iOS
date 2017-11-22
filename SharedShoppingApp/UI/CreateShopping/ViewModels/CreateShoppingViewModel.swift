@@ -23,7 +23,7 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
     }
 
     var selectShoppingNameText: Observable<Void> {
-        return startEditingSubject.asObservable().single()
+        return startEditingSubject.asObservable().single().catchError { _ in Observable.never() }
     }
 
     // MARK: CreateShoppingViewControllerOutputs
