@@ -51,6 +51,16 @@ class CreateShoppingViewModelSpec: QuickSpec {
                         expect(try! sut.createButtonEnabled.toBlocking().first()!).to(beTrue())
                     }
                 }
+
+                context("create shopping") {
+                    beforeEach {
+                        sut.createShopping()
+                    }
+
+                    it("should not create shopping") {
+                        expect(shoppingCreatorSpy.didCreateShopping).to(beNil())
+                    }
+                }
             }
 
             context("create shopping") {
