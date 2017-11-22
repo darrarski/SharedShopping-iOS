@@ -54,10 +54,6 @@ class CreateShoppingViewController: UIViewController {
         outputs.viewDidAppear()
     }
 
-    @objc func rightBarButtonItemAction() {
-        outputs.createShopping()
-    }
-
     private var createShoppingView: CreateShoppingView! {
         _ = view
         return scrollViewController.contentView as? CreateShoppingView
