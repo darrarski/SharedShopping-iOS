@@ -2,6 +2,7 @@ import Quick
 import Nimble
 import ScrollViewController
 import RxSwift
+import EarlGrey
 
 @testable import SharedShoppingApp
 
@@ -37,12 +38,34 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                     )
                 }
 
-                context("load view") {
+                context("present on screen") {
                     var createShoppingView: CreateShoppingView!
 
                     beforeEach {
-                        _ = sut.view
+                        GREYTestHelper.enableFastAnimation()
+                        UIApplication.shared.keyWindow?.rootViewController = sut
                         createShoppingView = scrollViewController.contentView as? CreateShoppingView
+                    }
+
+                    afterEach {
+                        UIApplication.shared.keyWindow?.rootViewController = nil
+                        GREYTestHelper.disableFastAnimation()
+                    }
+
+                    it("should have correct title") {
+                        expect(sut.navigationItem.title).to(equal(inputs.title))
+                    }
+
+                    it("should embed scroll view controller") {
+                        expect(sut.childViewControllers).to(contain(scrollViewController))
+                    }
+
+                    it("should enable bouncing in scroll view controller") {
+                        expect(scrollViewController.scrollView.alwaysBounceVertical).to(beTrue())
+                    }
+
+                    it("should set correct view for scroll view controller content") {
+                        expect(scrollViewController.contentView).to(beAKindOf(CreateShoppingView.self))
                     }
 
                     describe("right bar button item in navigation item") {
@@ -67,27 +90,7 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                         }
                     }
 
-                    it("should have correct title") {
-                        expect(sut.navigationItem.title).to(equal(inputs.title))
-                    }
-
-                    it("should embed scroll view controller") {
-                        expect(sut.childViewControllers).to(contain(scrollViewController))
-                    }
-
-                    it("should enable bouncing in scroll view controller") {
-                        expect(scrollViewController.scrollView.alwaysBounceVertical).to(beTrue())
-                    }
-
-                    it("should set correct view for scroll view controller content") {
-                        expect(scrollViewController.contentView).to(beAKindOf(CreateShoppingView.self))
-                    }
-
-                    it("should set correct content view") {
-                        expect(createShoppingView).notTo(beNil())
-                    }
-
-                    context("when view did appear") {
+                    context("view did appear") {
                         beforeEach {
                             sut.viewDidAppear(false)
                         }
@@ -98,39 +101,37 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                     }
 
                     context("start editing") {
-                        var observer: MethodCallObserver!
-                        var selector: Selector!
-
                         beforeEach {
-                            observer = MethodCallObserver()
-                            selector = #selector(UITextView.becomeFirstResponder)
-                            observer.observe(createShoppingView.textView, selector)
                             inputs.simulateStartEditing()
                         }
 
                         it("should make text view first responder") {
-                            expect(observer.observedCalls.last?.selector).to(equal(selector))
+                            expect(createShoppingView.textView.isFirstResponder).to(beTrue())
                         }
                     }
 
-                    context("when input shopping name changes") {
+                    context("change shopping name") {
+                        var name: String!
+
                         beforeEach {
-                            inputs.shoppingNameVar.value = "New Shopping"
+                            name = "New Shopping Name"
+                            inputs.shoppingNameVar.value = name
                         }
 
                         it("should update text view") {
-                            expect(createShoppingView.textView.text).to(equal(inputs.shoppingNameVar.value))
+                            expect(createShoppingView.textView.text).to(equal(name))
+                        }
+                    }
+
+                    context("select shopping name text") {
+                        beforeEach {
+                            createShoppingView.textView.text = "TEST"
+                            inputs.simulateSelectShoppingNameText()
                         }
 
-                        context("select shopping name text") {
-                            beforeEach {
-                                inputs.simulateSelectShoppingNameText()
-                            }
-
-                            it("should select text") {
-                                let expectation = NSRange(location: 0, length: inputs.shoppingNameVar.value!.count)
-                                expect(createShoppingView.textView.selectedRange).to(equal(expectation))
-                            }
+                        it("should select text") {
+                            let expectation = NSRange(location: 0, length: createShoppingView.textView.text!.count)
+                            expect(createShoppingView.textView.selectedRange).to(equal(expectation))
                         }
                     }
                 }
