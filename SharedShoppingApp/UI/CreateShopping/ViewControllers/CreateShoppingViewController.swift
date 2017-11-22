@@ -4,6 +4,7 @@ import RxSwift
 
 protocol CreateShoppingViewControllerInputs {
     var startEditing: Observable<Void> { get }
+    var shoppingName: Observable<String?> { get }
 }
 
 protocol CreateShoppingViewControllerOutputs {
@@ -69,6 +70,11 @@ class CreateShoppingViewController: UIViewController {
     private func bind(_ inputs: CreateShoppingViewControllerInputs) {
         inputs.startEditing
             .subscribe(onNext: { [weak self] in self?.createShoppingView.textView.becomeFirstResponder() })
+            .disposed(by: disposeBag)
+
+        inputs.shoppingName
+            .distinctUntilChanged { $0 == $1 }
+            .bind(to: createShoppingView.textView.rx.text)
             .disposed(by: disposeBag)
     }
 

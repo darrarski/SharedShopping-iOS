@@ -108,12 +108,24 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                             expect(observer.observedCalls.last?.selector).to(equal(selector))
                         }
                     }
+
+                    context("when input shopping name changes") {
+                        beforeEach {
+                            inputs.shoppingNameVar.value = "New Shopping"
+                        }
+
+                        it("should update text view") {
+                            expect(createShoppingView.textView.text).to(equal(inputs.shoppingNameVar.value))
+                        }
+                    }
                 }
             }
         }
     }
 
     private class Inputs: CreateShoppingViewControllerInputs {
+
+        let shoppingNameVar = Variable<String?>(nil)
 
         func simulateStartEditing() {
             startEditingSubject.onNext(())
@@ -123,6 +135,10 @@ class CreateShoppingViewControllerSpec: QuickSpec {
 
         var startEditing: Observable<Void> {
             return startEditingSubject.asObservable()
+        }
+
+        var shoppingName: Observable<String?> {
+            return shoppingNameVar.asObservable()
         }
 
         // MARK: Private

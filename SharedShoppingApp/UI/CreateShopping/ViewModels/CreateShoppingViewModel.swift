@@ -14,6 +14,10 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
         return startEditingSubject.asObservable()
     }
 
+    var shoppingName: Observable<String?> {
+        return Observable.just("New Shopping") // TODO:
+    }
+
     // MARK: CreateShoppingViewControllerOutputs
 
     func viewDidAppear() {
