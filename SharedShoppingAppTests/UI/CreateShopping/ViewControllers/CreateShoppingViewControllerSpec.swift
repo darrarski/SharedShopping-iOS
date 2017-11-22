@@ -53,7 +53,7 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                     }
 
                     it("should have correct title") {
-                        expect(sut.navigationItem.title).to(equal(inputs.title))
+                        expect(sut.navigationItem.title).to(equal(try! inputs.title.toBlocking().first()!))
                     }
 
                     it("should embed scroll view controller") {
@@ -153,8 +153,8 @@ class CreateShoppingViewControllerSpec: QuickSpec {
 
         // MARK: CreateShoppingViewControllerInputs
 
-        var title: String {
-            return "Test Title"
+        var title: Observable<String?> {
+            return Observable.just("Test Title")
         }
 
         var startEditing: Observable<Void> {

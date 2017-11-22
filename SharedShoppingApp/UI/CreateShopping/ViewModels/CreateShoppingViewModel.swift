@@ -10,8 +10,8 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
 
     // MARK: CreateShoppingViewControllerInputs
 
-    var title: String {
-        return "Shopping"
+    var title: Observable<String?> {
+        return Observable.just("Shopping")
     }
 
     var startEditing: Observable<Void> {

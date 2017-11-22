@@ -3,7 +3,7 @@ import ScrollViewController
 import RxSwift
 
 protocol CreateShoppingViewControllerInputs {
-    var title: String { get }
+    var title: Observable<String?> { get }
     var startEditing: Observable<Void> { get }
     var shoppingName: Observable<String?> { get }
     var selectShoppingNameText: Observable<Void> { get }
@@ -70,7 +70,9 @@ class CreateShoppingViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     private func bind(_ inputs: CreateShoppingViewControllerInputs) {
-        navigationItem.title = inputs.title
+        inputs.title
+            .subscribe(onNext: { [weak self] in self?.navigationItem.title = $0 })
+            .disposed(by: disposeBag)
 
         inputs.startEditing
             .subscribe(onNext: { [weak self] in self?.createShoppingView.textView.becomeFirstResponder() })

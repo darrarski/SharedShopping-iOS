@@ -22,7 +22,7 @@ class CreateShoppingViewModelSpec: QuickSpec {
             }
 
             it("should have correct title") {
-                expect(sut.title).to(equal("Shopping"))
+                expect(try! sut.title.toBlocking().first()!).to(equal("Shopping"))
             }
 
             context("create shopping") {

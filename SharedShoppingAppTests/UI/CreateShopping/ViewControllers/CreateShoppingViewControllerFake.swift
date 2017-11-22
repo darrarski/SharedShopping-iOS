@@ -19,7 +19,9 @@ class CreateShoppingViewControllerFake: CreateShoppingViewController {
 
 private struct InputsFake: CreateShoppingViewControllerInputs {
 
-    let title = ""
+    var title: Observable<String?> {
+        return Observable.never()
+    }
 
     var startEditing: Observable<Void> {
         return Observable.never()
