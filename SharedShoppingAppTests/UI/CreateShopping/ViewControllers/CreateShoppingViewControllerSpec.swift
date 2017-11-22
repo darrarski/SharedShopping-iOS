@@ -67,6 +67,10 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                         }
                     }
 
+                    it("should have correct title") {
+                        expect(sut.navigationItem.title).to(equal(inputs.title))
+                    }
+
                     it("should embed scroll view controller") {
                         expect(sut.childViewControllers).to(contain(scrollViewController))
                     }
@@ -132,6 +136,10 @@ class CreateShoppingViewControllerSpec: QuickSpec {
         }
 
         // MARK: CreateShoppingViewControllerInputs
+
+        var title: String {
+            return "Test Title"
+        }
 
         var startEditing: Observable<Void> {
             return startEditingSubject.asObservable()
