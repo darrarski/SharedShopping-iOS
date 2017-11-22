@@ -25,6 +25,34 @@ class CreateShoppingViewModelSpec: QuickSpec {
                 expect(try! sut.title.toBlocking().first()!).to(equal("Shopping"))
             }
 
+            it("should have correct shopping name") {
+                expect(try! sut.shoppingName.toBlocking().first()!).to(equal("New Shopping"))
+            }
+
+            it("should have correct create button title") {
+                expect(try! sut.createButtonTitle.toBlocking().first()!).to(equal("Create"))
+            }
+
+            context("clear shopping name") {
+                beforeEach {
+                    sut.shoppingNameDidChange(nil)
+                }
+
+                it("should create button be disabled") {
+                    expect(try! sut.createButtonEnabled.toBlocking().first()!).to(beFalse())
+                }
+
+                context("set shopping name") {
+                    beforeEach {
+                        sut.shoppingNameDidChange("Name")
+                    }
+
+                    it("should create button be enabled") {
+                        expect(try! sut.createButtonEnabled.toBlocking().first()!).to(beTrue())
+                    }
+                }
+            }
+
             context("create shopping") {
                 beforeEach {
                     sut.createShopping()
