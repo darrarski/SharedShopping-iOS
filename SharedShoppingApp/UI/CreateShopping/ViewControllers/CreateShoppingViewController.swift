@@ -42,10 +42,7 @@ class CreateShoppingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create",
-                                                            style: .done,
-                                                            target: nil,
-                                                            action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .done, target: nil, action: nil)
         bind(inputs)
         bind(outputs)
     }
