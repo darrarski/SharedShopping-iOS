@@ -110,6 +110,7 @@
 		31D8288E1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8288D1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift */; };
 		31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */; };
 		31E84ACE1FC5FC7300B10399 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF72C6F02BFF92988FE80FC0 /* EarlGrey.swift */; };
+		31EFB6CB1FC63FD00078E177 /* EarlGrey_Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EFB6CA1FC63FD00078E177 /* EarlGrey_Helpers.swift */; };
 		31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */; };
 		31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */; };
 		31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */; };
@@ -248,6 +249,7 @@
 		31D8288B1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewModelAssembly.swift; sourceTree = "<group>"; };
 		31D8288D1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewModelAssembly.swift; sourceTree = "<group>"; };
 		31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
+		31EFB6CA1FC63FD00078E177 /* EarlGrey_Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGrey_Helpers.swift; sourceTree = "<group>"; };
 		31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowCreatingAssembly.swift; sourceTree = "<group>"; };
 		31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewController.swift; sourceTree = "<group>"; };
 		31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -704,6 +706,7 @@
 		31A361AE1F97F6350061B658 /* TestHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				31EFB6CA1FC63FD00078E177 /* EarlGrey_Helpers.swift */,
 				31A361AF1F97F6540061B658 /* MethodCallObserver.swift */,
 				315456571FB7A1800045A78D /* SimpleTestableObserver.swift */,
 			);
@@ -1302,6 +1305,7 @@
 				31D8287B1FA27F05009CD4E5 /* Shopping_Nimble.swift in Sources */,
 				315FD4DF1FAD454200A9C555 /* CreateShoppingPresenterSpec.swift in Sources */,
 				31847DDD1FA7D94D0024E150 /* ShoppingViewControllerSpec.swift in Sources */,
+				31EFB6CB1FC63FD00078E177 /* EarlGrey_Helpers.swift in Sources */,
 				313B26B31F8C2A6F00E55447 /* ShoppingsViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
