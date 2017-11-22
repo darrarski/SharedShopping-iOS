@@ -48,7 +48,8 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
     }
 
     func createShopping() {
-        let shopping = shoppingCreator.createShopping()
+        guard let name = shoppingNameVar.value else { return }
+        let shopping = shoppingCreator.createShopping(name: name)
         createdShoppingPresenter.presentCreatedShopping(shopping)
     }
 

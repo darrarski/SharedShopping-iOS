@@ -7,8 +7,8 @@ class ShoppingCreatorSpy: ShoppingCreating {
 
     // MARK: ShoppingCreating
 
-    func createShopping() -> Shopping {
-        let shopping = ShoppingFake(name: "Shopping", date: Date())
+    func createShopping(name: String) -> Shopping {
+        let shopping = ShoppingFake(name: name, date: Date())
         didCreateShopping = shopping
         return shopping
     }

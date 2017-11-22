@@ -18,9 +18,9 @@ class ShoppingServiceRealm: ShoppingsProviding, ShoppingCreating, ShoppingRemovi
 
     // MARK: ShoppingCreating
 
-    func createShopping() -> Shopping {
+    func createShopping(name: String) -> Shopping {
         let shopping = ShoppingRealm()
-        shopping.name = "New Shopping"
+        shopping.name = name
         shopping.date = Date()
         try! realm.write { // swiftlint:disable:this force_try
             realm.add(shopping)

@@ -62,6 +62,11 @@ class CreateShoppingViewModelSpec: QuickSpec {
                     expect(shoppingCreatorSpy.didCreateShopping).notTo(beNil())
                 }
 
+                it("should created shopping have correct name") {
+                    expect(shoppingCreatorSpy.didCreateShopping?.name)
+                        .to(equal(try! sut.shoppingName.toBlocking().first()!))
+                }
+
                 it("should present created shopping") {
                     expect(createdShoppingPresenterSpy.didPresentCreatedShopping)
                         .to(equal(shoppingCreatorSpy.didCreateShopping))

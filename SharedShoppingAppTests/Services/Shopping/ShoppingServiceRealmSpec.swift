@@ -30,11 +30,15 @@ class ShoppingServiceRealmSpec: QuickSpec {
                 var shopping: Shopping!
 
                 beforeEach {
-                    shopping = sut.createShopping()
+                    shopping = sut.createShopping(name: "Shopping")
                 }
 
                 it("should have one shopping") {
                     expect(try! sut.shoppings.toBlocking().first()).to(equal([shopping]))
+                }
+
+                it("should created shopping have correct name") {
+                    expect(try! sut.shoppings.toBlocking().first()!.first!.name).to(equal("Shopping"))
                 }
 
                 context("remove shopping") {
