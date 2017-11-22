@@ -25,6 +25,10 @@ private struct InputsFake: CreateShoppingViewControllerInputs {
         return Observable.never()
     }
 
+    var selectShoppingNameText: Observable<Void> {
+        return Observable.never()
+    }
+
     var shoppingName: Observable<String?> {
         return Observable.never()
     }

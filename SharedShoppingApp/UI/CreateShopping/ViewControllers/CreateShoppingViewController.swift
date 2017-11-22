@@ -6,6 +6,7 @@ protocol CreateShoppingViewControllerInputs {
     var title: String { get }
     var startEditing: Observable<Void> { get }
     var shoppingName: Observable<String?> { get }
+    var selectShoppingNameText: Observable<Void> { get }
 }
 
 protocol CreateShoppingViewControllerOutputs {
@@ -78,6 +79,10 @@ class CreateShoppingViewController: UIViewController {
         inputs.shoppingName
             .distinctUntilChanged { $0 == $1 }
             .bind(to: createShoppingView.textView.rx.text)
+            .disposed(by: disposeBag)
+
+        inputs.selectShoppingNameText
+            .subscribe(onNext: { [weak self] in self?.createShoppingView.textView.selectAll(nil) })
             .disposed(by: disposeBag)
     }
 

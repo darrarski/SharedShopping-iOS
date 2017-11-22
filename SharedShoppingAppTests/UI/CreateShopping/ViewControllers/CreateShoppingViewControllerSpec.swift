@@ -121,6 +121,17 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                         it("should update text view") {
                             expect(createShoppingView.textView.text).to(equal(inputs.shoppingNameVar.value))
                         }
+
+                        context("select shopping name text") {
+                            beforeEach {
+                                inputs.simulateSelectShoppingNameText()
+                            }
+
+                            it("should select text") {
+                                let expectation = NSRange(location: 0, length: inputs.shoppingNameVar.value!.count)
+                                expect(createShoppingView.textView.selectedRange).to(equal(expectation))
+                            }
+                        }
                     }
                 }
             }
@@ -129,10 +140,14 @@ class CreateShoppingViewControllerSpec: QuickSpec {
 
     private class Inputs: CreateShoppingViewControllerInputs {
 
-        let shoppingNameVar = Variable<String?>(nil)
-
         func simulateStartEditing() {
             startEditingSubject.onNext(())
+        }
+
+        let shoppingNameVar = Variable<String?>(nil)
+
+        func simulateSelectShoppingNameText() {
+            selectShoppingNameTextSubject.onNext(())
         }
 
         // MARK: CreateShoppingViewControllerInputs
@@ -149,9 +164,14 @@ class CreateShoppingViewControllerSpec: QuickSpec {
             return shoppingNameVar.asObservable()
         }
 
+        var selectShoppingNameText: Observable<Void> {
+            return selectShoppingNameTextSubject.asObservable()
+        }
+
         // MARK: Private
 
         private let startEditingSubject = PublishSubject<Void>()
+        private let selectShoppingNameTextSubject = PublishSubject<Void>()
 
     }
 
