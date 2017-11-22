@@ -44,8 +44,8 @@ class CreateShoppingViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create",
                                                             style: .done,
-                                                            target: self,
-                                                            action: #selector(rightBarButtonItemAction))
+                                                            target: nil,
+                                                            action: nil)
         bind(inputs)
         bind(outputs)
     }
@@ -95,6 +95,10 @@ class CreateShoppingViewController: UIViewController {
             .skip(1)
             .distinctUntilChanged { $0 == $1 }
             .subscribe(onNext: { [weak self] in self?.outputs.shoppingNameDidChange($0) })
+            .disposed(by: disposeBag)
+
+        navigationItem.rightBarButtonItem?.rx.tap
+            .subscribe(onNext: { [weak self] in self?.outputs.createShopping() })
             .disposed(by: disposeBag)
     }
 
