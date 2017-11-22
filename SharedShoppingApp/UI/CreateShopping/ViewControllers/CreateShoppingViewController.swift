@@ -11,6 +11,7 @@ protocol CreateShoppingViewControllerInputs {
 
 protocol CreateShoppingViewControllerOutputs {
     func viewDidAppear()
+    func shoppingNameDidChange(_ name: String?)
     func createShopping()
 }
 
@@ -46,6 +47,7 @@ class CreateShoppingViewController: UIViewController {
                                                             target: self,
                                                             action: #selector(rightBarButtonItemAction))
         bind(inputs)
+        bind(outputs)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -85,6 +87,14 @@ class CreateShoppingViewController: UIViewController {
 
         inputs.selectShoppingNameText
             .subscribe(onNext: { [weak self] in self?.createShoppingView.textView.selectAll(nil) })
+            .disposed(by: disposeBag)
+    }
+
+    private func bind(_ inputs: CreateShoppingViewControllerOutputs) {
+        createShoppingView.textView.rx.text
+            .skip(1)
+            .distinctUntilChanged { $0 == $1 }
+            .subscribe(onNext: { [weak self] in self?.outputs.shoppingNameDidChange($0) })
             .disposed(by: disposeBag)
     }
 

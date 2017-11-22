@@ -19,7 +19,7 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
     }
 
     var shoppingName: Observable<String?> {
-        return Observable.just("New Shopping") // TODO:
+        return shoppingNameVar.asObservable()
     }
 
     var selectShoppingNameText: Observable<Void> {
@@ -32,6 +32,10 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
         startEditingSubject.onNext(())
     }
 
+    func shoppingNameDidChange(_ name: String?) {
+        shoppingNameVar.value = name
+    }
+
     func createShopping() {
         let shopping = shoppingCreator.createShopping()
         createdShoppingPresenter.presentCreatedShopping(shopping)
@@ -42,5 +46,6 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
     private let shoppingCreator: ShoppingCreating
     private let createdShoppingPresenter: CreatedShoppingPresenting
     private let startEditingSubject = PublishSubject<Void>()
+    private let shoppingNameVar = Variable<String?>("New Shopping")
 
 }

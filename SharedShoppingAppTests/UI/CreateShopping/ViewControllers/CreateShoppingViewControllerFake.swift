@@ -41,6 +41,8 @@ private struct OutputsFake: CreateShoppingViewControllerOutputs {
 
     func viewDidAppear() {}
 
+    func shoppingNameDidChange(_ name: String?) {}
+
     func createShopping() {}
 
 }

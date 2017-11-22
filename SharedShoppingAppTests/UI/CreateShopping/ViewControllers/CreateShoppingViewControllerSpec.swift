@@ -134,6 +134,20 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                             expect(createShoppingView.textView.selectedRange).to(equal(expectation))
                         }
                     }
+
+                    context("when entering shopping name") {
+                        var name: String!
+
+                        beforeEach {
+                            name = "Test Shopping Name"
+                            EarlGrey.select(elementWithMatcher: grey_kindOfClass(UITextView.self))
+                                .perform(grey_replaceText(name))
+                        }
+
+                        it("should pass name changes to output") {
+                            expect(outputs.shoppingNameChanges).to(equal([name]))
+                        }
+                    }
                 }
             }
         }
@@ -179,12 +193,17 @@ class CreateShoppingViewControllerSpec: QuickSpec {
     private class Outputs: CreateShoppingViewControllerOutputs {
 
         var viewDidAppearCalled = false
+        var shoppingNameChanges = [String?]()
         var didCreateShopping = false
 
         // MARK: CreateShoppingViewControllerOutputs
 
         func viewDidAppear() {
             viewDidAppearCalled = true
+        }
+
+        func shoppingNameDidChange(_ name: String?) {
+            shoppingNameChanges.append(name)
         }
 
         func createShopping() {
