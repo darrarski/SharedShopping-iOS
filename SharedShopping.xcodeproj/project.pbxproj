@@ -109,6 +109,7 @@
 		31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8288B1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift */; };
 		31D8288E1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8288D1FA29680009CD4E5 /* ShoppingsTableViewModelAssembly.swift */; };
 		31E5F5A01F8AEBE5008A74F7 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5F59F1F8AEBE5008A74F7 /* Shopping.swift */; };
+		31E84ACE1FC5FC7300B10399 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF72C6F02BFF92988FE80FC0 /* EarlGrey.swift */; };
 		31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAE9FE1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift */; };
 		31FAEA021F7EF92400EA7660 /* ShoppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA011F7EF92400EA7660 /* ShoppingsViewController.swift */; };
 		31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEA071F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift */; };
@@ -1262,6 +1263,7 @@
 				31B9CB741FACF98E00C0DB9E /* ShoppingPresenterSpec.swift in Sources */,
 				317920821F88597000D7359F /* TableRowViewModelStub.swift in Sources */,
 				31D828641FA267C5009CD4E5 /* AppWindowFactorySpec.swift in Sources */,
+				31E84ACE1FC5FC7300B10399 /* EarlGrey.swift in Sources */,
 				315FD4E51FAD497700A9C555 /* CreateShoppingPresenterSpy.swift in Sources */,
 				31B9CB7A1FAD152800C0DB9E /* ShoppingPresenterSpy.swift in Sources */,
 				31D828791FA27B25009CD4E5 /* ShoppingFake.swift in Sources */,
