@@ -26,6 +26,10 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
         return startEditingSubject.asObservable().single().catchError { _ in Observable.never() }
     }
 
+    var createButtonTitle: Observable<String?> {
+        return Observable.just("Create")
+    }
+
     // MARK: CreateShoppingViewControllerOutputs
 
     func viewDidAppear() {

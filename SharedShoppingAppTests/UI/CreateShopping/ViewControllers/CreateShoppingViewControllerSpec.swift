@@ -54,6 +54,11 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                         expect(sut.navigationItem.title).to(equal(try! inputs.title.toBlocking().first()!))
                     }
 
+                    it("should right navigation item button have correct title") {
+                        expect(sut.navigationItem.rightBarButtonItem?.title)
+                            .to(equal(try! inputs.createButtonTitle.toBlocking().first()!))
+                    }
+
                     it("should embed scroll view controller") {
                         expect(sut.childViewControllers).to(contain(scrollViewController))
                     }
@@ -168,6 +173,10 @@ class CreateShoppingViewControllerSpec: QuickSpec {
 
         var selectShoppingNameText: Observable<Void> {
             return selectShoppingNameTextSubject.asObservable()
+        }
+
+        var createButtonTitle: Observable<String?> {
+            return Observable.just("Create Button Title")
         }
 
         // MARK: Private

@@ -7,6 +7,7 @@ protocol CreateShoppingViewControllerInputs {
     var startEditing: Observable<Void> { get }
     var shoppingName: Observable<String?> { get }
     var selectShoppingNameText: Observable<Void> { get }
+    var createButtonTitle: Observable<String?> { get }
 }
 
 protocol CreateShoppingViewControllerOutputs {
@@ -42,7 +43,7 @@ class CreateShoppingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .done, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
         bind(inputs)
         bind(outputs)
     }
@@ -84,6 +85,10 @@ class CreateShoppingViewController: UIViewController {
 
         inputs.selectShoppingNameText
             .subscribe(onNext: { [weak self] in self?.createShoppingView.textView.selectAll(nil) })
+            .disposed(by: disposeBag)
+
+        inputs.createButtonTitle
+            .subscribe(onNext: { [weak self] in self?.navigationItem.rightBarButtonItem?.title = $0 })
             .disposed(by: disposeBag)
     }
 
