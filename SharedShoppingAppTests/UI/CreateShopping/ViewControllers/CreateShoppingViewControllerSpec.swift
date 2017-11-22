@@ -42,14 +42,12 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                     var createShoppingView: CreateShoppingView!
 
                     beforeEach {
-                        GREYTestHelper.enableFastAnimation()
-                        UIApplication.shared.keyWindow?.rootViewController = sut
+                        EarlGrey.presentViewController(UINavigationController(rootViewController: sut))
                         createShoppingView = scrollViewController.contentView as? CreateShoppingView
                     }
 
                     afterEach {
-                        UIApplication.shared.keyWindow?.rootViewController = nil
-                        GREYTestHelper.disableFastAnimation()
+                        EarlGrey.cleanUpAfterPresentingViewController()
                     }
 
                     it("should have correct title") {
@@ -68,25 +66,14 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                         expect(scrollViewController.contentView).to(beAKindOf(CreateShoppingView.self))
                     }
 
-                    describe("right bar button item in navigation item") {
-                        var button: UIBarButtonItem?
-
+                    context("tap right navigation item button") {
                         beforeEach {
-                            button = sut.navigationItem.rightBarButtonItem
+                            EarlGrey.select(elementWithMatcher: grey_accessibilityElement(sut.navigationItem.rightBarButtonItem!))
+                                .perform(grey_tap())
                         }
 
-                        it("should not be nil") {
-                            expect(button).notTo(beNil())
-                        }
-
-                        context("tap") {
-                            beforeEach {
-                                _ = button?.target?.perform(button?.action)
-                            }
-
-                            it("should create shopping") {
-                                expect(outputs.didCreateShopping).to(beTrue())
-                            }
+                        it("should trigger create shopping action") {
+                            expect(outputs.didCreateShopping).to(beTrue())
                         }
                     }
 
