@@ -8,6 +8,7 @@ protocol CreateShoppingViewControllerInputs {
     var shoppingName: Observable<String?> { get }
     var selectShoppingNameText: Observable<Void> { get }
     var createButtonTitle: Observable<String?> { get }
+    var createButtonEnabled: Observable<Bool> { get }
 }
 
 protocol CreateShoppingViewControllerOutputs {
@@ -89,6 +90,10 @@ class CreateShoppingViewController: UIViewController {
 
         inputs.createButtonTitle
             .subscribe(onNext: { [weak self] in self?.navigationItem.rightBarButtonItem?.title = $0 })
+            .disposed(by: disposeBag)
+
+        inputs.createButtonEnabled
+            .subscribe(onNext: { [weak self] in self?.navigationItem.rightBarButtonItem?.isEnabled = $0 })
             .disposed(by: disposeBag)
     }
 

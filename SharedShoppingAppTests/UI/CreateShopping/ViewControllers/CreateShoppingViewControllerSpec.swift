@@ -71,14 +71,34 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                         expect(scrollViewController.contentView).to(beAKindOf(CreateShoppingView.self))
                     }
 
-                    context("tap right navigation item button") {
+                    context("enable create button") {
                         beforeEach {
-                            EarlGrey.select(elementWithMatcher: grey_accessibilityElement(sut.navigationItem.rightBarButtonItem!))
-                                .perform(grey_tap())
+                            inputs.createButtonEnabledVar.value = true
                         }
 
-                        it("should trigger create shopping action") {
-                            expect(outputs.didCreateShopping).to(beTrue())
+                        it("should be enabled") {
+                            expect(sut.navigationItem.rightBarButtonItem?.isEnabled).to(beTrue())
+                        }
+
+                        context("tap create button") {
+                            beforeEach {
+                                EarlGrey.select(elementWithMatcher: grey_accessibilityElement(sut.navigationItem.rightBarButtonItem!))
+                                    .perform(grey_tap())
+                            }
+
+                            it("should trigger action") {
+                                expect(outputs.didCreateShopping).to(beTrue())
+                            }
+                        }
+                    }
+
+                    context("disable create button") {
+                        beforeEach {
+                            inputs.createButtonEnabledVar.value = false
+                        }
+
+                        it("should be enabled") {
+                            expect(sut.navigationItem.rightBarButtonItem?.isEnabled).to(beFalse())
                         }
                     }
 
@@ -157,6 +177,8 @@ class CreateShoppingViewControllerSpec: QuickSpec {
             selectShoppingNameTextSubject.onNext(())
         }
 
+        let createButtonEnabledVar = Variable<Bool>(false)
+
         // MARK: CreateShoppingViewControllerInputs
 
         var title: Observable<String?> {
@@ -177,6 +199,10 @@ class CreateShoppingViewControllerSpec: QuickSpec {
 
         var createButtonTitle: Observable<String?> {
             return Observable.just("Create Button Title")
+        }
+
+        var createButtonEnabled: Observable<Bool> {
+            return createButtonEnabledVar.asObservable()
         }
 
         // MARK: Private

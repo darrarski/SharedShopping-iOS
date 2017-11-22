@@ -30,6 +30,13 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
         return Observable.just("Create")
     }
 
+    var createButtonEnabled: Observable<Bool> {
+        return shoppingNameVar.asObservable().map {
+            guard let name = $0 else { return false }
+            return !name.isEmpty
+        }
+    }
+
     // MARK: CreateShoppingViewControllerOutputs
 
     func viewDidAppear() {

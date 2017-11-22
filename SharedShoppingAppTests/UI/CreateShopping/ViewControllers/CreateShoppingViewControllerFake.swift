@@ -39,6 +39,10 @@ private struct InputsFake: CreateShoppingViewControllerInputs {
         return Observable.never()
     }
 
+    var createButtonEnabled: Observable<Bool> {
+        return Observable.never()
+    }
+
 }
 
 private struct OutputsFake: CreateShoppingViewControllerOutputs {
