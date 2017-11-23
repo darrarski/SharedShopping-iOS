@@ -5,8 +5,7 @@ extension EarlGrey {
     class func presentViewController(_ viewController: UIViewController) {
         GREYTestHelper.enableFastAnimation()
         UIApplication.shared.keyWindow!.rootViewController = viewController
-        let matcher = grey_accessibilityElement(viewController.view)
-        EarlGrey.select(elementWithMatcher: matcher).assert(grey_sufficientlyVisible())
+        GREYUIThreadExecutor.sharedInstance().drainUntilIdle()
     }
 
     class func cleanUpAfterPresentingViewController() {
