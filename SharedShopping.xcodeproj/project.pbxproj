@@ -1127,7 +1127,7 @@
 				"${BUILT_PRODUCTS_DIR}/KeyboardFrameChangeListener/KeyboardFrameChangeListener.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-11/iOS/RevealServer.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-12/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
