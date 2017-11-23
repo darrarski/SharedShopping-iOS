@@ -1,3 +1,3 @@
 protocol ShoppingCreating {
-    func createShopping() -> Shopping
+    func createShopping(name: String) -> Shopping
 }

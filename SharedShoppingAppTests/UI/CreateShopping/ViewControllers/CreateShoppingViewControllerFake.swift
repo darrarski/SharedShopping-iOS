@@ -19,7 +19,27 @@ class CreateShoppingViewControllerFake: CreateShoppingViewController {
 
 private struct InputsFake: CreateShoppingViewControllerInputs {
 
+    var title: Observable<String?> {
+        return Observable.never()
+    }
+
     var startEditing: Observable<Void> {
+        return Observable.never()
+    }
+
+    var selectShoppingNameText: Observable<Void> {
+        return Observable.never()
+    }
+
+    var shoppingName: Observable<String?> {
+        return Observable.never()
+    }
+
+    var createButtonTitle: Observable<String?> {
+        return Observable.never()
+    }
+
+    var createButtonEnabled: Observable<Bool> {
         return Observable.never()
     }
 
@@ -28,6 +48,8 @@ private struct InputsFake: CreateShoppingViewControllerInputs {
 private struct OutputsFake: CreateShoppingViewControllerOutputs {
 
     func viewDidAppear() {}
+
+    func shoppingNameDidChange(_ name: String?) {}
 
     func createShopping() {}
 

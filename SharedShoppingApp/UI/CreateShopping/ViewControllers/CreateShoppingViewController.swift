@@ -3,11 +3,17 @@ import ScrollViewController
 import RxSwift
 
 protocol CreateShoppingViewControllerInputs {
+    var title: Observable<String?> { get }
     var startEditing: Observable<Void> { get }
+    var shoppingName: Observable<String?> { get }
+    var selectShoppingNameText: Observable<Void> { get }
+    var createButtonTitle: Observable<String?> { get }
+    var createButtonEnabled: Observable<Bool> { get }
 }
 
 protocol CreateShoppingViewControllerOutputs {
     func viewDidAppear()
+    func shoppingNameDidChange(_ name: String?)
     func createShopping()
 }
 
@@ -38,20 +44,14 @@ class CreateShoppingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create",
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(rightBarButtonItemAction))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
         bind(inputs)
+        bind(outputs)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         outputs.viewDidAppear()
-    }
-
-    @objc func rightBarButtonItemAction() {
-        outputs.createShopping()
     }
 
     private var createShoppingView: CreateShoppingView! {
@@ -67,8 +67,41 @@ class CreateShoppingViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     private func bind(_ inputs: CreateShoppingViewControllerInputs) {
+        inputs.title
+            .subscribe(onNext: { [weak self] in self?.navigationItem.title = $0 })
+            .disposed(by: disposeBag)
+
         inputs.startEditing
             .subscribe(onNext: { [weak self] in self?.createShoppingView.textView.becomeFirstResponder() })
+            .disposed(by: disposeBag)
+
+        inputs.shoppingName
+            .distinctUntilChanged { $0 == $1 }
+            .bind(to: createShoppingView.textView.rx.text)
+            .disposed(by: disposeBag)
+
+        inputs.selectShoppingNameText
+            .subscribe(onNext: { [weak self] in self?.createShoppingView.textView.selectAll(nil) })
+            .disposed(by: disposeBag)
+
+        inputs.createButtonTitle
+            .subscribe(onNext: { [weak self] in self?.navigationItem.rightBarButtonItem?.title = $0 })
+            .disposed(by: disposeBag)
+
+        inputs.createButtonEnabled
+            .subscribe(onNext: { [weak self] in self?.navigationItem.rightBarButtonItem?.isEnabled = $0 })
+            .disposed(by: disposeBag)
+    }
+
+    private func bind(_ inputs: CreateShoppingViewControllerOutputs) {
+        createShoppingView.textView.rx.text
+            .skip(1)
+            .distinctUntilChanged { $0 == $1 }
+            .subscribe(onNext: { [weak self] in self?.outputs.shoppingNameDidChange($0) })
+            .disposed(by: disposeBag)
+
+        navigationItem.rightBarButtonItem?.rx.tap
+            .subscribe(onNext: { [weak self] in self?.outputs.createShopping() })
             .disposed(by: disposeBag)
     }
 

@@ -10,8 +10,31 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
 
     // MARK: CreateShoppingViewControllerInputs
 
+    var title: Observable<String?> {
+        return Observable.just("Shopping")
+    }
+
     var startEditing: Observable<Void> {
         return startEditingSubject.asObservable()
+    }
+
+    var shoppingName: Observable<String?> {
+        return shoppingNameVar.asObservable()
+    }
+
+    var selectShoppingNameText: Observable<Void> {
+        return startEditingSubject.asObservable().single().catchError { _ in Observable.never() }
+    }
+
+    var createButtonTitle: Observable<String?> {
+        return Observable.just("Create")
+    }
+
+    var createButtonEnabled: Observable<Bool> {
+        return shoppingNameVar.asObservable().map {
+            guard let name = $0 else { return false }
+            return !name.isEmpty
+        }
     }
 
     // MARK: CreateShoppingViewControllerOutputs
@@ -20,8 +43,13 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
         startEditingSubject.onNext(())
     }
 
+    func shoppingNameDidChange(_ name: String?) {
+        shoppingNameVar.value = name
+    }
+
     func createShopping() {
-        let shopping = shoppingCreator.createShopping()
+        guard let name = shoppingNameVar.value else { return }
+        let shopping = shoppingCreator.createShopping(name: name)
         createdShoppingPresenter.presentCreatedShopping(shopping)
     }
 
@@ -30,5 +58,6 @@ class CreateShoppingViewModel: CreateShoppingViewControllerInputs, CreateShoppin
     private let shoppingCreator: ShoppingCreating
     private let createdShoppingPresenter: CreatedShoppingPresenting
     private let startEditingSubject = PublishSubject<Void>()
+    private let shoppingNameVar = Variable<String?>("New Shopping")
 
 }

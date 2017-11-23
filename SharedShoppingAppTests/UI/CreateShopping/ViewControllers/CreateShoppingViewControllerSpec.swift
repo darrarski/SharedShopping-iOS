@@ -2,6 +2,7 @@ import Quick
 import Nimble
 import ScrollViewController
 import RxSwift
+import EarlGrey
 
 @testable import SharedShoppingApp
 
@@ -37,34 +38,25 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                     )
                 }
 
-                context("load view") {
+                context("present on screen") {
                     var createShoppingView: CreateShoppingView!
 
                     beforeEach {
-                        _ = sut.view
+                        EarlGrey.presentViewController(UINavigationController(rootViewController: sut))
                         createShoppingView = scrollViewController.contentView as? CreateShoppingView
                     }
 
-                    describe("right bar button item in navigation item") {
-                        var button: UIBarButtonItem?
+                    afterEach {
+                        EarlGrey.cleanUpAfterPresentingViewController()
+                    }
 
-                        beforeEach {
-                            button = sut.navigationItem.rightBarButtonItem
-                        }
+                    it("should have correct title") {
+                        expect(sut.navigationItem.title).to(equal(try! inputs.title.toBlocking().first()!))
+                    }
 
-                        it("should not be nil") {
-                            expect(button).notTo(beNil())
-                        }
-
-                        context("tap") {
-                            beforeEach {
-                                _ = button?.target?.perform(button?.action)
-                            }
-
-                            it("should create shopping") {
-                                expect(outputs.didCreateShopping).to(beTrue())
-                            }
-                        }
+                    it("should right navigation item button have correct title") {
+                        expect(sut.navigationItem.rightBarButtonItem?.title)
+                            .to(equal(try! inputs.createButtonTitle.toBlocking().first()!))
                     }
 
                     it("should embed scroll view controller") {
@@ -79,11 +71,38 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                         expect(scrollViewController.contentView).to(beAKindOf(CreateShoppingView.self))
                     }
 
-                    it("should set correct content view") {
-                        expect(createShoppingView).notTo(beNil())
+                    context("enable create button") {
+                        beforeEach {
+                            inputs.createButtonEnabledVar.value = true
+                        }
+
+                        it("should be enabled") {
+                            expect(sut.navigationItem.rightBarButtonItem?.isEnabled).to(beTrue())
+                        }
+
+                        context("tap create button") {
+                            beforeEach {
+                                EarlGrey.select(elementWithMatcher: grey_accessibilityElement(sut.navigationItem.rightBarButtonItem!))
+                                    .perform(grey_tap())
+                            }
+
+                            it("should trigger action") {
+                                expect(outputs.didCreateShopping).to(beTrue())
+                            }
+                        }
                     }
 
-                    context("when view did appear") {
+                    context("disable create button") {
+                        beforeEach {
+                            inputs.createButtonEnabledVar.value = false
+                        }
+
+                        it("should be enabled") {
+                            expect(sut.navigationItem.rightBarButtonItem?.isEnabled).to(beFalse())
+                        }
+                    }
+
+                    context("view did appear") {
                         beforeEach {
                             sut.viewDidAppear(false)
                         }
@@ -94,18 +113,51 @@ class CreateShoppingViewControllerSpec: QuickSpec {
                     }
 
                     context("start editing") {
-                        var observer: MethodCallObserver!
-                        var selector: Selector!
-
                         beforeEach {
-                            observer = MethodCallObserver()
-                            selector = #selector(UITextView.becomeFirstResponder)
-                            observer.observe(createShoppingView.textView, selector)
                             inputs.simulateStartEditing()
                         }
 
                         it("should make text view first responder") {
-                            expect(observer.observedCalls.last?.selector).to(equal(selector))
+                            expect(createShoppingView.textView.isFirstResponder).to(beTrue())
+                        }
+                    }
+
+                    context("change shopping name") {
+                        var name: String!
+
+                        beforeEach {
+                            name = "New Shopping Name"
+                            inputs.shoppingNameVar.value = name
+                        }
+
+                        it("should update text view") {
+                            expect(createShoppingView.textView.text).to(equal(name))
+                        }
+                    }
+
+                    context("select shopping name text") {
+                        beforeEach {
+                            createShoppingView.textView.text = "TEST"
+                            inputs.simulateSelectShoppingNameText()
+                        }
+
+                        it("should select text") {
+                            let expectation = NSRange(location: 0, length: createShoppingView.textView.text!.count)
+                            expect(createShoppingView.textView.selectedRange).to(equal(expectation))
+                        }
+                    }
+
+                    context("when entering shopping name") {
+                        var name: String!
+
+                        beforeEach {
+                            name = "Test Shopping Name"
+                            EarlGrey.select(elementWithMatcher: grey_kindOfClass(UITextView.self))
+                                .perform(grey_replaceText(name))
+                        }
+
+                        it("should pass name changes to output") {
+                            expect(outputs.shoppingNameChanges).to(equal([name]))
                         }
                     }
                 }
@@ -119,27 +171,61 @@ class CreateShoppingViewControllerSpec: QuickSpec {
             startEditingSubject.onNext(())
         }
 
+        let shoppingNameVar = Variable<String?>(nil)
+
+        func simulateSelectShoppingNameText() {
+            selectShoppingNameTextSubject.onNext(())
+        }
+
+        let createButtonEnabledVar = Variable<Bool>(false)
+
         // MARK: CreateShoppingViewControllerInputs
+
+        var title: Observable<String?> {
+            return Observable.just("Test Title")
+        }
 
         var startEditing: Observable<Void> {
             return startEditingSubject.asObservable()
         }
 
+        var shoppingName: Observable<String?> {
+            return shoppingNameVar.asObservable()
+        }
+
+        var selectShoppingNameText: Observable<Void> {
+            return selectShoppingNameTextSubject.asObservable()
+        }
+
+        var createButtonTitle: Observable<String?> {
+            return Observable.just("Create Button Title")
+        }
+
+        var createButtonEnabled: Observable<Bool> {
+            return createButtonEnabledVar.asObservable()
+        }
+
         // MARK: Private
 
         private let startEditingSubject = PublishSubject<Void>()
+        private let selectShoppingNameTextSubject = PublishSubject<Void>()
 
     }
 
     private class Outputs: CreateShoppingViewControllerOutputs {
 
         var viewDidAppearCalled = false
+        var shoppingNameChanges = [String?]()
         var didCreateShopping = false
 
         // MARK: CreateShoppingViewControllerOutputs
 
         func viewDidAppear() {
             viewDidAppearCalled = true
+        }
+
+        func shoppingNameDidChange(_ name: String?) {
+            shoppingNameChanges.append(name)
         }
 
         func createShopping() {
