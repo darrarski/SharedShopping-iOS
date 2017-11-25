@@ -79,7 +79,9 @@
 		31A3D5A71FC923B700135169 /* ShoppingsTableCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5A61FC923B700135169 /* ShoppingsTableCellSpec.swift */; };
 		31A3D5AA1FC924D600135169 /* CreateShoppingViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5A91FC924D600135169 /* CreateShoppingViewSpec.swift */; };
 		31A3D5AC1FC9259900135169 /* TableRowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5AB1FC9259900135169 /* TableRowAction.swift */; };
+		31A3D5AE1FC926CD00135169 /* TableViewRowActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5AD1FC926CD00135169 /* TableViewRowActionFactory.swift */; };
 		31A3D5B01FC9274500135169 /* TableViewRowActionCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5AF1FC9274500135169 /* TableViewRowActionCreating.swift */; };
+		31A3D5B21FC92C1B00135169 /* TableViewRowActionFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5B11FC92C1B00135169 /* TableViewRowActionFactorySpec.swift */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31B9CB6D1FACF22E00C0DB9E /* ShoppingPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6C1FACF22E00C0DB9E /* ShoppingPresenting.swift */; };
 		31B9CB6F1FACF26D00C0DB9E /* ShoppingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6E1FACF26D00C0DB9E /* ShoppingPresenter.swift */; };
@@ -228,7 +230,9 @@
 		31A3D5A61FC923B700135169 /* ShoppingsTableCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableCellSpec.swift; sourceTree = "<group>"; };
 		31A3D5A91FC924D600135169 /* CreateShoppingViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewSpec.swift; sourceTree = "<group>"; };
 		31A3D5AB1FC9259900135169 /* TableRowAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowAction.swift; sourceTree = "<group>"; };
+		31A3D5AD1FC926CD00135169 /* TableViewRowActionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRowActionFactory.swift; sourceTree = "<group>"; };
 		31A3D5AF1FC9274500135169 /* TableViewRowActionCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRowActionCreating.swift; sourceTree = "<group>"; };
+		31A3D5B11FC92C1B00135169 /* TableViewRowActionFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRowActionFactorySpec.swift; sourceTree = "<group>"; };
 		31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -456,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				31A3D5A21FC918F300135169 /* TableCellConfiguringSpec.swift */,
+				31A3D5B11FC92C1B00135169 /* TableViewRowActionFactorySpec.swift */,
 				313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */,
 				313B26A51F8BFF8900E55447 /* UITableViewSpy.swift */,
 			);
@@ -755,6 +760,7 @@
 				31A3D59E1FC9134A00135169 /* TableCellConfiguring.swift */,
 				31A3D5971FC901A500135169 /* TableCellCreating.swift */,
 				31A3D5AF1FC9274500135169 /* TableViewRowActionCreating.swift */,
+				31A3D5AD1FC926CD00135169 /* TableViewRowActionFactory.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1255,6 +1261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A3D5AE1FC926CD00135169 /* TableViewRowActionFactory.swift in Sources */,
 				310C7BE01FAE234100FB7762 /* CreateShoppingView.swift in Sources */,
 				31A3D5B01FC9274500135169 /* TableViewRowActionCreating.swift in Sources */,
 				3154E09C1FA9576F00529923 /* AppConfiguratorsAssembly.swift in Sources */,
@@ -1342,6 +1349,7 @@
 				3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */,
 				313B26B51F8C2AD800E55447 /* ShoppingsTableViewModelSpec.swift in Sources */,
 				313B26A61F8BFF8900E55447 /* UITableViewSpy.swift in Sources */,
+				31A3D5B21FC92C1B00135169 /* TableViewRowActionFactorySpec.swift in Sources */,
 				315456561FB7943B0045A78D /* CreateShoppingViewControllerFake.swift in Sources */,
 				315FD4EC1FAD4D8B00A9C555 /* CreateShoppingViewModelSpec.swift in Sources */,
 				313B26A31F8BF13C00E55447 /* ShoppingsTableRowViewModelSpec.swift in Sources */,
