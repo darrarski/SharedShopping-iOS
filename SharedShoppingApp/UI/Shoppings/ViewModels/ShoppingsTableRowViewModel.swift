@@ -35,8 +35,8 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     }
 
     func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "shopping",
-                                                       for: indexPath) as? ShoppingsTableViewCell else { fatalError() }
+        // swiftlint:disable:next force_cast
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shopping", for: indexPath) as! ShoppingsTableViewCell
         cell.titleLabel.text = shopping.name
         cell.subtitleLabel.text = dateFormatter.string(from: shopping.date)
         return cell
