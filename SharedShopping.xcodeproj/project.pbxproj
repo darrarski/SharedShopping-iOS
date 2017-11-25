@@ -78,6 +78,7 @@
 		31A3D5A51FC91B0F00135169 /* ShoppingsTableCellConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5A41FC91B0F00135169 /* ShoppingsTableCellConfiguratorSpec.swift */; };
 		31A3D5A71FC923B700135169 /* ShoppingsTableCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5A61FC923B700135169 /* ShoppingsTableCellSpec.swift */; };
 		31A3D5AA1FC924D600135169 /* CreateShoppingViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5A91FC924D600135169 /* CreateShoppingViewSpec.swift */; };
+		31A3D5AC1FC9259900135169 /* TableRowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5AB1FC9259900135169 /* TableRowAction.swift */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31B9CB6D1FACF22E00C0DB9E /* ShoppingPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6C1FACF22E00C0DB9E /* ShoppingPresenting.swift */; };
 		31B9CB6F1FACF26D00C0DB9E /* ShoppingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6E1FACF26D00C0DB9E /* ShoppingPresenter.swift */; };
@@ -225,6 +226,7 @@
 		31A3D5A41FC91B0F00135169 /* ShoppingsTableCellConfiguratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableCellConfiguratorSpec.swift; sourceTree = "<group>"; };
 		31A3D5A61FC923B700135169 /* ShoppingsTableCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableCellSpec.swift; sourceTree = "<group>"; };
 		31A3D5A91FC924D600135169 /* CreateShoppingViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewSpec.swift; sourceTree = "<group>"; };
+		31A3D5AB1FC9259900135169 /* TableRowAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowAction.swift; sourceTree = "<group>"; };
 		31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 		313B26981F8BEE0400E55447 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				31A3D5AB1FC9259900135169 /* TableRowAction.swift */,
 				3179207A1F884BBB00D7359F /* TableRowViewModel.swift */,
 			);
 			path = ViewModels;
@@ -1302,6 +1305,7 @@
 				31B9CB781FACFE0B00C0DB9E /* ShoppingPresenterAssembly.swift in Sources */,
 				31D8288C1FA29666009CD4E5 /* ShoppingsViewModelAssembly.swift in Sources */,
 				31B9CB6D1FACF22E00C0DB9E /* ShoppingPresenting.swift in Sources */,
+				31A3D5AC1FC9259900135169 /* TableRowAction.swift in Sources */,
 				31A361A11F97DAD40061B658 /* ShoppingsProviding.swift in Sources */,
 				31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */,
 				315FD4D81FAD449B00A9C555 /* CreateShoppingViewController.swift in Sources */,
