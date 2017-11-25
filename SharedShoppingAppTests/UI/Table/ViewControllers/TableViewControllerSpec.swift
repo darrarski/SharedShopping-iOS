@@ -78,12 +78,6 @@ class TableViewControllerSpec: QuickSpec {
                             expect(rowStub.heightCalled).to(beTrue())
                         }
 
-                        it("should have correct cell") {
-                            expect(sut.tableView(sut.tableView, cellForRowAt: indexPath)).to(be(rowStub.cellStub))
-                            expect(rowStub.cellAtIndexPathInTableViewCalled?.0).to(equal(indexPath))
-                            expect(rowStub.cellAtIndexPathInTableViewCalled?.1).to(be(sut.tableView))
-                        }
-
                         it("should have correct actions") {
                             expect(sut.tableView(sut.tableView, editActionsForRowAt: indexPath)).to(equal(rowStub.actionsStub))
                             expect(rowStub.actionsCalled).to(beTrue())

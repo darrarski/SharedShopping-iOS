@@ -101,42 +101,6 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 expect(sut.height).to(equal(UITableViewAutomaticDimension))
             }
 
-            describe("cell at index path in table view") {
-                var indexPath: IndexPath!
-                var tableView: UITableViewSpy!
-                var cellStub: ShoppingsTableCell!
-                var cell: UITableViewCell?
-
-                beforeEach {
-                    indexPath = IndexPath(row: 12, section: 17)
-                    tableView = UITableViewSpy()
-                    tableView.cellStub = { identifier in
-                        cellStub = ShoppingsTableCell(style: .default, reuseIdentifier: identifier)
-                        return cellStub
-                    }
-                    cell = sut.cell(at: indexPath, in: tableView) as? ShoppingsTableCell
-                }
-
-                it("should be dequeued with correct identifier") {
-                    expect(tableView.dequeueReusableCellWithIdentifierForIndexPathCalled?.0).to(equal("shopping"))
-                }
-
-                it("should be dequeued with correct index path") {
-                    expect(tableView.dequeueReusableCellWithIdentifierForIndexPathCalled?.1).to(equal(indexPath))
-                }
-
-                it("should be correct") {
-                    expect(cell).to(be(cellStub))
-                }
-
-                it("should have correct title") {
-                    expect(cellStub.titleLabel.text).to(equal(shopping.name))
-                }
-
-                it("should have correct date") {
-                    expect(cellStub.subtitleLabel.text).to(equal(dateFormatter.string(from: shopping.date)))
-                }
-            }
 
             it("should have one action") {
                 expect(sut.actions).to(haveCount(1))

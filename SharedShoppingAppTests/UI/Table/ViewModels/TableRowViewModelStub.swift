@@ -11,12 +11,10 @@ class TableRowViewModelStub: TableRowViewModel {
 
     var estimatedHeightStub = CGFloat(66)
     var heightStub = CGFloat(55)
-    var cellStub = UITableViewCell(style: .default, reuseIdentifier: "")
     var actionsStub: [UITableViewRowAction]?
 
     var estimatedHeightCalled = false
     var heightCalled = false
-    var cellAtIndexPathInTableViewCalled: (IndexPath, UITableView)?
     var actionsCalled = false
     var didSelectCalled = false
 
@@ -34,11 +32,6 @@ class TableRowViewModelStub: TableRowViewModel {
     var height: CGFloat {
         heightCalled = true
         return heightStub
-    }
-
-    func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
-        cellAtIndexPathInTableViewCalled = (indexPath, tableView)
-        return cellStub
     }
 
     var actions: [UITableViewRowAction]? {

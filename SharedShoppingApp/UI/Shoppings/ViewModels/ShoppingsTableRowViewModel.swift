@@ -34,13 +34,6 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
         return UITableViewAutomaticDimension
     }
 
-    func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
-        // swiftlint:disable:next force_cast
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shopping", for: indexPath) as! ShoppingsTableCell
-        cell.titleLabel.text = shopping.name
-        cell.subtitleLabel.text = dateFormatter.string(from: shopping.date)
-        return cell
-    }
 
     var actions: [UITableViewRowAction]? {
         let delete = rowActionFactory(.destructive, "Delete") { [weak self] (_, _) in

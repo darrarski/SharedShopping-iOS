@@ -62,8 +62,12 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = rowViewModels[indexPath.row]
-        return row.cell(at: indexPath, in: tableView)
+        let rowViewModel = rowViewModels[indexPath.row]
+        let cell = cellFactory.cell(withId: type(of: rowViewModel).cellIdentifier,
+                                    at: indexPath,
+                                    in: tableView)
+        // TODO: configure cell with rowViewModel
+        return cell
     }
 
     // MARK: Private
