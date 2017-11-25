@@ -20,6 +20,14 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
         self.shopping = shopping
     }
 
+    var title: String {
+        return shopping.name
+    }
+
+    var subtitle: String {
+        return dateFormatter.string(from: shopping.date)
+    }
+
     // MARK: TableRowViewModel
 
     static var cellIdentifier: String {
@@ -33,7 +41,6 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     var height: CGFloat {
         return UITableViewAutomaticDimension
     }
-
 
     var actions: [UITableViewRowAction]? {
         let delete = rowActionFactory(.destructive, "Delete") { [weak self] (_, _) in
