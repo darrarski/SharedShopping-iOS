@@ -1,6 +1,8 @@
 import Quick
 import Nimble
-
+import EarlGrey
+import RxSwift
+import RxBlocking
 @testable import SharedShoppingApp
 
 class ShoppingsViewControllerSpec: QuickSpec {
@@ -39,9 +41,13 @@ class ShoppingsViewControllerSpec: QuickSpec {
                     )
                 }
 
-                context("load view") {
+                context("present on screen") {
                     beforeEach {
-                        _ = sut.view
+                        EarlGrey.presentViewController(UINavigationController(rootViewController: sut))
+                    }
+
+                    afterEach {
+                        EarlGrey.cleanUpAfterPresentingViewController()
                     }
 
                     it("should embed tableViewController") {
@@ -49,7 +55,7 @@ class ShoppingsViewControllerSpec: QuickSpec {
                     }
 
                     it("should have correct title") {
-                        expect(sut.title).to(equal(inputs.title))
+                        expect(sut.navigationItem.title).to(equal(try! inputs.title.toBlocking().first()!))
                     }
 
                     describe("back bar button item") {
@@ -96,7 +102,9 @@ class ShoppingsViewControllerSpec: QuickSpec {
 
     private class Inputs: ShoppingsViewControllerInputs {
 
-        let title = "Test Title"
+        var title: Observable<String?> {
+            return Observable.just("Test Title")
+        }
 
     }
 

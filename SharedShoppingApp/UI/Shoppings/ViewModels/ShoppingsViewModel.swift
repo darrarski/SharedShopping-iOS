@@ -1,3 +1,5 @@
+import RxSwift
+
 class ShoppingsViewModel: ShoppingsViewControllerInputs, ShoppingsViewControllerOutputs {
 
     init(createShoppingPresenter: CreateShoppingPresenting) {
@@ -6,7 +8,9 @@ class ShoppingsViewModel: ShoppingsViewControllerInputs, ShoppingsViewController
 
     // MARK: ShoppingsViewControllerInputs
 
-    let title = "Shared Shopping"
+    var title: Observable<String?> {
+        return Observable.just("Shared Shopping")
+    }
 
     // MARK: ShoppingsViewControllerOutputs
 

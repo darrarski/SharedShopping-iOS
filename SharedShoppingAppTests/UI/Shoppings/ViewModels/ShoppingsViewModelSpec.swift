@@ -1,6 +1,7 @@
 import Quick
 import Nimble
-
+import RxSwift
+import RxBlocking
 @testable import SharedShoppingApp
 
 class ShoppingsViewModelSpec: QuickSpec {
@@ -16,7 +17,7 @@ class ShoppingsViewModelSpec: QuickSpec {
             }
 
             it("should have correct title") {
-                expect(sut.title).to(equal("Shared Shopping"))
+                expect(try! sut.title.toBlocking().first()!).to(equal("Shared Shopping"))
             }
 
             context("add shopping") {

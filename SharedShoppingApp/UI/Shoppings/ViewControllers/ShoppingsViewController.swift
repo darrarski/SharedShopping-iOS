@@ -1,7 +1,8 @@
 import UIKit
+import RxSwift
 
 protocol ShoppingsViewControllerInputs {
-    var title: String { get }
+    var title: Observable<String?> { get }
 }
 
 protocol ShoppingsViewControllerOutputs {
@@ -32,15 +33,10 @@ class ShoppingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = inputs.title
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
-                                                            target: self,
-                                                            action: #selector(rightBarButtonItemAction))
-    }
-
-    @objc func rightBarButtonItemAction() {
-        outputs.addShopping()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+        bind(inputs)
+        bind(outputs)
     }
 
     // MARK: Private
@@ -48,5 +44,18 @@ class ShoppingsViewController: UIViewController {
     private let tableViewControllerFactory: () -> UIViewController
     private let inputs: ShoppingsViewControllerInputs
     private let outputs: ShoppingsViewControllerOutputs
+    private let disposeBag = DisposeBag()
+
+    private func bind(_ inputs: ShoppingsViewControllerInputs) {
+        inputs.title
+            .subscribe(onNext: { [weak self] in self?.navigationItem.title = $0 })
+            .disposed(by: disposeBag)
+    }
+
+    private func bind(_ outputs: ShoppingsViewControllerOutputs) {
+        navigationItem.rightBarButtonItem?.rx.tap
+            .subscribe(onNext: { [weak self] in self?.outputs.addShopping() })
+            .disposed(by: disposeBag)
+    }
 
 }
