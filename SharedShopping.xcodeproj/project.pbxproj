@@ -72,6 +72,8 @@
 		31A3D5981FC901A500135169 /* TableCellCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5971FC901A500135169 /* TableCellCreating.swift */; };
 		31A3D59A1FC901DE00135169 /* ShoppingsTableCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5991FC901DE00135169 /* ShoppingsTableCellFactory.swift */; };
 		31A3D59D1FC906A300135169 /* ShoppingsTableCellFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D59C1FC906A300135169 /* ShoppingsTableCellFactorySpec.swift */; };
+		31A3D59F1FC9134A00135169 /* TableCellConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D59E1FC9134A00135169 /* TableCellConfiguring.swift */; };
+		31A3D5A31FC918F300135169 /* TableCellConfiguringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5A21FC918F300135169 /* TableCellConfiguringSpec.swift */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31B9CB6D1FACF22E00C0DB9E /* ShoppingPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6C1FACF22E00C0DB9E /* ShoppingPresenting.swift */; };
 		31B9CB6F1FACF26D00C0DB9E /* ShoppingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6E1FACF26D00C0DB9E /* ShoppingPresenter.swift */; };
@@ -213,6 +215,8 @@
 		31A3D5971FC901A500135169 /* TableCellCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellCreating.swift; sourceTree = "<group>"; };
 		31A3D5991FC901DE00135169 /* ShoppingsTableCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableCellFactory.swift; sourceTree = "<group>"; };
 		31A3D59C1FC906A300135169 /* ShoppingsTableCellFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableCellFactorySpec.swift; sourceTree = "<group>"; };
+		31A3D59E1FC9134A00135169 /* TableCellConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfiguring.swift; sourceTree = "<group>"; };
+		31A3D5A21FC918F300135169 /* TableCellConfiguringSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfiguringSpec.swift; sourceTree = "<group>"; };
 		31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -437,6 +441,7 @@
 		313B26A41F8BFF7B00E55447 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				31A3D5A21FC918F300135169 /* TableCellConfiguringSpec.swift */,
 				313B26B61F8C367D00E55447 /* UITableViewRowActionSpy.swift */,
 				313B26A51F8BFF8900E55447 /* UITableViewSpy.swift */,
 			);
@@ -732,6 +737,7 @@
 		31A3D5961FC9017C00135169 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				31A3D59E1FC9134A00135169 /* TableCellConfiguring.swift */,
 				31A3D5971FC901A500135169 /* TableCellCreating.swift */,
 			);
 			path = Views;
@@ -1231,6 +1237,7 @@
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
 				31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */,
 				31A3D5981FC901A500135169 /* TableCellCreating.swift in Sources */,
+				31A3D59F1FC9134A00135169 /* TableCellConfiguring.swift in Sources */,
 				3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */,
 				315FD4F41FAD50D000A9C555 /* CreatedShoppingPresenting.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */,
@@ -1316,6 +1323,7 @@
 				31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */,
 				31C1CB9F1FAD31350058B2E5 /* AlertViewControllerFactorySpy.swift in Sources */,
 				315456581FB7A1800045A78D /* SimpleTestableObserver.swift in Sources */,
+				31A3D5A31FC918F300135169 /* TableCellConfiguringSpec.swift in Sources */,
 				31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */,
 				31C1CB9D1FAD2E300058B2E5 /* AlertPresenterSpec.swift in Sources */,
 				31C1CBA11FAD317A0058B2E5 /* AlertViewControllerFactorySpec.swift in Sources */,
