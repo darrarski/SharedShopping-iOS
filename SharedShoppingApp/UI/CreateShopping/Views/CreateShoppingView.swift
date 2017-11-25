@@ -15,13 +15,7 @@ class CreateShoppingView: UIView {
 
     // MARK: Subviews
 
-    let textView: UITextView = {
-        let view = UITextView(frame: .zero)
-        view.backgroundColor = .white
-        view.isScrollEnabled = false
-        view.font = UIFont.preferredFont(forTextStyle: .body)
-        return view
-    }()
+    let textView = Factory.textView
 
     private func addSubviews() {
         addSubview(textView)
@@ -35,4 +29,16 @@ class CreateShoppingView: UIView {
         }
     }
 
+}
+
+private extension CreateShoppingView {
+    struct Factory {
+        static var textView: UITextView {
+            let view = UITextView(frame: .zero)
+            view.backgroundColor = .white
+            view.isScrollEnabled = false
+            view.font = UIFont.preferredFont(forTextStyle: .body)
+            return view
+        }
+    }
 }

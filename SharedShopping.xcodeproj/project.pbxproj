@@ -77,6 +77,7 @@
 		31A3D5A31FC918F300135169 /* TableCellConfiguringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5A21FC918F300135169 /* TableCellConfiguringSpec.swift */; };
 		31A3D5A51FC91B0F00135169 /* ShoppingsTableCellConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5A41FC91B0F00135169 /* ShoppingsTableCellConfiguratorSpec.swift */; };
 		31A3D5A71FC923B700135169 /* ShoppingsTableCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5A61FC923B700135169 /* ShoppingsTableCellSpec.swift */; };
+		31A3D5AA1FC924D600135169 /* CreateShoppingViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5A91FC924D600135169 /* CreateShoppingViewSpec.swift */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31B9CB6D1FACF22E00C0DB9E /* ShoppingPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6C1FACF22E00C0DB9E /* ShoppingPresenting.swift */; };
 		31B9CB6F1FACF26D00C0DB9E /* ShoppingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6E1FACF26D00C0DB9E /* ShoppingPresenter.swift */; };
@@ -223,6 +224,7 @@
 		31A3D5A21FC918F300135169 /* TableCellConfiguringSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfiguringSpec.swift; sourceTree = "<group>"; };
 		31A3D5A41FC91B0F00135169 /* ShoppingsTableCellConfiguratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableCellConfiguratorSpec.swift; sourceTree = "<group>"; };
 		31A3D5A61FC923B700135169 /* ShoppingsTableCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableCellSpec.swift; sourceTree = "<group>"; };
+		31A3D5A91FC924D600135169 /* CreateShoppingViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShoppingViewSpec.swift; sourceTree = "<group>"; };
 		31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -521,6 +523,7 @@
 				315FD4DD1FAD453100A9C555 /* Presenters */,
 				315FD4DC1FAD452B00A9C555 /* ViewControllers */,
 				315FD4EA1FAD4D7900A9C555 /* ViewModels */,
+				31A3D5A81FC924C200135169 /* Views */,
 			);
 			path = CreateShopping;
 			sourceTree = "<group>";
@@ -756,6 +759,14 @@
 				31A3D5A41FC91B0F00135169 /* ShoppingsTableCellConfiguratorSpec.swift */,
 				31A3D59C1FC906A300135169 /* ShoppingsTableCellFactorySpec.swift */,
 				31A3D5A61FC923B700135169 /* ShoppingsTableCellSpec.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		31A3D5A81FC924C200135169 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31A3D5A91FC924D600135169 /* CreateShoppingViewSpec.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1349,6 +1360,7 @@
 				31FAEA081F7EFA2400EA7660 /* ShoppingsViewControllerSpec.swift in Sources */,
 				3154E0A41FA95C7C00529923 /* CrashlyticsConfiguratorSpec.swift in Sources */,
 				31A361AD1F97E3000061B658 /* ShoppingsProviderStub.swift in Sources */,
+				31A3D5AA1FC924D600135169 /* CreateShoppingViewSpec.swift in Sources */,
 				31D8287B1FA27F05009CD4E5 /* Shopping_Nimble.swift in Sources */,
 				315FD4DF1FAD454200A9C555 /* CreateShoppingPresenterSpec.swift in Sources */,
 				31A3D59D1FC906A300135169 /* ShoppingsTableCellFactorySpec.swift in Sources */,
