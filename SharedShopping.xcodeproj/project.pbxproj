@@ -69,6 +69,7 @@
 		31A361B01F97F6540061B658 /* MethodCallObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361AF1F97F6540061B658 /* MethodCallObserver.swift */; };
 		31A361B21F97FE710061B658 /* ShoppingRemoverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361B11F97FE710061B658 /* ShoppingRemoverSpy.swift */; };
 		31A361B51F9803240061B658 /* Variable_AsWeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A361B41F9803240061B658 /* Variable_AsWeakObserver.swift */; };
+		31A3D5981FC901A500135169 /* TableCellCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A3D5971FC901A500135169 /* TableCellCreating.swift */; };
 		31A6F8701F7C4D7A00D40F15 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */; };
 		31B9CB6D1FACF22E00C0DB9E /* ShoppingPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6C1FACF22E00C0DB9E /* ShoppingPresenting.swift */; };
 		31B9CB6F1FACF26D00C0DB9E /* ShoppingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9CB6E1FACF26D00C0DB9E /* ShoppingPresenter.swift */; };
@@ -207,6 +208,7 @@
 		31A361AF1F97F6540061B658 /* MethodCallObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodCallObserver.swift; sourceTree = "<group>"; };
 		31A361B11F97FE710061B658 /* ShoppingRemoverSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRemoverSpy.swift; sourceTree = "<group>"; };
 		31A361B41F9803240061B658 /* Variable_AsWeakObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable_AsWeakObserver.swift; sourceTree = "<group>"; };
+		31A3D5971FC901A500135169 /* TableCellCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellCreating.swift; sourceTree = "<group>"; };
 		31A6F86F1F7C4D7A00D40F15 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31AAAEC01F7C43DB000C29AB /* SharedShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AAAEC41F7C43DB000C29AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 			children = (
 				313B26991F8BEE0C00E55447 /* ViewControllers */,
 				313B26981F8BEE0400E55447 /* ViewModels */,
+				31A3D5961FC9017C00135169 /* Views */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -719,6 +722,14 @@
 				31A361B41F9803240061B658 /* Variable_AsWeakObserver.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		31A3D5961FC9017C00135169 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31A3D5971FC901A500135169 /* TableCellCreating.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		31A6F86E1F7C4D4F00D40F15 /* Application */ = {
@@ -1205,6 +1216,7 @@
 				3179207B1F884BBB00D7359F /* TableRowViewModel.swift in Sources */,
 				31A361A31F97DADE0061B658 /* ShoppingCreating.swift in Sources */,
 				31D828621FA26708009CD4E5 /* AppWindowFactory.swift in Sources */,
+				31A3D5981FC901A500135169 /* TableCellCreating.swift in Sources */,
 				3185C96D1F9817E3006DAF71 /* Differ_TableViewControllerUpdates.swift in Sources */,
 				315FD4F41FAD50D000A9C555 /* CreatedShoppingPresenting.swift in Sources */,
 				31FAE9FF1F7EF61D00EA7660 /* AppWindowCreatingAssembly.swift in Sources */,
