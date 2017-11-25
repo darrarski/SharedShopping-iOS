@@ -43,7 +43,7 @@
 		315FD4FA1FAD57A900A9C555 /* CreatedShoppingPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FD4F91FAD57A900A9C555 /* CreatedShoppingPresenterSpec.swift */; };
 		316857891FA3BD67009DA75D /* RealmAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316857881FA3BD67009DA75D /* RealmAssembly.swift */; };
 		3168578B1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */; };
-		316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */; };
+		316AA6251F7F10F500A9407E /* ShoppingsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AA6241F7F10F500A9407E /* ShoppingsTableCell.swift */; };
 		317920761F884B6F00D7359F /* UIViewController_Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920751F884B6F00D7359F /* UIViewController_Embedding.swift */; };
 		317920791F884B9A00D7359F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317920781F884B9A00D7359F /* TableViewController.swift */; };
 		3179207B1F884BBB00D7359F /* TableRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179207A1F884BBB00D7359F /* TableRowViewModel.swift */; };
@@ -179,7 +179,7 @@
 		315FD4F91FAD57A900A9C555 /* CreatedShoppingPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedShoppingPresenterSpec.swift; sourceTree = "<group>"; };
 		316857881FA3BD67009DA75D /* RealmAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAssembly.swift; sourceTree = "<group>"; };
 		3168578A1FA3BEE4009DA75D /* ShoppingServiceRealmSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingServiceRealmSpec.swift; sourceTree = "<group>"; };
-		316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableViewCell.swift; sourceTree = "<group>"; };
+		316AA6241F7F10F500A9407E /* ShoppingsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingsTableCell.swift; sourceTree = "<group>"; };
 		317920751F884B6F00D7359F /* UIViewController_Embedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Embedding.swift; sourceTree = "<group>"; };
 		317920781F884B9A00D7359F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3179207A1F884BBB00D7359F /* TableRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowViewModel.swift; sourceTree = "<group>"; };
@@ -379,7 +379,7 @@
 		313B269C1F8BEE4A00E55447 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				316AA6241F7F10F500A9407E /* ShoppingsTableViewCell.swift */,
+				316AA6241F7F10F500A9407E /* ShoppingsTableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1228,7 +1228,7 @@
 				31C1CB911FAD2A0A0058B2E5 /* AlertViewControllerFactory.swift in Sources */,
 				315FD4D41FAD439200A9C555 /* CreateShoppingPresenting.swift in Sources */,
 				3154E0A01FA9580400529923 /* AppConfiguring.swift in Sources */,
-				316AA6251F7F10F500A9407E /* ShoppingsTableViewCell.swift in Sources */,
+				316AA6251F7F10F500A9407E /* ShoppingsTableCell.swift in Sources */,
 				31D828861FA2948E009CD4E5 /* ShoppingServiceAssembly.swift in Sources */,
 				31D828881FA294BC009CD4E5 /* AppWindowConfiguringAssembly.swift in Sources */,
 				31D828661FA269AC009CD4E5 /* AppWindowConfigurator.swift in Sources */,

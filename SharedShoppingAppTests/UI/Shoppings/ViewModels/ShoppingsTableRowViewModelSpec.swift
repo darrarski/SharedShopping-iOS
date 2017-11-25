@@ -115,7 +115,7 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 }
 
                 it("should register correct cell") {
-                    expect(tableView.registerCellClassForCellReuseIdentifierCalled?.0).to(be(ShoppingsTableViewCell.self))
+                    expect(tableView.registerCellClassForCellReuseIdentifierCalled?.0).to(be(ShoppingsTableCell.self))
                 }
 
                 it("should register correct identifier") {
@@ -134,17 +134,17 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
             describe("cell at index path in table view") {
                 var indexPath: IndexPath!
                 var tableView: UITableViewSpy!
-                var cellStub: ShoppingsTableViewCell!
+                var cellStub: ShoppingsTableCell!
                 var cell: UITableViewCell?
 
                 beforeEach {
                     indexPath = IndexPath(row: 12, section: 17)
                     tableView = UITableViewSpy()
                     tableView.cellStub = { identifier in
-                        cellStub = ShoppingsTableViewCell(style: .default, reuseIdentifier: identifier)
+                        cellStub = ShoppingsTableCell(style: .default, reuseIdentifier: identifier)
                         return cellStub
                     }
-                    cell = sut.cell(at: indexPath, in: tableView) as? ShoppingsTableViewCell
+                    cell = sut.cell(at: indexPath, in: tableView) as? ShoppingsTableCell
                 }
 
                 it("should be dequeued with correct identifier") {

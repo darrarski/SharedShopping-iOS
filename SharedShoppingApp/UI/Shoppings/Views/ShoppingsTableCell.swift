@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class ShoppingsTableViewCell: UITableViewCell {
+class ShoppingsTableCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

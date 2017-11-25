@@ -23,7 +23,7 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     // MARK: TableRowViewModel
 
     func register(in tableView: UITableView) {
-        tableView.register(ShoppingsTableViewCell.self, forCellReuseIdentifier: "shopping")
+        tableView.register(ShoppingsTableCell.self, forCellReuseIdentifier: "shopping")
     }
 
     var estimatedHeight: CGFloat {
@@ -36,7 +36,7 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
 
     func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
         // swiftlint:disable:next force_cast
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shopping", for: indexPath) as! ShoppingsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shopping", for: indexPath) as! ShoppingsTableCell
         cell.titleLabel.text = shopping.name
         cell.subtitleLabel.text = dateFormatter.string(from: shopping.date)
         return cell
