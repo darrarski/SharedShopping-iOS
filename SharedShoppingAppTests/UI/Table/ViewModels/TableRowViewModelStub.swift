@@ -14,7 +14,6 @@ class TableRowViewModelStub: TableRowViewModel {
     var cellStub = UITableViewCell(style: .default, reuseIdentifier: "")
     var actionsStub: [UITableViewRowAction]?
 
-    var registerInTableViewCalled: (UITableView)?
     var estimatedHeightCalled = false
     var heightCalled = false
     var cellAtIndexPathInTableViewCalled: (IndexPath, UITableView)?
@@ -23,8 +22,8 @@ class TableRowViewModelStub: TableRowViewModel {
 
     // MARK: TableRowViewModel
 
-    func register(in tableView: UITableView) {
-        registerInTableViewCalled = (tableView)
+    static var cellIdentifier: String {
+        return "test_cell_id"
     }
 
     var estimatedHeight: CGFloat {

@@ -93,23 +93,6 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 }
             }
 
-            context("register in table view") {
-                var tableView: UITableViewSpy!
-
-                beforeEach {
-                    tableView = UITableViewSpy()
-                    sut.register(in: tableView)
-                }
-
-                it("should register correct cell") {
-                    expect(tableView.registerCellClassForCellReuseIdentifierCalled?.0).to(be(ShoppingsTableCell.self))
-                }
-
-                it("should register correct identifier") {
-                    expect(tableView.registerCellClassForCellReuseIdentifierCalled?.1).to(equal("shopping"))
-                }
-            }
-
             it("should have correct estimated height") {
                 expect(sut.estimatedHeight).to(equal(60))
             }

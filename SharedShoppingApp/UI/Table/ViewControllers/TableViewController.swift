@@ -29,6 +29,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: .zero)
+        cellFactory.register(in: tableView)
         setupBindings()
     }
 
@@ -62,7 +63,6 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = rowViewModels[indexPath.row]
-        row.register(in: tableView)
         return row.cell(at: indexPath, in: tableView)
     }
 

@@ -21,13 +21,15 @@ class TableViewControllerSpec: QuickSpec {
             }
 
             context("init") {
+                var cellFactorySpy: CellFactorySpy!
                 var inputs: Inputs!
 
                 beforeEach {
+                    cellFactorySpy = CellFactorySpy()
                     inputs = Inputs()
                     sut = TableViewController(
                         style: .plain,
-                        cellFactory: CellFactory(),
+                        cellFactory: cellFactorySpy,
                         inputs: inputs
                     )
                 }
@@ -39,6 +41,10 @@ class TableViewControllerSpec: QuickSpec {
 
                     it("should have footer view") {
                         expect(sut.tableView.tableFooterView).notTo(beNil())
+                    }
+
+                    it("should register cell factory") {
+                        expect(cellFactorySpy.didRegisterInTableView).to(be(sut.tableView))
                     }
 
                     it("should have correct number of rows in section 0") {
@@ -74,7 +80,6 @@ class TableViewControllerSpec: QuickSpec {
 
                         it("should have correct cell") {
                             expect(sut.tableView(sut.tableView, cellForRowAt: indexPath)).to(be(rowStub.cellStub))
-                            expect(rowStub.registerInTableViewCalled).to(be(sut.tableView))
                             expect(rowStub.cellAtIndexPathInTableViewCalled?.0).to(equal(indexPath))
                             expect(rowStub.cellAtIndexPathInTableViewCalled?.1).to(be(sut.tableView))
                         }
@@ -143,11 +148,14 @@ class TableViewControllerSpec: QuickSpec {
         }
     }
 
-    private class CellFactory: TableCellCreating {
+    private class CellFactorySpy: TableCellCreating {
+
+        var didRegisterInTableView: UITableView?
 
         // MARK: TableCellCreating
 
         func register(in tableView: UITableView) {
+            didRegisterInTableView = tableView
             tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         }
 

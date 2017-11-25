@@ -22,8 +22,8 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
 
     // MARK: TableRowViewModel
 
-    func register(in tableView: UITableView) {
-        tableView.register(ShoppingsTableCell.self, forCellReuseIdentifier: "shopping")
+    static var cellIdentifier: String {
+        return "shopping"
     }
 
     var estimatedHeight: CGFloat {
