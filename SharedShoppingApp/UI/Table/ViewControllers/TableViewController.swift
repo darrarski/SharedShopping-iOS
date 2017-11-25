@@ -15,9 +15,11 @@ class TableViewController: UITableViewController {
     init(style: UITableViewStyle,
          cellFactory: TableCellCreating,
          cellConfigurators: [TableCellConfiguring],
+         rowActionFactory: TableViewRowActionCreating,
          inputs: TableViewControllerInputs) {
         self.cellFactory = cellFactory
         self.cellConfigurators = cellConfigurators
+        self.rowActionFactory = rowActionFactory
         self.inputs = inputs
         super.init(style: style)
     }
@@ -47,7 +49,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView,
                             editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        return rowViewModels[indexPath.row].actions
+        return rowViewModels[indexPath.row].actions?.map { rowActionFactory.tableViewRowAction(for: $0) }
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -75,6 +77,7 @@ class TableViewController: UITableViewController {
 
     private let cellFactory: TableCellCreating
     private let cellConfigurators: [TableCellConfiguring]
+    private let rowActionFactory: TableViewRowActionCreating
     private let inputs: TableViewControllerInputs
     private let disposeBag = DisposeBag()
 

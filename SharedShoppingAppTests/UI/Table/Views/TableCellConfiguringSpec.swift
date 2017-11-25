@@ -44,7 +44,7 @@ class TableCellConfiguringSpec: QuickSpec {
         static var cellIdentifier: String { return "" }
         var estimatedHeight: CGFloat = 0
         var height: CGFloat = 0
-        let actions: [UITableViewRowAction]? = nil
+        let actions: [TableRowAction]? = nil
         func isEqual(to other: TableRowViewModel) -> Bool { return false }
         func didSelect() {}
     }
@@ -53,7 +53,7 @@ class TableCellConfiguringSpec: QuickSpec {
         static var cellIdentifier: String { return "" }
         var estimatedHeight: CGFloat = 0
         var height: CGFloat = 0
-        let actions: [UITableViewRowAction]? = nil
+        let actions: [TableRowAction]? = nil
         func isEqual(to other: TableRowViewModel) -> Bool { return false }
         func didSelect() {}
     }

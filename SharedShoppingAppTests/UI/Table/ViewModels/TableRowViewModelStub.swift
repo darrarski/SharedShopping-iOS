@@ -11,7 +11,7 @@ class TableRowViewModelStub: TableRowViewModel {
 
     var estimatedHeightStub = CGFloat(66)
     var heightStub = CGFloat(55)
-    var actionsStub: [UITableViewRowAction]?
+    var actionsStub: [TableRowAction]?
 
     var estimatedHeightCalled = false
     var heightCalled = false
@@ -34,7 +34,7 @@ class TableRowViewModelStub: TableRowViewModel {
         return heightStub
     }
 
-    var actions: [UITableViewRowAction]? {
+    var actions: [TableRowAction]? {
         actionsCalled = true
         return actionsStub
     }

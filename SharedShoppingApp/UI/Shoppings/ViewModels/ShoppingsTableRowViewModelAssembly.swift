@@ -13,9 +13,6 @@ class ShoppingsTableRowViewModelAssembly: Assembly {
                     formatter.timeStyle = .short
                     return formatter
                 }(),
-                rowActionFactory: { style, title, handler in
-                    UITableViewRowAction(style: style, title: title, handler: handler)
-                },
                 shoppingRemover: resolver ~> ShoppingService.self,
                 shoppingPresenter: resolver ~> (ShoppingPresenter.self, navigationController),
                 alertPresenter: resolver ~> (AlertPresenter.self, navigationController as UIViewController),

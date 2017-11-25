@@ -15,7 +15,6 @@ class ShoppingsTableCellConfiguratorSpec: QuickSpec {
                 cell = ShoppingsTableCell(style: .default, reuseIdentifier: "shopping")
                 rowViewModel = ShoppingsTableRowViewModel(
                     dateFormatter: DateFormatter(),
-                    rowActionFactory: { _, _, _ in fatalError() },
                     shoppingRemover: ShoppingRemoverSpy(),
                     shoppingPresenter: ShoppingPresenterSpy(),
                     alertPresenter: AlertPresenterSpy(),

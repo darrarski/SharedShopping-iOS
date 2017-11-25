@@ -23,16 +23,19 @@ class TableViewControllerSpec: QuickSpec {
             context("init") {
                 var cellFactorySpy: CellFactorySpy!
                 var cellConfiguratorSpy: CellConfiguratorSpy!
+                var rowActionFactory: TableViewRowActionCreating!
                 var inputs: Inputs!
 
                 beforeEach {
                     cellFactorySpy = CellFactorySpy()
                     cellConfiguratorSpy = CellConfiguratorSpy()
+                    rowActionFactory = TableViewRowActionFactory()
                     inputs = Inputs()
                     sut = TableViewController(
                         style: .plain,
                         cellFactory: cellFactorySpy,
                         cellConfigurators: [cellConfiguratorSpy],
+                        rowActionFactory: rowActionFactory,
                         inputs: inputs
                     )
                 }
@@ -66,9 +69,7 @@ class TableViewControllerSpec: QuickSpec {
                         beforeEach {
                             indexPath = IndexPath(row: 7, section: 0)
                             rowStub = inputs.rowViewModelsStub.value[indexPath.row]
-                            rowStub.actionsStub = [
-                                UITableViewRowAction(style: .default, title: "Test Action", handler: { _, _ in })
-                            ]
+                            rowStub.actionsStub = [.delete(title: "Test Action", handler: {})]
                         }
 
                         it("should have correct estimated height") {
@@ -82,8 +83,11 @@ class TableViewControllerSpec: QuickSpec {
                         }
 
                         it("should have correct actions") {
-                            expect(sut.tableView(sut.tableView, editActionsForRowAt: indexPath)).to(equal(rowStub.actionsStub))
+                            let tableViewRowActions = sut.tableView(sut.tableView, editActionsForRowAt: indexPath)
                             expect(rowStub.actionsCalled).to(beTrue())
+                            expect(tableViewRowActions).to(haveCount(1))
+                            expect(tableViewRowActions?.first?.title).to(equal("Test Action"))
+                            expect(tableViewRowActions?.first?.style).to(equal(UITableViewRowActionStyle.destructive))
                         }
 
                         describe("cell") {

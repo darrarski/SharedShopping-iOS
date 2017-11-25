@@ -2,18 +2,12 @@ import UIKit
 
 class ShoppingsTableRowViewModel: TableRowViewModel {
 
-    typealias TableViewRowActionFactory = (UITableViewRowActionStyle,
-                                           String?,
-                                           @escaping (UITableViewRowAction, IndexPath) -> Void) -> UITableViewRowAction
-
     init(dateFormatter: DateFormatter,
-         rowActionFactory: @escaping TableViewRowActionFactory,
          shoppingRemover: ShoppingRemoving,
          shoppingPresenter: ShoppingPresenting,
          alertPresenter: AlertPresenting,
          shopping: Shopping) {
         self.dateFormatter = dateFormatter
-        self.rowActionFactory = rowActionFactory
         self.shoppingRemover = shoppingRemover
         self.shoppingPresenter = shoppingPresenter
         self.alertPresenter = alertPresenter
@@ -42,11 +36,8 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
         return UITableViewAutomaticDimension
     }
 
-    var actions: [UITableViewRowAction]? {
-        let delete = rowActionFactory(.destructive, "Delete") { [weak self] (_, _) in
-            self?.handleDeleteAction()
-        }
-        return [delete]
+    var actions: [TableRowAction]? {
+        return [.delete(title: "Delete", handler: { [weak self] in self?.handleDeleteAction() })]
     }
 
     func isEqual(to other: TableRowViewModel) -> Bool {
@@ -61,7 +52,6 @@ class ShoppingsTableRowViewModel: TableRowViewModel {
     // MARK: Private
 
     private let dateFormatter: DateFormatter
-    private let rowActionFactory: TableViewRowActionFactory
     private let shoppingRemover: ShoppingRemoving
     private let shoppingPresenter: ShoppingPresenting
     private let alertPresenter: AlertPresenting

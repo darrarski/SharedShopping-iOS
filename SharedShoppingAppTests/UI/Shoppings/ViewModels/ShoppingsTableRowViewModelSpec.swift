@@ -28,9 +28,6 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
 
                 sut = ShoppingsTableRowViewModel(
                     dateFormatter: dateFormatter,
-                    rowActionFactory: { style, title, handler in
-                        UITableViewRowActionSpy.create(style: style, title: title, handler: handler)
-                    },
                     shoppingRemover: shoppingRemoverSpy,
                     shoppingPresenter: shoppingPresenterSpy,
                     alertPresenter: alertPresenterSpy,
@@ -44,7 +41,6 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 beforeEach {
                     other = ShoppingsTableRowViewModel(
                         dateFormatter: DateFormatter(),
-                        rowActionFactory: { UITableViewRowAction(style: $0, title: $1, handler: $2) },
                         shoppingRemover: ShoppingRemoverSpy(),
                         shoppingPresenter: ShoppingPresenterSpy(),
                         alertPresenter: AlertPresenterSpy(),
@@ -64,9 +60,6 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 beforeEach {
                     other = ShoppingsTableRowViewModel(
                         dateFormatter: dateFormatter,
-                        rowActionFactory: { style, title, handler in
-                            UITableViewRowActionSpy.create(style: style, title: title, handler: handler)
-                        },
                         shoppingRemover: shoppingRemoverSpy,
                         shoppingPresenter: shoppingPresenterSpy,
                         alertPresenter: alertPresenterSpy,
@@ -106,24 +99,27 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
             }
 
             describe("first action") {
-                var action: UITableViewRowAction?
+                var action: TableRowAction?
 
                 beforeEach {
                     action = sut.actions?.first
                 }
 
-                it("should have correct style") {
-                    expect(action?.style).to(equal(UITableViewRowActionStyle.destructive))
-                }
-
-                it("should have correct title") {
-                    expect(action?.title).to(equal("Delete"))
+                it("should be correct") {
+                    switch action {
+                    case let .some(.delete(title, _)):
+                        expect(title).to(equal("Delete"))
+                    default:
+                        XCTFail("invalid TableRowAction")
+                    }
                 }
 
                 context("perform") {
                     beforeEach {
-                        guard let action = action as? UITableViewRowActionSpy else { return }
-                        action.handler(action, IndexPath(row: 12, section: 17))
+                        switch action {
+                        case let .some(.delete(_, handler)): handler()
+                        default: break
+                        }
                     }
 
                     describe("presented alert") {
