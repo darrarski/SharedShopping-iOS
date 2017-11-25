@@ -25,7 +25,11 @@ class TableViewControllerSpec: QuickSpec {
 
                 beforeEach {
                     inputs = Inputs()
-                    sut = TableViewController(style: .plain, inputs: inputs)
+                    sut = TableViewController(
+                        style: .plain,
+                        cellFactory: CellFactory(),
+                        inputs: inputs
+                    )
                 }
 
                 context("load view") {
@@ -137,6 +141,20 @@ class TableViewControllerSpec: QuickSpec {
                 }
             }
         }
+    }
+
+    private class CellFactory: TableCellCreating {
+
+        // MARK: TableCellCreating
+
+        func register(in tableView: UITableView) {
+            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        }
+
+        func cell(withId identifier: String, at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
+            return UITableViewCell(style: .default, reuseIdentifier: identifier)
+        }
+
     }
 
     private class Inputs: TableViewControllerInputs {

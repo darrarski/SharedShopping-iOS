@@ -12,7 +12,10 @@ class TableViewController: UITableViewController {
         case delete(row: Int, inSection: Int)
     }
 
-    init(style: UITableViewStyle, inputs: TableViewControllerInputs) {
+    init(style: UITableViewStyle,
+         cellFactory: TableCellCreating,
+         inputs: TableViewControllerInputs) {
+        self.cellFactory = cellFactory
         self.inputs = inputs
         super.init(style: style)
     }
@@ -65,6 +68,7 @@ class TableViewController: UITableViewController {
 
     // MARK: Private
 
+    private let cellFactory: TableCellCreating
     private let inputs: TableViewControllerInputs
     private let disposeBag = DisposeBag()
 

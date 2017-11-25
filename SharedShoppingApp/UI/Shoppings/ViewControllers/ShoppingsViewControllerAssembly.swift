@@ -11,6 +11,7 @@ class ShoppingsViewControllerAssembly: Assembly {
                 tableViewControllerFactory: {
                     TableViewController(
                         style: .plain,
+                        cellFactory: ShoppingsTableCellFactory(),
                         inputs: resolver ~> (ShoppingsTableViewModel.self, navigationController)
                     )
                 },
