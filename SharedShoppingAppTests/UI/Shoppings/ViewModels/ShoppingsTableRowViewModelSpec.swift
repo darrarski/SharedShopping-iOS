@@ -80,24 +80,11 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 }
             }
 
-            describe("other TableRowViewModel with same Shopping") {
+            describe("other TableRowViewModel") {
                 var other: TableRowViewModel!
 
                 beforeEach {
-                    other = TableRowViewModelStub(shopping: shopping)
-                }
-
-                it("should not be equal") {
-                    expect(sut.isEqual(to: other)).notTo(beTrue())
-                    expect(other.isEqual(to: sut)).notTo(beTrue())
-                }
-            }
-
-            describe("other TableRowViewModel with other Shopping") {
-                var other: TableRowViewModel!
-
-                beforeEach {
-                    other = TableRowViewModelStub(shopping: ShoppingFake(name: "Other Shopping", date: Date()))
+                    other = TableRowViewModelStub(uid: "other")
                 }
 
                 it("should not be equal") {

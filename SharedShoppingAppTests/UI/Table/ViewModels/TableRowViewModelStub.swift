@@ -3,11 +3,11 @@ import UIKit
 
 class TableRowViewModelStub: TableRowViewModel {
 
-    init(shopping: Shopping) {
-        self.shopping = shopping
+    init(uid: String) {
+        self.uid = uid
     }
 
-    let shopping: Shopping
+    let uid: String
 
     var estimatedHeightStub = CGFloat(66)
     var heightStub = CGFloat(55)
@@ -49,7 +49,7 @@ class TableRowViewModelStub: TableRowViewModel {
 
     func isEqual(to other: TableRowViewModel) -> Bool {
         guard let other = other as? TableRowViewModelStub else { return false }
-        return shopping.isEqual(to: other.shopping)
+        return uid == other.uid
     }
 
     func didSelect() {

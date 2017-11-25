@@ -23,7 +23,7 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                 ]
                 sut = ShoppingsTableViewModel(
                     shoppingsProvider: shoppingsProviderStub,
-                    rowViewModelFactory: { TableRowViewModelStub(shopping: $0) }
+                    rowViewModelFactory: { TableRowViewModelStub(uid: $0.name) }
                 )
             }
 
@@ -43,8 +43,8 @@ class ShoppingsTableViewModelSpec: QuickSpec {
                 }
 
                 it("should have correct shopping") {
-                    expect((rowViewModel as? TableRowViewModelStub)?.shopping)
-                        .to(equal(shoppingsProviderStub.shoppingsVar.value.first))
+                    expect((rowViewModel as? TableRowViewModelStub)?.uid)
+                        .to(equal(shoppingsProviderStub.shoppingsVar.value.first!.name))
                 }
             }
 
