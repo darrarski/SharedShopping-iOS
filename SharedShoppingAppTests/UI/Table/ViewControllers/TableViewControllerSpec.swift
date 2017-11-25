@@ -22,14 +22,17 @@ class TableViewControllerSpec: QuickSpec {
 
             context("init") {
                 var cellFactorySpy: CellFactorySpy!
+                var cellConfiguratorSpy: CellConfiguratorSpy!
                 var inputs: Inputs!
 
                 beforeEach {
                     cellFactorySpy = CellFactorySpy()
+                    cellConfiguratorSpy = CellConfiguratorSpy()
                     inputs = Inputs()
                     sut = TableViewController(
                         style: .plain,
                         cellFactory: cellFactorySpy,
+                        cellConfigurators: [cellConfiguratorSpy],
                         inputs: inputs
                     )
                 }
@@ -81,6 +84,23 @@ class TableViewControllerSpec: QuickSpec {
                         it("should have correct actions") {
                             expect(sut.tableView(sut.tableView, editActionsForRowAt: indexPath)).to(equal(rowStub.actionsStub))
                             expect(rowStub.actionsCalled).to(beTrue())
+                        }
+
+                        describe("cell") {
+                            var cell: UITableViewCell!
+
+                            beforeEach {
+                                cell = sut.tableView(sut.tableView, cellForRowAt: indexPath)
+                            }
+
+                            it("should have correct reuse identifier") {
+                                expect(cell.reuseIdentifier).to(equal(type(of: rowStub).cellIdentifier))
+                            }
+
+                            it("should be configured with row view model") {
+                                expect(cellConfiguratorSpy.didConfigureCellWithRowViewModel?.0).to(be(cell))
+                                expect(cellConfiguratorSpy.didConfigureCellWithRowViewModel?.1).to(be(rowStub))
+                            }
                         }
                     }
 
@@ -155,6 +175,26 @@ class TableViewControllerSpec: QuickSpec {
 
         func cell(withId identifier: String, at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
             return UITableViewCell(style: .default, reuseIdentifier: identifier)
+        }
+
+    }
+
+    private class CellConfiguratorSpy: TableCellConfiguring {
+
+        var didConfigureCellWithRowViewModel: (UITableViewCell, TableRowViewModel)?
+
+        // MARK: TableCellConfiguring
+
+        static var cellType: UITableViewCell.Type {
+            return UITableViewCell.self
+        }
+
+        static var rowViewModelType: TableRowViewModel.Type {
+            return TableRowViewModelStub.self
+        }
+
+        func configure(_ cell: UITableViewCell, with rowViewModel: TableRowViewModel) {
+            didConfigureCellWithRowViewModel = (cell, rowViewModel)
         }
 
     }

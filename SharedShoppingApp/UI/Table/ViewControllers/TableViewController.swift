@@ -14,8 +14,10 @@ class TableViewController: UITableViewController {
 
     init(style: UITableViewStyle,
          cellFactory: TableCellCreating,
+         cellConfigurators: [TableCellConfiguring],
          inputs: TableViewControllerInputs) {
         self.cellFactory = cellFactory
+        self.cellConfigurators = cellConfigurators
         self.inputs = inputs
         super.init(style: style)
     }
@@ -63,16 +65,16 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let rowViewModel = rowViewModels[indexPath.row]
-        let cell = cellFactory.cell(withId: type(of: rowViewModel).cellIdentifier,
-                                    at: indexPath,
-                                    in: tableView)
-        // TODO: configure cell with rowViewModel
+        let cell = cellFactory.cell(withId: type(of: rowViewModel).cellIdentifier, at: indexPath, in: tableView)
+        let configurator = cellConfigurators.first(where: { $0.canConfigure(cell, with: rowViewModel) })
+        configurator?.configure(cell, with: rowViewModel)
         return cell
     }
 
     // MARK: Private
 
     private let cellFactory: TableCellCreating
+    private let cellConfigurators: [TableCellConfiguring]
     private let inputs: TableViewControllerInputs
     private let disposeBag = DisposeBag()
 

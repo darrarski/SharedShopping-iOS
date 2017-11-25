@@ -101,7 +101,6 @@ class ShoppingsTableRowViewModelSpec: QuickSpec {
                 expect(sut.height).to(equal(UITableViewAutomaticDimension))
             }
 
-
             it("should have one action") {
                 expect(sut.actions).to(haveCount(1))
             }
