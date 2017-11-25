@@ -16,17 +16,8 @@ class ShoppingsTableCell: UITableViewCell {
 
     // MARK: Subviews
 
-    let titleLabel: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
-        return label
-    }()
-
-    let subtitleLabel: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
-        return label
-    }()
+    let titleLabel = Factory.titleLabel
+    let subtitleLabel = Factory.subtitleLabel
 
     private func loadSubviews() {
         contentView.addSubview(titleLabel)
@@ -49,4 +40,20 @@ class ShoppingsTableCell: UITableViewCell {
         }
     }
 
+}
+
+private extension ShoppingsTableCell {
+    struct Factory {
+        static var titleLabel: UILabel {
+            let label = UILabel(frame: .zero)
+            label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
+            return label
+        }
+
+        static var subtitleLabel: UILabel {
+            let label = UILabel(frame: .zero)
+            label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+            return label
+        }
+    }
 }
